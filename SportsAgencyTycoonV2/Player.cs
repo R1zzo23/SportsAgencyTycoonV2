@@ -33,7 +33,10 @@ namespace SportsAgencyTycoonV2
         #endregion
         public Player(string firstName, string lastName, Sport sport)
         {
-
+            _FirstName = firstName;
+            _LastName = lastName;
+            _FirstName = firstName + " " + lastName;
+            _Sport = sport;
         }
     }
 }

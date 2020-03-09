@@ -27,6 +27,11 @@ namespace SportsAgencyTycoonV2
         {
             get { return _LastName; }
         }
+        private bool _RandomLicenseOrder;
+        public bool RandomLicenseOrder
+        {
+            get { return _RandomLicenseOrder; }
+        }
 
         public CreateManagerAndAgency()
         {
@@ -44,6 +49,10 @@ namespace SportsAgencyTycoonV2
                 _AgencyName = txtAgencyName.Text.Trim();
                 _FirstName = txtManagerFirstName.Text.Trim();
                 _LastName = txtManagerLastName.Text.Trim();
+                // check if licenses will be randomized
+                if (cbRandomLicenseOrder.Checked)
+                    _RandomLicenseOrder = true;
+                else _RandomLicenseOrder = false;
 
                 this.Close();
             }

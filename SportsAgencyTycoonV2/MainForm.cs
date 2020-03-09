@@ -12,9 +12,11 @@ namespace SportsAgencyTycoonV2
 {
     public partial class MainForm : Form
     {
-        World world = new World();
+        Random rnd = new Random();
+        World world;
         public MainForm()
         {
+            world = new World(rnd);
             InitializeComponent();
             PopUpStartGameForm();
             PopulateManagerAndAgencyInfo();
@@ -34,6 +36,7 @@ namespace SportsAgencyTycoonV2
             world.SetMyAgency(new Agency(agencyName, 0));
             world.SetManager(manager);
             world.MyAgency.SetOffice();
+            if (startGameForm.RandomLicenseOrder) world.SetLicenseOrder();
         }
         public void PopulateManagerAndAgencyInfo()
         {
@@ -81,6 +84,7 @@ namespace SportsAgencyTycoonV2
         {
             if (cbManagerActions.SelectedIndex > -1)
             {
+                // obtain next license
                 if (cbManagerActions.SelectedIndex == 0)
                 {
                     if (world.MyAgency.InfluencePoints < world.NextLicenseCost)
@@ -90,6 +94,18 @@ namespace SportsAgencyTycoonV2
                         world.ObtainNextLicense();
                         UpdateLicenseList();
                         UpdateAgencyInfluencePointsLabel();
+                    }
+                }
+                // search for player
+                else if (cbManagerActions.SelectedIndex == 1)
+                {
+                    if (world.MyAgency.Licenses.Count == 0)
+                        MessageBox.Show("Must obtain a license before searching for a player to bring on as a client.");
+                    else
+                    {
+                        PlayerSearchForm playerSearchForm = new PlayerSearchForm(rnd, world.MyAgency, world.Manager);
+                        playerSearchForm.BringToFront();
+                        playerSearchForm.ShowDialog();
                     }
                 }
             }
