@@ -8,6 +8,7 @@ namespace SportsAgencyTycoonV2
 {
     public class Agency
     {
+        #region Private Fields
         private string _Name;
         private int _Level;
         private Office _Office;
@@ -15,41 +16,20 @@ namespace SportsAgencyTycoonV2
         private int _InfluencePoints;
         private int _AgentCount;
         private int _ClientCount;
+        #endregion
+        #region Public Getters
+        public string Name { get { return _Name; } }
+        public int Level { get { return _Level; } }
+        public int Money { get { return _Money; } }
+        public int InfluencePoints { get { return _InfluencePoints; } }
+        public int AgentCount { get { return _AgentCount; } }
+        public int ClientCount { get { return _ClientCount; } }
+        #endregion
 
         public Agency(string name, int level)
         {
             _Name = name;
             _Level = level;
         }
-        #region Public Methods to Return Private Variables
-        public string ReturnName()
-        {
-            return _Name;
-        }
-        public int ReturnLevel()
-        {
-            return _Level;
-        }
-        public Office ReturnOffice()
-        {
-            return _Office;
-        }
-        public int ReturnMoney()
-        {
-            return _Money;
-        }
-        public int ReturnIP()
-        {
-            return _InfluencePoints;
-        }
-        public int ReturnAgentCount()
-        {
-            return _AgentCount;
-        }
-        public int ReturnClientCount()
-        {
-            return _ClientCount;
-        }
-#endregion
     }
 }
