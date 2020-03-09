@@ -21,7 +21,7 @@ namespace SportsAgencyTycoonV2
             _EmployeeCapacity = employeeCapacity;
         }
 
-        #region Methods that Return Private Variables
+        #region Public Methods to Return Private Variables
         public int ReturnOfficeLevel()
         {
             return _Level;

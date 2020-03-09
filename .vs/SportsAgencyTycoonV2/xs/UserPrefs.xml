@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{454DE300-0763-47E0-81FB-E0C72FBCDAF9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SportsAgencyTycoonV2/Agency.cs">
+    <Files>
+      <File FileName="SportsAgencyTycoonV2/Office.cs" Line="24" Column="9" />
+      <File FileName="SportsAgencyTycoonV2/Agency.cs" Line="11" Column="9" />
+      <File FileName="SportsAgencyTycoonV2/Agent.cs" Line="8" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SportsAgencyTycoonV2" expanded="True">
+            <Node name="SportsAgencyTycoonV2" expanded="True">
+              <Node name="Agency.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SportsAgencyTycoonV2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
