@@ -1,0 +1,10 @@
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\bin\Debug\SportsAgencyTycoonV2.exe.config
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\bin\Debug\SportsAgencyTycoonV2.exe
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\bin\Debug\SportsAgencyTycoonV2.pdb
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.csprojAssemblyReference.cache
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.CreateManagerAndAgency.resources
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.MainForm.resources
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.Properties.Resources.resources
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.csproj.GenerateResource.cache
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.exe
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.pdb

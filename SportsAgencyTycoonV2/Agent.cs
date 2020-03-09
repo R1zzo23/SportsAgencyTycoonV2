@@ -39,6 +39,14 @@ namespace SportsAgencyTycoonV2
             if (role == Role.Manager)
                 _Salary = 0;
             else _Salary = DetermineSalary();
+
+            if (role == Role.Manager)
+            {
+                _Greed = 100;
+                _Negotiating = 100;
+                _Power = 100;
+                _Intelligence = 100;
+            }
         }
 
         int DetermineSalary()
