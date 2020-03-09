@@ -79,6 +79,9 @@
     </Compile>
     <Compile Include="Agent.cs" />
     <Compile Include="Role.cs" />
+    <Compile Include="Sport.cs" />
+    <Compile Include="Archetype.cs" />
+    <Compile Include="Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{454DE300-0763-47E0-81FB-E0C72FBCDAF9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SportsAgencyTycoonV2/Agent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SportsAgencyTycoonV2/Player.cs">
     <Files>
       <File FileName="SportsAgencyTycoonV2/Office.cs" Line="16" Column="19" />
       <File FileName="SportsAgencyTycoonV2/Agency.cs" Line="27" Column="19" />
-      <File FileName="SportsAgencyTycoonV2/Agent.cs" Line="37" Column="1" />
+      <File FileName="SportsAgencyTycoonV2/Agent.cs" Line="30" Column="66" />
+      <File FileName="SportsAgencyTycoonV2/Sports.cs" Line="12" Column="13" />
+      <File FileName="SportsAgencyTycoonV2/Archetype.cs" Line="22" Column="25" />
+      <File FileName="SportsAgencyTycoonV2/Player.cs" Line="36" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SportsAgencyTycoonV2" expanded="True">
             <Node name="SportsAgencyTycoonV2" expanded="True">
-              <Node name="Agent.cs" selected="True" />
+              <Node name="Player.cs" selected="True" />
             </Node>
           </Node>
         </State>
