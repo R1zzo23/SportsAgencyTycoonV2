@@ -21,5 +21,35 @@ namespace SportsAgencyTycoonV2
             _Name = name;
             _Level = level;
         }
+        #region Public Methods to Return Private Variables
+        public string ReturnName()
+        {
+            return _Name;
+        }
+        public int ReturnLevel()
+        {
+            return _Level;
+        }
+        public Office ReturnOffice()
+        {
+            return _Office;
+        }
+        public int ReturnMoney()
+        {
+            return _Money;
+        }
+        public int ReturnIP()
+        {
+            return _InfluencePoints;
+        }
+        public int ReturnAgentCount()
+        {
+            return _AgentCount;
+        }
+        public int ReturnClientCount()
+        {
+            return _ClientCount;
+        }
+#endregion
     }
 }
