@@ -15,6 +15,7 @@ namespace SportsAgencyTycoonV2
         private Archetype _Archetype;
 
         private int _Skill;
+        private double _Stars;
         private int _WorkEthic;
         #endregion
         #region Public Getters
@@ -29,6 +30,7 @@ namespace SportsAgencyTycoonV2
         public Archetype Archetype { get { return _Archetype;  } }
 
         public int Skill { get { return _Skill; } }
+        public double Stars { get { return _Stars; } }
         public int WorkEthic { get { return _WorkEthic; } }
         #endregion
         public Player(string firstName, string lastName, Sport sport)
@@ -37,6 +39,25 @@ namespace SportsAgencyTycoonV2
             _LastName = lastName;
             _FirstName = firstName + " " + lastName;
             _Sport = sport;
+        }
+        public void SetArchetype(Archetype a)
+        {
+            _Archetype = a;
+        }
+        public void SetStarRating(Random r, int agencyLevel)
+        {
+            int rnd = r.Next(1, agencyLevel + 9);
+            _Stars = Convert.ToDouble(rnd) / 2;
+        }
+        public void SetSkillRating(Random r)
+        {
+            int rnd = r.Next(Convert.ToInt32(_Stars * 20), Convert.ToInt32(_Stars * 30));
+            _Skill = 200 * (rnd / 100);
+        }
+        public void SetWorkEthicRating(Random r)
+        {
+            int rnd = r.Next(_Skill, _Skill * 4);
+            _WorkEthic = rnd;
         }
     }
 }

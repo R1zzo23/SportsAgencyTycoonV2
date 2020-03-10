@@ -19,3 +19,4 @@ C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\Sports
 C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.exe
 C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.pdb
 C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.PlayerSearchForm.resources
+C:\Users\Adam Rizzo\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.PlayerSearchForm.resources

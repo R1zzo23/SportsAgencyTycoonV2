@@ -112,12 +112,35 @@ namespace SportsAgencyTycoonV2
         private void searchTimer_Tick(object sender, EventArgs e)
         {
             Console.WriteLine("Another player found!");
+            FindPlayer();
+            DisplayList();
         }
 
         private void btnStopSearch_Click(object sender, EventArgs e)
         {
             searchTimer.Stop();
             lblSearching.Text = "Searching: No";
+        }
+
+        private void FindPlayer()
+        {
+            Player player = new Player("First", "Last", MyAgency.Licenses[cbSelectSport.SelectedIndex]);
+            Enum.TryParse(cbSelectArchetype.Text, out Archetype a);
+
+            player.SetArchetype(a);
+            player.SetStarRating(rnd, MyAgency.Level);
+            player.SetSkillRating(rnd);
+            player.SetWorkEthicRating(rnd);
+            PlayersFound.Add(player);
+            DisplayList();
+        }
+        private void DisplayList()
+        {
+            lblSearchResults.Text = "";
+            foreach (Player p in PlayersFound)
+            {
+                lblSearchResults.Text += "Name: " + p.FullName + ", Archetype: " + p.Archetype.ToString() + ", Stars: " + p.Stars.ToString() + ", Skill: " + p.Skill.ToString() + ", Work Ethic: " + p.WorkEthic.ToString() + Environment.NewLine;
+            }
         }
     }
 }
