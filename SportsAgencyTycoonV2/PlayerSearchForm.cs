@@ -133,6 +133,11 @@ namespace SportsAgencyTycoonV2
             player.SetWorkEthicRating(rnd);
             PlayersFound.Add(player);
             DisplayList();
+            if (PlayersFound.Count > (MyAgency.Level + 1 * 2))
+            {
+                searchTimer.Stop();
+                lblSearching.Text = "Searching: Completed!";
+            }
         }
         private void DisplayList()
         {

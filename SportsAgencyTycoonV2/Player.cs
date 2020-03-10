@@ -46,13 +46,13 @@ namespace SportsAgencyTycoonV2
         }
         public void SetStarRating(Random r, int agencyLevel)
         {
-            int rnd = r.Next(1, agencyLevel + 9);
-            _Stars = Convert.ToDouble(rnd) / 2;
+            double rnd = r.Next(1, agencyLevel + 2);
+            _Stars = rnd / 2;
         }
         public void SetSkillRating(Random r)
         {
-            int rnd = r.Next(Convert.ToInt32(_Stars * 20), Convert.ToInt32(_Stars * 30));
-            _Skill = 200 * (rnd / 100);
+            double rnd = r.Next(Convert.ToInt32(_Stars * 20), Convert.ToInt32(_Stars * 30));
+            _Skill = Convert.ToInt32(200 * (rnd / 100));
         }
         public void SetWorkEthicRating(Random r)
         {
