@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Timers;
 
 namespace SportsAgencyTycoonV2
 {
@@ -17,6 +16,7 @@ namespace SportsAgencyTycoonV2
         Agent Manager;
         Random rnd;
         List<Player> PlayersFound = new List<Player>();
+        Timer time = new Timer();
 
         public PlayerSearchForm(Random r, Agency myAgency, Agent manager)
         {
@@ -89,10 +89,14 @@ namespace SportsAgencyTycoonV2
                 MessageBox.Show("Please select a sport.");
             else if (cbSelectArchetype.SelectedIndex == -1)
                 MessageBox.Show("Please select an archetyep.");
+            else if (radioQuick.Checked == false && radioDiligent.Checked == false && radioIntense.Checked == false)
+                MessageBox.Show("Please select a search type.");
             else
             {
                 searchTimer.Interval = DetermineTimerLength();
+                searchProgressBar.Maximum = searchTimer.Interval;
                 searchTimer.Start();
+                InitializeMyTimer();
                 lblSearching.Text = "Searching: Yes";
                 Console.WriteLine(searchTimer.Interval);
             }            
@@ -105,6 +109,11 @@ namespace SportsAgencyTycoonV2
             else if (cbSelectArchetype.SelectedIndex > 1) seconds += 3;
 
             seconds *= 1000;
+
+            if (radioDiligent.Checked)
+                seconds *= 2;
+            if (radioIntense.Checked)
+                seconds *= 3;
 
             return seconds;
         }
@@ -146,6 +155,29 @@ namespace SportsAgencyTycoonV2
             {
                 lblSearchResults.Text += "Name: " + p.FullName + ", Archetype: " + p.Archetype.ToString() + ", Stars: " + p.Stars.ToString() + ", Skill: " + p.Skill.ToString() + ", Work Ethic: " + p.WorkEthic.ToString() + Environment.NewLine;
             }
+        }
+
+        
+
+        // Call this method from the constructor of the form.
+        private void InitializeMyTimer()
+        {
+            // Set the interval for the timer.
+            time.Interval = searchProgressBar.Maximum / 10;
+            // Connect the Tick event of the timer to its event handler.
+            time.Tick += new EventHandler(IncreaseProgressBar);
+            // Start the timer.
+            time.Start();
+        }
+
+        private void IncreaseProgressBar(object sender, EventArgs e)
+        {
+            // Increment the value of the ProgressBar a value of one each time.
+            searchProgressBar.Increment(searchProgressBar.Maximum / 10);
+            // Determine if we have completed by comparing the value of the Value property to the Maximum value.
+            if (searchProgressBar.Value == searchProgressBar.Maximum)
+                // Stop the timer.
+                time.Stop();
         }
     }
 }
