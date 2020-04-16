@@ -33,7 +33,6 @@ namespace SportsAgencyTycoonV2
         {
             _MyAgency = a;
             _MyAgency.AddMoney(35000);
-            _MyAgency.AddInfluencePointws(10);
         }
         public void SetManager(Agent a)
         {

@@ -56,6 +56,13 @@
     <Compile Include="CreateManagerAndAgency.Designer.cs">
       <DependentUpon>CreateManagerAndAgency.cs</DependentUpon>
     </Compile>
+    <Compile Include="FreelanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FreelanceForm.Designer.cs">
+      <DependentUpon>FreelanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FreelanceJob.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +81,9 @@
     <Compile Include="World.cs" />
     <EmbeddedResource Include="CreateManagerAndAgency.resx">
       <DependentUpon>CreateManagerAndAgency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FreelanceForm.resx">
+      <DependentUpon>FreelanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -57,7 +57,8 @@ namespace SportsAgencyTycoonV2
         }
         public void PopulateManagerActions()
         {
-            cbManagerActions.Items.Add("Obtain License (" + world.NextLicenseCost.ToString() + " IP)");
+            cbManagerActions.Items.Add("Obtain " + world.LicenseOrder[world.MyAgency.Licenses.Count].ToString() + " License (" + world.NextLicenseCost.ToString() + " IP)");
+            cbManagerActions.Items.Add("Freelance");
             cbManagerActions.Items.Add("Search For Player");
             cbManagerActions.Items.Add("Call Teams");
         }
@@ -96,8 +97,15 @@ namespace SportsAgencyTycoonV2
                         UpdateAgencyInfluencePointsLabel();
                     }
                 }
-                // search for player
+                // freelance
                 else if (cbManagerActions.SelectedIndex == 1)
+                {
+                    FreelanceForm freelanceForm = new FreelanceForm(rnd, world, world.MyAgency);
+                    freelanceForm.BringToFront();
+                    freelanceForm.ShowDialog();
+                }
+                // search for player
+                else if (cbManagerActions.SelectedIndex == 2)
                 {
                     if (world.MyAgency.Licenses.Count == 0)
                         MessageBox.Show("Must obtain a license before searching for a player to bring on as a client.");
