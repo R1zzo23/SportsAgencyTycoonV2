@@ -15,14 +15,47 @@ namespace SportsAgencyTycoonV2
         Random rnd;
         World world;
         Agency agency;
+        List<Control> JobTitles = new List<Control>();
+        List<Control> JobDescriptions = new List<Control>();
+        List<Control> BaselineScores = new List<Control>();
+        List<Control> IPPayouts = new List<Control>();
+        List<Control> MoneyPayouts = new List<Control>();
+        List<Control> PointsUntilCompletion = new List<Control>();
+        List<Control> AcceptJobButtons = new List<Control>();
+
         public FreelanceForm(Random r, World w, Agency a)
         {
             rnd = r;
             world = w;
             agency = a;
             InitializeComponent();
+            FillLists();
             CheckForFirstTimeFreelancing();
             DisplayAvailableJobs();
+        }
+        void FillLists()
+        {
+            JobTitles.Add(job1Title);
+            JobTitles.Add(job2Title);
+            JobTitles.Add(job3Title);
+            JobDescriptions.Add(job1Description);
+            JobDescriptions.Add(job2Description);
+            JobDescriptions.Add(job3Description);
+            BaselineScores.Add(job1BaselineScore);
+            BaselineScores.Add(job2BaselineScore);
+            BaselineScores.Add(job3BaselineScore);
+            IPPayouts.Add(job1IPPayout);
+            IPPayouts.Add(job2IPPayout);
+            IPPayouts.Add(job3IPPayout);
+            MoneyPayouts.Add(job1MoneyPayout);
+            MoneyPayouts.Add(job2MoneyPayout);
+            MoneyPayouts.Add(job3MoneyPayout);
+            PointsUntilCompletion.Add(job1PointsUntilCompletion);
+            PointsUntilCompletion.Add(job2PointsUntilCompletion);
+            PointsUntilCompletion.Add(job3PointsUntilCompletion);
+            AcceptJobButtons.Add(btnAcceptJob1);
+            AcceptJobButtons.Add(btnAcceptJob2);
+            AcceptJobButtons.Add(btnAcceptJob3);
         }
         void CheckForFirstTimeFreelancing()
         {
