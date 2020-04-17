@@ -18,6 +18,8 @@ namespace SportsAgencyTycoonV2
         {
             world = new World(rnd);
             InitializeComponent();
+            panelButtonHighlight.Height = btnOffice.Height;
+            panelButtonHighlight.Top = btnOffice.Top;
             PopUpStartGameForm();
             PopulateManagerAndAgencyInfo();
             PopulateManagerActions();
@@ -117,6 +119,30 @@ namespace SportsAgencyTycoonV2
                     }
                 }
             }
+        }
+
+        private void btnOffice_Click(object sender, EventArgs e)
+        {
+            panelButtonHighlight.Height = btnOffice.Height;
+            panelButtonHighlight.Top = btnOffice.Top;
+        }
+
+        private void btnManager_Click(object sender, EventArgs e)
+        {
+            panelButtonHighlight.Height = btnManager.Height;
+            panelButtonHighlight.Top = btnManager.Top;
+        }
+
+        private void btnJobs_Click(object sender, EventArgs e)
+        {
+            panelButtonHighlight.Height = btnJobs.Height;
+            panelButtonHighlight.Top = btnJobs.Top;
+        }
+
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            panelButtonHighlight.Height = btnClients.Height;
+            panelButtonHighlight.Top = btnClients.Top;
         }
     }
 }
