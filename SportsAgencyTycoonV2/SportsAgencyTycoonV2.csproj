@@ -120,9 +120,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\clients.png" />
+    <Content Include="Images\house.png" />
+    <Content Include="Images\house_large.png" />
     <Content Include="Images\job.png" />
     <Content Include="Images\office.png" />
-    <Content Include="Images\building %281%29.png" />
     <Content Include="Images\manager.png" />
     <Content Include="Images\team.png" />
   </ItemGroup>

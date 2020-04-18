@@ -23,6 +23,9 @@ namespace SportsAgencyTycoonV2
             PopUpStartGameForm();
             PopulateManagerAndAgencyInfo();
             PopulateManagerActions();
+            toolTipMainForm.SetToolTip(btnManager, "Manager - " + world.MyAgency.Manager.FullName);
+            toolTipMainForm.SetToolTip(btnOffice, "Agency - " + world.MyAgency.Name);
+            HideAllPanels();
         }
         public void PopUpStartGameForm()
         {
@@ -73,7 +76,7 @@ namespace SportsAgencyTycoonV2
         }
         public void UpdateLicenseList()
         {
-            lblLicenseList.Text = "License List: ";
+            lblLicenseList.Text = "Agency License List: ";
             if (world.MyAgency.Licenses.Count == 0)
                 lblLicenseList.Text += "none";
             else
@@ -125,24 +128,36 @@ namespace SportsAgencyTycoonV2
         {
             panelButtonHighlight.Height = btnOffice.Height;
             panelButtonHighlight.Top = btnOffice.Top;
+            HideAllPanels();
+            agencyPanel.Visible = true;
         }
 
         private void btnManager_Click(object sender, EventArgs e)
         {
             panelButtonHighlight.Height = btnManager.Height;
             panelButtonHighlight.Top = btnManager.Top;
+            HideAllPanels();
         }
 
         private void btnJobs_Click(object sender, EventArgs e)
         {
             panelButtonHighlight.Height = btnJobs.Height;
             panelButtonHighlight.Top = btnJobs.Top;
+            HideAllPanels();
+            freelancePanel.Visible = true;
         }
 
         private void btnClients_Click(object sender, EventArgs e)
         {
             panelButtonHighlight.Height = btnClients.Height;
             panelButtonHighlight.Top = btnClients.Top;
+            HideAllPanels();
+        }
+
+        private void HideAllPanels()
+        {
+            agencyPanel.Visible = false;
+            freelancePanel.Visible = false;
         }
     }
 }
