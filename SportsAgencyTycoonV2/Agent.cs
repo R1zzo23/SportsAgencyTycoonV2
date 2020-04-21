@@ -56,5 +56,12 @@ namespace SportsAgencyTycoonV2
 
             return salary;
         }
+        public void UpdateManagerUI(MainForm mf)
+        {
+            mf.lblManagerGreed.Text = "GRD: " + Greed.ToString();
+            mf.lblManagerIQ.Text = "INT: " + Intelligence.ToString();
+            mf.lblManagerNegotiate.Text = "NEG: " + Negotiating.ToString();
+            mf.lblManagerPower.Text = "POW: " + Power.ToString();
+        }
     }
 }

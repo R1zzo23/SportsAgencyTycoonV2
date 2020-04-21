@@ -56,6 +56,7 @@
     <Compile Include="CreateManagerAndAgency.Designer.cs">
       <DependentUpon>CreateManagerAndAgency.cs</DependentUpon>
     </Compile>
+    <Compile Include="Freelance.cs" />
     <Compile Include="FreelanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +64,7 @@
       <DependentUpon>FreelanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FreelanceJob.cs" />
+    <Compile Include="JobType.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

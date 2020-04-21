@@ -14,6 +14,7 @@ namespace SportsAgencyTycoonV2
     {
         Random rnd = new Random();
         World world;
+        Freelance freelance;
         public MainForm()
         {
             world = new World(rnd);
@@ -23,6 +24,7 @@ namespace SportsAgencyTycoonV2
             PopUpStartGameForm();
             PopulateManagerAndAgencyInfo();
             PopulateManagerActions();
+            freelance = new Freelance(this, rnd, world, world.MyAgency);
             toolTipMainForm.SetToolTip(btnManager, "Manager - " + world.MyAgency.Manager.FullName);
             toolTipMainForm.SetToolTip(btnOffice, "Agency - " + world.MyAgency.Name);
             HideAllPanels();
@@ -51,6 +53,7 @@ namespace SportsAgencyTycoonV2
             UpdateAgencyInfluencePointsLabel();
             UpdateOfficeInfo();
             UpdateLicenseList();
+            world.MyAgency.Manager.UpdateManagerUI(this);
         }
         public void UpdateAgencyMoneyLabel()
         {
@@ -145,6 +148,7 @@ namespace SportsAgencyTycoonV2
             panelButtonHighlight.Top = btnJobs.Top;
             HideAllPanels();
             freelancePanel.Visible = true;
+            freelance.ShowFreelancePanel();
         }
 
         private void btnClients_Click(object sender, EventArgs e)
