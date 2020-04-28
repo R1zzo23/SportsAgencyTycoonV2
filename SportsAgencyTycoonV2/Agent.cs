@@ -15,6 +15,8 @@ namespace SportsAgencyTycoonV2
         private int _Negotiating;
         private int _Power;
         private int _Intelligence;
+        private int _Scouting;
+
         #endregion
         #region Public Getters
         public string FirstName { get { return _FirstName; } }
@@ -28,6 +30,7 @@ namespace SportsAgencyTycoonV2
         public int Negotiating { get { return _Negotiating; } }
         public int Power { get { return _Power; } }
         public int Intelligence { get { return _Intelligence; } }
+        public int Scouting { get { return _Scouting; } }
         #endregion
         public Agent(string firstName, string lastName, Role role)
         {
@@ -46,6 +49,7 @@ namespace SportsAgencyTycoonV2
                 _Negotiating = 100;
                 _Power = 100;
                 _Intelligence = 100;
+                _Scouting = 100;
             }
         }
 

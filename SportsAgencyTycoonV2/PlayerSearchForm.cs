@@ -123,6 +123,7 @@ namespace SportsAgencyTycoonV2
             Console.WriteLine("Another player found!");
             FindPlayer();
             DisplayList();
+            searchProgressBar.Value = 0;
         }
 
         private void btnStopSearch_Click(object sender, EventArgs e)

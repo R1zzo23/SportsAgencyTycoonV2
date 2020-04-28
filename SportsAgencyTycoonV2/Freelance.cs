@@ -21,6 +21,8 @@ namespace SportsAgencyTycoonV2
         List<Control> PointsUntilCompletion = new List<Control>();
         List<Control> AcceptJobButtons = new List<Control>();
         List<Control> GroupBoxes = new List<Control>();
+        Timer jobTimer;
+        ProgressBar jobProgressBar;
 
         public Freelance(MainForm main, Random r, World w, Agency a)
         {
@@ -97,6 +99,36 @@ namespace SportsAgencyTycoonV2
                 AcceptJobButtons[i].Enabled = true;
                 GroupBoxes[i].Visible = true;
             }
+        }
+        public void AttemptJob(FreelanceJob job, Timer timer, ProgressBar progressBar)
+        {
+            jobTimer = timer;
+            jobProgressBar = progressBar;
+            jobProgressBar.Maximum = job.PointsUntilCompletion;
+            InitializeMyTimer(jobTimer, jobProgressBar);
+            Console.WriteLine("Attempting " + job.JobName);
+            if (job.JobType == JobType.education)
+            {
+                
+            }
+        }
+        private void InitializeMyTimer(Timer timer, ProgressBar progressBar)
+        {
+            // Set the interval for the timer.
+            jobTimer.Interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Intelligence) * 100;
+            // Connect the Tick event of the timer to its event handler.
+            jobTimer.Tick += new EventHandler(IncreaseProgressBar);
+            // Start the timer.
+            jobTimer.Start();
+        }
+        private void IncreaseProgressBar(object sender, EventArgs e)
+        {
+            // Increment the value of the ProgressBar a value of one each time.
+            jobProgressBar.Increment(world.MyAgency.Manager.Intelligence);
+            // Determine if we have completed by comparing the value of the Value property to the Maximum value.
+            if (jobProgressBar.Value == jobProgressBar.Maximum)
+                // Stop the timer.
+                jobTimer.Stop();
         }
     }
 }

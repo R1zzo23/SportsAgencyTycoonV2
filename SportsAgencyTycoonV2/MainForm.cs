@@ -15,6 +15,7 @@ namespace SportsAgencyTycoonV2
         Random rnd = new Random();
         World world;
         Freelance freelance;
+        public Timer freelanceJobTimer = new Timer();
         public MainForm()
         {
             world = new World(rnd);
@@ -50,6 +51,7 @@ namespace SportsAgencyTycoonV2
             lblAgencyName.Text = world.MyAgency.Name;
             lblManagerName.Text = world.MyAgency.Manager.FullName;
             UpdateAgencyMoneyLabel();
+            world.MyAgency.AddInfluencePointws(10);
             UpdateAgencyInfluencePointsLabel();
             UpdateOfficeInfo();
             UpdateLicenseList();
@@ -162,6 +164,24 @@ namespace SportsAgencyTycoonV2
         {
             agencyPanel.Visible = false;
             freelancePanel.Visible = false;
+        }
+
+        private void btnAcceptJob1_Click(object sender, EventArgs e)
+        {
+            FreelanceJob job = world.MyAgency.FreelanceJobsAvailable[0];
+            freelance.AttemptJob(job, freelanceJobTimer, jobProgressBar);
+        }
+
+        private void btnAcceptJob2_Click(object sender, EventArgs e)
+        {
+            FreelanceJob job = world.MyAgency.FreelanceJobsAvailable[1];
+            freelance.AttemptJob(job, freelanceJobTimer, jobProgressBar);
+        }
+
+        private void btnAcceptJob3_Click(object sender, EventArgs e)
+        {
+            FreelanceJob job = world.MyAgency.FreelanceJobsAvailable[2];
+            freelance.AttemptJob(job, freelanceJobTimer, jobProgressBar);
         }
     }
 }
