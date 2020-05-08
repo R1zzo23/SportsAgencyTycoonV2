@@ -67,7 +67,9 @@ namespace SportsAgencyTycoonV2
         }
         public void PopulateManagerActions()
         {
-            cbManagerActions.Items.Add("Obtain " + world.LicenseOrder[world.MyAgency.Licenses.Count].ToString() + " License (" + world.NextLicenseCost.ToString() + " IP)");
+            cbManagerActions.Items.Clear();
+            if (world.MyAgency.Licenses.Count < 5)
+                cbManagerActions.Items.Add("Obtain " + world.LicenseOrder[world.MyAgency.Licenses.Count].ToString() + " License (" + world.NextLicenseCost.ToString() + " IP)");
             cbManagerActions.Items.Add("Freelance");
             cbManagerActions.Items.Add("Search For Player");
             cbManagerActions.Items.Add("Call Teams");
@@ -105,6 +107,9 @@ namespace SportsAgencyTycoonV2
                         world.ObtainNextLicense();
                         UpdateLicenseList();
                         UpdateAgencyInfluencePointsLabel();
+                        PopulateManagerActions();
+                        cbManagerActions.Text = "";
+                        cbManagerActions.SelectedIndex = -1;
                     }
                 }
                 // freelance

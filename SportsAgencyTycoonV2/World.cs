@@ -55,18 +55,30 @@ namespace SportsAgencyTycoonV2
         }
         public void ObtainNextLicense()
         {
-            if (_MyAgency.Level == 0)
+            if (_MyAgency.Licenses.Count == 0)
                 _MyAgency.AddLicense(LicenseOrder[0]);
-            else if (_MyAgency.Level == 1)
+            else if (_MyAgency.Licenses.Count == 1)
                 _MyAgency.AddLicense(LicenseOrder[1]);
-            else if (_MyAgency.Level == 2)
+            else if (_MyAgency.Licenses.Count == 2)
                 _MyAgency.AddLicense(LicenseOrder[2]);
-            else if (_MyAgency.Level == 3)
+            else if (_MyAgency.Licenses.Count == 3)
                 _MyAgency.AddLicense(LicenseOrder[3]);
-            else if (_MyAgency.Level == 4)
+            else if (_MyAgency.Licenses.Count == 4)
                 _MyAgency.AddLicense(LicenseOrder[4]);
 
             _MyAgency.AddInfluencePointws(-NextLicenseCost);
+            SetNextLicenseCost();
+        }
+        public void SetNextLicenseCost()
+        {
+            if (NextLicenseCost == 10)
+                NextLicenseCost = 25;
+            else if (NextLicenseCost == 25)
+                NextLicenseCost = 50;
+            else if (NextLicenseCost == 50)
+                NextLicenseCost = 100;
+            else if (NextLicenseCost == 100)
+                NextLicenseCost = 250;
         }
     }
 }

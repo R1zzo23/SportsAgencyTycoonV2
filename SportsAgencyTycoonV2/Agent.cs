@@ -66,6 +66,7 @@ namespace SportsAgencyTycoonV2
             mf.lblManagerIQ.Text = "INT: " + Intelligence.ToString();
             mf.lblManagerNegotiate.Text = "NEG: " + Negotiating.ToString();
             mf.lblManagerPower.Text = "POW: " + Power.ToString();
+            mf.lblManagerScouting.Text = "SCT: " + Scouting.ToString();
         }
     }
 }
