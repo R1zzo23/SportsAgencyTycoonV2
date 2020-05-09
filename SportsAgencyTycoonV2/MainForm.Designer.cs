@@ -55,6 +55,7 @@
             this.lblManagerNegotiate = new System.Windows.Forms.Label();
             this.lblManagerGreed = new System.Windows.Forms.Label();
             this.lblManagerPower = new System.Windows.Forms.Label();
+            this.lblManagerScouting = new System.Windows.Forms.Label();
             this.agencyPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.agencyImageLarge = new System.Windows.Forms.PictureBox();
@@ -86,7 +87,9 @@
             this.job1BaselineScore = new System.Windows.Forms.Label();
             this.job1Description = new System.Windows.Forms.Label();
             this.job1Title = new System.Windows.Forms.Label();
-            this.lblManagerScouting = new System.Windows.Forms.Label();
+            this.job1WeeksToComplete = new System.Windows.Forms.Label();
+            this.job2WeeksToComplete = new System.Windows.Forms.Label();
+            this.job3WeeksToComplete = new System.Windows.Forms.Label();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -378,6 +381,17 @@
             this.lblManagerPower.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerPower, "Power");
             // 
+            // lblManagerScouting
+            // 
+            this.lblManagerScouting.AutoSize = true;
+            this.lblManagerScouting.Location = new System.Drawing.Point(82, 122);
+            this.lblManagerScouting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblManagerScouting.Name = "lblManagerScouting";
+            this.lblManagerScouting.Size = new System.Drawing.Size(48, 19);
+            this.lblManagerScouting.TabIndex = 14;
+            this.lblManagerScouting.Text = "SCT: 0";
+            this.toolTipMainForm.SetToolTip(this.lblManagerScouting, "Greed");
+            // 
             // agencyPanel
             // 
             this.agencyPanel.Controls.Add(this.lblManagerScouting);
@@ -466,6 +480,7 @@
             // 
             // gbJob3
             // 
+            this.gbJob3.Controls.Add(this.job3WeeksToComplete);
             this.gbJob3.Controls.Add(this.btnAcceptJob3);
             this.gbJob3.Controls.Add(this.job3PointsUntilCompletion);
             this.gbJob3.Controls.Add(this.job3MoneyPayout);
@@ -475,7 +490,7 @@
             this.gbJob3.Controls.Add(this.job3Title);
             this.gbJob3.Location = new System.Drawing.Point(627, 7);
             this.gbJob3.Name = "gbJob3";
-            this.gbJob3.Size = new System.Drawing.Size(300, 200);
+            this.gbJob3.Size = new System.Drawing.Size(300, 222);
             this.gbJob3.TabIndex = 10;
             this.gbJob3.TabStop = false;
             this.gbJob3.Text = "Job 1";
@@ -485,7 +500,7 @@
             // 
             this.btnAcceptJob3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceptJob3.ForeColor = System.Drawing.Color.White;
-            this.btnAcceptJob3.Location = new System.Drawing.Point(70, 163);
+            this.btnAcceptJob3.Location = new System.Drawing.Point(64, 182);
             this.btnAcceptJob3.Name = "btnAcceptJob3";
             this.btnAcceptJob3.Size = new System.Drawing.Size(117, 31);
             this.btnAcceptJob3.TabIndex = 6;
@@ -496,7 +511,7 @@
             // job3PointsUntilCompletion
             // 
             this.job3PointsUntilCompletion.AutoSize = true;
-            this.job3PointsUntilCompletion.Location = new System.Drawing.Point(7, 122);
+            this.job3PointsUntilCompletion.Location = new System.Drawing.Point(7, 130);
             this.job3PointsUntilCompletion.Name = "job3PointsUntilCompletion";
             this.job3PointsUntilCompletion.Size = new System.Drawing.Size(174, 19);
             this.job3PointsUntilCompletion.TabIndex = 5;
@@ -505,7 +520,7 @@
             // job3MoneyPayout
             // 
             this.job3MoneyPayout.AutoSize = true;
-            this.job3MoneyPayout.Location = new System.Drawing.Point(7, 103);
+            this.job3MoneyPayout.Location = new System.Drawing.Point(7, 109);
             this.job3MoneyPayout.Name = "job3MoneyPayout";
             this.job3MoneyPayout.Size = new System.Drawing.Size(118, 19);
             this.job3MoneyPayout.TabIndex = 4;
@@ -514,7 +529,7 @@
             // job3IPPayout
             // 
             this.job3IPPayout.AutoSize = true;
-            this.job3IPPayout.Location = new System.Drawing.Point(7, 84);
+            this.job3IPPayout.Location = new System.Drawing.Point(7, 88);
             this.job3IPPayout.Name = "job3IPPayout";
             this.job3IPPayout.Size = new System.Drawing.Size(81, 19);
             this.job3IPPayout.TabIndex = 3;
@@ -523,7 +538,7 @@
             // job3BaselineScore
             // 
             this.job3BaselineScore.AutoSize = true;
-            this.job3BaselineScore.Location = new System.Drawing.Point(7, 65);
+            this.job3BaselineScore.Location = new System.Drawing.Point(7, 67);
             this.job3BaselineScore.Name = "job3BaselineScore";
             this.job3BaselineScore.Size = new System.Drawing.Size(115, 19);
             this.job3BaselineScore.TabIndex = 2;
@@ -551,6 +566,7 @@
             // 
             // gbJob2
             // 
+            this.gbJob2.Controls.Add(this.job2WeeksToComplete);
             this.gbJob2.Controls.Add(this.btnAcceptJob2);
             this.gbJob2.Controls.Add(this.job2PointsUntilCompletion);
             this.gbJob2.Controls.Add(this.job2MoneyPayout);
@@ -560,7 +576,7 @@
             this.gbJob2.Controls.Add(this.job2Title);
             this.gbJob2.Location = new System.Drawing.Point(321, 7);
             this.gbJob2.Name = "gbJob2";
-            this.gbJob2.Size = new System.Drawing.Size(300, 200);
+            this.gbJob2.Size = new System.Drawing.Size(300, 222);
             this.gbJob2.TabIndex = 9;
             this.gbJob2.TabStop = false;
             this.gbJob2.Text = "Job 2";
@@ -570,7 +586,7 @@
             // 
             this.btnAcceptJob2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceptJob2.ForeColor = System.Drawing.Color.White;
-            this.btnAcceptJob2.Location = new System.Drawing.Point(79, 163);
+            this.btnAcceptJob2.Location = new System.Drawing.Point(79, 182);
             this.btnAcceptJob2.Name = "btnAcceptJob2";
             this.btnAcceptJob2.Size = new System.Drawing.Size(117, 31);
             this.btnAcceptJob2.TabIndex = 6;
@@ -581,7 +597,7 @@
             // job2PointsUntilCompletion
             // 
             this.job2PointsUntilCompletion.AutoSize = true;
-            this.job2PointsUntilCompletion.Location = new System.Drawing.Point(7, 122);
+            this.job2PointsUntilCompletion.Location = new System.Drawing.Point(7, 130);
             this.job2PointsUntilCompletion.Name = "job2PointsUntilCompletion";
             this.job2PointsUntilCompletion.Size = new System.Drawing.Size(174, 19);
             this.job2PointsUntilCompletion.TabIndex = 5;
@@ -590,7 +606,7 @@
             // job2MoneyPayout
             // 
             this.job2MoneyPayout.AutoSize = true;
-            this.job2MoneyPayout.Location = new System.Drawing.Point(7, 103);
+            this.job2MoneyPayout.Location = new System.Drawing.Point(7, 109);
             this.job2MoneyPayout.Name = "job2MoneyPayout";
             this.job2MoneyPayout.Size = new System.Drawing.Size(118, 19);
             this.job2MoneyPayout.TabIndex = 4;
@@ -599,7 +615,7 @@
             // job2IPPayout
             // 
             this.job2IPPayout.AutoSize = true;
-            this.job2IPPayout.Location = new System.Drawing.Point(7, 84);
+            this.job2IPPayout.Location = new System.Drawing.Point(7, 88);
             this.job2IPPayout.Name = "job2IPPayout";
             this.job2IPPayout.Size = new System.Drawing.Size(81, 19);
             this.job2IPPayout.TabIndex = 3;
@@ -608,7 +624,7 @@
             // job2BaselineScore
             // 
             this.job2BaselineScore.AutoSize = true;
-            this.job2BaselineScore.Location = new System.Drawing.Point(7, 65);
+            this.job2BaselineScore.Location = new System.Drawing.Point(7, 67);
             this.job2BaselineScore.Name = "job2BaselineScore";
             this.job2BaselineScore.Size = new System.Drawing.Size(115, 19);
             this.job2BaselineScore.TabIndex = 2;
@@ -636,6 +652,7 @@
             // 
             // gbJob1
             // 
+            this.gbJob1.Controls.Add(this.job1WeeksToComplete);
             this.gbJob1.Controls.Add(this.btnAcceptJob1);
             this.gbJob1.Controls.Add(this.job1PointsUntilCompletion);
             this.gbJob1.Controls.Add(this.job1MoneyPayout);
@@ -645,7 +662,7 @@
             this.gbJob1.Controls.Add(this.job1Title);
             this.gbJob1.Location = new System.Drawing.Point(15, 7);
             this.gbJob1.Name = "gbJob1";
-            this.gbJob1.Size = new System.Drawing.Size(300, 200);
+            this.gbJob1.Size = new System.Drawing.Size(300, 222);
             this.gbJob1.TabIndex = 8;
             this.gbJob1.TabStop = false;
             this.gbJob1.Text = "Job 1";
@@ -655,7 +672,7 @@
             // 
             this.btnAcceptJob1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceptJob1.ForeColor = System.Drawing.Color.White;
-            this.btnAcceptJob1.Location = new System.Drawing.Point(80, 163);
+            this.btnAcceptJob1.Location = new System.Drawing.Point(85, 182);
             this.btnAcceptJob1.Name = "btnAcceptJob1";
             this.btnAcceptJob1.Size = new System.Drawing.Size(117, 31);
             this.btnAcceptJob1.TabIndex = 6;
@@ -719,16 +736,32 @@
             this.job1Title.Text = "Job 1 Title Text";
             this.job1Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblManagerScouting
+            // job1WeeksToComplete
             // 
-            this.lblManagerScouting.AutoSize = true;
-            this.lblManagerScouting.Location = new System.Drawing.Point(82, 122);
-            this.lblManagerScouting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblManagerScouting.Name = "lblManagerScouting";
-            this.lblManagerScouting.Size = new System.Drawing.Size(48, 19);
-            this.lblManagerScouting.TabIndex = 14;
-            this.lblManagerScouting.Text = "SCT: 0";
-            this.toolTipMainForm.SetToolTip(this.lblManagerScouting, "Greed");
+            this.job1WeeksToComplete.AutoSize = true;
+            this.job1WeeksToComplete.Location = new System.Drawing.Point(7, 156);
+            this.job1WeeksToComplete.Name = "job1WeeksToComplete";
+            this.job1WeeksToComplete.Size = new System.Drawing.Size(149, 19);
+            this.job1WeeksToComplete.TabIndex = 7;
+            this.job1WeeksToComplete.Text = "Weeks To Complete:";
+            // 
+            // job2WeeksToComplete
+            // 
+            this.job2WeeksToComplete.AutoSize = true;
+            this.job2WeeksToComplete.Location = new System.Drawing.Point(4, 151);
+            this.job2WeeksToComplete.Name = "job2WeeksToComplete";
+            this.job2WeeksToComplete.Size = new System.Drawing.Size(149, 19);
+            this.job2WeeksToComplete.TabIndex = 8;
+            this.job2WeeksToComplete.Text = "Weeks To Complete:";
+            // 
+            // job3WeeksToComplete
+            // 
+            this.job3WeeksToComplete.AutoSize = true;
+            this.job3WeeksToComplete.Location = new System.Drawing.Point(7, 151);
+            this.job3WeeksToComplete.Name = "job3WeeksToComplete";
+            this.job3WeeksToComplete.Size = new System.Drawing.Size(149, 19);
+            this.job3WeeksToComplete.TabIndex = 9;
+            this.job3WeeksToComplete.Text = "Weeks To Complete:";
             // 
             // MainForm
             // 
@@ -736,8 +769,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
-            this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.freelancePanel);
+            this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.universalAgencyPanel);
             this.Font = new System.Drawing.Font("Century Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -779,10 +812,6 @@
         private System.Windows.Forms.Label lblLicenseList;
         private System.Windows.Forms.Panel universalAgencyPanel;
         private System.Windows.Forms.Panel menuPanel;
-        private System.Windows.Forms.Button btnClients;
-        private System.Windows.Forms.Button btnJobs;
-        private System.Windows.Forms.Button btnManager;
-        private System.Windows.Forms.Button btnOffice;
         private System.Windows.Forms.Panel panelButtonHighlight;
         private System.Windows.Forms.ToolTip toolTipMainForm;
         private System.Windows.Forms.Panel agencyPanel;
@@ -821,6 +850,13 @@
         public System.Windows.Forms.Label lblManagerPower;
         public System.Windows.Forms.ProgressBar jobProgressBar;
         public System.Windows.Forms.Label lblManagerScouting;
+        public System.Windows.Forms.Button btnClients;
+        public System.Windows.Forms.Button btnJobs;
+        public System.Windows.Forms.Button btnManager;
+        public System.Windows.Forms.Button btnOffice;
+        public System.Windows.Forms.Label job3WeeksToComplete;
+        public System.Windows.Forms.Label job2WeeksToComplete;
+        public System.Windows.Forms.Label job1WeeksToComplete;
     }
 }
 

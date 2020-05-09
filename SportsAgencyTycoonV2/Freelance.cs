@@ -19,10 +19,12 @@ namespace SportsAgencyTycoonV2
         List<Control> IPPayouts = new List<Control>();
         List<Control> MoneyPayouts = new List<Control>();
         List<Control> PointsUntilCompletion = new List<Control>();
+        List<Control> WeeksForCompletion = new List<Control>();
         List<Control> AcceptJobButtons = new List<Control>();
         List<Control> GroupBoxes = new List<Control>();
         Timer jobTimer;
         ProgressBar jobProgressBar;
+        FreelanceJob AttemptedJob;
 
         public Freelance(MainForm main, Random r, World w, Agency a)
         {
@@ -60,6 +62,9 @@ namespace SportsAgencyTycoonV2
             PointsUntilCompletion.Add(MainForm.job1PointsUntilCompletion);
             PointsUntilCompletion.Add(MainForm.job2PointsUntilCompletion);
             PointsUntilCompletion.Add(MainForm.job3PointsUntilCompletion);
+            WeeksForCompletion.Add(MainForm.job1WeeksToComplete);
+            WeeksForCompletion.Add(MainForm.job2WeeksToComplete);
+            WeeksForCompletion.Add(MainForm.job3WeeksToComplete);
             AcceptJobButtons.Add(MainForm.btnAcceptJob1);
             AcceptJobButtons.Add(MainForm.btnAcceptJob2);
             AcceptJobButtons.Add(MainForm.btnAcceptJob3);
@@ -73,7 +78,7 @@ namespace SportsAgencyTycoonV2
                     "Do a poor job or bite off more than you can chew and your reputation will spoil. Good luck!");
 
                 agency.FreelanceBefore = true;
-                agency.AddFreelanceJob(new FreelanceJob("Back To School", "Complete a Sports Management Course", JobType.education, 1, 5, 0, 1500));
+                agency.AddFreelanceJob(new FreelanceJob("Back To School", "Complete a Sports Management Course", JobType.education, 1, 5, 0, 4, 1500));
             }
         }
         public void DisplayAvailableJobs()
@@ -96,28 +101,37 @@ namespace SportsAgencyTycoonV2
                 IPPayouts[i].Text = "IP Payout: " + agency.FreelanceJobsAvailable[i].IPPayout.ToString();
                 MoneyPayouts[i].Text = "Money Payout: " + agency.FreelanceJobsAvailable[i].MoneyPayout.ToString();
                 PointsUntilCompletion[i].Text = "Points Until Completion: " + agency.FreelanceJobsAvailable[i].PointsUntilCompletion.ToString();
+                WeeksForCompletion[i].Text = "Weeks For Completion: " + agency.FreelanceJobsAvailable[i].WeeksToComplete.ToString();
                 AcceptJobButtons[i].Enabled = true;
                 GroupBoxes[i].Visible = true;
             }
         }
         public void AttemptJob(FreelanceJob job, Timer timer, ProgressBar progressBar)
         {
+            AttemptedJob = job;
             jobTimer = timer;
             jobProgressBar = progressBar;
-            jobProgressBar.Maximum = job.PointsUntilCompletion;
+            jobProgressBar.Maximum = AttemptedJob.PointsUntilCompletion;
             InitializeMyTimer(jobTimer, jobProgressBar);
-            Console.WriteLine("Attempting " + job.JobName);
-            if (job.JobType == JobType.education)
-            {
-                
-            }
+            Console.WriteLine("Attempting " + AttemptedJob.JobName);
+            Console.WriteLine("Progress Bar Maximum = " + jobProgressBar.Maximum);
+            DisableButtons();
         }
         private void InitializeMyTimer(Timer timer, ProgressBar progressBar)
         {
             // Set the interval for the timer.
-            jobTimer.Interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Intelligence) * 100;
+            if (AttemptedJob.JobType == JobType.education)
+                jobTimer.Interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Intelligence) * 100;
+            else if (AttemptedJob.JobType == JobType.negotiating)
+                jobTimer.Interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Negotiating) * 100;
+            else if (AttemptedJob.JobType == JobType.scouting)
+                jobTimer.Interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Scouting) * 100;
+
+            Console.WriteLine("jobTimer.Interval = " + jobTimer.Interval);
+
             // Connect the Tick event of the timer to its event handler.
-            jobTimer.Tick += new EventHandler(IncreaseProgressBar);
+            jobTimer.Tick += IncreaseProgressBar;
+
             // Start the timer.
             jobTimer.Start();
         }
@@ -125,10 +139,44 @@ namespace SportsAgencyTycoonV2
         {
             // Increment the value of the ProgressBar a value of one each time.
             jobProgressBar.Increment(world.MyAgency.Manager.Intelligence);
+            Console.WriteLine("incremented by " + world.MyAgency.Manager.Intelligence);
             // Determine if we have completed by comparing the value of the Value property to the Maximum value.
-            if (jobProgressBar.Value == jobProgressBar.Maximum)
+            if (jobProgressBar.Value >= jobProgressBar.Maximum)
+            {
                 // Stop the timer.
                 jobTimer.Stop();
+                jobProgressBar.Value = 0;
+
+                // need to remove EventHandler or reset it somehow
+
+                // Get agency score for job
+                ScoreJob(AttemptedJob);
+                EnableButtons();
+            }
+        }
+        private void ScoreJob(FreelanceJob job)
+        {
+
+        }
+        private void DisableButtons()
+        {
+            MainForm.btnOffice.Enabled = false;
+            MainForm.btnManager.Enabled = false;
+            MainForm.btnJobs.Enabled = false;
+            MainForm.btnClients.Enabled = false;
+            MainForm.btnAcceptJob1.Enabled = false;
+            MainForm.btnAcceptJob2.Enabled = false;
+            MainForm.btnAcceptJob3.Enabled = false;
+        }
+        private void EnableButtons()
+        {
+            MainForm.btnOffice.Enabled = true;
+            MainForm.btnManager.Enabled = true;
+            MainForm.btnJobs.Enabled = true;
+            MainForm.btnClients.Enabled = true;
+            MainForm.btnAcceptJob1.Enabled = true;
+            MainForm.btnAcceptJob2.Enabled = true;
+            MainForm.btnAcceptJob3.Enabled = true;
         }
     }
 }
