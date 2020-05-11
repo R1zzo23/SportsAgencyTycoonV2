@@ -156,7 +156,44 @@ namespace SportsAgencyTycoonV2
         }
         private void ScoreJob(FreelanceJob job)
         {
+            double baselineScore = job.BaselineJobScore;
+            double jobScore = 10;
+            int agencyTimeToComplete = 1;
+            bool jobDoneInTime;
+            string results;
 
+            if (agencyTimeToComplete <= job.WeeksToComplete)
+                jobDoneInTime = true;
+            else jobDoneInTime = false;
+
+            if (job.JobType == JobType.education)
+            {
+                if (jobDoneInTime) jobScore = rnd.Next(7, 11);
+                else jobScore = rnd.Next(1, 7);
+            }
+
+
+            results = "Baseline Score Needed: " + baselineScore.ToString() + Environment.NewLine
+                + "Agency's Job Score: " + jobScore.ToString() + Environment.NewLine;
+
+            if (jobScore >= baselineScore)
+            {
+                results = results + "SUCCESS!";
+                AwardCompanyPayouts(job);
+            }
+            else
+            {
+                results = results + "JOB FAILED!";
+            }
+
+            world.MyAgency.FreelanceJobsAvailable.Remove(job);
+            DisplayAvailableJobs();
+                
+        }
+        private void AwardCompanyPayouts(FreelanceJob job)
+        {
+            world.MyAgency.AddInfluencePoints(job.IPPayout);
+            world.MyAgency.AddMoney(job.MoneyPayout);
         }
         private void DisableButtons()
         {

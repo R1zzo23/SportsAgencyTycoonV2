@@ -48,7 +48,7 @@ namespace SportsAgencyTycoonV2
         {
             _Money += i;
         }
-        public void AddInfluencePointws(int i)
+        public void AddInfluencePoints(int i)
         {
             _InfluencePoints += i;
         }

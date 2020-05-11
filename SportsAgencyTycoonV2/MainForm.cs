@@ -51,7 +51,7 @@ namespace SportsAgencyTycoonV2
             lblAgencyName.Text = world.MyAgency.Name;
             lblManagerName.Text = world.MyAgency.Manager.FullName;
             UpdateAgencyMoneyLabel();
-            world.MyAgency.AddInfluencePointws(10);
+            world.MyAgency.AddInfluencePoints(10);
             UpdateAgencyInfluencePointsLabel();
             UpdateOfficeInfo();
             UpdateLicenseList();

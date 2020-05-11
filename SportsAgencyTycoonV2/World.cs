@@ -66,7 +66,7 @@ namespace SportsAgencyTycoonV2
             else if (_MyAgency.Licenses.Count == 4)
                 _MyAgency.AddLicense(LicenseOrder[4]);
 
-            _MyAgency.AddInfluencePointws(-NextLicenseCost);
+            _MyAgency.AddInfluencePoints(-NextLicenseCost);
             SetNextLicenseCost();
         }
         public void SetNextLicenseCost()
