@@ -184,8 +184,10 @@ namespace SportsAgencyTycoonV2
             else
             {
                 results = results + "JOB FAILED!";
-            }
+                // knock agency reputation?
 
+            }
+            MessageBox.Show(results);
             world.MyAgency.FreelanceJobsAvailable.Remove(job);
             DisplayAvailableJobs();
                 
