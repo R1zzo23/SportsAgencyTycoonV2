@@ -25,6 +25,7 @@ namespace SportsAgencyTycoonV2
         Timer jobTimer;
         ProgressBar jobProgressBar;
         FreelanceJob AttemptedJob;
+        int interval;
 
         public Freelance(MainForm main, Random r, World w, Agency a)
         {
@@ -121,16 +122,19 @@ namespace SportsAgencyTycoonV2
         {
             // Set the interval for the timer.
             if (AttemptedJob.JobType == JobType.education)
-                jobTimer.Interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Intelligence) * 100;
+                interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Intelligence) * 10;
             else if (AttemptedJob.JobType == JobType.negotiating)
-                jobTimer.Interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Negotiating) * 100;
+                interval = (jobProgressBar.Maximum / ((world.MyAgency.Manager.Negotiating + world.MyAgency.Manager.Intelligence) / 2)) * 10;
             else if (AttemptedJob.JobType == JobType.scouting)
-                jobTimer.Interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Scouting) * 100;
+                interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Scouting) * 10;
+
+            jobTimer.Interval = interval;
 
             Console.WriteLine("jobTimer.Interval = " + jobTimer.Interval);
 
             // Connect the Tick event of the timer to its event handler.
-            jobTimer.Tick += IncreaseProgressBar;
+            AddEvent(IncreaseProgressBar);
+            //jobTimer.Tick += IncreaseProgressBar;
 
             // Start the timer.
             jobTimer.Start();
@@ -138,14 +142,14 @@ namespace SportsAgencyTycoonV2
         private void IncreaseProgressBar(object sender, EventArgs e)
         {
             // Increment the value of the ProgressBar a value of one each time.
-            jobProgressBar.Increment(world.MyAgency.Manager.Intelligence);
-            Console.WriteLine("incremented by " + world.MyAgency.Manager.Intelligence);
+            jobProgressBar.Increment(interval / 10);
             // Determine if we have completed by comparing the value of the Value property to the Maximum value.
             if (jobProgressBar.Value >= jobProgressBar.Maximum)
             {
                 // Stop the timer.
                 jobTimer.Stop();
                 jobProgressBar.Value = 0;
+                RemoveEvent(IncreaseProgressBar);
 
                 // need to remove EventHandler or reset it somehow
 
@@ -170,6 +174,11 @@ namespace SportsAgencyTycoonV2
             {
                 if (jobDoneInTime) jobScore = rnd.Next(7, 11);
                 else jobScore = rnd.Next(1, 7);
+            }
+            else if (job.JobType == JobType.negotiating)
+            {
+                if (jobDoneInTime) jobScore = rnd.Next(6, 11);
+                else jobScore = rnd.Next(1, 6);
             }
 
 
@@ -216,6 +225,15 @@ namespace SportsAgencyTycoonV2
             MainForm.btnAcceptJob1.Enabled = true;
             MainForm.btnAcceptJob2.Enabled = true;
             MainForm.btnAcceptJob3.Enabled = true;
+        }
+        private void AddEvent(EventHandler ev)
+        {
+            jobTimer.Tick += ev;
+        }
+
+        public void RemoveEvent(EventHandler ev)
+        {
+            jobTimer.Tick -= ev;
         }
     }
 }

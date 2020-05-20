@@ -64,7 +64,7 @@ namespace SportsAgencyTycoonV2
         {
             _Licenses.Add(sport);
             if (_Licenses.Count == 1)
-                AddFreelanceJob(new FreelanceJob("Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 2, 25000));
+                AddFreelanceJob(new FreelanceJob("Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 2, 2500));
         }
         public void AddFreelanceJob(FreelanceJob job)
         {
