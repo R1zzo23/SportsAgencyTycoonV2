@@ -19,6 +19,7 @@ namespace SportsAgencyTycoonV2
         public MainForm()
         {
             world = new World(rnd);
+            world.mainForm = this;
             InitializeComponent();
             panelButtonHighlight.Height = btnOffice.Height;
             panelButtonHighlight.Top = btnOffice.Top;
@@ -26,6 +27,7 @@ namespace SportsAgencyTycoonV2
             PopulateManagerAndAgencyInfo();
             PopulateManagerActions();
             freelance = new Freelance(this, rnd, world, world.MyAgency);
+            world.calendar = new Calendar(this, 1, 1, 1);
             toolTipMainForm.SetToolTip(btnManager, "Manager - " + world.MyAgency.Manager.FullName);
             toolTipMainForm.SetToolTip(btnOffice, "Agency - " + world.MyAgency.Name);
             HideAllPanels();

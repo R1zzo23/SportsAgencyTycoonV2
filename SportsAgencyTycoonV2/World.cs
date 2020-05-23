@@ -11,7 +11,10 @@ namespace SportsAgencyTycoonV2
         private Agency _MyAgency;
         private Agent _Manager;
 
+        public MainForm mainForm;
         public Random rnd;
+
+        public Calendar calendar;
 
         public bool RandomLicenseOrder;
         public int NextLicenseCost = 10;
@@ -25,6 +28,7 @@ namespace SportsAgencyTycoonV2
             LicenseOrder.Add(Sport.Baseball);
             LicenseOrder.Add(Sport.Basketball);
             LicenseOrder.Add(Sport.Football);
+            
         }
 
         public Agency MyAgency { get { return _MyAgency; } }

@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agency.cs" />
+    <Compile Include="Calendar.cs" />
     <Compile Include="CreateManagerAndAgency.cs">
       <SubType>Form</SubType>
     </Compile>
