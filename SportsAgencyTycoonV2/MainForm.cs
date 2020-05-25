@@ -16,6 +16,7 @@ namespace SportsAgencyTycoonV2
         World world;
         Freelance freelance;
         public Timer freelanceJobTimer = new Timer();
+        public List<Control> dayMarkers = new List<Control>();
         public MainForm()
         {
             world = new World(rnd);
@@ -31,6 +32,17 @@ namespace SportsAgencyTycoonV2
             toolTipMainForm.SetToolTip(btnManager, "Manager - " + world.MyAgency.Manager.FullName);
             toolTipMainForm.SetToolTip(btnOffice, "Agency - " + world.MyAgency.Name);
             HideAllPanels();
+            AddDayMarkersToList();
+        }
+        private void AddDayMarkersToList()
+        {
+            dayMarkers.Add(pnlDay1);
+            dayMarkers.Add(pnlDay2);
+            dayMarkers.Add(pnlDay3);
+            dayMarkers.Add(pnlDay4);
+            dayMarkers.Add(pnlDay5);
+            dayMarkers.Add(pnlDay6);
+            dayMarkers.Add(pnlDay7);
         }
         public void PopUpStartGameForm()
         {

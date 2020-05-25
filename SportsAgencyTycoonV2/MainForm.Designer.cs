@@ -91,16 +91,17 @@
             this.job1Description = new System.Windows.Forms.Label();
             this.job1Title = new System.Windows.Forms.Label();
             this.calendarPanel = new System.Windows.Forms.Panel();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.lblMonth = new System.Windows.Forms.Label();
-            this.lblWeek = new System.Windows.Forms.Label();
-            this.pnlDay1 = new System.Windows.Forms.Panel();
-            this.pnlDay2 = new System.Windows.Forms.Panel();
-            this.pnlDay3 = new System.Windows.Forms.Panel();
-            this.pnlDay4 = new System.Windows.Forms.Panel();
-            this.pnlDay5 = new System.Windows.Forms.Panel();
-            this.pnlDay6 = new System.Windows.Forms.Panel();
             this.pnlDay7 = new System.Windows.Forms.Panel();
+            this.pnlDay6 = new System.Windows.Forms.Panel();
+            this.pnlDay5 = new System.Windows.Forms.Panel();
+            this.pnlDay4 = new System.Windows.Forms.Panel();
+            this.pnlDay3 = new System.Windows.Forms.Panel();
+            this.pnlDay2 = new System.Windows.Forms.Panel();
+            this.pnlDay1 = new System.Windows.Forms.Panel();
+            this.lblWeek = new System.Windows.Forms.Label();
+            this.lblMonth = new System.Windows.Forms.Label();
+            this.lblYear = new System.Windows.Forms.Label();
+            this.calendarTimer = new System.Windows.Forms.Timer(this.components);
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -791,25 +792,67 @@
             this.calendarPanel.Size = new System.Drawing.Size(88, 67);
             this.calendarPanel.TabIndex = 10;
             // 
-            // lblYear
+            // pnlDay7
             // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(4, 4);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(26, 14);
-            this.lblYear.TabIndex = 0;
-            this.lblYear.Text = "Y: 0";
+            this.pnlDay7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
+            this.pnlDay7.Location = new System.Drawing.Point(53, 2);
+            this.pnlDay7.Name = "pnlDay7";
+            this.pnlDay7.Size = new System.Drawing.Size(8, 8);
+            this.pnlDay7.TabIndex = 15;
+            this.pnlDay7.Visible = false;
             // 
-            // lblMonth
+            // pnlDay6
             // 
-            this.lblMonth.AutoSize = true;
-            this.lblMonth.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonth.Location = new System.Drawing.Point(4, 24);
-            this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(27, 14);
-            this.lblMonth.TabIndex = 1;
-            this.lblMonth.Text = "M: 0";
+            this.pnlDay6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
+            this.pnlDay6.Location = new System.Drawing.Point(53, 11);
+            this.pnlDay6.Name = "pnlDay6";
+            this.pnlDay6.Size = new System.Drawing.Size(8, 8);
+            this.pnlDay6.TabIndex = 14;
+            this.pnlDay6.Visible = false;
+            // 
+            // pnlDay5
+            // 
+            this.pnlDay5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
+            this.pnlDay5.Location = new System.Drawing.Point(53, 20);
+            this.pnlDay5.Name = "pnlDay5";
+            this.pnlDay5.Size = new System.Drawing.Size(8, 8);
+            this.pnlDay5.TabIndex = 13;
+            this.pnlDay5.Visible = false;
+            // 
+            // pnlDay4
+            // 
+            this.pnlDay4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
+            this.pnlDay4.Location = new System.Drawing.Point(53, 29);
+            this.pnlDay4.Name = "pnlDay4";
+            this.pnlDay4.Size = new System.Drawing.Size(8, 8);
+            this.pnlDay4.TabIndex = 12;
+            this.pnlDay4.Visible = false;
+            // 
+            // pnlDay3
+            // 
+            this.pnlDay3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
+            this.pnlDay3.Location = new System.Drawing.Point(53, 38);
+            this.pnlDay3.Name = "pnlDay3";
+            this.pnlDay3.Size = new System.Drawing.Size(8, 8);
+            this.pnlDay3.TabIndex = 11;
+            this.pnlDay3.Visible = false;
+            // 
+            // pnlDay2
+            // 
+            this.pnlDay2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
+            this.pnlDay2.Location = new System.Drawing.Point(53, 47);
+            this.pnlDay2.Name = "pnlDay2";
+            this.pnlDay2.Size = new System.Drawing.Size(8, 8);
+            this.pnlDay2.TabIndex = 10;
+            this.pnlDay2.Visible = false;
+            // 
+            // pnlDay1
+            // 
+            this.pnlDay1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
+            this.pnlDay1.Location = new System.Drawing.Point(53, 56);
+            this.pnlDay1.Name = "pnlDay1";
+            this.pnlDay1.Size = new System.Drawing.Size(8, 8);
+            this.pnlDay1.TabIndex = 9;
             // 
             // lblWeek
             // 
@@ -821,68 +864,25 @@
             this.lblWeek.TabIndex = 2;
             this.lblWeek.Text = "D: 0";
             // 
-            // pnlDay1
+            // lblMonth
             // 
-            this.pnlDay1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
-            this.pnlDay1.Location = new System.Drawing.Point(53, 56);
-            this.pnlDay1.Name = "pnlDay1";
-            this.pnlDay1.Size = new System.Drawing.Size(8, 8);
-            this.pnlDay1.TabIndex = 9;
-            this.pnlDay1.Visible = false;
+            this.lblMonth.AutoSize = true;
+            this.lblMonth.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonth.Location = new System.Drawing.Point(4, 24);
+            this.lblMonth.Name = "lblMonth";
+            this.lblMonth.Size = new System.Drawing.Size(27, 14);
+            this.lblMonth.TabIndex = 1;
+            this.lblMonth.Text = "M: 0";
             // 
-            // pnlDay2
+            // lblYear
             // 
-            this.pnlDay2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
-            this.pnlDay2.Location = new System.Drawing.Point(53, 47);
-            this.pnlDay2.Name = "pnlDay2";
-            this.pnlDay2.Size = new System.Drawing.Size(8, 8);
-            this.pnlDay2.TabIndex = 10;
-            this.pnlDay2.Visible = false;
-            // 
-            // pnlDay3
-            // 
-            this.pnlDay3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
-            this.pnlDay3.Location = new System.Drawing.Point(53, 38);
-            this.pnlDay3.Name = "pnlDay3";
-            this.pnlDay3.Size = new System.Drawing.Size(8, 8);
-            this.pnlDay3.TabIndex = 11;
-            this.pnlDay3.Visible = false;
-            // 
-            // pnlDay4
-            // 
-            this.pnlDay4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
-            this.pnlDay4.Location = new System.Drawing.Point(53, 29);
-            this.pnlDay4.Name = "pnlDay4";
-            this.pnlDay4.Size = new System.Drawing.Size(8, 8);
-            this.pnlDay4.TabIndex = 12;
-            this.pnlDay4.Visible = false;
-            // 
-            // pnlDay5
-            // 
-            this.pnlDay5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
-            this.pnlDay5.Location = new System.Drawing.Point(53, 20);
-            this.pnlDay5.Name = "pnlDay5";
-            this.pnlDay5.Size = new System.Drawing.Size(8, 8);
-            this.pnlDay5.TabIndex = 13;
-            this.pnlDay5.Visible = false;
-            // 
-            // pnlDay6
-            // 
-            this.pnlDay6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
-            this.pnlDay6.Location = new System.Drawing.Point(53, 11);
-            this.pnlDay6.Name = "pnlDay6";
-            this.pnlDay6.Size = new System.Drawing.Size(8, 8);
-            this.pnlDay6.TabIndex = 14;
-            this.pnlDay6.Visible = false;
-            // 
-            // pnlDay7
-            // 
-            this.pnlDay7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
-            this.pnlDay7.Location = new System.Drawing.Point(53, 2);
-            this.pnlDay7.Name = "pnlDay7";
-            this.pnlDay7.Size = new System.Drawing.Size(8, 8);
-            this.pnlDay7.TabIndex = 15;
-            this.pnlDay7.Visible = false;
+            this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.Location = new System.Drawing.Point(4, 4);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(26, 14);
+            this.lblYear.TabIndex = 0;
+            this.lblYear.Text = "Y: 0";
             // 
             // MainForm
             // 
@@ -992,6 +992,7 @@
         public System.Windows.Forms.Label lblMonth;
         public System.Windows.Forms.Label lblYear;
         public System.Windows.Forms.Panel calendarPanel;
+        public System.Windows.Forms.Timer calendarTimer;
     }
 }
 
