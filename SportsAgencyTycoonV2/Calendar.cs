@@ -10,15 +10,17 @@ namespace SportsAgencyTycoonV2
     public class Calendar
     {
         MainForm mainForm;
+        World world;
         int Year;
         int Month;
         int Week;
         int Day;
         Timer calendarTimer;
 
-        public Calendar(MainForm mf, int y, int m, int w)
+        public Calendar(MainForm mf, World W, int y, int m, int w)
         {
             mainForm = mf;
+            world = W;
             Year = y;
             Month = m;
             Week = w;
@@ -35,7 +37,7 @@ namespace SportsAgencyTycoonV2
         private void InitializeMyTimer()
         {
             // Set length for a single day
-            calendarTimer.Interval = 500;
+            calendarTimer.Interval = 1000;
             // Connect the Tick event of the timer to its event handler.
             calendarTimer.Tick += new EventHandler(IncreaseDays);
             // Start the timer.
@@ -78,6 +80,7 @@ namespace SportsAgencyTycoonV2
             }
             //MonthName = (Months)MonthNumber;
             Week = 1;
+            world.MyAgency.PayOfficeMonthlyRent();
         }
         private void SetNewYear()
         {

@@ -28,7 +28,7 @@ namespace SportsAgencyTycoonV2
         }
         public void FillSportComboBox()
         {
-            foreach (Sport s in MyAgency.Licenses)
+            foreach (SportName s in MyAgency.Licenses)
                 cbSelectSport.Items.Add(s.ToString());
         }
 
@@ -41,7 +41,7 @@ namespace SportsAgencyTycoonV2
                 cbSelectArchetype.Items.Add(Archetype.Balanced.ToString());
                 cbSelectArchetype.Items.Add(Archetype.RawAthlete.ToString());
 
-                if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sport.Baseball)
+                if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Baseball)
                 {
                     cbSelectArchetype.Items.Add(Archetype.Flamethrower.ToString());
                     cbSelectArchetype.Items.Add(Archetype.ControlFreak.ToString());
@@ -49,13 +49,13 @@ namespace SportsAgencyTycoonV2
                     cbSelectArchetype.Items.Add(Archetype.ContactHitter.ToString());
                     cbSelectArchetype.Items.Add(Archetype.GoldGlover.ToString());
                 }
-                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sport.Soccer)
+                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Soccer)
                 {
                     cbSelectArchetype.Items.Add(Archetype.Finisher.ToString());
                     cbSelectArchetype.Items.Add(Archetype.TwoWayMidfielder.ToString());
                     cbSelectArchetype.Items.Add(Archetype.PlaymakingDefender.ToString());
                 }
-                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sport.Basketball)
+                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Basketball)
                 {
                     cbSelectArchetype.Items.Add(Archetype.Defender.ToString());
                     cbSelectArchetype.Items.Add(Archetype.Scorer.ToString());
@@ -64,7 +64,7 @@ namespace SportsAgencyTycoonV2
                     cbSelectArchetype.Items.Add(Archetype.ShotBlocker.ToString());
                     cbSelectArchetype.Items.Add(Archetype.ThreePointSpecialist.ToString());
                 }
-                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sport.Football)
+                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Football)
                 {
                     cbSelectArchetype.Items.Add(Archetype.MobileQB.ToString());
                     cbSelectArchetype.Items.Add(Archetype.PowerBack.ToString());
@@ -73,7 +73,7 @@ namespace SportsAgencyTycoonV2
                     cbSelectArchetype.Items.Add(Archetype.ManCorner.ToString());
                     cbSelectArchetype.Items.Add(Archetype.ZoneCorner.ToString());
                 }
-                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sport.Hockey)
+                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Hockey)
                 {
                     cbSelectArchetype.Items.Add(Archetype.PowerForward.ToString());
                     cbSelectArchetype.Items.Add(Archetype.Sniper.ToString());

@@ -18,16 +18,16 @@ namespace SportsAgencyTycoonV2
 
         public bool RandomLicenseOrder;
         public int NextLicenseCost = 10;
-        public List<Sport> LicenseOrder = new List<Sport>();
+        public List<SportName> LicenseOrder = new List<SportName>();
 
         public World(Random r)
         {
             rnd = r;
-            LicenseOrder.Add(Sport.Soccer);
-            LicenseOrder.Add(Sport.Hockey);
-            LicenseOrder.Add(Sport.Baseball);
-            LicenseOrder.Add(Sport.Basketball);
-            LicenseOrder.Add(Sport.Football);
+            LicenseOrder.Add(SportName.Soccer);
+            LicenseOrder.Add(SportName.Hockey);
+            LicenseOrder.Add(SportName.Baseball);
+            LicenseOrder.Add(SportName.Basketball);
+            LicenseOrder.Add(SportName.Football);
             
         }
 
@@ -45,8 +45,8 @@ namespace SportsAgencyTycoonV2
         }
         public void SetLicenseOrder()
         {
-            List<Sport> temp = new List<Sport>();
-            foreach (Sport s in LicenseOrder) temp.Add(s);
+            List<SportName> temp = new List<SportName>();
+            foreach (SportName s in LicenseOrder) temp.Add(s);
 
             LicenseOrder.Clear();
 

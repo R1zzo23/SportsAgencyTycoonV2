@@ -10,7 +10,7 @@ namespace SportsAgencyTycoonV2
 
         private int _Age;
 
-        private Sport _Sport;
+        private SportName _Sport;
         private int _Salary;
         private Archetype _Archetype;
 
@@ -25,7 +25,7 @@ namespace SportsAgencyTycoonV2
 
         public int Age { get { return _Age;  } }
 
-        public Sport Sport { get { return _Sport; } }
+        public SportName Sport { get { return _Sport; } }
         public int Salary { get { return _Salary; } }
         public Archetype Archetype { get { return _Archetype;  } }
 
@@ -33,7 +33,7 @@ namespace SportsAgencyTycoonV2
         public double Stars { get { return _Stars; } }
         public int WorkEthic { get { return _WorkEthic; } }
         #endregion
-        public Player(string firstName, string lastName, Sport sport)
+        public Player(string firstName, string lastName, SportName sport)
         {
             _FirstName = firstName;
             _LastName = lastName;

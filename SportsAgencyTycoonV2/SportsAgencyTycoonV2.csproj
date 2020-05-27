@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="FreelanceJob.cs" />
     <Compile Include="JobType.cs" />
+    <Compile Include="League.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +82,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team.cs" />
     <Compile Include="World.cs" />
     <EmbeddedResource Include="CreateManagerAndAgency.resx">
       <DependentUpon>CreateManagerAndAgency.cs</DependentUpon>
