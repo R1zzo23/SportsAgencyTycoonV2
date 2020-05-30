@@ -26,6 +26,7 @@ namespace SportsAgencyTycoonV2
         ProgressBar jobProgressBar;
         FreelanceJob AttemptedJob;
         int interval;
+        int increment;
 
         public Freelance(MainForm main, Random r, World w, Agency a)
         {
@@ -114,25 +115,57 @@ namespace SportsAgencyTycoonV2
             world.MyAgency.DaysAttemptingJob = 0;
 
             AttemptedJob = job;
+
+            DetermineWhoIsWorkingOnJob(AttemptedJob);
+
             jobTimer = timer;
             jobProgressBar = progressBar;
             jobProgressBar.Maximum = AttemptedJob.PointsUntilCompletion;
+            DetermineIncrement(AttemptedJob);
             InitializeMyTimer(jobTimer, jobProgressBar);
 
             // disable buttons so agency cannot do anything other than this job
             DisableButtons();
         }
+        private void DetermineWhoIsWorkingOnJob(FreelanceJob job)
+        {
+            world.MyAgency.Manager.WorkingOnJob = true;
+            if (world.MyAgency.AgentCount > 0)
+                if (job.JobType == JobType.scouting || job.JobType == JobType.negotiating)
+                {
+                    foreach (Agent a in world.MyAgency.AgentList)
+                        a.WorkingOnJob = true;
+                }
+        }
+        private void DetermineIncrement(FreelanceJob job)
+        {
+            double decimalIncrement = 0;
+            int min = 0;
+            int max = 0;
+
+            if (AttemptedJob.JobType == JobType.education)
+            {
+                min = Convert.ToInt32(Math.Round((Convert.ToDouble(world.MyAgency.Manager.Efficiency) / 100) * Convert.ToDouble(world.MyAgency.Manager.Intelligence)));
+                max = world.MyAgency.Manager.Intelligence;
+            }
+            else if (AttemptedJob.JobType == JobType.negotiating)
+            {
+
+            }
+            else if (AttemptedJob.JobType == JobType.scouting)
+            {
+
+            }
+
+            increment = rnd.Next(min, max + 1);
+            Console.WriteLine("min = " + min.ToString() + ", max = " + max.ToString());
+
+            //decimalIncrement = Math.Round(decimalIncrement);
+            //increment = Convert.ToInt32(decimalIncrement);
+        }
         private void InitializeMyTimer(Timer timer, ProgressBar progressBar)
         {
-            // Set the interval for the timer.
-            if (AttemptedJob.JobType == JobType.education)
-                interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Intelligence) * 10;
-            else if (AttemptedJob.JobType == JobType.negotiating)
-                interval = (jobProgressBar.Maximum / ((world.MyAgency.Manager.Negotiating + world.MyAgency.Manager.Intelligence) / 2)) * 10;
-            else if (AttemptedJob.JobType == JobType.scouting)
-                interval = (jobProgressBar.Maximum / world.MyAgency.Manager.Scouting) * 10;
-
-            jobTimer.Interval = interval;
+            jobTimer.Interval = 1000;
 
             Console.WriteLine("jobTimer.Interval = " + jobTimer.Interval);
 
@@ -146,7 +179,7 @@ namespace SportsAgencyTycoonV2
         private void IncreaseProgressBar(object sender, EventArgs e)
         {
             // Increment the value of the ProgressBar a value of one each time.
-            jobProgressBar.Increment(interval / 10);
+            jobProgressBar.Increment(increment);
             // Determine if we have completed by comparing the value of the Value property to the Maximum value.
             if (jobProgressBar.Value >= jobProgressBar.Maximum)
             {
@@ -154,11 +187,11 @@ namespace SportsAgencyTycoonV2
                 jobTimer.Stop();
                 jobProgressBar.Value = 0;
                 RemoveEvent(IncreaseProgressBar);
-
-                // need to remove EventHandler or reset it somehow
-
+                
                 // Get agency score for job
                 ScoreJob(AttemptedJob);
+                world.MyAgency.AttemptingJob = false;
+                AllEmployeesNotWorking();
                 EnableButtons();
             }
         }
@@ -193,6 +226,9 @@ namespace SportsAgencyTycoonV2
             if (!jobDoneInTime)
             {
                 double penaltyPercentage = (Convert.ToDouble(world.MyAgency.DaysAttemptingJob) - Convert.ToDouble(job.DaysToComplete)) / Convert.ToDouble(job.DaysToComplete);
+
+                Console.WriteLine("Original Job Score: " + jobScore.ToString());
+                
                 jobScore = jobScore * (1 - penaltyPercentage);
 
                 Console.WriteLine("penaltyPercentage = " + penaltyPercentage);
@@ -214,8 +250,16 @@ namespace SportsAgencyTycoonV2
             }
             MessageBox.Show(results);
             world.MyAgency.FreelanceJobsAvailable.Remove(job);
+            AllEmployeesNotWorking();
             DisplayAvailableJobs();
                 
+        }
+        public void AllEmployeesNotWorking()
+        {
+            world.MyAgency.Manager.WorkingOnJob = false;
+            if (world.MyAgency.AgentCount > 0)
+                foreach (Agent a in world.MyAgency.AgentList)
+                    a.WorkingOnJob = false;
         }
         private void AwardCompanyPayouts(FreelanceJob job)
         {

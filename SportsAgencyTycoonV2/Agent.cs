@@ -33,6 +33,8 @@ namespace SportsAgencyTycoonV2
         public int Intelligence { get { return _Intelligence; } }
         public int Scouting { get { return _Scouting; } }
         public int Efficiency { get { return _Efficiency; } }
+        public bool WorkingOnJob;
+        public int DaysWorkingOnJob;
         #endregion
         public Agent(string firstName, string lastName, Role role)
         {
@@ -54,6 +56,8 @@ namespace SportsAgencyTycoonV2
                 _Scouting = 100;
                 _Efficiency = 100;
             }
+            WorkingOnJob = false;
+            DaysWorkingOnJob = 0;
         }
 
         int DetermineSalary()
@@ -71,6 +75,10 @@ namespace SportsAgencyTycoonV2
             mf.lblManagerPower.Text = "POW: " + Power.ToString();
             mf.lblManagerScouting.Text = "SCT: " + Scouting.ToString();
             mf.lblManagerEfficiency.Text = "EFF: " + Efficiency.ToString();
+        }
+        public void AddEfficiency(int i)
+        {
+            _Efficiency += i;
         }
     }
 }

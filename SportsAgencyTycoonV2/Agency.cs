@@ -17,6 +17,7 @@ namespace SportsAgencyTycoonV2
         private int _InfluencePoints;
         private int _AgentCount;
         private int _ClientCount;
+        private List<Agent> _AgentList = new List<Agent>();
         private List<SportName> _Licenses = new List<SportName>();
         private List<FreelanceJob> _FreelanceJobsAvailable = new List<FreelanceJob>();
         #endregion
@@ -29,6 +30,7 @@ namespace SportsAgencyTycoonV2
         public int InfluencePoints { get { return _InfluencePoints; } }
         public int AgentCount { get { return _AgentCount; } }
         public int ClientCount { get { return _ClientCount; } }
+        public List<Agent> AgentList { get { return _AgentList; } }
         public List<SportName> Licenses { get { return _Licenses; } }
         public List<FreelanceJob> FreelanceJobsAvailable {  get { return _FreelanceJobsAvailable;  } }
         public bool FreelanceBefore = false;
@@ -67,7 +69,7 @@ namespace SportsAgencyTycoonV2
         {
             _Licenses.Add(sport);
             if (_Licenses.Count == 1)
-                AddFreelanceJob(new FreelanceJob("Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 14, 2500));
+                AddFreelanceJob(new FreelanceJob("Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 14, 1750));
         }
         public void AddFreelanceJob(FreelanceJob job)
         {
@@ -76,6 +78,35 @@ namespace SportsAgencyTycoonV2
         public void PayOfficeMonthlyRent()
         {
             AddMoney(-Office.MonthlyCost);
+        }
+        public void AddDaysWorking()
+        {
+            Manager.DaysWorkingOnJob++;
+            DetermineIfEfficiencyDrops(Manager);
+            if (AgentCount > 0)
+                foreach (Agent a in AgentList)
+                    if (a.WorkingOnJob)
+                    {
+                        a.DaysWorkingOnJob++;
+                        DetermineIfEfficiencyDrops(a);
+                    }
+        }
+        public void DetermineIfEfficiencyDrops(Agent a)
+        {
+            int daysForDecrease = 0;
+            if (a.Role == Role.Manager)
+            {
+                daysForDecrease = 5;
+            }
+            else daysForDecrease = 3;
+
+            if (a.DaysWorkingOnJob % daysForDecrease == 0)
+            {
+                a.AddEfficiency(-1);
+                a.DaysWorkingOnJob = 0;
+                if (a.Role == Role.Manager)
+                    a.UpdateManagerUI(mainForm);
+            }
         }
     }
 }

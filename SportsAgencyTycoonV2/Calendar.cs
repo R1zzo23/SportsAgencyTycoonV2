@@ -47,7 +47,11 @@ namespace SportsAgencyTycoonV2
         {
             Day++;
             if (world.MyAgency.AttemptingJob)
+            {
                 world.MyAgency.DaysAttemptingJob++;
+                world.MyAgency.AddDaysWorking();
+            }                
+
             if (Day <= 6)
             {
                 mainForm.dayMarkers[Day].Visible = true;
