@@ -14,10 +14,10 @@ namespace SportsAgencyTycoonV2
         public double BaselineJobScore;
         public int IPPayout;
         public int MoneyPayout;
-        public int WeeksToComplete;
+        public int DaysToComplete;
         public int PointsUntilCompletion;
 
-        public FreelanceJob(string jobName, string jobDescription, JobType jobType, double baselineJobScore, int ipPayout, int moneyPayout, int weeksToComplete, int pointsUntilCompletion)
+        public FreelanceJob(string jobName, string jobDescription, JobType jobType, double baselineJobScore, int ipPayout, int moneyPayout, int daysToComplete, int pointsUntilCompletion)
         {
             JobName = jobName;
             JobDescription = jobDescription;
@@ -25,7 +25,7 @@ namespace SportsAgencyTycoonV2
             BaselineJobScore = baselineJobScore;
             IPPayout = ipPayout;
             MoneyPayout = moneyPayout;
-            WeeksToComplete = weeksToComplete;
+            DaysToComplete = daysToComplete;
             PointsUntilCompletion = pointsUntilCompletion;
         }
     }

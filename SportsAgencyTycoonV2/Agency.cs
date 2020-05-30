@@ -32,6 +32,8 @@ namespace SportsAgencyTycoonV2
         public List<SportName> Licenses { get { return _Licenses; } }
         public List<FreelanceJob> FreelanceJobsAvailable {  get { return _FreelanceJobsAvailable;  } }
         public bool FreelanceBefore = false;
+        public bool AttemptingJob;
+        public int DaysAttemptingJob = 0;
         public MainForm mainForm;
         #endregion
 
@@ -41,6 +43,7 @@ namespace SportsAgencyTycoonV2
             _Level = level;
             _InfluencePoints = 0;
             mainForm = mf;
+            AttemptingJob = false;
         }
         public void SetManager(Agent agent)
         {
@@ -64,7 +67,7 @@ namespace SportsAgencyTycoonV2
         {
             _Licenses.Add(sport);
             if (_Licenses.Count == 1)
-                AddFreelanceJob(new FreelanceJob("Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 2, 2500));
+                AddFreelanceJob(new FreelanceJob("Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 14, 2500));
         }
         public void AddFreelanceJob(FreelanceJob job)
         {

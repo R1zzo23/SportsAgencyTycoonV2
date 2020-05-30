@@ -46,6 +46,8 @@ namespace SportsAgencyTycoonV2
         private void IncreaseDays(object sender, EventArgs e)
         {
             Day++;
+            if (world.MyAgency.AttemptingJob)
+                world.MyAgency.DaysAttemptingJob++;
             if (Day <= 6)
             {
                 mainForm.dayMarkers[Day].Visible = true;

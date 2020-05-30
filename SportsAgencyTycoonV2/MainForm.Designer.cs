@@ -64,7 +64,7 @@
             this.freelancePanel = new System.Windows.Forms.Panel();
             this.jobProgressBar = new System.Windows.Forms.ProgressBar();
             this.gbJob3 = new System.Windows.Forms.GroupBox();
-            this.job3WeeksToComplete = new System.Windows.Forms.Label();
+            this.job3DaysToComplete = new System.Windows.Forms.Label();
             this.btnAcceptJob3 = new System.Windows.Forms.Button();
             this.job3PointsUntilCompletion = new System.Windows.Forms.Label();
             this.job3MoneyPayout = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.job3Description = new System.Windows.Forms.Label();
             this.job3Title = new System.Windows.Forms.Label();
             this.gbJob2 = new System.Windows.Forms.GroupBox();
-            this.job2WeeksToComplete = new System.Windows.Forms.Label();
+            this.job2DaysToComplete = new System.Windows.Forms.Label();
             this.btnAcceptJob2 = new System.Windows.Forms.Button();
             this.job2PointsUntilCompletion = new System.Windows.Forms.Label();
             this.job2MoneyPayout = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             this.job2Description = new System.Windows.Forms.Label();
             this.job2Title = new System.Windows.Forms.Label();
             this.gbJob1 = new System.Windows.Forms.GroupBox();
-            this.job1WeeksToComplete = new System.Windows.Forms.Label();
+            this.job1DaysToComplete = new System.Windows.Forms.Label();
             this.btnAcceptJob1 = new System.Windows.Forms.Button();
             this.job1PointsUntilCompletion = new System.Windows.Forms.Label();
             this.job1MoneyPayout = new System.Windows.Forms.Label();
@@ -102,6 +102,7 @@
             this.lblMonth = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
             this.calendarTimer = new System.Windows.Forms.Timer(this.components);
+            this.lblManagerEfficiency = new System.Windows.Forms.Label();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -118,7 +119,7 @@
             // 
             this.btnManagerAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManagerAction.ForeColor = System.Drawing.Color.White;
-            this.btnManagerAction.Location = new System.Drawing.Point(278, 157);
+            this.btnManagerAction.Location = new System.Drawing.Point(279, 110);
             this.btnManagerAction.Margin = new System.Windows.Forms.Padding(4);
             this.btnManagerAction.Name = "btnManagerAction";
             this.btnManagerAction.Size = new System.Drawing.Size(130, 25);
@@ -131,7 +132,7 @@
             // cbManagerActions
             // 
             this.cbManagerActions.FormattingEnabled = true;
-            this.cbManagerActions.Location = new System.Drawing.Point(7, 157);
+            this.cbManagerActions.Location = new System.Drawing.Point(8, 110);
             this.cbManagerActions.Margin = new System.Windows.Forms.Padding(4);
             this.cbManagerActions.Name = "cbManagerActions";
             this.cbManagerActions.Size = new System.Drawing.Size(263, 25);
@@ -352,10 +353,11 @@
             // lblManagerIQ
             // 
             this.lblManagerIQ.AutoSize = true;
+            this.lblManagerIQ.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagerIQ.Location = new System.Drawing.Point(82, 30);
             this.lblManagerIQ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerIQ.Name = "lblManagerIQ";
-            this.lblManagerIQ.Size = new System.Drawing.Size(43, 19);
+            this.lblManagerIQ.Size = new System.Drawing.Size(56, 16);
             this.lblManagerIQ.TabIndex = 13;
             this.lblManagerIQ.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerIQ, "Intelligence");
@@ -363,10 +365,11 @@
             // lblManagerNegotiate
             // 
             this.lblManagerNegotiate.AutoSize = true;
-            this.lblManagerNegotiate.Location = new System.Drawing.Point(82, 53);
+            this.lblManagerNegotiate.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagerNegotiate.Location = new System.Drawing.Point(82, 54);
             this.lblManagerNegotiate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerNegotiate.Name = "lblManagerNegotiate";
-            this.lblManagerNegotiate.Size = new System.Drawing.Size(55, 19);
+            this.lblManagerNegotiate.Size = new System.Drawing.Size(56, 16);
             this.lblManagerNegotiate.TabIndex = 11;
             this.lblManagerNegotiate.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerNegotiate, "Negotiating");
@@ -374,10 +377,11 @@
             // lblManagerGreed
             // 
             this.lblManagerGreed.AutoSize = true;
-            this.lblManagerGreed.Location = new System.Drawing.Point(82, 100);
+            this.lblManagerGreed.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagerGreed.Location = new System.Drawing.Point(170, 30);
             this.lblManagerGreed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerGreed.Name = "lblManagerGreed";
-            this.lblManagerGreed.Size = new System.Drawing.Size(56, 19);
+            this.lblManagerGreed.Size = new System.Drawing.Size(56, 16);
             this.lblManagerGreed.TabIndex = 10;
             this.lblManagerGreed.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerGreed, "Greed");
@@ -385,10 +389,11 @@
             // lblManagerPower
             // 
             this.lblManagerPower.AutoSize = true;
+            this.lblManagerPower.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagerPower.Location = new System.Drawing.Point(82, 78);
             this.lblManagerPower.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerPower.Name = "lblManagerPower";
-            this.lblManagerPower.Size = new System.Drawing.Size(60, 19);
+            this.lblManagerPower.Size = new System.Drawing.Size(56, 16);
             this.lblManagerPower.TabIndex = 12;
             this.lblManagerPower.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerPower, "Power");
@@ -396,16 +401,18 @@
             // lblManagerScouting
             // 
             this.lblManagerScouting.AutoSize = true;
-            this.lblManagerScouting.Location = new System.Drawing.Point(82, 122);
+            this.lblManagerScouting.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagerScouting.Location = new System.Drawing.Point(170, 54);
             this.lblManagerScouting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerScouting.Name = "lblManagerScouting";
-            this.lblManagerScouting.Size = new System.Drawing.Size(48, 19);
+            this.lblManagerScouting.Size = new System.Drawing.Size(56, 16);
             this.lblManagerScouting.TabIndex = 14;
             this.lblManagerScouting.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerScouting, "Greed");
             // 
             // agencyPanel
             // 
+            this.agencyPanel.Controls.Add(this.lblManagerEfficiency);
             this.agencyPanel.Controls.Add(this.lblManagerScouting);
             this.agencyPanel.Controls.Add(this.lblManagerIQ);
             this.agencyPanel.Controls.Add(this.lblManagerNegotiate);
@@ -492,7 +499,7 @@
             // 
             // gbJob3
             // 
-            this.gbJob3.Controls.Add(this.job3WeeksToComplete);
+            this.gbJob3.Controls.Add(this.job3DaysToComplete);
             this.gbJob3.Controls.Add(this.btnAcceptJob3);
             this.gbJob3.Controls.Add(this.job3PointsUntilCompletion);
             this.gbJob3.Controls.Add(this.job3MoneyPayout);
@@ -508,14 +515,14 @@
             this.gbJob3.Text = "Job 1";
             this.gbJob3.Visible = false;
             // 
-            // job3WeeksToComplete
+            // job3DaysToComplete
             // 
-            this.job3WeeksToComplete.AutoSize = true;
-            this.job3WeeksToComplete.Location = new System.Drawing.Point(7, 151);
-            this.job3WeeksToComplete.Name = "job3WeeksToComplete";
-            this.job3WeeksToComplete.Size = new System.Drawing.Size(149, 19);
-            this.job3WeeksToComplete.TabIndex = 9;
-            this.job3WeeksToComplete.Text = "Weeks To Complete:";
+            this.job3DaysToComplete.AutoSize = true;
+            this.job3DaysToComplete.Location = new System.Drawing.Point(7, 151);
+            this.job3DaysToComplete.Name = "job3DaysToComplete";
+            this.job3DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job3DaysToComplete.TabIndex = 9;
+            this.job3DaysToComplete.Text = "Days To Complete:";
             // 
             // btnAcceptJob3
             // 
@@ -587,7 +594,7 @@
             // 
             // gbJob2
             // 
-            this.gbJob2.Controls.Add(this.job2WeeksToComplete);
+            this.gbJob2.Controls.Add(this.job2DaysToComplete);
             this.gbJob2.Controls.Add(this.btnAcceptJob2);
             this.gbJob2.Controls.Add(this.job2PointsUntilCompletion);
             this.gbJob2.Controls.Add(this.job2MoneyPayout);
@@ -603,14 +610,14 @@
             this.gbJob2.Text = "Job 2";
             this.gbJob2.Visible = false;
             // 
-            // job2WeeksToComplete
+            // job2DaysToComplete
             // 
-            this.job2WeeksToComplete.AutoSize = true;
-            this.job2WeeksToComplete.Location = new System.Drawing.Point(4, 151);
-            this.job2WeeksToComplete.Name = "job2WeeksToComplete";
-            this.job2WeeksToComplete.Size = new System.Drawing.Size(149, 19);
-            this.job2WeeksToComplete.TabIndex = 8;
-            this.job2WeeksToComplete.Text = "Weeks To Complete:";
+            this.job2DaysToComplete.AutoSize = true;
+            this.job2DaysToComplete.Location = new System.Drawing.Point(4, 151);
+            this.job2DaysToComplete.Name = "job2DaysToComplete";
+            this.job2DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job2DaysToComplete.TabIndex = 8;
+            this.job2DaysToComplete.Text = "Days To Complete:";
             // 
             // btnAcceptJob2
             // 
@@ -682,7 +689,7 @@
             // 
             // gbJob1
             // 
-            this.gbJob1.Controls.Add(this.job1WeeksToComplete);
+            this.gbJob1.Controls.Add(this.job1DaysToComplete);
             this.gbJob1.Controls.Add(this.btnAcceptJob1);
             this.gbJob1.Controls.Add(this.job1PointsUntilCompletion);
             this.gbJob1.Controls.Add(this.job1MoneyPayout);
@@ -698,14 +705,14 @@
             this.gbJob1.Text = "Job 1";
             this.gbJob1.Visible = false;
             // 
-            // job1WeeksToComplete
+            // job1DaysToComplete
             // 
-            this.job1WeeksToComplete.AutoSize = true;
-            this.job1WeeksToComplete.Location = new System.Drawing.Point(7, 156);
-            this.job1WeeksToComplete.Name = "job1WeeksToComplete";
-            this.job1WeeksToComplete.Size = new System.Drawing.Size(149, 19);
-            this.job1WeeksToComplete.TabIndex = 7;
-            this.job1WeeksToComplete.Text = "Weeks To Complete:";
+            this.job1DaysToComplete.AutoSize = true;
+            this.job1DaysToComplete.Location = new System.Drawing.Point(7, 156);
+            this.job1DaysToComplete.Name = "job1DaysToComplete";
+            this.job1DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job1DaysToComplete.TabIndex = 7;
+            this.job1DaysToComplete.Text = "Days To Complete:";
             // 
             // btnAcceptJob1
             // 
@@ -884,15 +891,27 @@
             this.lblYear.TabIndex = 0;
             this.lblYear.Text = "Y: 0";
             // 
+            // lblManagerEfficiency
+            // 
+            this.lblManagerEfficiency.AutoSize = true;
+            this.lblManagerEfficiency.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagerEfficiency.Location = new System.Drawing.Point(170, 78);
+            this.lblManagerEfficiency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblManagerEfficiency.Name = "lblManagerEfficiency";
+            this.lblManagerEfficiency.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerEfficiency.TabIndex = 15;
+            this.lblManagerEfficiency.Text = "EFF: 0";
+            this.toolTipMainForm.SetToolTip(this.lblManagerEfficiency, "Greed");
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
-            this.Controls.Add(this.calendarPanel);
             this.Controls.Add(this.freelancePanel);
             this.Controls.Add(this.agencyPanel);
+            this.Controls.Add(this.calendarPanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.universalAgencyPanel);
             this.Font = new System.Drawing.Font("Century Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -978,9 +997,9 @@
         public System.Windows.Forms.Button btnJobs;
         public System.Windows.Forms.Button btnManager;
         public System.Windows.Forms.Button btnOffice;
-        public System.Windows.Forms.Label job3WeeksToComplete;
-        public System.Windows.Forms.Label job2WeeksToComplete;
-        public System.Windows.Forms.Label job1WeeksToComplete;
+        public System.Windows.Forms.Label job3DaysToComplete;
+        public System.Windows.Forms.Label job2DaysToComplete;
+        public System.Windows.Forms.Label job1DaysToComplete;
         public System.Windows.Forms.Panel pnlDay7;
         public System.Windows.Forms.Panel pnlDay6;
         public System.Windows.Forms.Panel pnlDay5;
@@ -993,6 +1012,7 @@
         public System.Windows.Forms.Label lblYear;
         public System.Windows.Forms.Panel calendarPanel;
         public System.Windows.Forms.Timer calendarTimer;
+        public System.Windows.Forms.Label lblManagerEfficiency;
     }
 }
 

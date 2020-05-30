@@ -16,6 +16,7 @@ namespace SportsAgencyTycoonV2
         private int _Power;
         private int _Intelligence;
         private int _Scouting;
+        private int _Efficiency;
 
         #endregion
         #region Public Getters
@@ -31,6 +32,7 @@ namespace SportsAgencyTycoonV2
         public int Power { get { return _Power; } }
         public int Intelligence { get { return _Intelligence; } }
         public int Scouting { get { return _Scouting; } }
+        public int Efficiency { get { return _Efficiency; } }
         #endregion
         public Agent(string firstName, string lastName, Role role)
         {
@@ -50,6 +52,7 @@ namespace SportsAgencyTycoonV2
                 _Power = 100;
                 _Intelligence = 100;
                 _Scouting = 100;
+                _Efficiency = 100;
             }
         }
 
@@ -67,6 +70,7 @@ namespace SportsAgencyTycoonV2
             mf.lblManagerNegotiate.Text = "NEG: " + Negotiating.ToString();
             mf.lblManagerPower.Text = "POW: " + Power.ToString();
             mf.lblManagerScouting.Text = "SCT: " + Scouting.ToString();
+            mf.lblManagerEfficiency.Text = "EFF: " + Efficiency.ToString();
         }
     }
 }
