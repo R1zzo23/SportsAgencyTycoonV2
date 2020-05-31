@@ -16,7 +16,8 @@ namespace SportsAgencyTycoonV2
         private int _Power;
         private int _Intelligence;
         private int _Scouting;
-        private int _Efficiency;
+        private int _CurrentEfficiency;
+        private int _MaxEfficiency;
 
         #endregion
         #region Public Getters
@@ -32,11 +33,12 @@ namespace SportsAgencyTycoonV2
         public int Power { get { return _Power; } }
         public int Intelligence { get { return _Intelligence; } }
         public int Scouting { get { return _Scouting; } }
-        public int Efficiency { get { return _Efficiency; } }
+        public int CurrentEfficiency { get { return _CurrentEfficiency; } }
+        public int MaxEfficiency {  get { return _MaxEfficiency; } }
         public bool WorkingOnJob;
         public int DaysWorkingOnJob;
         #endregion
-        public Agent(string firstName, string lastName, Role role)
+        public Agent(string firstName, string lastName, Role role, int greed, int negotiating, int power, int intelligence, int scouting, int efficiency)
         {
             _FirstName = firstName;
             _LastName = lastName;
@@ -54,7 +56,18 @@ namespace SportsAgencyTycoonV2
                 _Power = 100;
                 _Intelligence = 100;
                 _Scouting = 100;
-                _Efficiency = 100;
+                _CurrentEfficiency = 100;
+                _MaxEfficiency = 100;
+            }
+            else
+            {
+                _Greed = greed;
+                _Negotiating = negotiating;
+                _Power = power;
+                _Intelligence = intelligence;
+                _Scouting = scouting;
+                _CurrentEfficiency = efficiency;
+                _MaxEfficiency = efficiency;
             }
             WorkingOnJob = false;
             DaysWorkingOnJob = 0;
@@ -74,11 +87,11 @@ namespace SportsAgencyTycoonV2
             mf.lblManagerNegotiate.Text = "NEG: " + Negotiating.ToString();
             mf.lblManagerPower.Text = "POW: " + Power.ToString();
             mf.lblManagerScouting.Text = "SCT: " + Scouting.ToString();
-            mf.lblManagerEfficiency.Text = "EFF: " + Efficiency.ToString();
+            mf.lblManagerEfficiency.Text = "EFF: " + CurrentEfficiency.ToString();
         }
         public void AddEfficiency(int i)
         {
-            _Efficiency += i;
+            _CurrentEfficiency += i;
         }
     }
 }

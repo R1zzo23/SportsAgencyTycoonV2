@@ -54,7 +54,7 @@ namespace SportsAgencyTycoonV2
             string firstName = startGameForm.FirstName;
             string lastName = startGameForm.LastName;
 
-            Agent manager = new Agent(firstName, lastName, Role.Manager);
+            Agent manager = new Agent(firstName, lastName, Role.Manager, 0, 0, 0, 0, 0, 0);
             world.SetMyAgency(new Agency(this, agencyName, 0));
             world.SetManager(manager);
             world.MyAgency.SetOffice();

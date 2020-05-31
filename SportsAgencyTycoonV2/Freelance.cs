@@ -137,20 +137,29 @@ namespace SportsAgencyTycoonV2
                         a.WorkingOnJob = true;
                 }
         }
-        private void DetermineIncrement(FreelanceJob job)
+        private int DetermineIncrement(FreelanceJob job)
         {
             double decimalIncrement = 0;
             int min = 0;
             int max = 0;
+            
 
             if (AttemptedJob.JobType == JobType.education)
             {
-                min = Convert.ToInt32(Math.Round((Convert.ToDouble(world.MyAgency.Manager.Efficiency) / 100) * Convert.ToDouble(world.MyAgency.Manager.Intelligence)));
+                min = Convert.ToInt32(Math.Round((Convert.ToDouble(world.MyAgency.Manager.CurrentEfficiency) / 100) * Convert.ToDouble(world.MyAgency.Manager.Intelligence)));
                 max = world.MyAgency.Manager.Intelligence;
             }
             else if (AttemptedJob.JobType == JobType.negotiating)
             {
+                min += Convert.ToInt32(Math.Round((Convert.ToDouble(world.MyAgency.Manager.CurrentEfficiency) / 100) * Convert.ToDouble(((world.MyAgency.Manager.Negotiating * 3) + (world.MyAgency.Manager.Power * 2 ) + (world.MyAgency.Manager.Greed)) / 6)));
+                max += ((world.MyAgency.Manager.Negotiating * 3) + (world.MyAgency.Manager.Power * 2) + (world.MyAgency.Manager.Greed)) / 6;
 
+                if (world.MyAgency.AgentList.Count > 0)
+                    foreach (Agent a in world.MyAgency.AgentList)
+                    {
+                        min += Convert.ToInt32(Math.Round((Convert.ToDouble(a.CurrentEfficiency) / 100) * Convert.ToDouble(((a.Negotiating * 3) + (a.Power * 2) + (a.Greed)) / 6)));
+                        max += ((a.Negotiating * 3) + (a.Power * 2) + (a.Greed)) / 6;
+                    }
             }
             else if (AttemptedJob.JobType == JobType.scouting)
             {
@@ -158,7 +167,9 @@ namespace SportsAgencyTycoonV2
             }
 
             increment = rnd.Next(min, max + 1);
-            Console.WriteLine("min = " + min.ToString() + ", max = " + max.ToString());
+            Console.WriteLine("min = " + min.ToString() + ", max = " + max.ToString() + ", Increment = " + increment.ToString());
+
+            return increment;
 
             //decimalIncrement = Math.Round(decimalIncrement);
             //increment = Convert.ToInt32(decimalIncrement);
@@ -179,7 +190,7 @@ namespace SportsAgencyTycoonV2
         private void IncreaseProgressBar(object sender, EventArgs e)
         {
             // Increment the value of the ProgressBar a value of one each time.
-            jobProgressBar.Increment(increment);
+            jobProgressBar.Increment(DetermineIncrement(AttemptedJob));
             // Determine if we have completed by comparing the value of the Value property to the Maximum value.
             if (jobProgressBar.Value >= jobProgressBar.Maximum)
             {

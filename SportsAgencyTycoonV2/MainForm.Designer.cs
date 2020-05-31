@@ -56,6 +56,7 @@
             this.lblManagerGreed = new System.Windows.Forms.Label();
             this.lblManagerPower = new System.Windows.Forms.Label();
             this.lblManagerScouting = new System.Windows.Forms.Label();
+            this.lblManagerEfficiency = new System.Windows.Forms.Label();
             this.agencyPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.agencyImageLarge = new System.Windows.Forms.PictureBox();
@@ -102,7 +103,6 @@
             this.lblMonth = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
             this.calendarTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblManagerEfficiency = new System.Windows.Forms.Label();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -409,6 +409,18 @@
             this.lblManagerScouting.TabIndex = 14;
             this.lblManagerScouting.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerScouting, "Greed");
+            // 
+            // lblManagerEfficiency
+            // 
+            this.lblManagerEfficiency.AutoSize = true;
+            this.lblManagerEfficiency.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagerEfficiency.Location = new System.Drawing.Point(170, 78);
+            this.lblManagerEfficiency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblManagerEfficiency.Name = "lblManagerEfficiency";
+            this.lblManagerEfficiency.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerEfficiency.TabIndex = 15;
+            this.lblManagerEfficiency.Text = "EFF: 0";
+            this.toolTipMainForm.SetToolTip(this.lblManagerEfficiency, "Greed");
             // 
             // agencyPanel
             // 
@@ -891,26 +903,14 @@
             this.lblYear.TabIndex = 0;
             this.lblYear.Text = "Y: 0";
             // 
-            // lblManagerEfficiency
-            // 
-            this.lblManagerEfficiency.AutoSize = true;
-            this.lblManagerEfficiency.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManagerEfficiency.Location = new System.Drawing.Point(170, 78);
-            this.lblManagerEfficiency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblManagerEfficiency.Name = "lblManagerEfficiency";
-            this.lblManagerEfficiency.Size = new System.Drawing.Size(56, 16);
-            this.lblManagerEfficiency.TabIndex = 15;
-            this.lblManagerEfficiency.Text = "EFF: 0";
-            this.toolTipMainForm.SetToolTip(this.lblManagerEfficiency, "Greed");
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
-            this.Controls.Add(this.freelancePanel);
             this.Controls.Add(this.agencyPanel);
+            this.Controls.Add(this.freelancePanel);
             this.Controls.Add(this.calendarPanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.universalAgencyPanel);
