@@ -33,6 +33,7 @@ namespace SportsAgencyTycoonV2
             toolTipMainForm.SetToolTip(btnOffice, "Agency - " + world.MyAgency.Name);
             HideAllPanels();
             AddDayMarkersToList();
+            UpdateOfficeInfo();
         }
         private void AddDayMarkersToList()
         {
@@ -93,7 +94,7 @@ namespace SportsAgencyTycoonV2
             lblOfficeLevel.Text = "Office Level: " + world.MyAgency.Office.Level.ToString();
             lblPurchaseCost.Text = "Purchase Cost: " + world.MyAgency.Office.PurchaseCost.ToString("C0");
             lblMonthlyCost.Text = "Monthly Cost: " + world.MyAgency.Office.MonthlyCost.ToString("C0");
-            lblEmployeeCapacity.Text = "Employee Capacity: " + (world.MyAgency.ClientCount + 1) + "/" + world.MyAgency.Office.EmployeeCapacity.ToString();
+            lblEmployeeCapacity.Text = "Employee Capacity: " + (world.MyAgency.AgentCount + 1) + "/" + world.MyAgency.Office.EmployeeCapacity.ToString();
         }
         public void UpdateLicenseList()
         {

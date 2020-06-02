@@ -1,0 +1,30 @@
+﻿Things To Work On:
+- scoring all FreelanceJobs
+- scouting job yields actual player
+- increasing efficiency over time/when taking a break
+- agents earning XP via jobs
+
+New Things To Add:
+- acquiring player to become client costs IP
+  + IP will be based on a broad scouting system's evaluation of a player
+  + agency can scout player on their own (for money) to get a better feel for player's ability
+    = allows for agency to try to find an underrated player for under market price
+- negotiations for your own client to be automated?
+  + pick a focus: money, title contender, playing time, exposure for marketing or balanced
+  + deal gets finalized IF there is a team willing to take player on
+  + calculate players happiness with team and agency after deal is finalized
+- different size agencies across the world
+- agencies hold market share for each sport?
+- after finishing scouting job, you have choice to 
+    steal player for yourself but risk ruining repuation 
+    with company that offered you the job
+- player demands (top tier players demanding private jets, etc.)
+- player training
+
+Things To Add From v1 Of Game:
+- creating teams and players
+- simulating games/seasons/events for golf and tennis
+- awards
+- drafts
+- Agency calling GM for player
+- loan system if out of money

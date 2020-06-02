@@ -131,6 +131,7 @@
     <Content Include="Images\office.png" />
     <Content Include="Images\manager.png" />
     <Content Include="Images\team.png" />
+    <Content Include="_GameIdeas.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

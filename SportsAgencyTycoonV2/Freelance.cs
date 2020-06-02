@@ -139,7 +139,6 @@ namespace SportsAgencyTycoonV2
         }
         private int DetermineIncrement(FreelanceJob job)
         {
-            double decimalIncrement = 0;
             int min = 0;
             int max = 0;
             
@@ -163,16 +162,19 @@ namespace SportsAgencyTycoonV2
             }
             else if (AttemptedJob.JobType == JobType.scouting)
             {
-
+                min += Convert.ToInt32(Math.Round((Convert.ToDouble(world.MyAgency.Manager.CurrentEfficiency) / 100) * Convert.ToDouble(((world.MyAgency.Manager.Scouting * 9) + (world.MyAgency.Manager.Intelligence)) / 10)));
+                max += ((world.MyAgency.Manager.Scouting * 9) + (world.MyAgency.Manager.Intelligence)) / 10;
+                foreach (Agent a in world.MyAgency.AgentList)
+                {
+                    min += Convert.ToInt32(Math.Round((Convert.ToDouble(a.CurrentEfficiency) / 100) * Convert.ToDouble(((a.Scouting * 9) + (a.Intelligence)) / 10)));
+                    max += ((a.Scouting * 9) + (a.Intelligence)) / 10;
+                }
             }
 
             increment = rnd.Next(min, max + 1);
             Console.WriteLine("min = " + min.ToString() + ", max = " + max.ToString() + ", Increment = " + increment.ToString());
 
             return increment;
-
-            //decimalIncrement = Math.Round(decimalIncrement);
-            //increment = Convert.ToInt32(decimalIncrement);
         }
         private void InitializeMyTimer(Timer timer, ProgressBar progressBar)
         {

@@ -46,7 +46,14 @@ namespace SportsAgencyTycoonV2
             _InfluencePoints = 0;
             mainForm = mf;
             AttemptingJob = false;
-            AgentList.Add(new Agent("Rose", "Rizzo", Role.Agent, 150, 50, 75, 110, 10, 80));
+            _AgentList.Add(new Agent("Rose", "Rizzo", Role.Agent, 150, 50, 75, 110, 10, 80));
+            _AgentCount = _AgentList.Count;
+        }
+        public void AddAgent(Agent a)
+        {
+            _AgentList.Add(a);
+            _AgentCount = _AgentList.Count;
+            mainForm.UpdateOfficeInfo();
         }
         public void SetManager(Agent agent)
         {
@@ -70,7 +77,10 @@ namespace SportsAgencyTycoonV2
         {
             _Licenses.Add(sport);
             if (_Licenses.Count == 1)
+            {
                 AddFreelanceJob(new FreelanceJob("Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 14, 1750));
+                AddFreelanceJob(new FreelanceJob("Diamond In The Rough", "Scout your first unsigned player.", JobType.scouting, 7, 5, 0, 28, 3500));
+            }
         }
         public void AddFreelanceJob(FreelanceJob job)
         {
