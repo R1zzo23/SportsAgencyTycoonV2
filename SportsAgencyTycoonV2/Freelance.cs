@@ -223,8 +223,7 @@ namespace SportsAgencyTycoonV2
 
             if (job.JobType == JobType.education)
             {
-                if (jobDoneInTime) jobScore = rnd.Next(7, 11);
-                else jobScore = rnd.Next(1, 7);
+                jobScore = 10;
             }
             else if (job.JobType == JobType.negotiating)
             {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SportsAgencyTycoonV2
 {
@@ -47,6 +48,7 @@ namespace SportsAgencyTycoonV2
             mainForm = mf;
             AttemptingJob = false;
             _AgentList.Add(new Agent("Rose", "Rizzo", Role.Agent, 150, 50, 75, 110, 10, 80));
+            _AgentList.Add(new Agent("Sylvia", "Rizzo", Role.Agent, 175, 85, 150, 210, 90, 100));
             _AgentCount = _AgentList.Count;
         }
         public void AddAgent(Agent a)
@@ -117,6 +119,25 @@ namespace SportsAgencyTycoonV2
                 a.DaysWorkingOnJob = 0;
                 if (a.Role == Role.Manager)
                     a.UpdateManagerUI(mainForm);
+            }
+        }
+        public void DisplayAllAgents()
+        {
+            foreach (Control c in mainForm.agentGroupBoxes)
+                c.Visible = false;
+            if (AgentList.Count > 0)
+            {
+                for (int i = 0; i < AgentList.Count; i++)
+                {
+                    mainForm.agentGroupBoxes[i].Visible = true;
+                    mainForm.agentNames[i].Text = AgentList[i].FullName;
+                    mainForm.agentIntelligences[i].Text = "INT: " + AgentList[i].Intelligence.ToString();
+                    mainForm.agentGreeds[i].Text = "GRD: " + AgentList[i].Greed.ToString();
+                    mainForm.agentNegotiations[i].Text = "NEG: " + AgentList[i].Negotiating.ToString();
+                    mainForm.agentScoutings[i].Text = "SCT: " + AgentList[i].Scouting.ToString();
+                    mainForm.agentPowers[i].Text = "POW: " + AgentList[i].Power.ToString();
+                    mainForm.agentEfficiencies[i].Text = "EFF: " + AgentList[i].CurrentEfficiency.ToString() + "/" + AgentList[i].MaxEfficiency.ToString();
+                }
             }
         }
     }

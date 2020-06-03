@@ -17,6 +17,14 @@ namespace SportsAgencyTycoonV2
         Freelance freelance;
         public Timer freelanceJobTimer = new Timer();
         public List<Control> dayMarkers = new List<Control>();
+        public List<Control> agentNames = new List<Control>();
+        public List<Control> agentGreeds = new List<Control>();
+        public List<Control> agentNegotiations = new List<Control>();
+        public List<Control> agentScoutings = new List<Control>();
+        public List<Control> agentPowers = new List<Control>();
+        public List<Control> agentEfficiencies = new List<Control>();
+        public List<Control> agentIntelligences = new List<Control>();
+        public List<Control> agentGroupBoxes = new List<Control>();
         public MainForm()
         {
             world = new World(rnd);
@@ -33,7 +41,35 @@ namespace SportsAgencyTycoonV2
             toolTipMainForm.SetToolTip(btnOffice, "Agency - " + world.MyAgency.Name);
             HideAllPanels();
             AddDayMarkersToList();
+            AddAgentLabelsToList();
             UpdateOfficeInfo();
+        }
+        private void AddAgentLabelsToList()
+        {
+            agentGroupBoxes.Add(gbAgent1);
+            agentGroupBoxes.Add(gbAgent2);
+            agentGroupBoxes.Add(gbAgent3);
+            agentNames.Add(lblAgent1Name);
+            agentNames.Add(lblAgent2Name);
+            agentNames.Add(lblAgent3Name);
+            agentNegotiations.Add(lblAgent1NEG);
+            agentNegotiations.Add(lblAgent2NEG);
+            agentNegotiations.Add(lblAgent3NEG);
+            agentGreeds.Add(lblAgent1GRD);
+            agentGreeds.Add(lblAgent2GRD);
+            agentGreeds.Add(lblAgent3GRD);
+            agentScoutings.Add(lblAgent1SCT);
+            agentScoutings.Add(lblAgent2SCT);
+            agentScoutings.Add(lblAgent3SCT);
+            agentPowers.Add(lblAgent1POW);
+            agentPowers.Add(lblAgent2POW);
+            agentPowers.Add(lblAgent3POW);
+            agentEfficiencies.Add(lblAgent1EFF);
+            agentEfficiencies.Add(lblAgent2EFF);
+            agentEfficiencies.Add(lblAgent3EFF);
+            agentIntelligences.Add(lblAgent1INT);
+            agentIntelligences.Add(lblAgent2INT);
+            agentIntelligences.Add(lblAgent3INT);
         }
         private void AddDayMarkersToList()
         {
@@ -66,7 +102,7 @@ namespace SportsAgencyTycoonV2
             lblAgencyName.Text = world.MyAgency.Name;
             lblManagerName.Text = world.MyAgency.Manager.FullName;
             UpdateAgencyMoneyLabel();
-            world.MyAgency.AddInfluencePoints(10);
+            world.MyAgency.AddInfluencePoints(1000);
             UpdateAgencyInfluencePointsLabel();
             UpdateOfficeInfo();
             UpdateLicenseList();
@@ -155,6 +191,7 @@ namespace SportsAgencyTycoonV2
             panelButtonHighlight.Top = btnOffice.Top;
             HideAllPanels();
             agencyPanel.Visible = true;
+            world.MyAgency.DisplayAllAgents();
         }
 
         private void btnManager_Click(object sender, EventArgs e)

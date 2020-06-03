@@ -35,6 +35,7 @@ namespace SportsAgencyTycoonV2
         public int Scouting { get { return _Scouting; } }
         public int CurrentEfficiency { get { return _CurrentEfficiency; } }
         public int MaxEfficiency {  get { return _MaxEfficiency; } }
+
         public bool WorkingOnJob;
         public int DaysWorkingOnJob;
         #endregion
