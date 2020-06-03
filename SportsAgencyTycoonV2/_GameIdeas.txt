@@ -1,5 +1,6 @@
 ﻿Things To Work On:
 - scoring all FreelanceJobs
+  + cannot score SCOUTING jobs until I create scouting function for agency
 - scouting job yields actual player
 - increasing efficiency over time/when taking a break
 - agents earning XP via jobs

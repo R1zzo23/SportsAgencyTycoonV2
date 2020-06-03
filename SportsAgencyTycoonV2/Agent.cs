@@ -73,7 +73,10 @@ namespace SportsAgencyTycoonV2
             WorkingOnJob = false;
             DaysWorkingOnJob = 0;
         }
-
+        public void SetCurrentEfficiency(int i)
+        {
+            _CurrentEfficiency = i;
+        }
         int DetermineSalary()
         {
             int salary = 0;
