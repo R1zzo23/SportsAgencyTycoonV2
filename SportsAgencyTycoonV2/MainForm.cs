@@ -139,7 +139,7 @@ namespace SportsAgencyTycoonV2
                 lblLicenseList.Text += "none";
             else
             {
-                foreach (SportName s in world.MyAgency.Licenses)
+                foreach (Sports s in world.MyAgency.Licenses)
                     lblLicenseList.Text += Environment.NewLine + s.ToString();
             }
         }

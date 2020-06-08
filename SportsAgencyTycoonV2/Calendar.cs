@@ -11,10 +11,10 @@ namespace SportsAgencyTycoonV2
     {
         MainForm mainForm;
         World world;
-        int Year;
-        int Month;
-        int Week;
-        int Day;
+        public int Year;
+        public int Month;
+        public int Week;
+        public int Day;
         Timer calendarTimer;
 
         public Calendar(MainForm mf, World W, int y, int m, int w)

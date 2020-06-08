@@ -28,7 +28,7 @@ namespace SportsAgencyTycoonV2
         }
         public void FillSportComboBox()
         {
-            foreach (SportName s in MyAgency.Licenses)
+            foreach (Sports s in MyAgency.Licenses)
                 cbSelectSport.Items.Add(s.ToString());
         }
 
@@ -41,7 +41,7 @@ namespace SportsAgencyTycoonV2
                 cbSelectArchetype.Items.Add(Archetype.Balanced.ToString());
                 cbSelectArchetype.Items.Add(Archetype.RawAthlete.ToString());
 
-                if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Baseball)
+                if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sports.Baseball)
                 {
                     cbSelectArchetype.Items.Add(Archetype.Flamethrower.ToString());
                     cbSelectArchetype.Items.Add(Archetype.ControlFreak.ToString());
@@ -49,13 +49,13 @@ namespace SportsAgencyTycoonV2
                     cbSelectArchetype.Items.Add(Archetype.ContactHitter.ToString());
                     cbSelectArchetype.Items.Add(Archetype.GoldGlover.ToString());
                 }
-                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Soccer)
+                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sports.Soccer)
                 {
                     cbSelectArchetype.Items.Add(Archetype.Finisher.ToString());
                     cbSelectArchetype.Items.Add(Archetype.TwoWayMidfielder.ToString());
                     cbSelectArchetype.Items.Add(Archetype.PlaymakingDefender.ToString());
                 }
-                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Basketball)
+                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sports.Basketball)
                 {
                     cbSelectArchetype.Items.Add(Archetype.Defender.ToString());
                     cbSelectArchetype.Items.Add(Archetype.Scorer.ToString());
@@ -64,7 +64,7 @@ namespace SportsAgencyTycoonV2
                     cbSelectArchetype.Items.Add(Archetype.ShotBlocker.ToString());
                     cbSelectArchetype.Items.Add(Archetype.ThreePointSpecialist.ToString());
                 }
-                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Football)
+                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sports.Football)
                 {
                     cbSelectArchetype.Items.Add(Archetype.MobileQB.ToString());
                     cbSelectArchetype.Items.Add(Archetype.PowerBack.ToString());
@@ -73,7 +73,7 @@ namespace SportsAgencyTycoonV2
                     cbSelectArchetype.Items.Add(Archetype.ManCorner.ToString());
                     cbSelectArchetype.Items.Add(Archetype.ZoneCorner.ToString());
                 }
-                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == SportName.Hockey)
+                else if (MyAgency.Licenses[cbSelectSport.SelectedIndex] == Sports.Hockey)
                 {
                     cbSelectArchetype.Items.Add(Archetype.PowerForward.ToString());
                     cbSelectArchetype.Items.Add(Archetype.Sniper.ToString());
@@ -121,8 +121,8 @@ namespace SportsAgencyTycoonV2
         private void searchTimer_Tick(object sender, EventArgs e)
         {
             Console.WriteLine("Another player found!");
-            FindPlayer();
-            DisplayList();
+            //FindPlayer();
+            //DisplayList();
             searchProgressBar.Value = 0;
         }
 
@@ -132,7 +132,7 @@ namespace SportsAgencyTycoonV2
             lblSearching.Text = "Searching: No";
         }
 
-        private void FindPlayer()
+        /*private void FindPlayer()
         {
             Player player = new Player("First", "Last", MyAgency.Licenses[cbSelectSport.SelectedIndex]);
             Enum.TryParse(cbSelectArchetype.Text, out Archetype a);
@@ -156,7 +156,7 @@ namespace SportsAgencyTycoonV2
             {
                 lblSearchResults.Text += "Name: " + p.FullName + ", Archetype: " + p.Archetype.ToString() + ", Stars: " + p.Stars.ToString() + ", Skill: " + p.Skill.ToString() + ", Work Ethic: " + p.WorkEthic.ToString() + Environment.NewLine;
             }
-        }
+        }*/
 
         
 

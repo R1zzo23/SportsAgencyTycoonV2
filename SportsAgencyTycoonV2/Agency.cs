@@ -19,7 +19,7 @@ namespace SportsAgencyTycoonV2
         private int _AgentCount;
         private int _ClientCount;
         private List<Agent> _AgentList = new List<Agent>();
-        private List<SportName> _Licenses = new List<SportName>();
+        private List<Sports> _Licenses = new List<Sports>();
         private List<FreelanceJob> _FreelanceJobsAvailable = new List<FreelanceJob>();
         #endregion
         #region Public Getters
@@ -32,7 +32,7 @@ namespace SportsAgencyTycoonV2
         public int AgentCount { get { return _AgentCount; } }
         public int ClientCount { get { return _ClientCount; } }
         public List<Agent> AgentList { get { return _AgentList; } }
-        public List<SportName> Licenses { get { return _Licenses; } }
+        public List<Sports> Licenses { get { return _Licenses; } }
         public List<FreelanceJob> FreelanceJobsAvailable {  get { return _FreelanceJobsAvailable;  } }
         public bool FreelanceBefore = false;
         public bool AttemptingJob;
@@ -77,7 +77,7 @@ namespace SportsAgencyTycoonV2
         {
             _Office = new Office(1, 0, 2500, 1);
         }
-        public void AddLicense(SportName sport)
+        public void AddLicense(Sports sport)
         {
             _Licenses.Add(sport);
             if (_Licenses.Count == 1)
