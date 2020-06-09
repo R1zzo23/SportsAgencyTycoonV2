@@ -52,8 +52,10 @@
     <Compile Include="Agency.cs" />
     <Compile Include="Award.cs" />
     <Compile Include="Baseball.cs" />
+    <Compile Include="BaseballDraft.cs" />
     <Compile Include="BaseballPlayer.cs" />
     <Compile Include="Basketball.cs" />
+    <Compile Include="BasketballDraft.cs" />
     <Compile Include="BasketballPlayer.cs" />
     <Compile Include="Calendar.cs" />
     <Compile Include="CalendarEvent.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="EventCalendar.cs" />
     <Compile Include="FirstName.cs" />
     <Compile Include="Football.cs" />
+    <Compile Include="FootballDraft.cs" />
     <Compile Include="FootballPlayer.cs" />
     <Compile Include="Freelance.cs" />
     <Compile Include="FreelanceForm.cs">
@@ -84,6 +87,7 @@
     <Compile Include="GenomeDescription.cs" />
     <Compile Include="HappinessDescription.cs" />
     <Compile Include="Hockey.cs" />
+    <Compile Include="HockeyDraft.cs" />
     <Compile Include="HockeyPlayer.cs" />
     <Compile Include="Interaction.cs" />
     <Compile Include="JobType.cs" />
@@ -113,9 +117,11 @@
     <Compile Include="RelationshipWithPlayer.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="Soccer.cs" />
+    <Compile Include="SoccerDraft.cs" />
     <Compile Include="SoccerPlayer.cs" />
     <Compile Include="Team.cs" />
     <Compile Include="World.cs" />
+    <Compile Include="WorldPanelFunctions.cs" />
     <EmbeddedResource Include="CreateManagerAndAgency.resx">
       <DependentUpon>CreateManagerAndAgency.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +169,7 @@
     <Content Include="Images\office.png" />
     <Content Include="Images\manager.png" />
     <Content Include="Images\team.png" />
+    <Content Include="Images\world.png" />
     <Content Include="_GameIdeas.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

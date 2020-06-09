@@ -110,6 +110,19 @@ namespace SportsAgencyTycoonV2
         }
         #endregion
 
+        public void InitializeWorld()
+        {
+            CreateLeaguesAssociationEventsPlayersAndTeams();
+            //NerfFreeAgentsToStart();
+            Basketball = new Basketball(mainForm, rnd, this, NBA);
+            Baseball = new Baseball(mainForm, rnd, this, MLB);
+            Football = new Football(mainForm, rnd, this, NFL);
+            Hockey = new Hockey(mainForm, rnd, this, NHL);
+            Soccer = new Soccer(mainForm, rnd, this, MLS);
+            //CreateGlobalAchievements();
+            //CreateTeamRelationships(MyAgency.Manager);
+        }
+
         #region Create Leagues & Associations
         public void CreateLeaguesAssociationEventsPlayersAndTeams()
         {

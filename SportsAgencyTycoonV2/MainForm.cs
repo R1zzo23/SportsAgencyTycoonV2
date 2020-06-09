@@ -25,6 +25,8 @@ namespace SportsAgencyTycoonV2
         public List<Control> agentEfficiencies = new List<Control>();
         public List<Control> agentIntelligences = new List<Control>();
         public List<Control> agentGroupBoxes = new List<Control>();
+
+        public WorldPanelFunctions worldPanelFunctions;
         public MainForm()
         {
             world = new World(rnd);
@@ -43,6 +45,8 @@ namespace SportsAgencyTycoonV2
             AddDayMarkersToList();
             AddAgentLabelsToList();
             UpdateOfficeInfo();
+            world.InitializeWorld();
+            worldPanelFunctions = new WorldPanelFunctions(this, world);
         }
         private void AddAgentLabelsToList()
         {
@@ -216,11 +220,24 @@ namespace SportsAgencyTycoonV2
             panelButtonHighlight.Top = btnClients.Top;
             HideAllPanels();
         }
+        private void btnWorld_Click(object sender, EventArgs e)
+        {
+            panelButtonHighlight.Height = btnWorld.Height;
+            panelButtonHighlight.Top = btnWorld.Top;
+            HideAllPanels();
+            worldPanel.Visible = true;
+            worldPanelFunctions.PopulateLeagues();
+        }
+        private void cbLeagues_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            worldPanelFunctions.LeagueSelected();
+        }
 
         private void HideAllPanels()
         {
             agencyPanel.Visible = false;
             freelancePanel.Visible = false;
+            worldPanel.Visible = false;
         }
 
         private void btnAcceptJob1_Click(object sender, EventArgs e)
