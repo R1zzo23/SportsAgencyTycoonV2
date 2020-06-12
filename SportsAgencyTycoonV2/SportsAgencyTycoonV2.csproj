@@ -142,6 +142,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -162,12 +163,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\baseball.png" />
+    <Content Include="Images\basketball.png" />
     <Content Include="Images\clients.png" />
+    <Content Include="Images\football.png" />
+    <Content Include="Images\hockey.png" />
     <Content Include="Images\house.png" />
     <Content Include="Images\house_large.png" />
     <Content Include="Images\job.png" />
     <Content Include="Images\office.png" />
     <Content Include="Images\manager.png" />
+    <Content Include="Images\soccer.png" />
     <Content Include="Images\team.png" />
     <Content Include="Images\world.png" />
     <Content Include="_GameIdeas.txt" />
