@@ -192,7 +192,7 @@ namespace SportsAgencyTycoonV2
                 for (int j = 1; j < DraftOrder.Count + 1; j++)
                 {
                     // team selects player to draft
-                    Player draftedPlayer = DraftOrder[j].DraftPlayer(rnd, league.DraftEntrants, league.Sport, rounds, j, i);
+                    Player draftedPlayer = DraftOrder[j - 1].DraftPlayer(rnd, league.DraftEntrants, league.Sport, rounds, j, i);
                     // player has info updated for Round # and Pick #
                     RecordPlayerDraftPosition(draftedPlayer, i, j);
                     // draftedPlayer receives rookie contract
@@ -200,11 +200,11 @@ namespace SportsAgencyTycoonV2
                     // check for achivements for agent
                     //DraftedPlayerAchievementCheck(i, j, draftedPlayer);
                     // add draftedPlayer to his respective team
-                    AddPlayerToTeam(draftedPlayer, DraftOrder[j], i, j);
+                    AddPlayerToTeam(draftedPlayer, DraftOrder[j - 1], i, j);
                     // remove player from draft pool
                     RemoveDraftedPlayerFromDraftPool(draftedPlayer);
                     // add selection to results to be printed later
-                    results = results + i + "." + j + " - " + DraftOrder[j].Abbreviation + " selects " + draftedPlayer.Position.ToString() + " " + draftedPlayer.FullName + Environment.NewLine;
+                    results = results + i + "." + j + " - " + DraftOrder[j - 1].Abbreviation + " selects " + draftedPlayer.Position.ToString() + " " + draftedPlayer.FullName + Environment.NewLine;
                 }
             }
 

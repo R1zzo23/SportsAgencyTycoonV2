@@ -45,7 +45,12 @@
             this.lblLicenseList = new System.Windows.Forms.Label();
             this.universalAgencyPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.btnWorld = new System.Windows.Forms.Button();
             this.panelButtonHighlight = new System.Windows.Forms.Panel();
+            this.btnClients = new System.Windows.Forms.Button();
+            this.btnJobs = new System.Windows.Forms.Button();
+            this.btnManager = new System.Windows.Forms.Button();
+            this.btnOffice = new System.Windows.Forms.Button();
             this.toolTipMainForm = new System.Windows.Forms.ToolTip(this.components);
             this.lblManagerIQ = new System.Windows.Forms.Label();
             this.lblManagerNegotiate = new System.Windows.Forms.Label();
@@ -75,14 +80,19 @@
             this.gbAgent3 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.lblAgent3Name = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.gbAgent2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lblAgent2Name = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbAgent1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblAgent1Name = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.agencyImageLarge = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.managerImageLarge = new System.Windows.Forms.PictureBox();
             this.freelancePanel = new System.Windows.Forms.Panel();
             this.jobProgressBar = new System.Windows.Forms.ProgressBar();
             this.gbJob3 = new System.Windows.Forms.GroupBox();
@@ -138,28 +148,23 @@
             this.cbLeagues = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureFootball = new System.Windows.Forms.PictureBox();
+            this.pictureBasketball = new System.Windows.Forms.PictureBox();
+            this.pictureBaseball = new System.Windows.Forms.PictureBox();
+            this.pictureHockey = new System.Windows.Forms.PictureBox();
+            this.pictureSoccer = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.agencyImageLarge = new System.Windows.Forms.PictureBox();
-            this.managerImageLarge = new System.Windows.Forms.PictureBox();
-            this.btnWorld = new System.Windows.Forms.Button();
-            this.btnClients = new System.Windows.Forms.Button();
-            this.btnJobs = new System.Windows.Forms.Button();
-            this.btnManager = new System.Windows.Forms.Button();
-            this.btnOffice = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
             this.gbAgent3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.gbAgent2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbAgent1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).BeginInit();
             this.freelancePanel.SuspendLayout();
             this.gbJob3.SuspendLayout();
             this.gbJob2.SuspendLayout();
@@ -167,16 +172,11 @@
             this.calendarPanel.SuspendLayout();
             this.worldPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).BeginInit();
             this.SuspendLayout();
             // 
             // btnManagerAction
@@ -346,6 +346,22 @@
             this.menuPanel.Size = new System.Drawing.Size(89, 230);
             this.menuPanel.TabIndex = 7;
             // 
+            // btnWorld
+            // 
+            this.btnWorld.FlatAppearance.BorderSize = 0;
+            this.btnWorld.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWorld.ForeColor = System.Drawing.Color.White;
+            this.btnWorld.Image = ((System.Drawing.Image)(resources.GetObject("btnWorld.Image")));
+            this.btnWorld.Location = new System.Drawing.Point(3, 176);
+            this.btnWorld.Name = "btnWorld";
+            this.btnWorld.Size = new System.Drawing.Size(68, 41);
+            this.btnWorld.TabIndex = 9;
+            this.btnWorld.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnWorld.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnWorld, "Clients");
+            this.btnWorld.UseVisualStyleBackColor = true;
+            this.btnWorld.Click += new System.EventHandler(this.btnWorld_Click);
+            // 
             // panelButtonHighlight
             // 
             this.panelButtonHighlight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
@@ -353,6 +369,70 @@
             this.panelButtonHighlight.Name = "panelButtonHighlight";
             this.panelButtonHighlight.Size = new System.Drawing.Size(7, 40);
             this.panelButtonHighlight.TabIndex = 8;
+            // 
+            // btnClients
+            // 
+            this.btnClients.FlatAppearance.BorderSize = 0;
+            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClients.ForeColor = System.Drawing.Color.White;
+            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
+            this.btnClients.Location = new System.Drawing.Point(3, 132);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Size = new System.Drawing.Size(68, 41);
+            this.btnClients.TabIndex = 3;
+            this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnClients, "Clients");
+            this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
+            // 
+            // btnJobs
+            // 
+            this.btnJobs.FlatAppearance.BorderSize = 0;
+            this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJobs.ForeColor = System.Drawing.Color.White;
+            this.btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("btnJobs.Image")));
+            this.btnJobs.Location = new System.Drawing.Point(3, 88);
+            this.btnJobs.Name = "btnJobs";
+            this.btnJobs.Size = new System.Drawing.Size(68, 41);
+            this.btnJobs.TabIndex = 2;
+            this.btnJobs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnJobs, "Freelance Jobs");
+            this.btnJobs.UseVisualStyleBackColor = true;
+            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
+            // 
+            // btnManager
+            // 
+            this.btnManager.FlatAppearance.BorderSize = 0;
+            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManager.ForeColor = System.Drawing.Color.White;
+            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
+            this.btnManager.Location = new System.Drawing.Point(3, 44);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(68, 41);
+            this.btnManager.TabIndex = 1;
+            this.btnManager.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnManager.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnManager, "Manager");
+            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
+            // 
+            // btnOffice
+            // 
+            this.btnOffice.FlatAppearance.BorderSize = 0;
+            this.btnOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOffice.ForeColor = System.Drawing.Color.White;
+            this.btnOffice.Image = ((System.Drawing.Image)(resources.GetObject("btnOffice.Image")));
+            this.btnOffice.Location = new System.Drawing.Point(3, 0);
+            this.btnOffice.Name = "btnOffice";
+            this.btnOffice.Size = new System.Drawing.Size(68, 41);
+            this.btnOffice.TabIndex = 0;
+            this.btnOffice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOffice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnOffice, "Agency");
+            this.btnOffice.UseVisualStyleBackColor = true;
+            this.btnOffice.Click += new System.EventHandler(this.btnOffice_Click);
             // 
             // lblManagerIQ
             // 
@@ -711,6 +791,16 @@
             this.lblAgent3Name.Text = "Very Very Long Name Here";
             this.lblAgent3Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
             // gbAgent2
             // 
             this.gbAgent2.Controls.Add(this.label11);
@@ -749,6 +839,16 @@
             this.lblAgent2Name.TabIndex = 23;
             this.lblAgent2Name.Text = "Very Very Long Name Here";
             this.lblAgent2Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
             // gbAgent1
             // 
@@ -789,6 +889,16 @@
             this.lblAgent1Name.Text = "Very Very Long Name Here";
             this.lblAgent1Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -800,6 +910,16 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Office";
             // 
+            // agencyImageLarge
+            // 
+            this.agencyImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("agencyImageLarge.Image")));
+            this.agencyImageLarge.InitialImage = null;
+            this.agencyImageLarge.Location = new System.Drawing.Point(597, 25);
+            this.agencyImageLarge.Name = "agencyImageLarge";
+            this.agencyImageLarge.Size = new System.Drawing.Size(66, 63);
+            this.agencyImageLarge.TabIndex = 8;
+            this.agencyImageLarge.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -810,6 +930,16 @@
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Manager:";
+            // 
+            // managerImageLarge
+            // 
+            this.managerImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.Image")));
+            this.managerImageLarge.InitialImage = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.InitialImage")));
+            this.managerImageLarge.Location = new System.Drawing.Point(8, 28);
+            this.managerImageLarge.Name = "managerImageLarge";
+            this.managerImageLarge.Size = new System.Drawing.Size(66, 63);
+            this.managerImageLarge.TabIndex = 6;
+            this.managerImageLarge.TabStop = false;
             // 
             // freelancePanel
             // 
@@ -1374,16 +1504,66 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureFootball);
+            this.panel1.Controls.Add(this.pictureBasketball);
+            this.panel1.Controls.Add(this.pictureBaseball);
+            this.panel1.Controls.Add(this.pictureHockey);
+            this.panel1.Controls.Add(this.pictureSoccer);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(0, 309);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(89, 220);
             this.panel1.TabIndex = 12;
+            // 
+            // pictureFootball
+            // 
+            this.pictureFootball.Image = global::SportsAgencyTycoonV2.Properties.Resources.football;
+            this.pictureFootball.Location = new System.Drawing.Point(28, 179);
+            this.pictureFootball.Name = "pictureFootball";
+            this.pictureFootball.Size = new System.Drawing.Size(33, 33);
+            this.pictureFootball.TabIndex = 5;
+            this.pictureFootball.TabStop = false;
+            this.pictureFootball.Visible = false;
+            // 
+            // pictureBasketball
+            // 
+            this.pictureBasketball.Image = global::SportsAgencyTycoonV2.Properties.Resources.basketball;
+            this.pictureBasketball.Location = new System.Drawing.Point(28, 140);
+            this.pictureBasketball.Name = "pictureBasketball";
+            this.pictureBasketball.Size = new System.Drawing.Size(33, 33);
+            this.pictureBasketball.TabIndex = 4;
+            this.pictureBasketball.TabStop = false;
+            this.pictureBasketball.Visible = false;
+            // 
+            // pictureBaseball
+            // 
+            this.pictureBaseball.Image = global::SportsAgencyTycoonV2.Properties.Resources.baseball;
+            this.pictureBaseball.Location = new System.Drawing.Point(28, 101);
+            this.pictureBaseball.Name = "pictureBaseball";
+            this.pictureBaseball.Size = new System.Drawing.Size(33, 33);
+            this.pictureBaseball.TabIndex = 3;
+            this.pictureBaseball.TabStop = false;
+            this.pictureBaseball.Visible = false;
+            // 
+            // pictureHockey
+            // 
+            this.pictureHockey.Image = global::SportsAgencyTycoonV2.Properties.Resources.hockey;
+            this.pictureHockey.Location = new System.Drawing.Point(28, 62);
+            this.pictureHockey.Name = "pictureHockey";
+            this.pictureHockey.Size = new System.Drawing.Size(33, 33);
+            this.pictureHockey.TabIndex = 2;
+            this.pictureHockey.TabStop = false;
+            this.pictureHockey.Visible = false;
+            // 
+            // pictureSoccer
+            // 
+            this.pictureSoccer.Image = global::SportsAgencyTycoonV2.Properties.Resources.soccer;
+            this.pictureSoccer.Location = new System.Drawing.Point(28, 23);
+            this.pictureSoccer.Name = "pictureSoccer";
+            this.pictureSoccer.Size = new System.Drawing.Size(33, 33);
+            this.pictureSoccer.TabIndex = 1;
+            this.pictureSoccer.TabStop = false;
+            this.pictureSoccer.Visible = false;
             // 
             // label4
             // 
@@ -1395,181 +1575,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "In Season";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::SportsAgencyTycoonV2.Properties.Resources.soccer;
-            this.pictureBox4.Location = new System.Drawing.Point(28, 23);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // agencyImageLarge
-            // 
-            this.agencyImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("agencyImageLarge.Image")));
-            this.agencyImageLarge.InitialImage = null;
-            this.agencyImageLarge.Location = new System.Drawing.Point(597, 25);
-            this.agencyImageLarge.Name = "agencyImageLarge";
-            this.agencyImageLarge.Size = new System.Drawing.Size(66, 63);
-            this.agencyImageLarge.TabIndex = 8;
-            this.agencyImageLarge.TabStop = false;
-            // 
-            // managerImageLarge
-            // 
-            this.managerImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.Image")));
-            this.managerImageLarge.InitialImage = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.InitialImage")));
-            this.managerImageLarge.Location = new System.Drawing.Point(8, 28);
-            this.managerImageLarge.Name = "managerImageLarge";
-            this.managerImageLarge.Size = new System.Drawing.Size(66, 63);
-            this.managerImageLarge.TabIndex = 6;
-            this.managerImageLarge.TabStop = false;
-            // 
-            // btnWorld
-            // 
-            this.btnWorld.FlatAppearance.BorderSize = 0;
-            this.btnWorld.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWorld.ForeColor = System.Drawing.Color.White;
-            this.btnWorld.Image = ((System.Drawing.Image)(resources.GetObject("btnWorld.Image")));
-            this.btnWorld.Location = new System.Drawing.Point(3, 176);
-            this.btnWorld.Name = "btnWorld";
-            this.btnWorld.Size = new System.Drawing.Size(68, 41);
-            this.btnWorld.TabIndex = 9;
-            this.btnWorld.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnWorld.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnWorld, "Clients");
-            this.btnWorld.UseVisualStyleBackColor = true;
-            this.btnWorld.Click += new System.EventHandler(this.btnWorld_Click);
-            // 
-            // btnClients
-            // 
-            this.btnClients.FlatAppearance.BorderSize = 0;
-            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClients.ForeColor = System.Drawing.Color.White;
-            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
-            this.btnClients.Location = new System.Drawing.Point(3, 132);
-            this.btnClients.Name = "btnClients";
-            this.btnClients.Size = new System.Drawing.Size(68, 41);
-            this.btnClients.TabIndex = 3;
-            this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnClients, "Clients");
-            this.btnClients.UseVisualStyleBackColor = true;
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
-            // 
-            // btnJobs
-            // 
-            this.btnJobs.FlatAppearance.BorderSize = 0;
-            this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJobs.ForeColor = System.Drawing.Color.White;
-            this.btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("btnJobs.Image")));
-            this.btnJobs.Location = new System.Drawing.Point(3, 88);
-            this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(68, 41);
-            this.btnJobs.TabIndex = 2;
-            this.btnJobs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnJobs, "Freelance Jobs");
-            this.btnJobs.UseVisualStyleBackColor = true;
-            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
-            // 
-            // btnManager
-            // 
-            this.btnManager.FlatAppearance.BorderSize = 0;
-            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManager.ForeColor = System.Drawing.Color.White;
-            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
-            this.btnManager.Location = new System.Drawing.Point(3, 44);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(68, 41);
-            this.btnManager.TabIndex = 1;
-            this.btnManager.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnManager.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnManager, "Manager");
-            this.btnManager.UseVisualStyleBackColor = true;
-            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
-            // 
-            // btnOffice
-            // 
-            this.btnOffice.FlatAppearance.BorderSize = 0;
-            this.btnOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOffice.ForeColor = System.Drawing.Color.White;
-            this.btnOffice.Image = ((System.Drawing.Image)(resources.GetObject("btnOffice.Image")));
-            this.btnOffice.Location = new System.Drawing.Point(3, 0);
-            this.btnOffice.Name = "btnOffice";
-            this.btnOffice.Size = new System.Drawing.Size(68, 41);
-            this.btnOffice.TabIndex = 0;
-            this.btnOffice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOffice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnOffice, "Agency");
-            this.btnOffice.UseVisualStyleBackColor = true;
-            this.btnOffice.Click += new System.EventHandler(this.btnOffice_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::SportsAgencyTycoonV2.Properties.Resources.hockey;
-            this.pictureBox5.Location = new System.Drawing.Point(28, 62);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::SportsAgencyTycoonV2.Properties.Resources.baseball;
-            this.pictureBox6.Location = new System.Drawing.Point(28, 101);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::SportsAgencyTycoonV2.Properties.Resources.basketball;
-            this.pictureBox7.Location = new System.Drawing.Point(28, 140);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox7.TabIndex = 4;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::SportsAgencyTycoonV2.Properties.Resources.football;
-            this.pictureBox8.Location = new System.Drawing.Point(28, 179);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox8.TabIndex = 5;
-            this.pictureBox8.TabStop = false;
             // 
             // MainForm
             // 
@@ -1596,10 +1601,15 @@
             this.agencyPanel.PerformLayout();
             this.gbAgent3.ResumeLayout(false);
             this.gbAgent3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.gbAgent2.ResumeLayout(false);
             this.gbAgent2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbAgent1.ResumeLayout(false);
             this.gbAgent1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).EndInit();
             this.freelancePanel.ResumeLayout(false);
             this.gbJob3.ResumeLayout(false);
             this.gbJob3.PerformLayout();
@@ -1613,16 +1623,11 @@
             this.worldPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1747,11 +1752,11 @@
         public System.Windows.Forms.ComboBox cbLeagues;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.PictureBox pictureSoccer;
+        public System.Windows.Forms.PictureBox pictureFootball;
+        public System.Windows.Forms.PictureBox pictureBasketball;
+        public System.Windows.Forms.PictureBox pictureBaseball;
+        public System.Windows.Forms.PictureBox pictureHockey;
     }
 }
 

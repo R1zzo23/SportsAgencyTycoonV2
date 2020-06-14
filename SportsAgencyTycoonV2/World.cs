@@ -36,6 +36,8 @@ namespace SportsAgencyTycoonV2
         public int NextLicenseCost = 10;
         public List<Sports> LicenseOrder = new List<Sports>();
 
+        public List<CalendarEvent> EventsThisWeek = new List<CalendarEvent>();
+
         public PlayerGenomeProject PGP = new PlayerGenomeProject();
         public ProgressionRegression ProgressionRegression;
 
@@ -52,6 +54,8 @@ namespace SportsAgencyTycoonV2
             AvailableAgents = new List<Agent>();
             Leagues = new List<League>();
             eventCalendar = new EventCalendar();
+
+            ProgressionRegression = new ProgressionRegression(rnd, this);
         }
 
         public Agency MyAgency { get { return _MyAgency; } }
@@ -154,14 +158,7 @@ namespace SportsAgencyTycoonV2
             NHL = new League(Sports.Hockey, "National Hockey League", "NHL", rnd.Next(30, 55), new Date(10, 1), new Date(6, 2), 82, 8, 9500000, 650000);
             MLS = new League(Sports.Soccer, "Major League Soccer", "MLS", rnd.Next(15, 50), new Date(3, 2), new Date(12, 1), 34, 9, 7000000, 56250);
         }
-        public void CreateCalendarEventsForLeagueStartAndEnd()
-        {
-            foreach (League l in Leagues)
-            {
-                eventCalendar.AddCalendarEvent(new CalendarEvent(l));
-                eventCalendar.AddCalendarEvent(new CalendarEvent(l, "end"));
-            }
-        }
+        
         public void CreateProgressionRegressionEventsForPlayers()
         {
             foreach (League l in Leagues)
@@ -646,6 +643,14 @@ namespace SportsAgencyTycoonV2
                         eventCalendar.AddCalendarEvent(new CalendarEvent(p));
         }
         #endregion
+        public void CreateCalendarEventsForLeagueStartAndEnd()
+        {
+            foreach (League l in Leagues)
+            {
+                eventCalendar.AddCalendarEvent(new CalendarEvent(l));
+                eventCalendar.AddCalendarEvent(new CalendarEvent(l, "end"));
+            }
+        }
         public void AssignTeamToPlayersInLeagues()
         {
             foreach (League l in Leagues)
@@ -928,6 +933,60 @@ namespace SportsAgencyTycoonV2
                 }
             }
             Console.WriteLine(league.Name + " retirements this year: " + count);
+        }
+        public void CheckForEventsThisWeek()
+        {
+            EventsThisWeek.Clear();
+            foreach (CalendarEvent e in eventCalendar.Events)
+            {
+                if (e.EventDate.Week == calendar.Week && e.EventDate.MonthNumber == calendar.Month) EventsThisWeek.Add(e);
+            }
+        }
+        public void PayPlayersAnnualSalary(League l)
+        {
+            if (l.Initialized)
+            {
+                foreach (Team t in l.TeamList)
+                    foreach (Player p in t.Roster)
+                    {
+                        //add one year to player's experience
+                        p.Experience++;
+
+                        // all players getting paid annually get their money
+                        if (p.Contract.AgentPaySchedule == PaySchedule.Annually)
+                        {
+                            p.CareerEarnings += p.Contract.YearlySalary;
+                            // if player is member of agency, agency gets paid too
+                            if (p.MemberOfAgency)
+                            {
+                                MyAgency.AddMoney(Convert.ToInt32((double)p.Contract.YearlySalary * (double)(p.Contract.AgentPercentage / 100)));
+                                //find which Agent represents this client and give money to Agent
+                                //MyAgency.FindAgent(p).CareerEarnings += Convert.ToInt32((double)p.Contract.YearlySalary * (double)(p.Contract.AgentPercentage / 100));
+                            }
+                        }
+                        p.Contract.Years--;
+                    }
+                l.InSeason = false;
+                MakePlayerAFreeAgent(l);
+            }
+        }
+        private void MakePlayerAFreeAgent(League l)
+        {
+            for (int i = 0; i < l.TeamList.Count; i++)
+                for (int j = l.TeamList[i].Roster.Count - 1; j >= 0; j--)
+                {
+                    if (l.TeamList[i].Roster[j].Contract.Years == 0)
+                    {
+                        l.TeamList[i].Roster[j].Contract.MonthlySalary = 0;
+                        l.TeamList[i].Roster[j].Contract.YearlySalary = 0;
+                        l.TeamList[i].Roster[j].Contract.SigningBonus = 0;
+                        l.TeamList[i].Roster[j].FormerTeam = l.TeamList[i].Roster[j].Team;
+                        l.TeamList[i].Roster[j].Team = null;
+                        l.FreeAgents.Add(l.TeamList[i].Roster[j]);
+                        l.TeamList[i].Roster[j].FreeAgent = true;
+                        l.TeamList[i].Roster.RemoveAt(j);
+                    }
+                }
         }
         /*public void RetireAssociationPlayers(Association association)
         {
