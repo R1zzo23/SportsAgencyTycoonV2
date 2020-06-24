@@ -988,6 +988,119 @@ namespace SportsAgencyTycoonV2
                     }
                 }
         }
+        public void ResetPlayerStats(League l)
+        {
+            foreach (Team t in l.TeamList)
+            {
+                if (l.Sport == Sports.Football)
+                {
+                    foreach (FootballPlayer p in t.Roster)
+                    {
+                        p.PassingTDs = 0;
+                        p.PassingYards = 0;
+                        p.Interceptions = 0;
+                        p.Receptions = 0;
+                        p.ReceivingYards = 0;
+                        p.ReceivingYardsThisWeek = 0;
+                        p.ReceivingTDs = 0;
+                        p.Carries = 0;
+                        p.RushingYards = 0;
+                        p.YardsPerCarry = 0.0;
+                        p.RushingTDs = 0;
+                        p.Fumbles = 0;
+                        p.Tackles = 0;
+                        p.DefensiveInterceptions = 0;
+                        p.TacklesForLoss = 0;
+                        p.Sacks = 0;
+                        p.FGAttempts = 0;
+                        p.FGMakes = 0;
+                        p.XPAttempts = 0;
+                        p.XPMakes = 0;
+                        p.Punts = 0;
+                        p.NetPuntYards = 0;
+                        p.NetPuntAverage = 0;
+                        p.SacksAllowed = 0;
+                        p.PassesDefended = 0;
+                        p.PancakeBlocks = 0;
+                        p.MVPScore = 0;
+                        p.OPOYScore = 0;
+                        p.DPOYScore = 0;
+                    }
+                }
+                else if (l.Sport == Sports.Basketball)
+                {
+                    foreach (BasketballPlayer p in t.Roster)
+                    {
+                        p.Points = 0.0;
+                        p.Rebounds = 0.0;
+                        p.Assists = 0.0;
+                        p.Steals = 0.0;
+                        p.Blocks = 0.0;
+                        p.MVPScore = 0.0;
+                        p.DPOYScore = 0.0;
+                    }
+                }
+                else if (l.Sport == Sports.Baseball)
+                {
+                    foreach (BaseballPlayer p in t.Roster)
+                    {
+                        p.Average = 0.0;
+                        p.HomeRuns = 0;
+                        p.RBI = 0;
+                        p.ERA = 0.00;
+                        p.Wins = 0;
+                        p.Losses = 0;
+                        p.Saves = 0;
+                    }
+                }
+                else if (l.Sport == Sports.Hockey)
+                {
+                    foreach (HockeyPlayer p in t.Roster)
+                    {
+                        p.Goals = 0;
+                        p.Assists = 0;
+                        p.Points = 0;
+                        p.GAA = 0.0;
+                        p.GoalsAllowed = 0;
+                        p.SavePercentage = 0.0;
+                        p.Saves = 0;
+                        p.ShutOuts = 0;
+                        p.GamesPlayed = 0;
+                        p.Wins = 0;
+                        p.Losses = 0;
+                    }
+                }
+                else if (l.Sport == Sports.Soccer)
+                {
+                    foreach (SoccerPlayer p in t.Roster)
+                    {
+                        p.Goals = 0;
+                        p.Assists = 0;
+                        p.MatchRating = 0.00;
+                        p.Saves = 0;
+                        p.CleanSheets = 0;
+                    }
+                }
+            }
+
+
+        }
+        public void ResetTeamRecords(League l)
+        {
+            foreach (Team t in l.TeamList)
+            {
+                t.Wins = 0;
+                t.ConferenceWins = 0;
+                t.DivisionWins = 0;
+                t.Losses = 0;
+                t.Ties = 0;
+                t.OTLosses = 0;
+                t.ConferenceLosses = 0;
+                t.DivisionLosses = 0;
+            }
+            //set league.Playoffs to false
+            l.Playoffs = false;
+        }
         /*public void RetireAssociationPlayers(Association association)
         {
             for (int i = association.PlayerList.Count - 1; i > 0; i--)

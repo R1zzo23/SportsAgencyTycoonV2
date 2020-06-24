@@ -211,16 +211,16 @@ namespace SportsAgencyTycoonV2
                         world.MLB.Initialized = true;
                         world.MLB.WeekNumber = 0;
                         l = world.MLB;
-                        //ResetTeamRecords(world.MLB);
-                        //ResetPlayerStats(world.MLB);
+                        world.ResetTeamRecords(world.MLB);
+                        world.ResetPlayerStats(world.MLB);
                     }
                     else if (e.Sport == Sports.Basketball)
                     {
                         world.NBA.InSeason = true;
                         world.NBA.Initialized = true;
                         l = world.NBA;
-                        //ResetTeamRecords(world.NBA);
-                        //ResetPlayerStats(world.NBA);
+                        world.ResetTeamRecords(world.NBA);
+                        world.ResetPlayerStats(world.NBA);
                     }
                     else if (e.Sport == Sports.Football)
                     {
@@ -228,8 +228,8 @@ namespace SportsAgencyTycoonV2
                         world.NFL.Initialized = true;
                         world.NFL.WeekNumber = 0;
                         l = world.NFL;
-                        //ResetTeamRecords(world.NFL);
-                        //ResetPlayerStats(world.NFL);
+                        world.ResetTeamRecords(world.NFL);
+                        world.ResetPlayerStats(world.NFL);
                     }
                     else if (e.Sport == Sports.Hockey)
                     {
@@ -237,8 +237,8 @@ namespace SportsAgencyTycoonV2
                         world.NHL.Initialized = true;
                         world.NHL.WeekNumber = 0;
                         l = world.NHL;
-                        //ResetTeamRecords(world.NHL);
-                        //ResetPlayerStats(world.NHL);
+                        world.ResetTeamRecords(world.NHL);
+                        world.ResetPlayerStats(world.NHL);
                     }
                     else if (e.Sport == Sports.Soccer)
                     {
@@ -246,8 +246,8 @@ namespace SportsAgencyTycoonV2
                         world.MLS.Initialized = true;
                         world.MLS.WeekNumber = 0;
                         l = world.MLS;
-                        //ResetTeamRecords(world.MLS);
-                        //ResetPlayerStats(world.MLS);
+                        world.ResetTeamRecords(world.MLS);
+                        world.ResetPlayerStats(world.MLS);
                     }
                     DetermineSeasons();
                     world.ReorderDepthCharts(l);

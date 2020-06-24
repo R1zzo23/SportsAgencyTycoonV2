@@ -88,7 +88,11 @@ namespace SportsAgencyTycoonV2
                     //mainForm.newsLabel.Text = World.Basketball.DisplayDPOYTop5() + Environment.NewLine + mainForm.newsLabel.Text;
                     //mainForm.newsLabel.Text = World.Basketball.DisplayMVPTop5() + Environment.NewLine + mainForm.newsLabel.Text;
 
+                    DisplayDPOYTop5();
+                    DisplayMVPTop5();
+
                     //mainForm.newsLabel.Text = World.Basketball.DeterminePlayoffField() + Environment.NewLine + mainForm.newsLabel.Text;
+                    DeterminePlayoffField();
                 }
 
             }
