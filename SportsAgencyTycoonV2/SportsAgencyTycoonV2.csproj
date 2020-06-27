@@ -120,6 +120,7 @@
     <Compile Include="SoccerDraft.cs" />
     <Compile Include="SoccerPlayer.cs" />
     <Compile Include="Team.cs" />
+    <Compile Include="TeamRosterPanelFunctions.cs" />
     <Compile Include="World.cs" />
     <Compile Include="WorldPanelFunctions.cs" />
     <EmbeddedResource Include="CreateManagerAndAgency.resx">

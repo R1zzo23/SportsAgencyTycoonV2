@@ -27,6 +27,7 @@ namespace SportsAgencyTycoonV2
         public List<Control> agentGroupBoxes = new List<Control>();
 
         public WorldPanelFunctions worldPanelFunctions;
+        public TeamRosterPanelFunctions teamRosterPanelFunctions;
         public MainForm()
         {
             world = new World(rnd);
@@ -47,6 +48,7 @@ namespace SportsAgencyTycoonV2
             UpdateOfficeInfo();
             world.InitializeWorld();
             worldPanelFunctions = new WorldPanelFunctions(this, world);
+            teamRosterPanelFunctions = new TeamRosterPanelFunctions(this, world);
         }
         private void AddAgentLabelsToList()
         {
@@ -238,6 +240,7 @@ namespace SportsAgencyTycoonV2
             agencyPanel.Visible = false;
             freelancePanel.Visible = false;
             worldPanel.Visible = false;
+            teamRosterPanel.Visible = false;
         }
 
         private void btnAcceptJob1_Click(object sender, EventArgs e)
@@ -256,6 +259,16 @@ namespace SportsAgencyTycoonV2
         {
             FreelanceJob job = world.MyAgency.FreelanceJobsAvailable[2];
             freelance.AttemptJob(job, freelanceJobTimer, jobProgressBar);
+        }
+
+        private void btnViewRoster_Click(object sender, EventArgs e)
+        {
+            if (cbTeams.SelectedIndex > -1)
+            {
+                HideAllPanels();
+                teamRosterPanel.Visible = true;
+                teamRosterPanelFunctions.FillTeamRosterComboBox(world.Leagues[cbLeagues.SelectedIndex].TeamList[cbTeams.SelectedIndex]);
+            }
         }
     }
 }

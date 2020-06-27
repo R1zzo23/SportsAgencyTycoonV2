@@ -154,6 +154,11 @@
             this.pictureHockey = new System.Windows.Forms.PictureBox();
             this.pictureSoccer = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbTeams = new System.Windows.Forms.ComboBox();
+            this.btnViewRoster = new System.Windows.Forms.Button();
+            this.teamRosterPanel = new System.Windows.Forms.Panel();
+            this.lblTeamName = new System.Windows.Forms.Label();
+            this.cbTeamRoster = new System.Windows.Forms.ComboBox();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -177,6 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).BeginInit();
+            this.teamRosterPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnManagerAction
@@ -1355,6 +1361,8 @@
             // 
             // worldPanel
             // 
+            this.worldPanel.Controls.Add(this.btnViewRoster);
+            this.worldPanel.Controls.Add(this.cbTeams);
             this.worldPanel.Controls.Add(this.lblEastDivision4);
             this.worldPanel.Controls.Add(this.lblEastDivision3);
             this.worldPanel.Controls.Add(this.lblEastDivision2);
@@ -1376,7 +1384,7 @@
             // 
             this.lblEastDivision4.AutoSize = true;
             this.lblEastDivision4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastDivision4.Location = new System.Drawing.Point(822, 519);
+            this.lblEastDivision4.Location = new System.Drawing.Point(685, 372);
             this.lblEastDivision4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision4.Name = "lblEastDivision4";
             this.lblEastDivision4.Size = new System.Drawing.Size(41, 15);
@@ -1387,7 +1395,7 @@
             // 
             this.lblEastDivision3.AutoSize = true;
             this.lblEastDivision3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastDivision3.Location = new System.Drawing.Point(822, 372);
+            this.lblEastDivision3.Location = new System.Drawing.Point(685, 273);
             this.lblEastDivision3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision3.Name = "lblEastDivision3";
             this.lblEastDivision3.Size = new System.Drawing.Size(35, 15);
@@ -1398,7 +1406,7 @@
             // 
             this.lblEastDivision2.AutoSize = true;
             this.lblEastDivision2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastDivision2.Location = new System.Drawing.Point(822, 224);
+            this.lblEastDivision2.Location = new System.Drawing.Point(685, 174);
             this.lblEastDivision2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision2.Name = "lblEastDivision2";
             this.lblEastDivision2.Size = new System.Drawing.Size(35, 15);
@@ -1409,7 +1417,7 @@
             // 
             this.lblEastDivision1.AutoSize = true;
             this.lblEastDivision1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastDivision1.Location = new System.Drawing.Point(822, 76);
+            this.lblEastDivision1.Location = new System.Drawing.Point(685, 75);
             this.lblEastDivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision1.Name = "lblEastDivision1";
             this.lblEastDivision1.Size = new System.Drawing.Size(35, 15);
@@ -1420,7 +1428,7 @@
             // 
             this.lblWestDivision4.AutoSize = true;
             this.lblWestDivision4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestDivision4.Location = new System.Drawing.Point(562, 519);
+            this.lblWestDivision4.Location = new System.Drawing.Point(425, 372);
             this.lblWestDivision4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision4.Name = "lblWestDivision4";
             this.lblWestDivision4.Size = new System.Drawing.Size(35, 15);
@@ -1431,7 +1439,7 @@
             // 
             this.lblWestDivision3.AutoSize = true;
             this.lblWestDivision3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestDivision3.Location = new System.Drawing.Point(562, 372);
+            this.lblWestDivision3.Location = new System.Drawing.Point(425, 273);
             this.lblWestDivision3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision3.Name = "lblWestDivision3";
             this.lblWestDivision3.Size = new System.Drawing.Size(35, 15);
@@ -1442,7 +1450,7 @@
             // 
             this.lblWestDivision2.AutoSize = true;
             this.lblWestDivision2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestDivision2.Location = new System.Drawing.Point(562, 224);
+            this.lblWestDivision2.Location = new System.Drawing.Point(425, 174);
             this.lblWestDivision2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision2.Name = "lblWestDivision2";
             this.lblWestDivision2.Size = new System.Drawing.Size(35, 15);
@@ -1453,7 +1461,7 @@
             // 
             this.lblWestDivision1.AutoSize = true;
             this.lblWestDivision1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestDivision1.Location = new System.Drawing.Point(562, 76);
+            this.lblWestDivision1.Location = new System.Drawing.Point(425, 75);
             this.lblWestDivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision1.Name = "lblWestDivision1";
             this.lblWestDivision1.Size = new System.Drawing.Size(35, 15);
@@ -1464,7 +1472,7 @@
             // 
             this.lblEastConference.AutoSize = true;
             this.lblEastConference.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastConference.Location = new System.Drawing.Point(288, 76);
+            this.lblEastConference.Location = new System.Drawing.Point(236, 76);
             this.lblEastConference.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastConference.Name = "lblEastConference";
             this.lblEastConference.Size = new System.Drawing.Size(35, 15);
@@ -1475,7 +1483,7 @@
             // 
             this.lblWestConference.AutoSize = true;
             this.lblWestConference.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestConference.Location = new System.Drawing.Point(16, 76);
+            this.lblWestConference.Location = new System.Drawing.Point(18, 76);
             this.lblWestConference.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestConference.Name = "lblWestConference";
             this.lblWestConference.Size = new System.Drawing.Size(35, 15);
@@ -1576,14 +1584,67 @@
             this.label4.Text = "In Season";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // cbTeams
+            // 
+            this.cbTeams.FormattingEnabled = true;
+            this.cbTeams.Location = new System.Drawing.Point(428, 41);
+            this.cbTeams.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTeams.Name = "cbTeams";
+            this.cbTeams.Size = new System.Drawing.Size(319, 25);
+            this.cbTeams.TabIndex = 24;
+            // 
+            // btnViewRoster
+            // 
+            this.btnViewRoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewRoster.ForeColor = System.Drawing.Color.White;
+            this.btnViewRoster.Location = new System.Drawing.Point(767, 40);
+            this.btnViewRoster.Name = "btnViewRoster";
+            this.btnViewRoster.Size = new System.Drawing.Size(114, 26);
+            this.btnViewRoster.TabIndex = 25;
+            this.btnViewRoster.Text = "View Roster";
+            this.btnViewRoster.UseVisualStyleBackColor = true;
+            this.btnViewRoster.Click += new System.EventHandler(this.btnViewRoster_Click);
+            // 
+            // teamRosterPanel
+            // 
+            this.teamRosterPanel.Controls.Add(this.cbTeamRoster);
+            this.teamRosterPanel.Controls.Add(this.lblTeamName);
+            this.teamRosterPanel.Location = new System.Drawing.Point(95, 74);
+            this.teamRosterPanel.Name = "teamRosterPanel";
+            this.teamRosterPanel.Size = new System.Drawing.Size(1061, 683);
+            this.teamRosterPanel.TabIndex = 13;
+            // 
+            // lblTeamName
+            // 
+            this.lblTeamName.AutoSize = true;
+            this.lblTeamName.Font = new System.Drawing.Font("Century Gothic", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeamName.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTeamName.Location = new System.Drawing.Point(9, 7);
+            this.lblTeamName.Name = "lblTeamName";
+            this.lblTeamName.Size = new System.Drawing.Size(481, 52);
+            this.lblTeamName.TabIndex = 0;
+            this.lblTeamName.Text = "Revere Runnin\' Rebels";
+            this.lblTeamName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cbTeamRoster
+            // 
+            this.cbTeamRoster.Font = new System.Drawing.Font("Century Gothic", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTeamRoster.ForeColor = System.Drawing.Color.Black;
+            this.cbTeamRoster.FormattingEnabled = true;
+            this.cbTeamRoster.Location = new System.Drawing.Point(21, 69);
+            this.cbTeamRoster.Name = "cbTeamRoster";
+            this.cbTeamRoster.Size = new System.Drawing.Size(301, 27);
+            this.cbTeamRoster.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.teamRosterPanel);
             this.Controls.Add(this.worldPanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.freelancePanel);
             this.Controls.Add(this.calendarPanel);
@@ -1628,6 +1689,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).EndInit();
+            this.teamRosterPanel.ResumeLayout(false);
+            this.teamRosterPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1757,6 +1820,11 @@
         public System.Windows.Forms.PictureBox pictureBasketball;
         public System.Windows.Forms.PictureBox pictureBaseball;
         public System.Windows.Forms.PictureBox pictureHockey;
+        public System.Windows.Forms.ComboBox cbTeams;
+        private System.Windows.Forms.Button btnViewRoster;
+        private System.Windows.Forms.Panel teamRosterPanel;
+        public System.Windows.Forms.ComboBox cbTeamRoster;
+        public System.Windows.Forms.Label lblTeamName;
     }
 }
 
