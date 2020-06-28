@@ -51,6 +51,7 @@ namespace SportsAgencyTycoonV2
             if (world.Leagues.Count > 0)
             {
                 mainForm.cbLeagues.Items.Clear();
+                mainForm.cbLeagueList.Items.Clear();
 
                 string leagueName;
 
@@ -58,6 +59,7 @@ namespace SportsAgencyTycoonV2
                 {
                     leagueName = league.Name;
                     mainForm.cbLeagues.Items.Add(leagueName);
+                    mainForm.cbLeagueList.Items.Add(leagueName);
                 }
             }
         }

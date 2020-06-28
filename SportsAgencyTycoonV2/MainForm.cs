@@ -270,5 +270,21 @@ namespace SportsAgencyTycoonV2
                 teamRosterPanelFunctions.FillTeamRosterComboBox(world.Leagues[cbLeagues.SelectedIndex].TeamList[cbTeams.SelectedIndex]);
             }
         }
+
+        private void cbTeamRoster_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            teamRosterPanelFunctions.DisplaySelectedPlayerInfo(world.Leagues[cbLeagueList.SelectedIndex].TeamList[cbTeamList.SelectedIndex].Roster[cbTeamRoster.SelectedIndex]);
+        }
+
+        private void cbLeagueList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            teamRosterPanelFunctions.FillTeamComboBox(world.Leagues[cbLeagueList.SelectedIndex]);
+        }
+
+        private void cbTeamList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            teamRosterPanelFunctions.FillTeamRosterComboBox(world.Leagues[cbLeagueList.SelectedIndex].TeamList[cbTeamList.SelectedIndex]);
+            teamRosterPanelFunctions.FillTeamInfo();
+        }
     }
 }
