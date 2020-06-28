@@ -87,16 +87,6 @@ namespace SportsAgencyTycoonV2
             {
                 DisplaySoccerStandings(selectedLeague);
             }
-            FillTeamList(selectedLeague);
-        }
-        private void FillTeamList(League l)
-        {
-            mainForm.cbTeams.Items.Clear();
-            foreach (Team t in l.TeamList)
-            {
-                string teamName = t.City + " " + t.Mascot;
-                mainForm.cbTeams.Items.Add(teamName);
-            }                
         }
         public void ViewRoster(Team t)
         {

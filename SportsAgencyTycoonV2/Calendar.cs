@@ -37,7 +37,7 @@ namespace SportsAgencyTycoonV2
         private void InitializeMyTimer()
         {
             // Set length for a single day
-            calendarTimer.Interval = 50;
+            calendarTimer.Interval = 1000;
             // Connect the Tick event of the timer to its event handler.
             calendarTimer.Tick += new EventHandler(IncreaseDays);
             // Start the timer.

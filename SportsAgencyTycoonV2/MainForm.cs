@@ -222,12 +222,20 @@ namespace SportsAgencyTycoonV2
             panelButtonHighlight.Top = btnClients.Top;
             HideAllPanels();
         }
-        private void btnWorld_Click(object sender, EventArgs e)
+        private void btnStandings_Click(object sender, EventArgs e)
         {
-            panelButtonHighlight.Height = btnWorld.Height;
-            panelButtonHighlight.Top = btnWorld.Top;
+            panelButtonHighlight.Height = btnStandings.Height;
+            panelButtonHighlight.Top = btnStandings.Top;
             HideAllPanels();
             worldPanel.Visible = true;
+            worldPanelFunctions.PopulateLeagues();
+        }
+        private void btnViewRosters_Click(object sender, EventArgs e)
+        {
+            panelButtonHighlight.Height = btnViewRosters.Height;
+            panelButtonHighlight.Top = btnViewRosters.Top;
+            HideAllPanels();
+            teamRosterPanel.Visible = true;
             worldPanelFunctions.PopulateLeagues();
         }
         private void cbLeagues_SelectedIndexChanged(object sender, EventArgs e)
@@ -261,16 +269,6 @@ namespace SportsAgencyTycoonV2
             freelance.AttemptJob(job, freelanceJobTimer, jobProgressBar);
         }
 
-        private void btnViewRoster_Click(object sender, EventArgs e)
-        {
-            if (cbTeams.SelectedIndex > -1)
-            {
-                HideAllPanels();
-                teamRosterPanel.Visible = true;
-                teamRosterPanelFunctions.FillTeamRosterComboBox(world.Leagues[cbLeagues.SelectedIndex].TeamList[cbTeams.SelectedIndex]);
-            }
-        }
-
         private void cbTeamRoster_SelectedIndexChanged(object sender, EventArgs e)
         {
             teamRosterPanelFunctions.DisplaySelectedPlayerInfo(world.Leagues[cbLeagueList.SelectedIndex].TeamList[cbTeamList.SelectedIndex].Roster[cbTeamRoster.SelectedIndex]);
@@ -286,5 +284,7 @@ namespace SportsAgencyTycoonV2
             teamRosterPanelFunctions.FillTeamRosterComboBox(world.Leagues[cbLeagueList.SelectedIndex].TeamList[cbTeamList.SelectedIndex]);
             teamRosterPanelFunctions.FillTeamInfo();
         }
+
+        
     }
 }

@@ -45,7 +45,7 @@
             this.lblLicenseList = new System.Windows.Forms.Label();
             this.universalAgencyPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.btnWorld = new System.Windows.Forms.Button();
+            this.btnStandings = new System.Windows.Forms.Button();
             this.panelButtonHighlight = new System.Windows.Forms.Panel();
             this.btnClients = new System.Windows.Forms.Button();
             this.btnJobs = new System.Windows.Forms.Button();
@@ -135,8 +135,6 @@
             this.lblYear = new System.Windows.Forms.Label();
             this.calendarTimer = new System.Windows.Forms.Timer(this.components);
             this.worldPanel = new System.Windows.Forms.Panel();
-            this.btnViewRoster = new System.Windows.Forms.Button();
-            this.cbTeams = new System.Windows.Forms.ComboBox();
             this.lblEastDivision4 = new System.Windows.Forms.Label();
             this.lblEastDivision3 = new System.Windows.Forms.Label();
             this.lblEastDivision2 = new System.Windows.Forms.Label();
@@ -157,9 +155,9 @@
             this.pictureSoccer = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.teamRosterPanel = new System.Windows.Forms.Panel();
-            this.cbTeamRoster = new System.Windows.Forms.ComboBox();
-            this.lblTeamAwards = new System.Windows.Forms.Label();
-            this.lblTeamInfo = new System.Windows.Forms.Label();
+            this.lblRoster = new System.Windows.Forms.Label();
+            this.cbLeagueList = new System.Windows.Forms.ComboBox();
+            this.cbTeamList = new System.Windows.Forms.ComboBox();
             this.lblStarter = new System.Windows.Forms.Label();
             this.lblDepthChart = new System.Windows.Forms.Label();
             this.lblStats = new System.Windows.Forms.Label();
@@ -181,9 +179,10 @@
             this.lblAgentPaid = new System.Windows.Forms.Label();
             this.lblYearsLeft = new System.Windows.Forms.Label();
             this.lblYearlySalary = new System.Windows.Forms.Label();
-            this.cbTeamList = new System.Windows.Forms.ComboBox();
-            this.cbLeagueList = new System.Windows.Forms.ComboBox();
-            this.lblRoster = new System.Windows.Forms.Label();
+            this.lblTeamAwards = new System.Windows.Forms.Label();
+            this.lblTeamInfo = new System.Windows.Forms.Label();
+            this.cbTeamRoster = new System.Windows.Forms.ComboBox();
+            this.btnViewRosters = new System.Windows.Forms.Button();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -233,7 +232,7 @@
             this.cbManagerActions.Location = new System.Drawing.Point(8, 110);
             this.cbManagerActions.Margin = new System.Windows.Forms.Padding(4);
             this.cbManagerActions.Name = "cbManagerActions";
-            this.cbManagerActions.Size = new System.Drawing.Size(263, 25);
+            this.cbManagerActions.Size = new System.Drawing.Size(263, 29);
             this.cbManagerActions.TabIndex = 1;
             // 
             // lblManagerName
@@ -242,7 +241,7 @@
             this.lblManagerName.Location = new System.Drawing.Point(79, 6);
             this.lblManagerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerName.Name = "lblManagerName";
-            this.lblManagerName.Size = new System.Drawing.Size(192, 19);
+            this.lblManagerName.Size = new System.Drawing.Size(234, 21);
             this.lblManagerName.TabIndex = 0;
             this.lblManagerName.Text = "Very Very Long Name Here";
             this.lblManagerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +263,7 @@
             this.lblAgencyMoney.Location = new System.Drawing.Point(476, 40);
             this.lblAgencyMoney.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgencyMoney.Name = "lblAgencyMoney";
-            this.lblAgencyMoney.Size = new System.Drawing.Size(81, 19);
+            this.lblAgencyMoney.Size = new System.Drawing.Size(95, 21);
             this.lblAgencyMoney.TabIndex = 2;
             this.lblAgencyMoney.Text = "Money: $0";
             // 
@@ -274,7 +273,7 @@
             this.lblInfluencePoints.Location = new System.Drawing.Point(622, 40);
             this.lblInfluencePoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfluencePoints.Name = "lblInfluencePoints";
-            this.lblInfluencePoints.Size = new System.Drawing.Size(132, 19);
+            this.lblInfluencePoints.Size = new System.Drawing.Size(158, 21);
             this.lblInfluencePoints.TabIndex = 3;
             this.lblInfluencePoints.Text = "Influence Points: 0";
             // 
@@ -284,7 +283,7 @@
             this.lblOfficeLevel.Location = new System.Drawing.Point(670, 4);
             this.lblOfficeLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOfficeLevel.Name = "lblOfficeLevel";
-            this.lblOfficeLevel.Size = new System.Drawing.Size(60, 19);
+            this.lblOfficeLevel.Size = new System.Drawing.Size(73, 21);
             this.lblOfficeLevel.TabIndex = 5;
             this.lblOfficeLevel.Text = "Level: 0";
             // 
@@ -320,7 +319,7 @@
             this.lblEmployeeCapacity.Location = new System.Drawing.Point(670, 64);
             this.lblEmployeeCapacity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeCapacity.Name = "lblEmployeeCapacity";
-            this.lblEmployeeCapacity.Size = new System.Drawing.Size(186, 19);
+            this.lblEmployeeCapacity.Size = new System.Drawing.Size(218, 21);
             this.lblEmployeeCapacity.TabIndex = 2;
             this.lblEmployeeCapacity.Text = "Employee Capacity: 0/10";
             // 
@@ -330,7 +329,7 @@
             this.lblMonthlyCost.Location = new System.Drawing.Point(670, 44);
             this.lblMonthlyCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMonthlyCost.Name = "lblMonthlyCost";
-            this.lblMonthlyCost.Size = new System.Drawing.Size(123, 19);
+            this.lblMonthlyCost.Size = new System.Drawing.Size(148, 21);
             this.lblMonthlyCost.TabIndex = 1;
             this.lblMonthlyCost.Text = "Monthly Cost: $0";
             // 
@@ -340,7 +339,7 @@
             this.lblPurchaseCost.Location = new System.Drawing.Point(670, 24);
             this.lblPurchaseCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPurchaseCost.Name = "lblPurchaseCost";
-            this.lblPurchaseCost.Size = new System.Drawing.Size(130, 19);
+            this.lblPurchaseCost.Size = new System.Drawing.Size(158, 21);
             this.lblPurchaseCost.TabIndex = 0;
             this.lblPurchaseCost.Text = "Purchase Cost: $0";
             // 
@@ -351,7 +350,7 @@
             this.lblLicenseList.Location = new System.Drawing.Point(391, 6);
             this.lblLicenseList.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLicenseList.Name = "lblLicenseList";
-            this.lblLicenseList.Size = new System.Drawing.Size(147, 17);
+            this.lblLicenseList.Size = new System.Drawing.Size(180, 19);
             this.lblLicenseList.TabIndex = 5;
             this.lblLicenseList.Text = "Agency License List: ";
             this.lblLicenseList.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -369,7 +368,8 @@
             // menuPanel
             // 
             this.menuPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.menuPanel.Controls.Add(this.btnWorld);
+            this.menuPanel.Controls.Add(this.btnViewRosters);
+            this.menuPanel.Controls.Add(this.btnStandings);
             this.menuPanel.Controls.Add(this.panelButtonHighlight);
             this.menuPanel.Controls.Add(this.btnClients);
             this.menuPanel.Controls.Add(this.btnJobs);
@@ -377,24 +377,24 @@
             this.menuPanel.Controls.Add(this.btnOffice);
             this.menuPanel.Location = new System.Drawing.Point(0, 73);
             this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(89, 230);
+            this.menuPanel.Size = new System.Drawing.Size(89, 282);
             this.menuPanel.TabIndex = 7;
             // 
-            // btnWorld
+            // btnStandings
             // 
-            this.btnWorld.FlatAppearance.BorderSize = 0;
-            this.btnWorld.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWorld.ForeColor = System.Drawing.Color.White;
-            this.btnWorld.Image = ((System.Drawing.Image)(resources.GetObject("btnWorld.Image")));
-            this.btnWorld.Location = new System.Drawing.Point(3, 176);
-            this.btnWorld.Name = "btnWorld";
-            this.btnWorld.Size = new System.Drawing.Size(68, 41);
-            this.btnWorld.TabIndex = 9;
-            this.btnWorld.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnWorld.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnWorld, "Clients");
-            this.btnWorld.UseVisualStyleBackColor = true;
-            this.btnWorld.Click += new System.EventHandler(this.btnWorld_Click);
+            this.btnStandings.FlatAppearance.BorderSize = 0;
+            this.btnStandings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStandings.ForeColor = System.Drawing.Color.White;
+            this.btnStandings.Image = ((System.Drawing.Image)(resources.GetObject("btnStandings.Image")));
+            this.btnStandings.Location = new System.Drawing.Point(3, 176);
+            this.btnStandings.Name = "btnStandings";
+            this.btnStandings.Size = new System.Drawing.Size(68, 41);
+            this.btnStandings.TabIndex = 9;
+            this.btnStandings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStandings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnStandings, "Clients");
+            this.btnStandings.UseVisualStyleBackColor = true;
+            this.btnStandings.Click += new System.EventHandler(this.btnStandings_Click);
             // 
             // panelButtonHighlight
             // 
@@ -475,7 +475,7 @@
             this.lblManagerIQ.Location = new System.Drawing.Point(82, 30);
             this.lblManagerIQ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerIQ.Name = "lblManagerIQ";
-            this.lblManagerIQ.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerIQ.Size = new System.Drawing.Size(69, 19);
             this.lblManagerIQ.TabIndex = 13;
             this.lblManagerIQ.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerIQ, "Intelligence");
@@ -487,7 +487,7 @@
             this.lblManagerNegotiate.Location = new System.Drawing.Point(82, 54);
             this.lblManagerNegotiate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerNegotiate.Name = "lblManagerNegotiate";
-            this.lblManagerNegotiate.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerNegotiate.Size = new System.Drawing.Size(69, 19);
             this.lblManagerNegotiate.TabIndex = 11;
             this.lblManagerNegotiate.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerNegotiate, "Negotiating");
@@ -499,7 +499,7 @@
             this.lblManagerGreed.Location = new System.Drawing.Point(170, 30);
             this.lblManagerGreed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerGreed.Name = "lblManagerGreed";
-            this.lblManagerGreed.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerGreed.Size = new System.Drawing.Size(69, 19);
             this.lblManagerGreed.TabIndex = 10;
             this.lblManagerGreed.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerGreed, "Greed");
@@ -511,7 +511,7 @@
             this.lblManagerPower.Location = new System.Drawing.Point(82, 78);
             this.lblManagerPower.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerPower.Name = "lblManagerPower";
-            this.lblManagerPower.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerPower.Size = new System.Drawing.Size(69, 19);
             this.lblManagerPower.TabIndex = 12;
             this.lblManagerPower.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerPower, "Power");
@@ -523,7 +523,7 @@
             this.lblManagerScouting.Location = new System.Drawing.Point(170, 54);
             this.lblManagerScouting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerScouting.Name = "lblManagerScouting";
-            this.lblManagerScouting.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerScouting.Size = new System.Drawing.Size(69, 19);
             this.lblManagerScouting.TabIndex = 14;
             this.lblManagerScouting.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerScouting, "Greed");
@@ -535,7 +535,7 @@
             this.lblManagerEfficiency.Location = new System.Drawing.Point(170, 78);
             this.lblManagerEfficiency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerEfficiency.Name = "lblManagerEfficiency";
-            this.lblManagerEfficiency.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerEfficiency.Size = new System.Drawing.Size(69, 19);
             this.lblManagerEfficiency.TabIndex = 15;
             this.lblManagerEfficiency.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerEfficiency, "Greed");
@@ -547,7 +547,7 @@
             this.lblAgent1EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent1EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1EFF.Name = "lblAgent1EFF";
-            this.lblAgent1EFF.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1EFF.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1EFF.TabIndex = 22;
             this.lblAgent1EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1EFF, "Efficiency");
@@ -559,7 +559,7 @@
             this.lblAgent1SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent1SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1SCT.Name = "lblAgent1SCT";
-            this.lblAgent1SCT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1SCT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1SCT.TabIndex = 21;
             this.lblAgent1SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1SCT, "Scouting");
@@ -571,7 +571,7 @@
             this.lblAgent1INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent1INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1INT.Name = "lblAgent1INT";
-            this.lblAgent1INT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1INT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1INT.TabIndex = 20;
             this.lblAgent1INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1INT, "Intelligence");
@@ -583,7 +583,7 @@
             this.lblAgent1NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent1NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1NEG.Name = "lblAgent1NEG";
-            this.lblAgent1NEG.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1NEG.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1NEG.TabIndex = 18;
             this.lblAgent1NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1NEG, "Negotiating");
@@ -595,7 +595,7 @@
             this.lblAgent1GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent1GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1GRD.Name = "lblAgent1GRD";
-            this.lblAgent1GRD.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1GRD.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1GRD.TabIndex = 17;
             this.lblAgent1GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1GRD, "Greed");
@@ -607,7 +607,7 @@
             this.lblAgent1POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent1POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1POW.Name = "lblAgent1POW";
-            this.lblAgent1POW.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1POW.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1POW.TabIndex = 19;
             this.lblAgent1POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1POW, "Power");
@@ -619,7 +619,7 @@
             this.lblAgent2EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent2EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2EFF.Name = "lblAgent2EFF";
-            this.lblAgent2EFF.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2EFF.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2EFF.TabIndex = 22;
             this.lblAgent2EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2EFF, "Efficiency");
@@ -631,7 +631,7 @@
             this.lblAgent2SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent2SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2SCT.Name = "lblAgent2SCT";
-            this.lblAgent2SCT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2SCT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2SCT.TabIndex = 21;
             this.lblAgent2SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2SCT, "Scouting");
@@ -643,7 +643,7 @@
             this.lblAgent2INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent2INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2INT.Name = "lblAgent2INT";
-            this.lblAgent2INT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2INT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2INT.TabIndex = 20;
             this.lblAgent2INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2INT, "Intelligence");
@@ -655,7 +655,7 @@
             this.lblAgent2NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent2NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2NEG.Name = "lblAgent2NEG";
-            this.lblAgent2NEG.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2NEG.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2NEG.TabIndex = 18;
             this.lblAgent2NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2NEG, "Negotiating");
@@ -667,7 +667,7 @@
             this.lblAgent2GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent2GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2GRD.Name = "lblAgent2GRD";
-            this.lblAgent2GRD.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2GRD.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2GRD.TabIndex = 17;
             this.lblAgent2GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2GRD, "Greed");
@@ -679,7 +679,7 @@
             this.lblAgent2POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent2POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2POW.Name = "lblAgent2POW";
-            this.lblAgent2POW.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2POW.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2POW.TabIndex = 19;
             this.lblAgent2POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2POW, "Power");
@@ -691,7 +691,7 @@
             this.lblAgent3EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent3EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3EFF.Name = "lblAgent3EFF";
-            this.lblAgent3EFF.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3EFF.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3EFF.TabIndex = 22;
             this.lblAgent3EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3EFF, "Efficiency");
@@ -703,7 +703,7 @@
             this.lblAgent3SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent3SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3SCT.Name = "lblAgent3SCT";
-            this.lblAgent3SCT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3SCT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3SCT.TabIndex = 21;
             this.lblAgent3SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3SCT, "Scouting");
@@ -715,7 +715,7 @@
             this.lblAgent3INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent3INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3INT.Name = "lblAgent3INT";
-            this.lblAgent3INT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3INT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3INT.TabIndex = 20;
             this.lblAgent3INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3INT, "Intelligence");
@@ -727,7 +727,7 @@
             this.lblAgent3NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent3NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3NEG.Name = "lblAgent3NEG";
-            this.lblAgent3NEG.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3NEG.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3NEG.TabIndex = 18;
             this.lblAgent3NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3NEG, "Negotiating");
@@ -739,7 +739,7 @@
             this.lblAgent3GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent3GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3GRD.Name = "lblAgent3GRD";
-            this.lblAgent3GRD.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3GRD.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3GRD.TabIndex = 17;
             this.lblAgent3GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3GRD, "Greed");
@@ -751,7 +751,7 @@
             this.lblAgent3POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent3POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3POW.Name = "lblAgent3POW";
-            this.lblAgent3POW.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3POW.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3POW.TabIndex = 19;
             this.lblAgent3POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3POW, "Power");
@@ -810,7 +810,7 @@
             this.label19.Location = new System.Drawing.Point(1, 24);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(52, 17);
+            this.label19.Size = new System.Drawing.Size(63, 19);
             this.label19.TabIndex = 24;
             this.label19.Text = "Agent:";
             // 
@@ -820,7 +820,7 @@
             this.lblAgent3Name.Location = new System.Drawing.Point(51, 23);
             this.lblAgent3Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3Name.Name = "lblAgent3Name";
-            this.lblAgent3Name.Size = new System.Drawing.Size(192, 19);
+            this.lblAgent3Name.Size = new System.Drawing.Size(234, 21);
             this.lblAgent3Name.TabIndex = 23;
             this.lblAgent3Name.Text = "Very Very Long Name Here";
             this.lblAgent3Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -859,7 +859,7 @@
             this.label11.Location = new System.Drawing.Point(1, 24);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 17);
+            this.label11.Size = new System.Drawing.Size(63, 19);
             this.label11.TabIndex = 24;
             this.label11.Text = "Agent:";
             // 
@@ -869,7 +869,7 @@
             this.lblAgent2Name.Location = new System.Drawing.Point(51, 23);
             this.lblAgent2Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2Name.Name = "lblAgent2Name";
-            this.lblAgent2Name.Size = new System.Drawing.Size(192, 19);
+            this.lblAgent2Name.Size = new System.Drawing.Size(234, 21);
             this.lblAgent2Name.TabIndex = 23;
             this.lblAgent2Name.Text = "Very Very Long Name Here";
             this.lblAgent2Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -908,7 +908,7 @@
             this.label9.Location = new System.Drawing.Point(1, 24);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 17);
+            this.label9.Size = new System.Drawing.Size(63, 19);
             this.label9.TabIndex = 24;
             this.label9.Text = "Agent:";
             // 
@@ -918,7 +918,7 @@
             this.lblAgent1Name.Location = new System.Drawing.Point(51, 23);
             this.lblAgent1Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1Name.Name = "lblAgent1Name";
-            this.lblAgent1Name.Size = new System.Drawing.Size(192, 19);
+            this.lblAgent1Name.Size = new System.Drawing.Size(234, 21);
             this.lblAgent1Name.TabIndex = 23;
             this.lblAgent1Name.Text = "Very Very Long Name Here";
             this.lblAgent1Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -940,7 +940,7 @@
             this.label2.Location = new System.Drawing.Point(602, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(59, 19);
             this.label2.TabIndex = 9;
             this.label2.Text = "Office";
             // 
@@ -961,7 +961,7 @@
             this.label1.Location = new System.Drawing.Point(4, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.Size = new System.Drawing.Size(88, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "Manager:";
             // 
@@ -1016,7 +1016,7 @@
             this.job3DaysToComplete.AutoSize = true;
             this.job3DaysToComplete.Location = new System.Drawing.Point(7, 151);
             this.job3DaysToComplete.Name = "job3DaysToComplete";
-            this.job3DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job3DaysToComplete.Size = new System.Drawing.Size(168, 21);
             this.job3DaysToComplete.TabIndex = 9;
             this.job3DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1037,7 +1037,7 @@
             this.job3PointsUntilCompletion.AutoSize = true;
             this.job3PointsUntilCompletion.Location = new System.Drawing.Point(7, 130);
             this.job3PointsUntilCompletion.Name = "job3PointsUntilCompletion";
-            this.job3PointsUntilCompletion.Size = new System.Drawing.Size(174, 19);
+            this.job3PointsUntilCompletion.Size = new System.Drawing.Size(210, 21);
             this.job3PointsUntilCompletion.TabIndex = 5;
             this.job3PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1046,7 +1046,7 @@
             this.job3MoneyPayout.AutoSize = true;
             this.job3MoneyPayout.Location = new System.Drawing.Point(7, 109);
             this.job3MoneyPayout.Name = "job3MoneyPayout";
-            this.job3MoneyPayout.Size = new System.Drawing.Size(118, 19);
+            this.job3MoneyPayout.Size = new System.Drawing.Size(140, 21);
             this.job3MoneyPayout.TabIndex = 4;
             this.job3MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1055,7 +1055,7 @@
             this.job3IPPayout.AutoSize = true;
             this.job3IPPayout.Location = new System.Drawing.Point(7, 88);
             this.job3IPPayout.Name = "job3IPPayout";
-            this.job3IPPayout.Size = new System.Drawing.Size(81, 19);
+            this.job3IPPayout.Size = new System.Drawing.Size(98, 21);
             this.job3IPPayout.TabIndex = 3;
             this.job3IPPayout.Text = "IP Payout: ";
             // 
@@ -1064,7 +1064,7 @@
             this.job3BaselineScore.AutoSize = true;
             this.job3BaselineScore.Location = new System.Drawing.Point(7, 67);
             this.job3BaselineScore.Name = "job3BaselineScore";
-            this.job3BaselineScore.Size = new System.Drawing.Size(115, 19);
+            this.job3BaselineScore.Size = new System.Drawing.Size(138, 21);
             this.job3BaselineScore.TabIndex = 2;
             this.job3BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1073,7 +1073,7 @@
             this.job3Description.AutoSize = true;
             this.job3Description.Location = new System.Drawing.Point(7, 46);
             this.job3Description.Name = "job3Description";
-            this.job3Description.Size = new System.Drawing.Size(127, 19);
+            this.job3Description.Size = new System.Drawing.Size(153, 21);
             this.job3Description.TabIndex = 1;
             this.job3Description.Text = "Job 1 Description";
             // 
@@ -1083,7 +1083,7 @@
             this.job3Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job3Title.Location = new System.Drawing.Point(6, 16);
             this.job3Title.Name = "job3Title";
-            this.job3Title.Size = new System.Drawing.Size(174, 26);
+            this.job3Title.Size = new System.Drawing.Size(215, 31);
             this.job3Title.TabIndex = 0;
             this.job3Title.Text = "Job 1 Title Text";
             this.job3Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1111,7 +1111,7 @@
             this.job2DaysToComplete.AutoSize = true;
             this.job2DaysToComplete.Location = new System.Drawing.Point(4, 151);
             this.job2DaysToComplete.Name = "job2DaysToComplete";
-            this.job2DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job2DaysToComplete.Size = new System.Drawing.Size(168, 21);
             this.job2DaysToComplete.TabIndex = 8;
             this.job2DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1132,7 +1132,7 @@
             this.job2PointsUntilCompletion.AutoSize = true;
             this.job2PointsUntilCompletion.Location = new System.Drawing.Point(7, 130);
             this.job2PointsUntilCompletion.Name = "job2PointsUntilCompletion";
-            this.job2PointsUntilCompletion.Size = new System.Drawing.Size(174, 19);
+            this.job2PointsUntilCompletion.Size = new System.Drawing.Size(210, 21);
             this.job2PointsUntilCompletion.TabIndex = 5;
             this.job2PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1141,7 +1141,7 @@
             this.job2MoneyPayout.AutoSize = true;
             this.job2MoneyPayout.Location = new System.Drawing.Point(7, 109);
             this.job2MoneyPayout.Name = "job2MoneyPayout";
-            this.job2MoneyPayout.Size = new System.Drawing.Size(118, 19);
+            this.job2MoneyPayout.Size = new System.Drawing.Size(140, 21);
             this.job2MoneyPayout.TabIndex = 4;
             this.job2MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1150,7 +1150,7 @@
             this.job2IPPayout.AutoSize = true;
             this.job2IPPayout.Location = new System.Drawing.Point(7, 88);
             this.job2IPPayout.Name = "job2IPPayout";
-            this.job2IPPayout.Size = new System.Drawing.Size(81, 19);
+            this.job2IPPayout.Size = new System.Drawing.Size(98, 21);
             this.job2IPPayout.TabIndex = 3;
             this.job2IPPayout.Text = "IP Payout: ";
             // 
@@ -1159,7 +1159,7 @@
             this.job2BaselineScore.AutoSize = true;
             this.job2BaselineScore.Location = new System.Drawing.Point(7, 67);
             this.job2BaselineScore.Name = "job2BaselineScore";
-            this.job2BaselineScore.Size = new System.Drawing.Size(115, 19);
+            this.job2BaselineScore.Size = new System.Drawing.Size(138, 21);
             this.job2BaselineScore.TabIndex = 2;
             this.job2BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1168,7 +1168,7 @@
             this.job2Description.AutoSize = true;
             this.job2Description.Location = new System.Drawing.Point(7, 46);
             this.job2Description.Name = "job2Description";
-            this.job2Description.Size = new System.Drawing.Size(127, 19);
+            this.job2Description.Size = new System.Drawing.Size(153, 21);
             this.job2Description.TabIndex = 1;
             this.job2Description.Text = "Job 1 Description";
             // 
@@ -1178,7 +1178,7 @@
             this.job2Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job2Title.Location = new System.Drawing.Point(6, 16);
             this.job2Title.Name = "job2Title";
-            this.job2Title.Size = new System.Drawing.Size(174, 26);
+            this.job2Title.Size = new System.Drawing.Size(215, 31);
             this.job2Title.TabIndex = 0;
             this.job2Title.Text = "Job 1 Title Text";
             this.job2Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1206,7 +1206,7 @@
             this.job1DaysToComplete.AutoSize = true;
             this.job1DaysToComplete.Location = new System.Drawing.Point(7, 156);
             this.job1DaysToComplete.Name = "job1DaysToComplete";
-            this.job1DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job1DaysToComplete.Size = new System.Drawing.Size(168, 21);
             this.job1DaysToComplete.TabIndex = 7;
             this.job1DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1227,7 +1227,7 @@
             this.job1PointsUntilCompletion.AutoSize = true;
             this.job1PointsUntilCompletion.Location = new System.Drawing.Point(7, 134);
             this.job1PointsUntilCompletion.Name = "job1PointsUntilCompletion";
-            this.job1PointsUntilCompletion.Size = new System.Drawing.Size(174, 19);
+            this.job1PointsUntilCompletion.Size = new System.Drawing.Size(210, 21);
             this.job1PointsUntilCompletion.TabIndex = 5;
             this.job1PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1236,7 +1236,7 @@
             this.job1MoneyPayout.AutoSize = true;
             this.job1MoneyPayout.Location = new System.Drawing.Point(7, 112);
             this.job1MoneyPayout.Name = "job1MoneyPayout";
-            this.job1MoneyPayout.Size = new System.Drawing.Size(118, 19);
+            this.job1MoneyPayout.Size = new System.Drawing.Size(140, 21);
             this.job1MoneyPayout.TabIndex = 4;
             this.job1MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1245,7 +1245,7 @@
             this.job1IPPayout.AutoSize = true;
             this.job1IPPayout.Location = new System.Drawing.Point(7, 90);
             this.job1IPPayout.Name = "job1IPPayout";
-            this.job1IPPayout.Size = new System.Drawing.Size(81, 19);
+            this.job1IPPayout.Size = new System.Drawing.Size(98, 21);
             this.job1IPPayout.TabIndex = 3;
             this.job1IPPayout.Text = "IP Payout: ";
             // 
@@ -1254,7 +1254,7 @@
             this.job1BaselineScore.AutoSize = true;
             this.job1BaselineScore.Location = new System.Drawing.Point(7, 68);
             this.job1BaselineScore.Name = "job1BaselineScore";
-            this.job1BaselineScore.Size = new System.Drawing.Size(115, 19);
+            this.job1BaselineScore.Size = new System.Drawing.Size(138, 21);
             this.job1BaselineScore.TabIndex = 2;
             this.job1BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1263,7 +1263,7 @@
             this.job1Description.AutoSize = true;
             this.job1Description.Location = new System.Drawing.Point(7, 46);
             this.job1Description.Name = "job1Description";
-            this.job1Description.Size = new System.Drawing.Size(127, 19);
+            this.job1Description.Size = new System.Drawing.Size(153, 21);
             this.job1Description.TabIndex = 1;
             this.job1Description.Text = "Job 1 Description";
             // 
@@ -1273,7 +1273,7 @@
             this.job1Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job1Title.Location = new System.Drawing.Point(6, 16);
             this.job1Title.Name = "job1Title";
-            this.job1Title.Size = new System.Drawing.Size(174, 26);
+            this.job1Title.Size = new System.Drawing.Size(215, 31);
             this.job1Title.TabIndex = 0;
             this.job1Title.Text = "Job 1 Title Text";
             this.job1Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1363,7 +1363,7 @@
             this.lblWeek.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeek.Location = new System.Drawing.Point(4, 44);
             this.lblWeek.Name = "lblWeek";
-            this.lblWeek.Size = new System.Drawing.Size(26, 14);
+            this.lblWeek.Size = new System.Drawing.Size(30, 16);
             this.lblWeek.TabIndex = 2;
             this.lblWeek.Text = "D: 0";
             // 
@@ -1373,7 +1373,7 @@
             this.lblMonth.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonth.Location = new System.Drawing.Point(4, 24);
             this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(27, 14);
+            this.lblMonth.Size = new System.Drawing.Size(31, 16);
             this.lblMonth.TabIndex = 1;
             this.lblMonth.Text = "M: 0";
             // 
@@ -1383,14 +1383,12 @@
             this.lblYear.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(4, 4);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(26, 14);
+            this.lblYear.Size = new System.Drawing.Size(29, 16);
             this.lblYear.TabIndex = 0;
             this.lblYear.Text = "Y: 0";
             // 
             // worldPanel
             // 
-            this.worldPanel.Controls.Add(this.btnViewRoster);
-            this.worldPanel.Controls.Add(this.cbTeams);
             this.worldPanel.Controls.Add(this.lblEastDivision4);
             this.worldPanel.Controls.Add(this.lblEastDivision3);
             this.worldPanel.Controls.Add(this.lblEastDivision2);
@@ -1408,134 +1406,113 @@
             this.worldPanel.Size = new System.Drawing.Size(1061, 683);
             this.worldPanel.TabIndex = 11;
             // 
-            // btnViewRoster
-            // 
-            this.btnViewRoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewRoster.ForeColor = System.Drawing.Color.White;
-            this.btnViewRoster.Location = new System.Drawing.Point(767, 40);
-            this.btnViewRoster.Name = "btnViewRoster";
-            this.btnViewRoster.Size = new System.Drawing.Size(114, 26);
-            this.btnViewRoster.TabIndex = 25;
-            this.btnViewRoster.Text = "View Roster";
-            this.btnViewRoster.UseVisualStyleBackColor = true;
-            this.btnViewRoster.Click += new System.EventHandler(this.btnViewRoster_Click);
-            // 
-            // cbTeams
-            // 
-            this.cbTeams.FormattingEnabled = true;
-            this.cbTeams.Location = new System.Drawing.Point(428, 41);
-            this.cbTeams.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTeams.Name = "cbTeams";
-            this.cbTeams.Size = new System.Drawing.Size(319, 25);
-            this.cbTeams.TabIndex = 24;
-            // 
             // lblEastDivision4
             // 
             this.lblEastDivision4.AutoSize = true;
-            this.lblEastDivision4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastDivision4.Location = new System.Drawing.Point(685, 372);
+            this.lblEastDivision4.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEastDivision4.Location = new System.Drawing.Point(733, 469);
             this.lblEastDivision4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision4.Name = "lblEastDivision4";
-            this.lblEastDivision4.Size = new System.Drawing.Size(41, 15);
+            this.lblEastDivision4.Size = new System.Drawing.Size(61, 23);
             this.lblEastDivision4.TabIndex = 23;
             this.lblEastDivision4.Text = "label10";
             // 
             // lblEastDivision3
             // 
             this.lblEastDivision3.AutoSize = true;
-            this.lblEastDivision3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastDivision3.Location = new System.Drawing.Point(685, 273);
+            this.lblEastDivision3.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEastDivision3.Location = new System.Drawing.Point(733, 338);
             this.lblEastDivision3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision3.Name = "lblEastDivision3";
-            this.lblEastDivision3.Size = new System.Drawing.Size(35, 15);
+            this.lblEastDivision3.Size = new System.Drawing.Size(52, 23);
             this.lblEastDivision3.TabIndex = 22;
             this.lblEastDivision3.Text = "label9";
             // 
             // lblEastDivision2
             // 
             this.lblEastDivision2.AutoSize = true;
-            this.lblEastDivision2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastDivision2.Location = new System.Drawing.Point(685, 174);
+            this.lblEastDivision2.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEastDivision2.Location = new System.Drawing.Point(733, 207);
             this.lblEastDivision2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision2.Name = "lblEastDivision2";
-            this.lblEastDivision2.Size = new System.Drawing.Size(35, 15);
+            this.lblEastDivision2.Size = new System.Drawing.Size(52, 23);
             this.lblEastDivision2.TabIndex = 21;
             this.lblEastDivision2.Text = "label8";
             // 
             // lblEastDivision1
             // 
             this.lblEastDivision1.AutoSize = true;
-            this.lblEastDivision1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEastDivision1.Location = new System.Drawing.Point(685, 75);
+            this.lblEastDivision1.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEastDivision1.Location = new System.Drawing.Point(733, 76);
             this.lblEastDivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision1.Name = "lblEastDivision1";
-            this.lblEastDivision1.Size = new System.Drawing.Size(35, 15);
+            this.lblEastDivision1.Size = new System.Drawing.Size(52, 23);
             this.lblEastDivision1.TabIndex = 20;
             this.lblEastDivision1.Text = "label7";
             // 
             // lblWestDivision4
             // 
             this.lblWestDivision4.AutoSize = true;
-            this.lblWestDivision4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestDivision4.Location = new System.Drawing.Point(425, 372);
+            this.lblWestDivision4.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWestDivision4.Location = new System.Drawing.Point(473, 469);
             this.lblWestDivision4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision4.Name = "lblWestDivision4";
-            this.lblWestDivision4.Size = new System.Drawing.Size(35, 15);
+            this.lblWestDivision4.Size = new System.Drawing.Size(52, 23);
             this.lblWestDivision4.TabIndex = 19;
             this.lblWestDivision4.Text = "label6";
             // 
             // lblWestDivision3
             // 
             this.lblWestDivision3.AutoSize = true;
-            this.lblWestDivision3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestDivision3.Location = new System.Drawing.Point(425, 273);
+            this.lblWestDivision3.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWestDivision3.Location = new System.Drawing.Point(473, 338);
             this.lblWestDivision3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision3.Name = "lblWestDivision3";
-            this.lblWestDivision3.Size = new System.Drawing.Size(35, 15);
+            this.lblWestDivision3.Size = new System.Drawing.Size(52, 23);
             this.lblWestDivision3.TabIndex = 18;
             this.lblWestDivision3.Text = "label5";
             // 
             // lblWestDivision2
             // 
             this.lblWestDivision2.AutoSize = true;
-            this.lblWestDivision2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestDivision2.Location = new System.Drawing.Point(425, 174);
+            this.lblWestDivision2.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWestDivision2.Location = new System.Drawing.Point(473, 207);
             this.lblWestDivision2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision2.Name = "lblWestDivision2";
-            this.lblWestDivision2.Size = new System.Drawing.Size(35, 15);
+            this.lblWestDivision2.Size = new System.Drawing.Size(52, 23);
             this.lblWestDivision2.TabIndex = 17;
             this.lblWestDivision2.Text = "label4";
             // 
             // lblWestDivision1
             // 
             this.lblWestDivision1.AutoSize = true;
-            this.lblWestDivision1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWestDivision1.Location = new System.Drawing.Point(425, 75);
+            this.lblWestDivision1.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWestDivision1.Location = new System.Drawing.Point(473, 76);
             this.lblWestDivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision1.Name = "lblWestDivision1";
-            this.lblWestDivision1.Size = new System.Drawing.Size(35, 15);
+            this.lblWestDivision1.Size = new System.Drawing.Size(52, 23);
             this.lblWestDivision1.TabIndex = 16;
             this.lblWestDivision1.Text = "label3";
             // 
             // lblEastConference
             // 
             this.lblEastConference.AutoSize = true;
-            this.lblEastConference.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEastConference.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEastConference.Location = new System.Drawing.Point(236, 76);
             this.lblEastConference.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastConference.Name = "lblEastConference";
-            this.lblEastConference.Size = new System.Drawing.Size(35, 15);
+            this.lblEastConference.Size = new System.Drawing.Size(52, 23);
             this.lblEastConference.TabIndex = 15;
             this.lblEastConference.Text = "label2";
             // 
             // lblWestConference
             // 
             this.lblWestConference.AutoSize = true;
-            this.lblWestConference.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWestConference.Font = new System.Drawing.Font("Arial Unicode MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWestConference.Location = new System.Drawing.Point(18, 76);
             this.lblWestConference.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestConference.Name = "lblWestConference";
-            this.lblWestConference.Size = new System.Drawing.Size(35, 15);
+            this.lblWestConference.Size = new System.Drawing.Size(52, 23);
             this.lblWestConference.TabIndex = 14;
             this.lblWestConference.Text = "label1";
             // 
@@ -1545,7 +1522,7 @@
             this.cbLeagues.Location = new System.Drawing.Point(15, 42);
             this.cbLeagues.Margin = new System.Windows.Forms.Padding(4);
             this.cbLeagues.Name = "cbLeagues";
-            this.cbLeagues.Size = new System.Drawing.Size(319, 25);
+            this.cbLeagues.Size = new System.Drawing.Size(319, 29);
             this.cbLeagues.TabIndex = 13;
             this.cbLeagues.SelectedIndexChanged += new System.EventHandler(this.cbLeagues_SelectedIndexChanged);
             // 
@@ -1554,9 +1531,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 19);
+            this.label3.Size = new System.Drawing.Size(158, 21);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Wide World of Sports";
+            this.label3.Text = "League Standings";
             // 
             // panel1
             // 
@@ -1567,7 +1544,7 @@
             this.panel1.Controls.Add(this.pictureHockey);
             this.panel1.Controls.Add(this.pictureSoccer);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(0, 309);
+            this.panel1.Location = new System.Drawing.Point(4, 365);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(89, 220);
             this.panel1.TabIndex = 12;
@@ -1628,7 +1605,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(8, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.Size = new System.Drawing.Size(89, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "In Season";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1652,53 +1629,50 @@
             this.teamRosterPanel.Size = new System.Drawing.Size(1061, 683);
             this.teamRosterPanel.TabIndex = 13;
             // 
-            // cbTeamRoster
+            // lblRoster
             // 
-            this.cbTeamRoster.Font = new System.Drawing.Font("Century Gothic", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTeamRoster.ForeColor = System.Drawing.Color.Black;
-            this.cbTeamRoster.FormattingEnabled = true;
-            this.cbTeamRoster.Location = new System.Drawing.Point(643, 15);
-            this.cbTeamRoster.Name = "cbTeamRoster";
-            this.cbTeamRoster.Size = new System.Drawing.Size(301, 27);
-            this.cbTeamRoster.TabIndex = 1;
-            this.cbTeamRoster.SelectedIndexChanged += new System.EventHandler(this.cbTeamRoster_SelectedIndexChanged);
+            this.lblRoster.AutoSize = true;
+            this.lblRoster.Location = new System.Drawing.Point(25, 200);
+            this.lblRoster.Name = "lblRoster";
+            this.lblRoster.Size = new System.Drawing.Size(60, 21);
+            this.lblRoster.TabIndex = 19;
+            this.lblRoster.Text = "label1";
             // 
-            // lblTeamAwards
+            // cbLeagueList
             // 
-            this.lblTeamAwards.AutoSize = true;
-            this.lblTeamAwards.Location = new System.Drawing.Point(23, 124);
-            this.lblTeamAwards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTeamAwards.Name = "lblTeamAwards";
-            this.lblTeamAwards.Size = new System.Drawing.Size(52, 19);
-            this.lblTeamAwards.TabIndex = 6;
-            this.lblTeamAwards.Text = "label1";
+            this.cbLeagueList.FormattingEnabled = true;
+            this.cbLeagueList.Location = new System.Drawing.Point(14, 17);
+            this.cbLeagueList.Name = "cbLeagueList";
+            this.cbLeagueList.Size = new System.Drawing.Size(308, 29);
+            this.cbLeagueList.TabIndex = 18;
+            this.cbLeagueList.SelectedIndexChanged += new System.EventHandler(this.cbLeagueList_SelectedIndexChanged);
             // 
-            // lblTeamInfo
+            // cbTeamList
             // 
-            this.lblTeamInfo.AutoSize = true;
-            this.lblTeamInfo.Location = new System.Drawing.Point(23, 71);
-            this.lblTeamInfo.Name = "lblTeamInfo";
-            this.lblTeamInfo.Size = new System.Drawing.Size(52, 19);
-            this.lblTeamInfo.TabIndex = 5;
-            this.lblTeamInfo.Text = "label1";
+            this.cbTeamList.FormattingEnabled = true;
+            this.cbTeamList.Location = new System.Drawing.Point(329, 16);
+            this.cbTeamList.Name = "cbTeamList";
+            this.cbTeamList.Size = new System.Drawing.Size(308, 29);
+            this.cbTeamList.TabIndex = 17;
+            this.cbTeamList.SelectedIndexChanged += new System.EventHandler(this.cbTeamList_SelectedIndexChanged);
             // 
             // lblStarter
             // 
             this.lblStarter.AutoSize = true;
-            this.lblStarter.Location = new System.Drawing.Point(338, 606);
+            this.lblStarter.Location = new System.Drawing.Point(649, 587);
             this.lblStarter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStarter.Name = "lblStarter";
-            this.lblStarter.Size = new System.Drawing.Size(61, 19);
+            this.lblStarter.Size = new System.Drawing.Size(75, 21);
             this.lblStarter.TabIndex = 16;
             this.lblStarter.Text = "Starter: ";
             // 
             // lblDepthChart
             // 
             this.lblDepthChart.AutoSize = true;
-            this.lblDepthChart.Location = new System.Drawing.Point(338, 581);
+            this.lblDepthChart.Location = new System.Drawing.Point(649, 562);
             this.lblDepthChart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepthChart.Name = "lblDepthChart";
-            this.lblDepthChart.Size = new System.Drawing.Size(156, 19);
+            this.lblDepthChart.Size = new System.Drawing.Size(190, 21);
             this.lblDepthChart.TabIndex = 15;
             this.lblDepthChart.Text = "Spot on Depth Chart:";
             // 
@@ -1707,7 +1681,7 @@
             this.lblStats.AutoSize = true;
             this.lblStats.Location = new System.Drawing.Point(889, 80);
             this.lblStats.Name = "lblStats";
-            this.lblStats.Size = new System.Drawing.Size(52, 19);
+            this.lblStats.Size = new System.Drawing.Size(60, 21);
             this.lblStats.TabIndex = 14;
             this.lblStats.Text = "label1";
             // 
@@ -1732,7 +1706,7 @@
             this.lblAgencyHappiness.AutoSize = true;
             this.lblAgencyHappiness.Location = new System.Drawing.Point(6, 173);
             this.lblAgencyHappiness.Name = "lblAgencyHappiness";
-            this.lblAgencyHappiness.Size = new System.Drawing.Size(141, 19);
+            this.lblAgencyHappiness.Size = new System.Drawing.Size(170, 21);
             this.lblAgencyHappiness.TabIndex = 10;
             this.lblAgencyHappiness.Text = "Agency Happiness:";
             // 
@@ -1741,7 +1715,7 @@
             this.lblTeamHappiness.AutoSize = true;
             this.lblTeamHappiness.Location = new System.Drawing.Point(6, 148);
             this.lblTeamHappiness.Name = "lblTeamHappiness";
-            this.lblTeamHappiness.Size = new System.Drawing.Size(125, 19);
+            this.lblTeamHappiness.Size = new System.Drawing.Size(152, 21);
             this.lblTeamHappiness.TabIndex = 9;
             this.lblTeamHappiness.Text = "Team Happiness:";
             // 
@@ -1750,7 +1724,7 @@
             this.lblPlayForTitle.AutoSize = true;
             this.lblPlayForTitle.Location = new System.Drawing.Point(6, 124);
             this.lblPlayForTitle.Name = "lblPlayForTitle";
-            this.lblPlayForTitle.Size = new System.Drawing.Size(92, 19);
+            this.lblPlayForTitle.Size = new System.Drawing.Size(111, 21);
             this.lblPlayForTitle.TabIndex = 8;
             this.lblPlayForTitle.Text = "Play for Title:";
             // 
@@ -1759,7 +1733,7 @@
             this.lblLoyalty.AutoSize = true;
             this.lblLoyalty.Location = new System.Drawing.Point(6, 99);
             this.lblLoyalty.Name = "lblLoyalty";
-            this.lblLoyalty.Size = new System.Drawing.Size(62, 19);
+            this.lblLoyalty.Size = new System.Drawing.Size(72, 21);
             this.lblLoyalty.TabIndex = 7;
             this.lblLoyalty.Text = "Loyalty:";
             // 
@@ -1768,7 +1742,7 @@
             this.lblLifestyle.AutoSize = true;
             this.lblLifestyle.Location = new System.Drawing.Point(6, 71);
             this.lblLifestyle.Name = "lblLifestyle";
-            this.lblLifestyle.Size = new System.Drawing.Size(69, 19);
+            this.lblLifestyle.Size = new System.Drawing.Size(83, 21);
             this.lblLifestyle.TabIndex = 6;
             this.lblLifestyle.Text = "Lifestyle: ";
             // 
@@ -1777,7 +1751,7 @@
             this.lblGreed.AutoSize = true;
             this.lblGreed.Location = new System.Drawing.Point(6, 46);
             this.lblGreed.Name = "lblGreed";
-            this.lblGreed.Size = new System.Drawing.Size(61, 19);
+            this.lblGreed.Size = new System.Drawing.Size(74, 21);
             this.lblGreed.TabIndex = 5;
             this.lblGreed.Text = "Greed: ";
             // 
@@ -1786,7 +1760,7 @@
             this.lblPopularity.AutoSize = true;
             this.lblPopularity.Location = new System.Drawing.Point(6, 22);
             this.lblPopularity.Name = "lblPopularity";
-            this.lblPopularity.Size = new System.Drawing.Size(82, 19);
+            this.lblPopularity.Size = new System.Drawing.Size(96, 21);
             this.lblPopularity.TabIndex = 4;
             this.lblPopularity.Text = "Popularity:";
             // 
@@ -1808,7 +1782,7 @@
             this.lblPosition.AutoSize = true;
             this.lblPosition.Location = new System.Drawing.Point(6, 16);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(64, 19);
+            this.lblPosition.Size = new System.Drawing.Size(77, 21);
             this.lblPosition.TabIndex = 10;
             this.lblPosition.Text = "Position:";
             // 
@@ -1817,7 +1791,7 @@
             this.lblSkillLevel.AutoSize = true;
             this.lblSkillLevel.Location = new System.Drawing.Point(6, 89);
             this.lblSkillLevel.Name = "lblSkillLevel";
-            this.lblSkillLevel.Size = new System.Drawing.Size(79, 19);
+            this.lblSkillLevel.Size = new System.Drawing.Size(95, 21);
             this.lblSkillLevel.TabIndex = 9;
             this.lblSkillLevel.Text = "Skill Level: ";
             // 
@@ -1826,7 +1800,7 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(6, 64);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(40, 19);
+            this.lblAge.Size = new System.Drawing.Size(50, 21);
             this.lblAge.TabIndex = 8;
             this.lblAge.Text = "Age:";
             // 
@@ -1835,7 +1809,7 @@
             this.lblFullName.AutoSize = true;
             this.lblFullName.Location = new System.Drawing.Point(6, 40);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(100, 19);
+            this.lblFullName.Size = new System.Drawing.Size(118, 21);
             this.lblFullName.TabIndex = 7;
             this.lblFullName.Text = "Yearly Salary:";
             // 
@@ -1857,7 +1831,7 @@
             this.lblAgentPercent.AutoSize = true;
             this.lblAgentPercent.Location = new System.Drawing.Point(6, 94);
             this.lblAgentPercent.Name = "lblAgentPercent";
-            this.lblAgentPercent.Size = new System.Drawing.Size(139, 19);
+            this.lblAgentPercent.Size = new System.Drawing.Size(171, 21);
             this.lblAgentPercent.TabIndex = 7;
             this.lblAgentPercent.Text = "Agent Percentage:";
             // 
@@ -1866,7 +1840,7 @@
             this.lblAgentPaid.AutoSize = true;
             this.lblAgentPaid.Location = new System.Drawing.Point(6, 71);
             this.lblAgentPaid.Name = "lblAgentPaid";
-            this.lblAgentPaid.Size = new System.Drawing.Size(93, 19);
+            this.lblAgentPaid.Size = new System.Drawing.Size(114, 21);
             this.lblAgentPaid.TabIndex = 6;
             this.lblAgentPaid.Text = "Agent Paid: ";
             // 
@@ -1875,7 +1849,7 @@
             this.lblYearsLeft.AutoSize = true;
             this.lblYearsLeft.Location = new System.Drawing.Point(6, 46);
             this.lblYearsLeft.Name = "lblYearsLeft";
-            this.lblYearsLeft.Size = new System.Drawing.Size(76, 19);
+            this.lblYearsLeft.Size = new System.Drawing.Size(97, 21);
             this.lblYearsLeft.TabIndex = 5;
             this.lblYearsLeft.Text = "Years Left:";
             // 
@@ -1884,40 +1858,59 @@
             this.lblYearlySalary.AutoSize = true;
             this.lblYearlySalary.Location = new System.Drawing.Point(6, 22);
             this.lblYearlySalary.Name = "lblYearlySalary";
-            this.lblYearlySalary.Size = new System.Drawing.Size(100, 19);
+            this.lblYearlySalary.Size = new System.Drawing.Size(118, 21);
             this.lblYearlySalary.TabIndex = 4;
             this.lblYearlySalary.Text = "Yearly Salary:";
             // 
-            // cbTeamList
+            // lblTeamAwards
             // 
-            this.cbTeamList.FormattingEnabled = true;
-            this.cbTeamList.Location = new System.Drawing.Point(329, 16);
-            this.cbTeamList.Name = "cbTeamList";
-            this.cbTeamList.Size = new System.Drawing.Size(308, 25);
-            this.cbTeamList.TabIndex = 17;
-            this.cbTeamList.SelectedIndexChanged += new System.EventHandler(this.cbTeamList_SelectedIndexChanged);
+            this.lblTeamAwards.AutoSize = true;
+            this.lblTeamAwards.Location = new System.Drawing.Point(23, 124);
+            this.lblTeamAwards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTeamAwards.Name = "lblTeamAwards";
+            this.lblTeamAwards.Size = new System.Drawing.Size(60, 21);
+            this.lblTeamAwards.TabIndex = 6;
+            this.lblTeamAwards.Text = "label1";
             // 
-            // cbLeagueList
+            // lblTeamInfo
             // 
-            this.cbLeagueList.FormattingEnabled = true;
-            this.cbLeagueList.Location = new System.Drawing.Point(14, 17);
-            this.cbLeagueList.Name = "cbLeagueList";
-            this.cbLeagueList.Size = new System.Drawing.Size(308, 25);
-            this.cbLeagueList.TabIndex = 18;
-            this.cbLeagueList.SelectedIndexChanged += new System.EventHandler(this.cbLeagueList_SelectedIndexChanged);
+            this.lblTeamInfo.AutoSize = true;
+            this.lblTeamInfo.Location = new System.Drawing.Point(23, 71);
+            this.lblTeamInfo.Name = "lblTeamInfo";
+            this.lblTeamInfo.Size = new System.Drawing.Size(60, 21);
+            this.lblTeamInfo.TabIndex = 5;
+            this.lblTeamInfo.Text = "label1";
             // 
-            // lblRoster
+            // cbTeamRoster
             // 
-            this.lblRoster.AutoSize = true;
-            this.lblRoster.Location = new System.Drawing.Point(25, 200);
-            this.lblRoster.Name = "lblRoster";
-            this.lblRoster.Size = new System.Drawing.Size(52, 19);
-            this.lblRoster.TabIndex = 19;
-            this.lblRoster.Text = "label1";
+            this.cbTeamRoster.Font = new System.Drawing.Font("Century Gothic", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTeamRoster.ForeColor = System.Drawing.Color.Black;
+            this.cbTeamRoster.FormattingEnabled = true;
+            this.cbTeamRoster.Location = new System.Drawing.Point(643, 15);
+            this.cbTeamRoster.Name = "cbTeamRoster";
+            this.cbTeamRoster.Size = new System.Drawing.Size(301, 29);
+            this.cbTeamRoster.TabIndex = 1;
+            this.cbTeamRoster.SelectedIndexChanged += new System.EventHandler(this.cbTeamRoster_SelectedIndexChanged);
+            // 
+            // btnViewRosters
+            // 
+            this.btnViewRosters.FlatAppearance.BorderSize = 0;
+            this.btnViewRosters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewRosters.ForeColor = System.Drawing.Color.White;
+            this.btnViewRosters.Image = ((System.Drawing.Image)(resources.GetObject("btnViewRosters.Image")));
+            this.btnViewRosters.Location = new System.Drawing.Point(3, 223);
+            this.btnViewRosters.Name = "btnViewRosters";
+            this.btnViewRosters.Size = new System.Drawing.Size(68, 41);
+            this.btnViewRosters.TabIndex = 10;
+            this.btnViewRosters.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnViewRosters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnViewRosters, "Clients");
+            this.btnViewRosters.UseVisualStyleBackColor = true;
+            this.btnViewRosters.Click += new System.EventHandler(this.btnViewRosters_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
@@ -2084,7 +2077,7 @@
         public System.Windows.Forms.Label lblAgent1GRD;
         public System.Windows.Forms.Label lblAgent1POW;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Button btnWorld;
+        public System.Windows.Forms.Button btnStandings;
         private System.Windows.Forms.Panel worldPanel;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label lblEastDivision4;
@@ -2105,8 +2098,6 @@
         public System.Windows.Forms.PictureBox pictureBasketball;
         public System.Windows.Forms.PictureBox pictureBaseball;
         public System.Windows.Forms.PictureBox pictureHockey;
-        public System.Windows.Forms.ComboBox cbTeams;
-        private System.Windows.Forms.Button btnViewRoster;
         private System.Windows.Forms.Panel teamRosterPanel;
         public System.Windows.Forms.ComboBox cbTeamRoster;
         public System.Windows.Forms.Label lblStarter;
@@ -2135,6 +2126,7 @@
         public System.Windows.Forms.Label lblYearsLeft;
         public System.Windows.Forms.Label lblYearlySalary;
         public System.Windows.Forms.Label lblRoster;
+        public System.Windows.Forms.Button btnViewRosters;
     }
 }
 
