@@ -172,21 +172,12 @@ namespace SportsAgencyTycoonV2
                 // freelance
                 else if (cbManagerActions.SelectedIndex == 1)
                 {
-                    FreelanceForm freelanceForm = new FreelanceForm(rnd, world, world.MyAgency);
-                    freelanceForm.BringToFront();
-                    freelanceForm.ShowDialog();
+                    Freelance();
                 }
                 // search for player
                 else if (cbManagerActions.SelectedIndex == 2)
                 {
-                    if (world.MyAgency.Licenses.Count == 0)
-                        MessageBox.Show("Must obtain a license before searching for a player to bring on as a client.");
-                    else
-                    {
-                        PlayerSearchForm playerSearchForm = new PlayerSearchForm(rnd, world.MyAgency, world.Manager);
-                        playerSearchForm.BringToFront();
-                        playerSearchForm.ShowDialog();
-                    }
+                    OpenClientPanel();
                 }
             }
         }
@@ -209,6 +200,10 @@ namespace SportsAgencyTycoonV2
 
         private void btnJobs_Click(object sender, EventArgs e)
         {
+            Freelance();
+        }
+        private void Freelance()
+        {
             panelButtonHighlight.Height = btnJobs.Height;
             panelButtonHighlight.Top = btnJobs.Top;
             HideAllPanels();
@@ -218,9 +213,14 @@ namespace SportsAgencyTycoonV2
 
         private void btnClients_Click(object sender, EventArgs e)
         {
+            OpenClientPanel();
+        }
+        private void OpenClientPanel()
+        {
             panelButtonHighlight.Height = btnClients.Height;
             panelButtonHighlight.Top = btnClients.Top;
             HideAllPanels();
+            clientPanel.Visible = true;
         }
         private void btnStandings_Click(object sender, EventArgs e)
         {
@@ -238,10 +238,6 @@ namespace SportsAgencyTycoonV2
             teamRosterPanel.Visible = true;
             worldPanelFunctions.PopulateLeagues();
         }
-        private void cbLeagues_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            worldPanelFunctions.LeagueSelected();
-        }
 
         private void HideAllPanels()
         {
@@ -249,8 +245,9 @@ namespace SportsAgencyTycoonV2
             freelancePanel.Visible = false;
             worldPanel.Visible = false;
             teamRosterPanel.Visible = false;
+            clientPanel.Visible = false;
         }
-
+        #region Freelance Buttons
         private void btnAcceptJob1_Click(object sender, EventArgs e)
         {
             FreelanceJob job = world.MyAgency.FreelanceJobsAvailable[0];
@@ -268,7 +265,12 @@ namespace SportsAgencyTycoonV2
             FreelanceJob job = world.MyAgency.FreelanceJobsAvailable[2];
             freelance.AttemptJob(job, freelanceJobTimer, jobProgressBar);
         }
-
+        #endregion
+        #region League, Team and Roster IndexChanged Methods
+        private void cbLeagues_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            worldPanelFunctions.LeagueSelected();
+        }
         private void cbTeamRoster_SelectedIndexChanged(object sender, EventArgs e)
         {
             teamRosterPanelFunctions.DisplaySelectedPlayerInfo(world.Leagues[cbLeagueList.SelectedIndex].TeamList[cbTeamList.SelectedIndex].Roster[cbTeamRoster.SelectedIndex]);
@@ -284,7 +286,7 @@ namespace SportsAgencyTycoonV2
             teamRosterPanelFunctions.FillTeamRosterComboBox(world.Leagues[cbLeagueList.SelectedIndex].TeamList[cbTeamList.SelectedIndex]);
             teamRosterPanelFunctions.FillTeamInfo();
         }
+        #endregion
 
-        
     }
 }

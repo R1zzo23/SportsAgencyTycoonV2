@@ -175,6 +175,7 @@
     <Content Include="Images\office.png" />
     <Content Include="Images\manager.png" />
     <Content Include="Images\soccer.png" />
+    <Content Include="Images\standings.png" />
     <Content Include="Images\team.png" />
     <Content Include="Images\world.png" />
     <Content Include="_GameIdeas.txt" />
