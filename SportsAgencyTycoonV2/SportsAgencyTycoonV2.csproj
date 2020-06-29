@@ -60,6 +60,7 @@
     <Compile Include="Calendar.cs" />
     <Compile Include="CalendarEvent.cs" />
     <Compile Include="CalendarEventType.cs" />
+    <Compile Include="ClientPanelFunctions.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="CreateManagerAndAgency.cs">

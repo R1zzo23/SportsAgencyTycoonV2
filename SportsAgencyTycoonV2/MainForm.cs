@@ -28,6 +28,7 @@ namespace SportsAgencyTycoonV2
 
         public WorldPanelFunctions worldPanelFunctions;
         public TeamRosterPanelFunctions teamRosterPanelFunctions;
+        public ClientPanelFunctions clientPanelFunctions;
         public MainForm()
         {
             world = new World(rnd);
@@ -49,6 +50,7 @@ namespace SportsAgencyTycoonV2
             world.InitializeWorld();
             worldPanelFunctions = new WorldPanelFunctions(this, world);
             teamRosterPanelFunctions = new TeamRosterPanelFunctions(this, world);
+            clientPanelFunctions = new ClientPanelFunctions(this, world);
         }
         private void AddAgentLabelsToList()
         {
@@ -217,10 +219,16 @@ namespace SportsAgencyTycoonV2
         }
         private void OpenClientPanel()
         {
-            panelButtonHighlight.Height = btnClients.Height;
-            panelButtonHighlight.Top = btnClients.Top;
-            HideAllPanels();
-            clientPanel.Visible = true;
+            if (world.MyAgency.Licenses.Count == 0)
+                MessageBox.Show("Must have a license to represent players before signing your own.");
+            else
+            {
+                panelButtonHighlight.Height = btnClients.Height;
+                panelButtonHighlight.Top = btnClients.Top;
+                HideAllPanels();
+                clientPanel.Visible = true;
+                clientPanelFunctions.FillSportComboBox();
+            }
         }
         private void btnStandings_Click(object sender, EventArgs e)
         {
@@ -288,5 +296,10 @@ namespace SportsAgencyTycoonV2
         }
         #endregion
 
+        private void btnSearchForClient_Click(object sender, EventArgs e)
+        {
+            clientPanelFunctions.SearchForClient();
+        }
+        
     }
 }

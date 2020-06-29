@@ -37,6 +37,9 @@ namespace SportsAgencyTycoonV2
         public int Experience = 0;
         public bool Retiring = false;
 
+        public int ScoutedSkill;
+        public bool ScoutedByAgency = false;
+
         //player attributes to determine which teams or contracts a player prefers
         //public int Greed;
         public int Lifestyle;
