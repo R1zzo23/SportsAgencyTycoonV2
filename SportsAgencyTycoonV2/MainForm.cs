@@ -300,6 +300,10 @@ namespace SportsAgencyTycoonV2
         {
             clientPanelFunctions.SearchForClient();
         }
-        
+
+        private void cbScoutedPlayers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            clientPanelFunctions.DisplayScoutedPlayerInfo();
+        }
     }
 }

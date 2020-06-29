@@ -16,6 +16,7 @@ namespace SportsAgencyTycoonV2
         Sports selectedSport;
         List<SoccerPlayer> scoutedSoccerPlayers = new List<SoccerPlayer>();
         List<Player> availableClients = new List<Player>();
+        List<Player> scoutedPlayers = new List<Player>();
         int scoutingSkills;
         int agentSkills;
         public ClientPanelFunctions (MainForm mf, World w)
@@ -42,20 +43,27 @@ namespace SportsAgencyTycoonV2
         {
             if (mainForm.cbClientSport.SelectedIndex > -1)
             {
-                selectedSport = world.MyAgency.Licenses[mainForm.cbClientSport.SelectedIndex];
-                if (!mainForm.rbFreeAgent.Checked && !mainForm.rbOnTeam.Checked && !mainForm.rbEither.Checked)
-                    MessageBox.Show("Check one of the options to search.");
+                if (mainForm.cbAgentToScout.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Must select an agent to do the scouting.");
+                }
                 else
                 {
-                    if (mainForm.rbEither.Checked)
+                    selectedSport = world.MyAgency.Licenses[mainForm.cbClientSport.SelectedIndex];
+                    if (!mainForm.rbFreeAgent.Checked && !mainForm.rbOnTeam.Checked && !mainForm.rbEither.Checked)
+                        MessageBox.Show("Check one of the options to search.");
+                    else
                     {
-                        freeAgent = true;
-                        onTeam = true;
+                        if (mainForm.rbEither.Checked)
+                        {
+                            freeAgent = true;
+                            onTeam = true;
+                        }
+                        else if (mainForm.rbFreeAgent.Checked)
+                            freeAgent = true;
+                        else if (mainForm.rbOnTeam.Checked)
+                            onTeam = true;
                     }
-                    else if (mainForm.rbFreeAgent.Checked)
-                        freeAgent = true;
-                    else if (mainForm.rbOnTeam.Checked)
-                        onTeam = true;
                 }
             }
         }
@@ -74,14 +82,18 @@ namespace SportsAgencyTycoonV2
         }
         private void ScoutPlayer(Player p)
         {
-            p.ScoutedByAgency = true;
-            int variation = (scoutingSkills / 100) * p.CurrentSkill;
-            p.ScoutedSkill = world.rnd.Next((p.CurrentSkill - variation), p.CurrentSkill + variation);
+            if (!p.ScoutedByAgency)
+            {
+                p.ScoutedByAgency = true;
+                double variation = (Convert.ToDouble(scoutingSkills) / 100) * Convert.ToDouble(p.CurrentSkill);
+                p.ScoutedSkill = world.rnd.Next(Convert.ToInt32((Convert.ToDouble(p.CurrentSkill) - variation)), Convert.ToInt32(Convert.ToDouble(p.CurrentSkill) + variation));
+                scoutedPlayers.Add(p);
+            }            
         }
         private void FillAvailableClientList()
         {
             availableClients.Clear();
-            scoutingSkills = (int)(world.MyAgency.Manager.Scouting * .75);
+            scoutingSkills = (int)(world.MyAgency.Manager.Scouting * .5);
             agentSkills = (int)((world.MyAgency.Manager.Power + world.MyAgency.Manager.Intelligence + world.MyAgency.Manager.Negotiating) * .25);
 
             /*foreach (Agent a in world.MyAgency.AgentList)
@@ -114,17 +126,27 @@ namespace SportsAgencyTycoonV2
         private void FillScoutedClientComboBox()
         {
             mainForm.cbScoutedPlayers.Items.Clear();
-            foreach (Player p in availableClients)
+            foreach (Player p in scoutedPlayers)
             {
-                if (p.ScoutedByAgency)
-                {
-                    string abbrev;
-                    if (p.Team != null)
-                        abbrev = p.Team.Abbreviation;
-                    else abbrev = "Free Agent";
-                    mainForm.cbScoutedPlayers.Items.Add("[" + abbrev + "] " + p.Position.ToString() + " " + p.FullName + " " + p.ScoutedSkill.ToString());
-                }
+                string abbrev;
+                if (p.Team != null)
+                    abbrev = p.Team.Abbreviation;
+                else abbrev = "Free Agent";
+                mainForm.cbScoutedPlayers.Items.Add("[" + abbrev + "] " + p.Position.ToString() + " " + p.FullName + " Scouted: " + p.ScoutedSkill.ToString() + " Actual: " + p.CurrentSkill.ToString());
             }
+        }
+        public void DisplayScoutedPlayerInfo()
+        {
+            Player scoutedPlayer = scoutedPlayers[mainForm.cbScoutedPlayers.SelectedIndex];
+            if (scoutedPlayer.ScoutedSkill <= 20)
+                mainForm.starRatingPicture.Image = SportsAgencyTycoonV2.Properties.Resources._1star;
+            else if (scoutedPlayer.ScoutedSkill <= 40)
+                mainForm.starRatingPicture.Image = SportsAgencyTycoonV2.Properties.Resources._2star;
+            else if (scoutedPlayer.ScoutedSkill <= 60)
+                mainForm.starRatingPicture.Image = SportsAgencyTycoonV2.Properties.Resources._3star;
+            else if (scoutedPlayer.ScoutedSkill <= 80)
+                mainForm.starRatingPicture.Image = SportsAgencyTycoonV2.Properties.Resources._4star;
+            else mainForm.starRatingPicture.Image = SportsAgencyTycoonV2.Properties.Resources._5star;
         }
     }
 }
