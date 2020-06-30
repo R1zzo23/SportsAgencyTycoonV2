@@ -228,6 +228,7 @@ namespace SportsAgencyTycoonV2
                 HideAllPanels();
                 clientPanel.Visible = true;
                 clientPanelFunctions.FillSportComboBox();
+                clientPanelFunctions.FillAgentComboBox();
             }
         }
         private void btnStandings_Click(object sender, EventArgs e)
@@ -304,6 +305,18 @@ namespace SportsAgencyTycoonV2
         private void cbScoutedPlayers_SelectedIndexChanged(object sender, EventArgs e)
         {
             clientPanelFunctions.DisplayScoutedPlayerInfo();
+        }
+
+        private void cbAgentToScout_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            clientPanelFunctions.SelectAgentToScout();
+        }
+
+        private void cbClientSport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            clientPanelFunctions.selectedSport = world.MyAgency.Licenses[cbClientSport.SelectedIndex];
+            cbScoutedPlayers.SelectedIndex = -1;
+            clientPanelFunctions.FillScoutedClientComboBox();
         }
     }
 }
