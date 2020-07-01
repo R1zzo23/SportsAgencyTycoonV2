@@ -39,6 +39,8 @@ namespace SportsAgencyTycoonV2
 
         public int ScoutedSkill;
         public bool ScoutedByAgency = false;
+        public Agent AgentThatScoutedPlayer;
+        public int AgentScoutingRating;
 
         //player attributes to determine which teams or contracts a player prefers
         //public int Greed;

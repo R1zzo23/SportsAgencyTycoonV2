@@ -30,7 +30,7 @@ namespace SportsAgencyTycoonV2
             mainForm.lblTeamAwards.Text = "";
             if (selectedTeam.Awards.Count > 0)
                 foreach (Award award in selectedTeam.Awards)
-                    mainForm.lblTeamAwards.Text += award.Year + " " + award.AwardName + Environment.NewLine;
+                    mainForm.lblTeamAwards.Text += "Year #" + award.Year + " " + award.AwardName + Environment.NewLine;
 
             mainForm.lblRoster.Text = "[POS] LAST, FIRST:                CUR/POT          AGE" + Environment.NewLine;
             if (selectedLeague.Sport == Sports.Hockey)

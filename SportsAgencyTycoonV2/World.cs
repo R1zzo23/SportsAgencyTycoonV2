@@ -864,7 +864,7 @@ namespace SportsAgencyTycoonV2
             Position position = p.Position;
             int starterCount = 0;
 
-            if (position == Position.G) starterCount = 1;
+            if (position == Position.GK) starterCount = 1;
             else if (position == Position.F || position == Position.D) starterCount = 4;
             else starterCount = 3;
 
