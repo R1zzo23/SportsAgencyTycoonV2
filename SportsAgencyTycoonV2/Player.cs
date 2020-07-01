@@ -38,6 +38,7 @@ namespace SportsAgencyTycoonV2
         public bool Retiring = false;
 
         public int ScoutedSkill;
+        public int WSSAScoutedSkill;
         public bool ScoutedByAgency = false;
         public Agent AgentThatScoutedPlayer;
         public int AgentScoutingRating;
@@ -119,6 +120,7 @@ namespace SportsAgencyTycoonV2
 
             CurrentSkill = rnd.Next(25, 76);
             PotentialSkill = AssignPotential(rnd, age, CurrentSkill);
+            WSSAScoutedSkill = AssignWSSAScoutedSkill(rnd, CurrentSkill, PotentialSkill);
 
             Greed = rnd.Next(0, 101);
             Lifestyle = rnd.Next(0, 101);
@@ -155,7 +157,28 @@ namespace SportsAgencyTycoonV2
             if (s == Sports.Boxing || s == Sports.Golf || s == Sports.MMA || s == Sports.Tennis) return PlayerType.Individual;
             else return PlayerType.Team;
         }
+        public int AssignWSSAScoutedSkill(Random rnd, int currentSkill, int potentialSkill)
+        {
+            int wssaScoutedSkill = 0;
+            int min;
+            int max;
 
+            if (currentSkill <= 30)
+                min = Convert.ToInt32(currentSkill / 3);
+            else if (currentSkill <= 50)
+                min = Convert.ToInt32(currentSkill / 2);
+            else if (currentSkill <= 75)
+                min = Convert.ToInt32(currentSkill / 1.5);
+            else min = Convert.ToInt32(currentSkill / 1.25);
+
+            max = currentSkill + min;
+
+            wssaScoutedSkill = rnd.Next(min, max);
+            if (wssaScoutedSkill < 1) wssaScoutedSkill = 1;
+            if (wssaScoutedSkill > 100) wssaScoutedSkill = 100;
+
+            return wssaScoutedSkill;
+        }
         public int AssignPotential(Random rnd, int age, int currentSkill)
         {
             int potentialSkill = 0;

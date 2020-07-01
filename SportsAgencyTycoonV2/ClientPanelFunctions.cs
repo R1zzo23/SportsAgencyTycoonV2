@@ -154,7 +154,7 @@ namespace SportsAgencyTycoonV2
                     if (p.Team != null)
                         abbrev = p.Team.Abbreviation;
                     else abbrev = "Free Agent";
-                    mainForm.cbScoutedPlayers.Items.Add("[" + abbrev + "] " + p.Position.ToString() + " " + p.FullName + " Scouted: " + p.ScoutedSkill.ToString() + " Actual: " + p.CurrentSkill.ToString());
+                    mainForm.cbScoutedPlayers.Items.Add("[" + abbrev + "] " + p.Position.ToString() + " " + p.FullName + " Scouted: " + p.ScoutedSkill.ToString() + "WSSA: " + p.WSSAScoutedSkill.ToString() + " Actual: " + p.CurrentSkill.ToString());
                 }
             }
         }
@@ -169,6 +169,8 @@ namespace SportsAgencyTycoonV2
         {
             if (mainForm.cbScoutedPlayers.SelectedIndex > -1)
             {
+                mainForm.lblWSSAScouting.Visible = true;
+                mainForm.lblScoutedBy.Visible = true;
                 List<Player> players = new List<Player>();
                 foreach (Player p in scoutedPlayers)
                     if (p.Sport == selectedSport)
@@ -183,8 +185,25 @@ namespace SportsAgencyTycoonV2
                 else if (selectedPlayer.ScoutedSkill <= 80)
                     mainForm.starRatingPicture.Image = SportsAgencyTycoonV2.Properties.Resources._4star;
                 else mainForm.starRatingPicture.Image = SportsAgencyTycoonV2.Properties.Resources._5star;
+
+                if (selectedPlayer.WSSAScoutedSkill <= 20)
+                    mainForm.wssaStarRating.Image = SportsAgencyTycoonV2.Properties.Resources._1star;
+                else if (selectedPlayer.WSSAScoutedSkill <= 40)
+                    mainForm.wssaStarRating.Image = SportsAgencyTycoonV2.Properties.Resources._2star;
+                else if (selectedPlayer.WSSAScoutedSkill <= 60)
+                    mainForm.wssaStarRating.Image = SportsAgencyTycoonV2.Properties.Resources._3star;
+                else if (selectedPlayer.WSSAScoutedSkill <= 80)
+                    mainForm.wssaStarRating.Image = SportsAgencyTycoonV2.Properties.Resources._4star;
+                else mainForm.wssaStarRating.Image = SportsAgencyTycoonV2.Properties.Resources._5star;
             }
-            else mainForm.starRatingPicture.Image = null;
+            else
+            {
+                mainForm.starRatingPicture.Image = null;
+                mainForm.wssaStarRating.Image = null;
+                mainForm.lblWSSAScouting.Visible = false;
+                mainForm.lblScoutedBy.Visible = false;
+            }
+            
         }
         private string ShowScoutedPlayerDescription()
         {
