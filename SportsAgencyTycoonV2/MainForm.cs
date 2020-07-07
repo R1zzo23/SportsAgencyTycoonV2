@@ -25,6 +25,7 @@ namespace SportsAgencyTycoonV2
         public List<Control> agentEfficiencies = new List<Control>();
         public List<Control> agentIntelligences = new List<Control>();
         public List<Control> agentGroupBoxes = new List<Control>();
+        public List<Control> agentStatusLabels = new List<Control>();
 
         public WorldPanelFunctions worldPanelFunctions;
         public TeamRosterPanelFunctions teamRosterPanelFunctions;
@@ -78,6 +79,9 @@ namespace SportsAgencyTycoonV2
             agentIntelligences.Add(lblAgent1INT);
             agentIntelligences.Add(lblAgent2INT);
             agentIntelligences.Add(lblAgent3INT);
+            agentStatusLabels.Add(lblAgent1Status);
+            agentStatusLabels.Add(lblAgent2Status);
+            agentStatusLabels.Add(lblAgent3Status);
         }
         private void AddDayMarkersToList()
         {
@@ -191,6 +195,7 @@ namespace SportsAgencyTycoonV2
             HideAllPanels();
             agencyPanel.Visible = true;
             world.MyAgency.DisplayAllAgents();
+            world.MyAgency.Manager.UpdateManagerUI(this);
         }
 
         private void btnManager_Click(object sender, EventArgs e)

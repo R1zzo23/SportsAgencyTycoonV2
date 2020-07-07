@@ -50,7 +50,7 @@ namespace SportsAgencyTycoonV2
             {
                 world.MyAgency.DaysAttemptingJob++;
                 world.MyAgency.AddDaysWorking();
-            }                
+            }
 
             if (Day <= 6)
             {
@@ -64,6 +64,24 @@ namespace SportsAgencyTycoonV2
 
                 AdvanceWeek();
             }
+            ReduceAgentWorkTimes();
+        }
+        public void ReduceAgentWorkTimes()
+        {
+            if (world.MyAgency.Manager.WorkTime > 0)
+            {
+                world.MyAgency.Manager.WorkTime--;
+                if (world.MyAgency.Manager.WorkTime == 0)
+                    world.MyAgency.Manager.Status = AgentStatus.Available;
+            }
+                
+            foreach (Agent a in world.MyAgency.AgentList)
+                if (a.WorkTime > 0)
+                {
+                    a.WorkTime--;
+                    if (a.WorkTime == 0)
+                        a.Status = AgentStatus.Available;
+                }
         }
         public void AdvanceWeek()
         {

@@ -141,6 +141,7 @@ namespace SportsAgencyTycoonV2
                     mainForm.agentScoutings[i].Text = "SCT: " + AgentList[i].Scouting.ToString();
                     mainForm.agentPowers[i].Text = "POW: " + AgentList[i].Power.ToString();
                     mainForm.agentEfficiencies[i].Text = "EFF: " + AgentList[i].CurrentEfficiency.ToString() + "/" + AgentList[i].MaxEfficiency.ToString();
+                    mainForm.agentStatusLabels[i].Text = "Status: " + AgentList[i].Status.ToString();
                 }
             }
         }

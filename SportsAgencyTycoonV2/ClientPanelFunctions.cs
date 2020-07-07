@@ -108,6 +108,8 @@ namespace SportsAgencyTycoonV2
                 scoutedPlayers.Add(p);
                 p.AgentThatScoutedPlayer = selectedAgent;
                 p.AgentScoutingRating = selectedAgent.Scouting;
+                selectedAgent.Status = AgentStatus.Scouting;
+                selectedAgent.WorkTime = 5;
             }            
         }
         private void FillAvailableClientList()

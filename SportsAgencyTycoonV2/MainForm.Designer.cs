@@ -184,6 +184,8 @@
             this.lblTeamInfo = new System.Windows.Forms.Label();
             this.cbTeamRoster = new System.Windows.Forms.ComboBox();
             this.clientPanel = new System.Windows.Forms.Panel();
+            this.lblWSSAScouting = new System.Windows.Forms.Label();
+            this.wssaStarRating = new System.Windows.Forms.PictureBox();
             this.lblScoutedBy = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblScoutedAgencyHappiness = new System.Windows.Forms.Label();
@@ -215,8 +217,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbClientSport = new System.Windows.Forms.ComboBox();
-            this.lblWSSAScouting = new System.Windows.Forms.Label();
-            this.wssaStarRating = new System.Windows.Forms.PictureBox();
+            this.lblManagerStatus = new System.Windows.Forms.Label();
+            this.lblAgent1Status = new System.Windows.Forms.Label();
+            this.lblAgent2Status = new System.Windows.Forms.Label();
+            this.lblAgent3Status = new System.Windows.Forms.Label();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -245,19 +249,19 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.clientPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).BeginInit();
             this.SuspendLayout();
             // 
             // btnManagerAction
             // 
             this.btnManagerAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManagerAction.ForeColor = System.Drawing.Color.White;
-            this.btnManagerAction.Location = new System.Drawing.Point(279, 110);
+            this.btnManagerAction.Location = new System.Drawing.Point(279, 143);
             this.btnManagerAction.Margin = new System.Windows.Forms.Padding(4);
             this.btnManagerAction.Name = "btnManagerAction";
             this.btnManagerAction.Size = new System.Drawing.Size(130, 25);
@@ -270,7 +274,7 @@
             // cbManagerActions
             // 
             this.cbManagerActions.FormattingEnabled = true;
-            this.cbManagerActions.Location = new System.Drawing.Point(8, 110);
+            this.cbManagerActions.Location = new System.Drawing.Point(8, 143);
             this.cbManagerActions.Margin = new System.Windows.Forms.Padding(4);
             this.cbManagerActions.Name = "cbManagerActions";
             this.cbManagerActions.Size = new System.Drawing.Size(263, 29);
@@ -815,6 +819,7 @@
             // 
             // agencyPanel
             // 
+            this.agencyPanel.Controls.Add(this.lblManagerStatus);
             this.agencyPanel.Controls.Add(this.gbAgent3);
             this.agencyPanel.Controls.Add(this.gbAgent2);
             this.agencyPanel.Controls.Add(this.gbAgent1);
@@ -840,11 +845,12 @@
             this.agencyPanel.Controls.Add(this.lblEmployeeCapacity);
             this.agencyPanel.Location = new System.Drawing.Point(95, 74);
             this.agencyPanel.Name = "agencyPanel";
-            this.agencyPanel.Size = new System.Drawing.Size(1061, 295);
+            this.agencyPanel.Size = new System.Drawing.Size(1061, 683);
             this.agencyPanel.TabIndex = 8;
             // 
             // gbAgent3
             // 
+            this.gbAgent3.Controls.Add(this.lblAgent3Status);
             this.gbAgent3.Controls.Add(this.label19);
             this.gbAgent3.Controls.Add(this.lblAgent3Name);
             this.gbAgent3.Controls.Add(this.lblAgent3EFF);
@@ -854,9 +860,9 @@
             this.gbAgent3.Controls.Add(this.lblAgent3GRD);
             this.gbAgent3.Controls.Add(this.lblAgent3POW);
             this.gbAgent3.Controls.Add(this.pictureBox3);
-            this.gbAgent3.Location = new System.Drawing.Point(738, 146);
+            this.gbAgent3.Location = new System.Drawing.Point(737, 182);
             this.gbAgent3.Name = "gbAgent3";
-            this.gbAgent3.Size = new System.Drawing.Size(314, 146);
+            this.gbAgent3.Size = new System.Drawing.Size(314, 165);
             this.gbAgent3.TabIndex = 18;
             this.gbAgent3.TabStop = false;
             // 
@@ -894,6 +900,7 @@
             // 
             // gbAgent2
             // 
+            this.gbAgent2.Controls.Add(this.lblAgent2Status);
             this.gbAgent2.Controls.Add(this.label11);
             this.gbAgent2.Controls.Add(this.lblAgent2Name);
             this.gbAgent2.Controls.Add(this.lblAgent2EFF);
@@ -903,9 +910,9 @@
             this.gbAgent2.Controls.Add(this.lblAgent2GRD);
             this.gbAgent2.Controls.Add(this.lblAgent2POW);
             this.gbAgent2.Controls.Add(this.pictureBox2);
-            this.gbAgent2.Location = new System.Drawing.Point(373, 149);
+            this.gbAgent2.Location = new System.Drawing.Point(372, 185);
             this.gbAgent2.Name = "gbAgent2";
-            this.gbAgent2.Size = new System.Drawing.Size(314, 146);
+            this.gbAgent2.Size = new System.Drawing.Size(314, 162);
             this.gbAgent2.TabIndex = 17;
             this.gbAgent2.TabStop = false;
             // 
@@ -943,6 +950,7 @@
             // 
             // gbAgent1
             // 
+            this.gbAgent1.Controls.Add(this.lblAgent1Status);
             this.gbAgent1.Controls.Add(this.label9);
             this.gbAgent1.Controls.Add(this.lblAgent1Name);
             this.gbAgent1.Controls.Add(this.lblAgent1EFF);
@@ -952,9 +960,9 @@
             this.gbAgent1.Controls.Add(this.lblAgent1GRD);
             this.gbAgent1.Controls.Add(this.lblAgent1POW);
             this.gbAgent1.Controls.Add(this.pictureBox1);
-            this.gbAgent1.Location = new System.Drawing.Point(8, 146);
+            this.gbAgent1.Location = new System.Drawing.Point(7, 182);
             this.gbAgent1.Name = "gbAgent1";
-            this.gbAgent1.Size = new System.Drawing.Size(314, 146);
+            this.gbAgent1.Size = new System.Drawing.Size(314, 166);
             this.gbAgent1.TabIndex = 16;
             this.gbAgent1.TabStop = false;
             // 
@@ -1976,6 +1984,25 @@
             this.clientPanel.Size = new System.Drawing.Size(1061, 683);
             this.clientPanel.TabIndex = 14;
             // 
+            // lblWSSAScouting
+            // 
+            this.lblWSSAScouting.AutoSize = true;
+            this.lblWSSAScouting.Location = new System.Drawing.Point(525, 144);
+            this.lblWSSAScouting.Name = "lblWSSAScouting";
+            this.lblWSSAScouting.Size = new System.Drawing.Size(132, 21);
+            this.lblWSSAScouting.TabIndex = 26;
+            this.lblWSSAScouting.Text = "WSSA Scouting";
+            // 
+            // wssaStarRating
+            // 
+            this.wssaStarRating.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
+            this.wssaStarRating.InitialImage = null;
+            this.wssaStarRating.Location = new System.Drawing.Point(345, 136);
+            this.wssaStarRating.Name = "wssaStarRating";
+            this.wssaStarRating.Size = new System.Drawing.Size(163, 37);
+            this.wssaStarRating.TabIndex = 25;
+            this.wssaStarRating.TabStop = false;
+            // 
             // lblScoutedBy
             // 
             this.lblScoutedBy.AutoSize = true;
@@ -2280,24 +2307,41 @@
             this.cbClientSport.TabIndex = 0;
             this.cbClientSport.SelectedIndexChanged += new System.EventHandler(this.cbClientSport_SelectedIndexChanged);
             // 
-            // lblWSSAScouting
+            // lblManagerStatus
             // 
-            this.lblWSSAScouting.AutoSize = true;
-            this.lblWSSAScouting.Location = new System.Drawing.Point(525, 144);
-            this.lblWSSAScouting.Name = "lblWSSAScouting";
-            this.lblWSSAScouting.Size = new System.Drawing.Size(132, 21);
-            this.lblWSSAScouting.TabIndex = 26;
-            this.lblWSSAScouting.Text = "WSSA Scouting";
+            this.lblManagerStatus.AutoSize = true;
+            this.lblManagerStatus.Location = new System.Drawing.Point(10, 110);
+            this.lblManagerStatus.Name = "lblManagerStatus";
+            this.lblManagerStatus.Size = new System.Drawing.Size(66, 21);
+            this.lblManagerStatus.TabIndex = 19;
+            this.lblManagerStatus.Text = "Status:";
             // 
-            // wssaStarRating
+            // lblAgent1Status
             // 
-            this.wssaStarRating.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
-            this.wssaStarRating.InitialImage = null;
-            this.wssaStarRating.Location = new System.Drawing.Point(345, 136);
-            this.wssaStarRating.Name = "wssaStarRating";
-            this.wssaStarRating.Size = new System.Drawing.Size(163, 37);
-            this.wssaStarRating.TabIndex = 25;
-            this.wssaStarRating.TabStop = false;
+            this.lblAgent1Status.AutoSize = true;
+            this.lblAgent1Status.Location = new System.Drawing.Point(9, 137);
+            this.lblAgent1Status.Name = "lblAgent1Status";
+            this.lblAgent1Status.Size = new System.Drawing.Size(66, 21);
+            this.lblAgent1Status.TabIndex = 25;
+            this.lblAgent1Status.Text = "Status:";
+            // 
+            // lblAgent2Status
+            // 
+            this.lblAgent2Status.AutoSize = true;
+            this.lblAgent2Status.Location = new System.Drawing.Point(9, 137);
+            this.lblAgent2Status.Name = "lblAgent2Status";
+            this.lblAgent2Status.Size = new System.Drawing.Size(66, 21);
+            this.lblAgent2Status.TabIndex = 25;
+            this.lblAgent2Status.Text = "Status:";
+            // 
+            // lblAgent3Status
+            // 
+            this.lblAgent3Status.AutoSize = true;
+            this.lblAgent3Status.Location = new System.Drawing.Point(9, 137);
+            this.lblAgent3Status.Name = "lblAgent3Status";
+            this.lblAgent3Status.Size = new System.Drawing.Size(66, 21);
+            this.lblAgent3Status.TabIndex = 25;
+            this.lblAgent3Status.Text = "Status:";
             // 
             // MainForm
             // 
@@ -2305,9 +2349,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
+            this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.clientPanel);
             this.Controls.Add(this.teamRosterPanel);
-            this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.worldPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.freelancePanel);
@@ -2363,6 +2407,7 @@
             this.groupBox1.PerformLayout();
             this.clientPanel.ResumeLayout(false);
             this.clientPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -2372,7 +2417,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2565,6 +2609,10 @@
         public System.Windows.Forms.Label lblScoutedBy;
         public System.Windows.Forms.Label lblWSSAScouting;
         public System.Windows.Forms.PictureBox wssaStarRating;
+        private System.Windows.Forms.Label lblAgent2Status;
+        private System.Windows.Forms.Label lblAgent1Status;
+        public System.Windows.Forms.Label lblManagerStatus;
+        public System.Windows.Forms.Label lblAgent3Status;
     }
 }
 
