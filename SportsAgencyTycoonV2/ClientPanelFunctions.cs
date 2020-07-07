@@ -100,17 +100,37 @@ namespace SportsAgencyTycoonV2
         }
         private void ScoutPlayer(Player p)
         {
-            if (!p.ScoutedByAgency)
+            if (selectedAgent.Status != AgentStatus.Available)
             {
-                p.ScoutedByAgency = true;
-                double variation = (1 - Convert.ToDouble(scoutingSkills) / 100) * Convert.ToDouble(p.CurrentSkill);
-                p.ScoutedSkill = world.rnd.Next(Convert.ToInt32((Convert.ToDouble(p.CurrentSkill) - variation)), Convert.ToInt32(Convert.ToDouble(p.CurrentSkill) + variation));
-                scoutedPlayers.Add(p);
-                p.AgentThatScoutedPlayer = selectedAgent;
-                p.AgentScoutingRating = selectedAgent.Scouting;
-                selectedAgent.Status = AgentStatus.Scouting;
-                selectedAgent.WorkTime = 5;
-            }            
+                MessageBox.Show("Agent is currently busy and cannot scout.");
+            }
+            else
+            {
+                if (!p.ScoutedByAgency)
+                {
+                    p.ScoutedByAgency = true;
+                    double variation = (1 - Convert.ToDouble(scoutingSkills) / 100) * Convert.ToDouble(p.CurrentSkill);
+                    p.ScoutedSkill = world.rnd.Next(Convert.ToInt32((Convert.ToDouble(p.CurrentSkill) - variation)), Convert.ToInt32(Convert.ToDouble(p.CurrentSkill) + variation));
+                    //scoutedPlayers.Add(p);
+                    p.AgentThatScoutedPlayer = selectedAgent;
+                    p.AgentScoutingRating = selectedAgent.Scouting;
+                    selectedAgent.Status = AgentStatus.Scouting;
+                    selectedAgent.PlayerBeingScouted = p;
+                    selectedAgent.WorkTime = DetermineTimeToScout();
+                }
+            }     
+        }
+        public int DetermineTimeToScout()
+        {
+            int ticks = Convert.ToInt32(((200 - selectedAgent.Scouting) / 10));
+
+            Console.WriteLine(selectedAgent.FullName + "'s time to scout: " + ticks);
+
+            return ticks;
+        }
+        public void AddScoutedPlayerToScoutedPlayersList(Player p)
+        {
+            scoutedPlayers.Add(p);
         }
         private void FillAvailableClientList()
         {

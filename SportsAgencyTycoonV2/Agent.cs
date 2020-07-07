@@ -40,6 +40,7 @@ namespace SportsAgencyTycoonV2
         public int DaysWorkingOnJob;
         public AgentStatus Status = AgentStatus.Available;
         public int WorkTime = 0;
+        public Player PlayerBeingScouted;
         #endregion
         public Agent(string firstName, string lastName, Role role, int greed, int negotiating, int power, int intelligence, int scouting, int efficiency)
         {

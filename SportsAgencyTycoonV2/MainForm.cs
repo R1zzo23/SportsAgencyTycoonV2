@@ -12,9 +12,9 @@ namespace SportsAgencyTycoonV2
 {
     public partial class MainForm : Form
     {
-        Random rnd = new Random();
-        World world;
-        Freelance freelance;
+        public Random rnd = new Random();
+        public World world;
+        public Freelance freelance;
         public Timer freelanceJobTimer = new Timer();
         public List<Control> dayMarkers = new List<Control>();
         public List<Control> agentNames = new List<Control>();
@@ -231,9 +231,14 @@ namespace SportsAgencyTycoonV2
                 panelButtonHighlight.Height = btnClients.Height;
                 panelButtonHighlight.Top = btnClients.Top;
                 HideAllPanels();
+                cbClientSport.SelectedIndex = -1;
+                cbClientSport.Text = "";
+                cbScoutedPlayers.SelectedIndex = -1;
+                cbScoutedPlayers.Text = "";
                 clientPanel.Visible = true;
                 clientPanelFunctions.FillSportComboBox();
                 clientPanelFunctions.FillAgentComboBox();
+                
             }
         }
         private void btnStandings_Click(object sender, EventArgs e)
@@ -319,7 +324,10 @@ namespace SportsAgencyTycoonV2
 
         private void cbClientSport_SelectedIndexChanged(object sender, EventArgs e)
         {
-            clientPanelFunctions.selectedSport = world.MyAgency.Licenses[cbClientSport.SelectedIndex];
+            if (cbClientSport.SelectedIndex > -1)
+            {
+                clientPanelFunctions.selectedSport = world.MyAgency.Licenses[cbClientSport.SelectedIndex];
+            }
             cbScoutedPlayers.SelectedIndex = -1;
             clientPanelFunctions.FillScoutedClientComboBox();
         }

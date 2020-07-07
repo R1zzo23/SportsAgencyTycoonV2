@@ -80,7 +80,7 @@ namespace SportsAgencyTycoonV2
                     "Do a poor job or bite off more than you can chew and your reputation will spoil. Good luck!");
 
                 agency.FreelanceBefore = true;
-                agency.AddFreelanceJob(new FreelanceJob("Back To School", "Complete a Sports Management Course", JobType.education, 1, 5, 0, 28, 1500));
+                agency.AddFreelanceJob(new FreelanceJob(MainForm, "Back To School", "Complete a Sports Management Course", JobType.education, 1, 5, 0, 28, 1500));
             }
         }
         public void DisplayAvailableJobs()
@@ -232,7 +232,7 @@ namespace SportsAgencyTycoonV2
             }
             else if (job.JobType == JobType.scouting)
             {
-                // do something
+                
             }
 
             if (!jobDoneInTime)

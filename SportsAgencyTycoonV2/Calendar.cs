@@ -72,7 +72,12 @@ namespace SportsAgencyTycoonV2
             {
                 world.MyAgency.Manager.WorkTime--;
                 if (world.MyAgency.Manager.WorkTime == 0)
+                {
+                    if (world.MyAgency.Manager.Status == AgentStatus.Scouting)
+                        mainForm.clientPanelFunctions.AddScoutedPlayerToScoutedPlayersList(world.MyAgency.Manager.PlayerBeingScouted);
                     world.MyAgency.Manager.Status = AgentStatus.Available;
+                    world.MyAgency.Manager.UpdateManagerUI(mainForm);
+                }
             }
                 
             foreach (Agent a in world.MyAgency.AgentList)
@@ -80,7 +85,13 @@ namespace SportsAgencyTycoonV2
                 {
                     a.WorkTime--;
                     if (a.WorkTime == 0)
+                    {
+                        if (a.Status == AgentStatus.Scouting)
+                            mainForm.clientPanelFunctions.AddScoutedPlayerToScoutedPlayersList(a.PlayerBeingScouted);
+
                         a.Status = AgentStatus.Available;
+                        world.MyAgency.DisplayAllAgents();
+                    }
                 }
         }
         public void AdvanceWeek()

@@ -8,6 +8,7 @@ namespace SportsAgencyTycoonV2
 {
     public class FreelanceJob
     {
+        MainForm mf;
         public string JobName;
         public string JobDescription;
         public JobType JobType;
@@ -16,9 +17,11 @@ namespace SportsAgencyTycoonV2
         public int MoneyPayout;
         public int DaysToComplete;
         public int PointsUntilCompletion;
+        public Sports Sport;
 
-        public FreelanceJob(string jobName, string jobDescription, JobType jobType, double baselineJobScore, int ipPayout, int moneyPayout, int daysToComplete, int pointsUntilCompletion)
+        public FreelanceJob(MainForm m, string jobName, string jobDescription, JobType jobType, double baselineJobScore, int ipPayout, int moneyPayout, int daysToComplete, int pointsUntilCompletion)
         {
+            mf = m;
             JobName = jobName;
             JobDescription = jobDescription;
             JobType = jobType;
@@ -27,6 +30,9 @@ namespace SportsAgencyTycoonV2
             MoneyPayout = moneyPayout;
             DaysToComplete = daysToComplete;
             PointsUntilCompletion = pointsUntilCompletion;
+
+            if (JobType == JobType.scouting)
+                Sport = mf.world.LicenseOrder[mf.rnd.Next(0, 5)];
         }
     }
 }

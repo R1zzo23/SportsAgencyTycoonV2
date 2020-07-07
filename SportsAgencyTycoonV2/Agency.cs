@@ -84,8 +84,8 @@ namespace SportsAgencyTycoonV2
             _Licenses.Add(sport);
             if (_Licenses.Count == 1)
             {
-                AddFreelanceJob(new FreelanceJob("Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 14, 1750));
-                AddFreelanceJob(new FreelanceJob("Diamond In The Rough", "Scout your first unsigned player.", JobType.scouting, 7, 5, 0, 28, 3500));
+                AddFreelanceJob(new FreelanceJob(mainForm, "Minor League Deal", "Large agency paying for minor negotiation", JobType.negotiating, 5, 3, 15000, 14, 1750));
+                AddFreelanceJob(new FreelanceJob(mainForm, "Diamond In The Rough", "Scout your first unsigned player.", JobType.scouting, 7, 5, 0, 28, 3500));
             }
         }
         public void AddFreelanceJob(FreelanceJob job)

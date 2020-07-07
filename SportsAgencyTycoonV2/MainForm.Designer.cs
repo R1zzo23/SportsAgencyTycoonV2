@@ -78,15 +78,19 @@
             this.lblAgent3GRD = new System.Windows.Forms.Label();
             this.lblAgent3POW = new System.Windows.Forms.Label();
             this.agencyPanel = new System.Windows.Forms.Panel();
+            this.lblManagerStatus = new System.Windows.Forms.Label();
             this.gbAgent3 = new System.Windows.Forms.GroupBox();
+            this.lblAgent3Status = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.lblAgent3Name = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.gbAgent2 = new System.Windows.Forms.GroupBox();
+            this.lblAgent2Status = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblAgent2Name = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbAgent1 = new System.Windows.Forms.GroupBox();
+            this.lblAgent1Status = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblAgent1Name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -217,10 +221,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbClientSport = new System.Windows.Forms.ComboBox();
-            this.lblManagerStatus = new System.Windows.Forms.Label();
-            this.lblAgent1Status = new System.Windows.Forms.Label();
-            this.lblAgent2Status = new System.Windows.Forms.Label();
-            this.lblAgent3Status = new System.Windows.Forms.Label();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -848,6 +848,15 @@
             this.agencyPanel.Size = new System.Drawing.Size(1061, 683);
             this.agencyPanel.TabIndex = 8;
             // 
+            // lblManagerStatus
+            // 
+            this.lblManagerStatus.AutoSize = true;
+            this.lblManagerStatus.Location = new System.Drawing.Point(10, 110);
+            this.lblManagerStatus.Name = "lblManagerStatus";
+            this.lblManagerStatus.Size = new System.Drawing.Size(66, 21);
+            this.lblManagerStatus.TabIndex = 19;
+            this.lblManagerStatus.Text = "Status:";
+            // 
             // gbAgent3
             // 
             this.gbAgent3.Controls.Add(this.lblAgent3Status);
@@ -865,6 +874,15 @@
             this.gbAgent3.Size = new System.Drawing.Size(314, 165);
             this.gbAgent3.TabIndex = 18;
             this.gbAgent3.TabStop = false;
+            // 
+            // lblAgent3Status
+            // 
+            this.lblAgent3Status.AutoSize = true;
+            this.lblAgent3Status.Location = new System.Drawing.Point(9, 137);
+            this.lblAgent3Status.Name = "lblAgent3Status";
+            this.lblAgent3Status.Size = new System.Drawing.Size(66, 21);
+            this.lblAgent3Status.TabIndex = 25;
+            this.lblAgent3Status.Text = "Status:";
             // 
             // label19
             // 
@@ -916,6 +934,15 @@
             this.gbAgent2.TabIndex = 17;
             this.gbAgent2.TabStop = false;
             // 
+            // lblAgent2Status
+            // 
+            this.lblAgent2Status.AutoSize = true;
+            this.lblAgent2Status.Location = new System.Drawing.Point(9, 137);
+            this.lblAgent2Status.Name = "lblAgent2Status";
+            this.lblAgent2Status.Size = new System.Drawing.Size(66, 21);
+            this.lblAgent2Status.TabIndex = 25;
+            this.lblAgent2Status.Text = "Status:";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -965,6 +992,15 @@
             this.gbAgent1.Size = new System.Drawing.Size(314, 166);
             this.gbAgent1.TabIndex = 16;
             this.gbAgent1.TabStop = false;
+            // 
+            // lblAgent1Status
+            // 
+            this.lblAgent1Status.AutoSize = true;
+            this.lblAgent1Status.Location = new System.Drawing.Point(9, 137);
+            this.lblAgent1Status.Name = "lblAgent1Status";
+            this.lblAgent1Status.Size = new System.Drawing.Size(66, 21);
+            this.lblAgent1Status.TabIndex = 25;
+            this.lblAgent1Status.Text = "Status:";
             // 
             // label9
             // 
@@ -2307,50 +2343,14 @@
             this.cbClientSport.TabIndex = 0;
             this.cbClientSport.SelectedIndexChanged += new System.EventHandler(this.cbClientSport_SelectedIndexChanged);
             // 
-            // lblManagerStatus
-            // 
-            this.lblManagerStatus.AutoSize = true;
-            this.lblManagerStatus.Location = new System.Drawing.Point(10, 110);
-            this.lblManagerStatus.Name = "lblManagerStatus";
-            this.lblManagerStatus.Size = new System.Drawing.Size(66, 21);
-            this.lblManagerStatus.TabIndex = 19;
-            this.lblManagerStatus.Text = "Status:";
-            // 
-            // lblAgent1Status
-            // 
-            this.lblAgent1Status.AutoSize = true;
-            this.lblAgent1Status.Location = new System.Drawing.Point(9, 137);
-            this.lblAgent1Status.Name = "lblAgent1Status";
-            this.lblAgent1Status.Size = new System.Drawing.Size(66, 21);
-            this.lblAgent1Status.TabIndex = 25;
-            this.lblAgent1Status.Text = "Status:";
-            // 
-            // lblAgent2Status
-            // 
-            this.lblAgent2Status.AutoSize = true;
-            this.lblAgent2Status.Location = new System.Drawing.Point(9, 137);
-            this.lblAgent2Status.Name = "lblAgent2Status";
-            this.lblAgent2Status.Size = new System.Drawing.Size(66, 21);
-            this.lblAgent2Status.TabIndex = 25;
-            this.lblAgent2Status.Text = "Status:";
-            // 
-            // lblAgent3Status
-            // 
-            this.lblAgent3Status.AutoSize = true;
-            this.lblAgent3Status.Location = new System.Drawing.Point(9, 137);
-            this.lblAgent3Status.Name = "lblAgent3Status";
-            this.lblAgent3Status.Size = new System.Drawing.Size(66, 21);
-            this.lblAgent3Status.TabIndex = 25;
-            this.lblAgent3Status.Text = "Status:";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
-            this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.clientPanel);
+            this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.teamRosterPanel);
             this.Controls.Add(this.worldPanel);
             this.Controls.Add(this.panel1);
