@@ -21,6 +21,7 @@ namespace SportsAgencyTycoonV2
         List<Player> scoutedPlayers = new List<Player>();
         int scoutingSkills;
         int agentSkills;
+        List<Player> players = new List<Player>();
         public ClientPanelFunctions (MainForm mf, World w)
         {
             mainForm = mf;
@@ -175,11 +176,14 @@ namespace SportsAgencyTycoonV2
             {
                 if (p.Sport == selectedSport)
                 {
-                    string abbrev;
-                    if (p.Team != null)
-                        abbrev = p.Team.Abbreviation;
-                    else abbrev = "Free Agent";
-                    mainForm.cbScoutedPlayers.Items.Add("[" + abbrev + "] " + p.Position.ToString() + " " + p.FullName + " [" + p.IPtoSign.ToString() + " IP]");
+                    if (!p.MemberOfAgency)
+                    {
+                        string abbrev;
+                        if (p.Team != null)
+                            abbrev = p.Team.Abbreviation;
+                        else abbrev = "Free Agent";
+                        mainForm.cbScoutedPlayers.Items.Add("[" + abbrev + "] " + p.Position.ToString() + " " + p.FullName + " [" + p.IPtoSign.ToString() + " IP]");
+                    }
                 }
             }
         }
@@ -196,9 +200,11 @@ namespace SportsAgencyTycoonV2
             {
                 mainForm.lblWSSAScouting.Visible = true;
                 mainForm.lblScoutedBy.Visible = true;
-                List<Player> players = new List<Player>();
+
+                players.Clear();
+
                 foreach (Player p in scoutedPlayers)
-                    if (p.Sport == selectedSport)
+                    if (p.Sport == selectedSport && !p.MemberOfAgency)
                         players.Add(p);
                 selectedPlayer = players[mainForm.cbScoutedPlayers.SelectedIndex];
                 if (selectedPlayer.ScoutedSkill <= 20)
@@ -230,13 +236,18 @@ namespace SportsAgencyTycoonV2
             }
             
         }
-        public void AttemptToSignPlayer()
+        public void SignPlayerToAgency()
         {
             if (selectedPlayer.IPtoSign > world.MyAgency.InfluencePoints)
                 MessageBox.Show("You do not have enough IP to sign this player.");
             else
             {
-                
+                world.MyAgency.AddInfluencePoints(-selectedPlayer.IPtoSign);
+                world.MyAgency.AddClient(selectedPlayer);
+                selectedPlayer.MemberOfAgency = true;
+                mainForm.cbScoutedPlayers.Text = "";
+                mainForm.cbScoutedPlayers.SelectedIndex = -1;
+                FillScoutedClientComboBox();
             }
         }
         private string ShowScoutedPlayerDescription()

@@ -331,10 +331,9 @@ namespace SportsAgencyTycoonV2
             cbScoutedPlayers.SelectedIndex = -1;
             clientPanelFunctions.FillScoutedClientComboBox();
         }
-
-        private void btnAttempToSign_Click(object sender, EventArgs e)
+        private void btnSignToAgency_Click(object sender, EventArgs e)
         {
-            clientPanelFunctions.AttemptToSignPlayer();
+            clientPanelFunctions.SignPlayerToAgency();
         }
     }
 }

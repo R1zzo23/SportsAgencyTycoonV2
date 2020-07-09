@@ -188,6 +188,7 @@
             this.lblTeamInfo = new System.Windows.Forms.Label();
             this.cbTeamRoster = new System.Windows.Forms.ComboBox();
             this.clientPanel = new System.Windows.Forms.Panel();
+            this.btnSignToAgency = new System.Windows.Forms.Button();
             this.lblWSSAScouting = new System.Windows.Forms.Label();
             this.wssaStarRating = new System.Windows.Forms.PictureBox();
             this.lblScoutedBy = new System.Windows.Forms.Label();
@@ -221,7 +222,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbClientSport = new System.Windows.Forms.ComboBox();
-            this.btnAttempToSign = new System.Windows.Forms.Button();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -1996,7 +1996,7 @@
             // 
             // clientPanel
             // 
-            this.clientPanel.Controls.Add(this.btnAttempToSign);
+            this.clientPanel.Controls.Add(this.btnSignToAgency);
             this.clientPanel.Controls.Add(this.lblWSSAScouting);
             this.clientPanel.Controls.Add(this.wssaStarRating);
             this.clientPanel.Controls.Add(this.lblScoutedBy);
@@ -2021,6 +2021,18 @@
             this.clientPanel.Name = "clientPanel";
             this.clientPanel.Size = new System.Drawing.Size(1061, 683);
             this.clientPanel.TabIndex = 14;
+            // 
+            // btnSignToAgency
+            // 
+            this.btnSignToAgency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignToAgency.ForeColor = System.Drawing.Color.White;
+            this.btnSignToAgency.Location = new System.Drawing.Point(737, 86);
+            this.btnSignToAgency.Name = "btnSignToAgency";
+            this.btnSignToAgency.Size = new System.Drawing.Size(125, 54);
+            this.btnSignToAgency.TabIndex = 27;
+            this.btnSignToAgency.Text = "Sign To Agency";
+            this.btnSignToAgency.UseVisualStyleBackColor = true;
+            this.btnSignToAgency.Click += new System.EventHandler(this.btnSignToAgency_Click);
             // 
             // lblWSSAScouting
             // 
@@ -2345,18 +2357,6 @@
             this.cbClientSport.TabIndex = 0;
             this.cbClientSport.SelectedIndexChanged += new System.EventHandler(this.cbClientSport_SelectedIndexChanged);
             // 
-            // btnAttempToSign
-            // 
-            this.btnAttempToSign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAttempToSign.ForeColor = System.Drawing.Color.White;
-            this.btnAttempToSign.Location = new System.Drawing.Point(737, 86);
-            this.btnAttempToSign.Name = "btnAttempToSign";
-            this.btnAttempToSign.Size = new System.Drawing.Size(125, 54);
-            this.btnAttempToSign.TabIndex = 27;
-            this.btnAttempToSign.Text = "Attempt To Sign";
-            this.btnAttempToSign.UseVisualStyleBackColor = true;
-            this.btnAttempToSign.Click += new System.EventHandler(this.btnAttempToSign_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -2627,7 +2627,7 @@
         private System.Windows.Forms.Label lblAgent1Status;
         public System.Windows.Forms.Label lblManagerStatus;
         public System.Windows.Forms.Label lblAgent3Status;
-        public System.Windows.Forms.Button btnAttempToSign;
+        public System.Windows.Forms.Button btnSignToAgency;
     }
 }
 

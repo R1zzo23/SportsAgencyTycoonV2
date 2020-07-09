@@ -61,6 +61,12 @@ namespace SportsAgencyTycoonV2
             _AgentCount = _AgentList.Count;
             mainForm.UpdateOfficeInfo();
         }
+        public void AddClient(Player p)
+        {
+            _ClientList.Add(p);
+            _ClientCount = _ClientList.Count;
+            mainForm.UpdateOfficeInfo();
+        }
         public void SetManager(Agent agent)
         {
             _Manager = agent;
