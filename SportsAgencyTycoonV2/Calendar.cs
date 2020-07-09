@@ -77,6 +77,7 @@ namespace SportsAgencyTycoonV2
                         mainForm.clientPanelFunctions.AddScoutedPlayerToScoutedPlayersList(world.MyAgency.Manager.PlayerBeingScouted);
                     world.MyAgency.Manager.Status = AgentStatus.Available;
                     world.MyAgency.Manager.UpdateManagerUI(mainForm);
+                    mainForm.clientPanelFunctions.FillAgentComboBox();
                 }
             }
                 
@@ -91,6 +92,7 @@ namespace SportsAgencyTycoonV2
 
                         a.Status = AgentStatus.Available;
                         world.MyAgency.DisplayAllAgents();
+                        mainForm.clientPanelFunctions.FillAgentComboBox();
                     }
                 }
         }

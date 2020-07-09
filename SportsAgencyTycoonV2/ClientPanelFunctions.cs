@@ -37,10 +37,12 @@ namespace SportsAgencyTycoonV2
         public void FillAgentComboBox()
         {
             mainForm.cbAgentToScout.Items.Clear();
-            mainForm.cbAgentToScout.Items.Add(world.MyAgency.Manager.FullName);
+            mainForm.cbAgentToScout.Items.Add(world.MyAgency.Manager.FullName + " (" + world.MyAgency.Manager.Status.ToString() + ")");
             if (world.MyAgency.AgentList.Count > 0)
                 foreach (Agent a in world.MyAgency.AgentList)
-                    mainForm.cbAgentToScout.Items.Add(a.FullName);
+                    mainForm.cbAgentToScout.Items.Add(a.FullName + " (" + a.Status.ToString() + ")");
+
+            mainForm.cbAgentToScout.Text = "";
         }
         public void SearchForClient()
         {
@@ -74,6 +76,7 @@ namespace SportsAgencyTycoonV2
                         FillAvailableClientList();
                         DetermineWhichPlayersGetScouted();
                         FillScoutedClientComboBox();
+                        FillAgentComboBox();
                     }
                 }
             }
@@ -176,7 +179,7 @@ namespace SportsAgencyTycoonV2
                     if (p.Team != null)
                         abbrev = p.Team.Abbreviation;
                     else abbrev = "Free Agent";
-                    mainForm.cbScoutedPlayers.Items.Add("[" + abbrev + "] " + p.Position.ToString() + " " + p.FullName + " Scouted: " + p.ScoutedSkill.ToString() + "WSSA: " + p.WSSAScoutedSkill.ToString() + " Actual: " + p.CurrentSkill.ToString());
+                    mainForm.cbScoutedPlayers.Items.Add("[" + abbrev + "] " + p.Position.ToString() + " " + p.FullName + " [" + p.IPtoSign.ToString() + " IP]");
                 }
             }
         }
@@ -226,6 +229,15 @@ namespace SportsAgencyTycoonV2
                 mainForm.lblScoutedBy.Visible = false;
             }
             
+        }
+        public void AttemptToSignPlayer()
+        {
+            if (selectedPlayer.IPtoSign > world.MyAgency.InfluencePoints)
+                MessageBox.Show("You do not have enough IP to sign this player.");
+            else
+            {
+                
+            }
         }
         private string ShowScoutedPlayerDescription()
         {

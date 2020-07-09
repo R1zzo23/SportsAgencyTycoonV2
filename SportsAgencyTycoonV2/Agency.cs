@@ -49,8 +49,8 @@ namespace SportsAgencyTycoonV2
             _InfluencePoints = 0;
             mainForm = mf;
             AttemptingJob = false;
-            _AgentList.Add(new Agent("Rose", "Rizzo", Role.Agent, 150, 50, 75, 110, 10, 80));
-            _AgentList.Add(new Agent("Sylvia", "Rizzo", Role.Agent, 175, 85, 150, 210, 90, 100));
+            _AgentList.Add(new Agent("Dirty", "Dave", Role.Agent, 150, 50, 75, 110, 10, 80));
+            _AgentList.Add(new Agent("Clean", "Steven", Role.Agent, 175, 85, 150, 210, 90, 100));
             _AgentCount = _AgentList.Count;
             _AgentList[0].SetCurrentEfficiency(25);
             _AgentList[1].SetCurrentEfficiency(50);

@@ -39,6 +39,7 @@ namespace SportsAgencyTycoonV2
 
         public int ScoutedSkill;
         public int WSSAScoutedSkill;
+        public int IPtoSign;
         public bool ScoutedByAgency = false;
         public Agent AgentThatScoutedPlayer;
         public int AgentScoutingRating;
@@ -121,6 +122,7 @@ namespace SportsAgencyTycoonV2
             CurrentSkill = rnd.Next(25, 76);
             PotentialSkill = AssignPotential(rnd, age, CurrentSkill);
             WSSAScoutedSkill = AssignWSSAScoutedSkill(rnd, CurrentSkill, PotentialSkill);
+            IPtoSign = AssignIPToSign(WSSAScoutedSkill);
 
             Greed = rnd.Next(0, 101);
             Lifestyle = rnd.Next(0, 101);
@@ -178,6 +180,18 @@ namespace SportsAgencyTycoonV2
             if (wssaScoutedSkill > 100) wssaScoutedSkill = 100;
 
             return wssaScoutedSkill;
+        }
+        public int AssignIPToSign(int w)
+        {
+            if (w <= 20)
+                return 1;
+            else if (w <= 40)
+                return 2;
+            else if (w <= 60)
+                return 5;
+            else if (2 <= 80)
+                return 10;
+            else return 25;
         }
         public int AssignPotential(Random rnd, int age, int currentSkill)
         {

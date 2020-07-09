@@ -221,6 +221,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbClientSport = new System.Windows.Forms.ComboBox();
+            this.btnAttempToSign = new System.Windows.Forms.Button();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -1995,6 +1996,7 @@
             // 
             // clientPanel
             // 
+            this.clientPanel.Controls.Add(this.btnAttempToSign);
             this.clientPanel.Controls.Add(this.lblWSSAScouting);
             this.clientPanel.Controls.Add(this.wssaStarRating);
             this.clientPanel.Controls.Add(this.lblScoutedBy);
@@ -2343,6 +2345,18 @@
             this.cbClientSport.TabIndex = 0;
             this.cbClientSport.SelectedIndexChanged += new System.EventHandler(this.cbClientSport_SelectedIndexChanged);
             // 
+            // btnAttempToSign
+            // 
+            this.btnAttempToSign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAttempToSign.ForeColor = System.Drawing.Color.White;
+            this.btnAttempToSign.Location = new System.Drawing.Point(737, 86);
+            this.btnAttempToSign.Name = "btnAttempToSign";
+            this.btnAttempToSign.Size = new System.Drawing.Size(125, 54);
+            this.btnAttempToSign.TabIndex = 27;
+            this.btnAttempToSign.Text = "Attempt To Sign";
+            this.btnAttempToSign.UseVisualStyleBackColor = true;
+            this.btnAttempToSign.Click += new System.EventHandler(this.btnAttempToSign_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -2613,6 +2627,7 @@
         private System.Windows.Forms.Label lblAgent1Status;
         public System.Windows.Forms.Label lblManagerStatus;
         public System.Windows.Forms.Label lblAgent3Status;
+        public System.Windows.Forms.Button btnAttempToSign;
     }
 }
 
