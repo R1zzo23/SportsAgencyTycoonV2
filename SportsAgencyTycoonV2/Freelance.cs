@@ -80,7 +80,7 @@ namespace SportsAgencyTycoonV2
                     "Do a poor job or bite off more than you can chew and your reputation will spoil. Good luck!");
 
                 agency.FreelanceBefore = true;
-                agency.AddFreelanceJob(new FreelanceJob(MainForm, "Back To School", "Complete a Sports Management Course", JobType.education, 1, 5, 0, 28, 1500));
+                agency.AddFreelanceJob(new FreelanceJob(MainForm, "Back To School", "Complete a sports management course.", JobType.education, 1, 5, 0, 28, 1500));
             }
         }
         public void DisplayAvailableJobs()
@@ -284,6 +284,8 @@ namespace SportsAgencyTycoonV2
             MainForm.btnManager.Enabled = false;
             MainForm.btnJobs.Enabled = false;
             MainForm.btnClients.Enabled = false;
+            MainForm.btnStandings.Enabled = false;
+            MainForm.btnViewRosters.Enabled = false;
             MainForm.btnAcceptJob1.Enabled = false;
             MainForm.btnAcceptJob2.Enabled = false;
             MainForm.btnAcceptJob3.Enabled = false;
@@ -294,6 +296,8 @@ namespace SportsAgencyTycoonV2
             MainForm.btnManager.Enabled = true;
             MainForm.btnJobs.Enabled = true;
             MainForm.btnClients.Enabled = true;
+            MainForm.btnStandings.Enabled = true;
+            MainForm.btnViewRosters.Enabled = true;
             MainForm.btnAcceptJob1.Enabled = true;
             MainForm.btnAcceptJob2.Enabled = true;
             MainForm.btnAcceptJob3.Enabled = true;

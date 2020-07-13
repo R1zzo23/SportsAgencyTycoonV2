@@ -30,6 +30,7 @@ namespace SportsAgencyTycoonV2
         public WorldPanelFunctions worldPanelFunctions;
         public TeamRosterPanelFunctions teamRosterPanelFunctions;
         public ClientPanelFunctions clientPanelFunctions;
+        public ManagerPanelFunctions managerPanelFunctions;
         public MainForm()
         {
             world = new World(rnd);
@@ -52,6 +53,7 @@ namespace SportsAgencyTycoonV2
             worldPanelFunctions = new WorldPanelFunctions(this, world);
             teamRosterPanelFunctions = new TeamRosterPanelFunctions(this, world);
             clientPanelFunctions = new ClientPanelFunctions(this, world);
+            managerPanelFunctions = new ManagerPanelFunctions(this, world);
         }
         private void AddAgentLabelsToList()
         {
@@ -203,6 +205,8 @@ namespace SportsAgencyTycoonV2
             panelButtonHighlight.Height = btnManager.Height;
             panelButtonHighlight.Top = btnManager.Top;
             HideAllPanels();
+            managerPanel.Visible = true;
+
         }
 
         private void btnJobs_Click(object sender, EventArgs e)
@@ -265,6 +269,7 @@ namespace SportsAgencyTycoonV2
             worldPanel.Visible = false;
             teamRosterPanel.Visible = false;
             clientPanel.Visible = false;
+            managerPanel.Visible = false;
         }
         #region Freelance Buttons
         private void btnAcceptJob1_Click(object sender, EventArgs e)
@@ -302,8 +307,11 @@ namespace SportsAgencyTycoonV2
 
         private void cbTeamList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            teamRosterPanelFunctions.FillTeamRosterComboBox(world.Leagues[cbLeagueList.SelectedIndex].TeamList[cbTeamList.SelectedIndex]);
-            teamRosterPanelFunctions.FillTeamInfo();
+            if (cbLeagueList.SelectedIndex > -1)
+            {
+                teamRosterPanelFunctions.FillTeamRosterComboBox(world.Leagues[cbLeagueList.SelectedIndex].TeamList[cbTeamList.SelectedIndex]);
+                teamRosterPanelFunctions.FillTeamInfo();
+            }            
         }
         #endregion
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SportsAgencyTycoonV2
 {
@@ -20,7 +21,7 @@ namespace SportsAgencyTycoonV2
             int daysToNegotiate = DetermineLengthOfNegotiation(p, a);
             a.WorkTime = daysToNegotiate;
             a.Status = AgentStatus.Negotiating;
-            p.Contract.AgentPercentage = DetermineAgentPercentage(p, a, daysToNegotiate, rnd, max, min);
+            p.Contract.AgentPercentage = DetermineAgentPercentage(p, a, daysToNegotiate, rnd, max, min) / 100;
         }
         private int DetermineMaxPercentage(Player p)
         {
@@ -91,7 +92,7 @@ namespace SportsAgencyTycoonV2
                     // player's favor
                     playerDaysWon++;
 
-                    percent = rnd.Next(min, percentage);
+                    percent = percentage - rnd.Next(percentage - 26, percentage + 1);
                     percentage -= percent;
 
                     Console.WriteLine("% dropped by" + percent);
@@ -100,11 +101,13 @@ namespace SportsAgencyTycoonV2
                 {
                     // agent's favor
                     agentDaysWon++;
-                    percent = rnd.Next(percentage, max);
+                    percent = rnd.Next(percentage + 1, percentage + 26) - percentage;
                     percentage += percent;
 
                     Console.WriteLine("% increased by" + percent);
                 }
+                if (percentage < min) percentage = min;
+                if (percentage > max) percentage = max;
             }
 
             if (agentDaysWon == days)
@@ -116,8 +119,7 @@ namespace SportsAgencyTycoonV2
                 // give unlucky achievement for losing every day of a negotiation
             }
 
-            Console.WriteLine("Player's Old Agent %: " + playersCurrentPercent.ToString());
-            Console.WriteLine("Players New Agent %: " + percentage.ToString());
+            MessageBox.Show("Agent Percentage went from " + p.Contract.AgentPercentage.ToString() + "% to " + (Convert.ToDouble(percentage) / 100).ToString() + "%.");
 
             return percentage;
         }

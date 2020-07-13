@@ -240,11 +240,19 @@ namespace SportsAgencyTycoonV2
         }
         public void SignPlayerToAgency()
         {
-            if (selectedPlayer.IPtoSign > world.MyAgency.InfluencePoints)
-                MessageBox.Show("You do not have enough IP to sign this player.");
-            else if (mainForm.cbScoutedPlayers.SelectedIndex == -1)
+            if (mainForm.cbScoutedPlayers.SelectedIndex == -1)
             {
                 MessageBox.Show("Must select a player to sign.");
+            }
+            else if (selectedPlayer.IPtoSign > world.MyAgency.InfluencePoints)
+                MessageBox.Show("You do not have enough IP to sign this player.");
+            else if (mainForm.cbAgentToScout.Text == "")
+            {
+                MessageBox.Show("Must select an agent to work the negotiations.");
+            }
+            else if (mainForm.cbAgentToScout.Text != "" && selectedAgent.Status != AgentStatus.Available)
+            {
+                MessageBox.Show("Agent is not available to run these negotiations.");
             }
             else
             {
