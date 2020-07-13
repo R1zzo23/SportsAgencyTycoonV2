@@ -11,6 +11,7 @@ namespace SportsAgencyTycoonV2
     {
         MainForm mainForm;
         World world;
+        NegotiateAgentPercentage negotiateAgentPercentage = new NegotiateAgentPercentage();
         bool freeAgent = false;
         bool onTeam = false;
         public Sports selectedSport;
@@ -27,6 +28,7 @@ namespace SportsAgencyTycoonV2
             mainForm = mf;
             world = w;
         }
+       
         public void FillSportComboBox()
         {
             mainForm.cbClientSport.Items.Clear();
@@ -240,11 +242,20 @@ namespace SportsAgencyTycoonV2
         {
             if (selectedPlayer.IPtoSign > world.MyAgency.InfluencePoints)
                 MessageBox.Show("You do not have enough IP to sign this player.");
+            else if (mainForm.cbScoutedPlayers.SelectedIndex == -1)
+            {
+                MessageBox.Show("Must select a player to sign.");
+            }
             else
             {
                 world.MyAgency.AddInfluencePoints(-selectedPlayer.IPtoSign);
                 world.MyAgency.AddClient(selectedPlayer);
                 selectedPlayer.MemberOfAgency = true;
+                if (!selectedPlayer.FreeAgent)
+                {
+                    // negotiate agent percentage
+                    negotiateAgentPercentage.NegotiatePercentage(selectedPlayer, selectedAgent, world.rnd);
+                }
                 mainForm.cbScoutedPlayers.Text = "";
                 mainForm.cbScoutedPlayers.SelectedIndex = -1;
                 FillScoutedClientComboBox();

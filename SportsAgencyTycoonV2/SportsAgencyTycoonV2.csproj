@@ -101,6 +101,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NegotiateAgentPercentage.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="PaySchedule.cs" />
     <Compile Include="PlayerGenomeProject.cs" />
