@@ -26,6 +26,7 @@ namespace SportsAgencyTycoonV2
         public List<Control> agentIntelligences = new List<Control>();
         public List<Control> agentGroupBoxes = new List<Control>();
         public List<Control> agentStatusLabels = new List<Control>();
+        public List<Control> agentRestButtons = new List<Control>();
 
         public WorldPanelFunctions worldPanelFunctions;
         public TeamRosterPanelFunctions teamRosterPanelFunctions;
@@ -84,6 +85,9 @@ namespace SportsAgencyTycoonV2
             agentStatusLabels.Add(lblAgent1Status);
             agentStatusLabels.Add(lblAgent2Status);
             agentStatusLabels.Add(lblAgent3Status);
+            agentRestButtons.Add(btnAgent1Rest);
+            agentRestButtons.Add(btnAgent2Rest);
+            agentRestButtons.Add(btnAgent3Rest);
         }
         private void AddDayMarkersToList()
         {
@@ -342,6 +346,26 @@ namespace SportsAgencyTycoonV2
         private void btnSignToAgency_Click(object sender, EventArgs e)
         {
             clientPanelFunctions.SignPlayerToAgency();
+        }
+
+        private void btnAgent1Rest_Click(object sender, EventArgs e)
+        {
+            RestAgent(0);
+        }
+
+        private void btnAgent2Rest_Click(object sender, EventArgs e)
+        {
+            RestAgent(1);
+        }
+
+        private void btnAgent3Rest_Click(object sender, EventArgs e)
+        {
+            RestAgent(2);
+        }
+        
+        private void RestAgent(int i)
+        {
+            world.MyAgency.AgentRest(i);
         }
     }
 }

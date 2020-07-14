@@ -102,6 +102,11 @@ namespace SportsAgencyTycoonV2
         {
             AddMoney(-Office.MonthlyCost);
         }
+        public void AddDayWorking(Agent a)
+        {
+            a.DaysWorkingOnJob++;
+            DetermineIfEfficiencyDrops(a);
+        }
         public void AddDaysWorking()
         {
             Manager.DaysWorkingOnJob++;
@@ -150,8 +155,16 @@ namespace SportsAgencyTycoonV2
                     mainForm.agentPowers[i].Text = "POW: " + AgentList[i].Power.ToString();
                     mainForm.agentEfficiencies[i].Text = "EFF: " + AgentList[i].CurrentEfficiency.ToString() + "/" + AgentList[i].MaxEfficiency.ToString();
                     mainForm.agentStatusLabels[i].Text = "Status: " + AgentList[i].Status.ToString();
+                    if (AgentList[i].Status == AgentStatus.Available && AgentList[i].CurrentEfficiency < AgentList[i].MaxEfficiency)
+                        mainForm.agentRestButtons[i].Enabled = true;
+                    else mainForm.agentRestButtons[i].Enabled = false;
                 }
             }
+        }
+        public void AgentRest(int i)
+        {
+            AgentList[i].Status = AgentStatus.Resting;
+            AgentList[i].DaysResting = 0;
         }
         /*public Agent FindAgent(Player player)
         {

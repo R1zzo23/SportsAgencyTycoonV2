@@ -261,6 +261,9 @@ namespace SportsAgencyTycoonV2
                 selectedPlayer.MemberOfAgency = true;
                 if (!selectedPlayer.FreeAgent)
                 {
+                    if (selectedAgent.Role == Role.Manager)
+                        world.MyAgency.Manager.UpdateManagerUI(mainForm);
+                    else world.MyAgency.DisplayAllAgents();
                     // negotiate agent percentage
                     negotiateAgentPercentage.NegotiatePercentage(selectedPlayer, selectedAgent, world.rnd);
                 }

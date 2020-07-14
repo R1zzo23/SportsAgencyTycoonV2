@@ -38,29 +38,29 @@ namespace SportsAgencyTycoonV2
             if (p.Greed >= 75)
             {
                 if (agentScore >= 75)
-                    days = 12;
+                    days = 6;
                 else if (agentScore >= 50)
-                    days = 10;
+                    days = 5;
                 else if (agentScore >= 25)
-                    days = 4;
+                    days = 2;
             }
             else if (p.Greed >= 50)
             {
                 if (agentScore >= 75)
-                    days = 8;
+                    days = 4;
                 else if (agentScore >= 50)
-                    days = 6;
+                    days = 3;
                 else if (agentScore >= 25)
-                    days = 5;
+                    days = 2;
             }
             else if (p.Greed >= 25)
             {
                 if (agentScore >= 75)
-                    days = 5;
-                else if (agentScore >= 50)
-                    days = 4;
-                else if (agentScore >= 25)
                     days = 3;
+                else if (agentScore >= 50)
+                    days = 2;
+                else if (agentScore >= 25)
+                    days = 1;
             }
             else
             {

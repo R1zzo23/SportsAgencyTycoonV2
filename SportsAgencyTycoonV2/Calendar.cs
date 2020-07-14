@@ -49,7 +49,34 @@ namespace SportsAgencyTycoonV2
             if (world.MyAgency.AttemptingJob)
             {
                 world.MyAgency.DaysAttemptingJob++;
-                world.MyAgency.AddDaysWorking();
+                world.MyAgency.AddDayWorking(world.MyAgency.Manager);
+                if (world.MyAgency.AgentCount > 0)
+                    foreach (Agent a in world.MyAgency.AgentList)
+                        if (a.Status == AgentStatus.Available)
+                            world.MyAgency.AddDayWorking(a);
+            }
+            else
+            {
+                if (world.MyAgency.Manager.Status == AgentStatus.Scouting || world.MyAgency.Manager.Status == AgentStatus.Negotiating || world.MyAgency.Manager.Status == AgentStatus.Training)
+                    world.MyAgency.AddDayWorking(world.MyAgency.Manager);
+                if (world.MyAgency.AgentCount > 0)
+                    foreach (Agent a in world.MyAgency.AgentList)
+                    {
+                        if (a.Status == AgentStatus.Scouting || a.Status == AgentStatus.Negotiating || a.Status == AgentStatus.Training)
+                            world.MyAgency.AddDayWorking(a);
+                        else if (a.Status == AgentStatus.Resting)
+                        {
+                            a.AddEfficiency(a.DaysResting + 1);
+                            a.DaysResting++;
+                            if (a.CurrentEfficiency >= a.MaxEfficiency)
+                            {
+                                a.SetEfficiency(a.MaxEfficiency);
+                                a.Status = AgentStatus.Available;
+                                a.DaysResting = 0;
+                            }
+                            world.MyAgency.DisplayAllAgents();
+                        }
+                    }
             }
 
             if (Day <= 6)
