@@ -21,7 +21,29 @@ namespace SportsAgencyTycoonV2
             if (world.MyAgency.ClientCount - 1 >= i)
             {
                 mainForm.lblClientName.Text = world.MyAgency.Clients[i].FullName;
+                if (world.MyAgency.Clients[i].FreeAgent)
+                    mainForm.lblClientPosAndTeam.Text = "Free Agent " + world.MyAgency.Clients[i].Position.ToString();
+                else
+                    mainForm.lblClientPosAndTeam.Text = world.MyAgency.Clients[i].Position.ToString() + " for " + world.MyAgency.Clients[i].Team.Abbreviation;
+
+                DisplayClientSportImage(world.MyAgency.Clients[i].Sport);
+                mainForm.lblClientAgencyHappiness.Text = world.MyAgency.Clients[i].AgencyHappinessString;
+                mainForm.lblClientTeamHappiness.Text = world.MyAgency.Clients[i].TeamHappinessString;
+                mainForm.lblClientPopularity.Text = world.MyAgency.Clients[i].PopularityString;
             }
+        }
+        public void DisplayClientSportImage(Sports s)
+        {
+            if (s == Sports.Baseball)
+                mainForm.clientSportImage.Image = Properties.Resources.baseball;
+            else if (s == Sports.Basketball)
+                mainForm.clientSportImage.Image = Properties.Resources.basketball;
+            else if (s == Sports.Football)
+                mainForm.clientSportImage.Image = Properties.Resources.football;
+            else if (s == Sports.Hockey)
+                mainForm.clientSportImage.Image = Properties.Resources.hockey;
+            else if (s == Sports.Soccer)
+                mainForm.clientSportImage.Image = Properties.Resources.soccer;
         }
         public void ScrollLeft()
         {

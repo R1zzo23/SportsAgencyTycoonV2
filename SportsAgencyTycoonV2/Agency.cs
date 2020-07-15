@@ -63,6 +63,9 @@ namespace SportsAgencyTycoonV2
         }
         public void AddClient(Player p)
         {
+            p.AgencyHappiness = 75;
+            p.AgencyHappinessDescription = p.DescribeHappiness(p.AgencyHappiness);
+            p.AgencyHappinessString = p.EnumToString(p.AgencyHappinessDescription.ToString());
             Clients.Add(p);
             _ClientCount = Clients.Count;
             mainForm.UpdateOfficeInfo();
