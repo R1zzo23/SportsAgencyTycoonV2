@@ -32,6 +32,7 @@ namespace SportsAgencyTycoonV2
         public TeamRosterPanelFunctions teamRosterPanelFunctions;
         public ClientPanelFunctions clientPanelFunctions;
         public ManagerPanelFunctions managerPanelFunctions;
+        public AgencyClientsPanelFunctions agencyClientsPanelFunctions;
         public MainForm()
         {
             world = new World(rnd);
@@ -55,6 +56,7 @@ namespace SportsAgencyTycoonV2
             teamRosterPanelFunctions = new TeamRosterPanelFunctions(this, world);
             clientPanelFunctions = new ClientPanelFunctions(this, world);
             managerPanelFunctions = new ManagerPanelFunctions(this, world);
+            agencyClientsPanelFunctions = new AgencyClientsPanelFunctions(this, world);
         }
         private void AddAgentLabelsToList()
         {
@@ -228,6 +230,14 @@ namespace SportsAgencyTycoonV2
 
         private void btnClients_Click(object sender, EventArgs e)
         {
+            panelButtonHighlight.Height = btnClients.Height;
+            panelButtonHighlight.Top = btnClients.Top;
+            HideAllPanels();
+            agencyClientsPanel.Visible = true;
+            agencyClientsPanelFunctions.DisplayClient(0);
+        }
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
             OpenClientPanel();
         }
         private void OpenClientPanel()
@@ -236,17 +246,14 @@ namespace SportsAgencyTycoonV2
                 MessageBox.Show("Must have a license to represent players before signing your own.");
             else
             {
-                panelButtonHighlight.Height = btnClients.Height;
-                panelButtonHighlight.Top = btnClients.Top;
                 HideAllPanels();
                 cbClientSport.SelectedIndex = -1;
                 cbClientSport.Text = "";
                 cbScoutedPlayers.SelectedIndex = -1;
                 cbScoutedPlayers.Text = "";
-                clientPanel.Visible = true;
+                scoutClientPanel.Visible = true;
                 clientPanelFunctions.FillSportComboBox();
                 clientPanelFunctions.FillAgentComboBox();
-                
             }
         }
         private void btnStandings_Click(object sender, EventArgs e)
@@ -272,8 +279,9 @@ namespace SportsAgencyTycoonV2
             freelancePanel.Visible = false;
             worldPanel.Visible = false;
             teamRosterPanel.Visible = false;
-            clientPanel.Visible = false;
+            scoutClientPanel.Visible = false;
             managerPanel.Visible = false;
+            agencyClientsPanel.Visible = false;
         }
         #region Freelance Buttons
         private void btnAcceptJob1_Click(object sender, EventArgs e)
@@ -366,6 +374,21 @@ namespace SportsAgencyTycoonV2
         private void RestAgent(int i)
         {
             world.MyAgency.AgentRest(i);
+        }
+
+        private void btnCloseScoutingPanel_Click(object sender, EventArgs e)
+        {
+            scoutClientPanel.Visible = false;
+        }
+
+        private void btnScrollLeftThroughClients_Click(object sender, EventArgs e)
+        {
+            agencyClientsPanelFunctions.ScrollLeft();
+        }
+
+        private void btnScrollRightThroughClients_Click(object sender, EventArgs e)
+        {
+            agencyClientsPanelFunctions.ScrollRight();
         }
     }
 }

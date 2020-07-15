@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agency.cs" />
+    <Compile Include="AgencyClientsPanelFunctions.cs" />
     <Compile Include="AgentStatus.cs" />
     <Compile Include="Award.cs" />
     <Compile Include="Baseball.cs" />
@@ -192,6 +193,8 @@
     <None Include="Resources\3star.png" />
     <None Include="Resources\4star.png" />
     <None Include="Resources\5star.png" />
+    <None Include="Resources\double left arrows small.png" />
+    <None Include="Resources\double right arrows small.png" />
     <Content Include="_GameIdeas.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
