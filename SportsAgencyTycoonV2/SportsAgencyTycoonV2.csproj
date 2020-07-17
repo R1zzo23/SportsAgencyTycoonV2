@@ -88,6 +88,7 @@
     </Compile>
     <Compile Include="FreelanceJob.cs" />
     <Compile Include="GenomeDescription.cs" />
+    <Compile Include="GetClientSignedFunctions.cs" />
     <Compile Include="HappinessDescription.cs" />
     <Compile Include="Hockey.cs" />
     <Compile Include="HockeyDraft.cs" />

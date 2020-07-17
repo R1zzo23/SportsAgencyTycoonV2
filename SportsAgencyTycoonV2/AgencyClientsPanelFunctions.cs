@@ -80,6 +80,9 @@ namespace SportsAgencyTycoonV2
         public void CallTeamsToSignClient(Player selectedPlayer)
         {
             Console.WriteLine("Calling teams to sign client...");
+            League league = world.Leagues[world.Leagues.FindIndex(o => o.Sport == selectedPlayer.Sport)];
+            GetClientSignedFunctions getClientSignedFunctions = new GetClientSignedFunctions(mainForm, world);
+            getClientSignedFunctions.AttemptToGetPlayerSigned(selectedPlayer, league, world.MyAgency);
         }
         public void CallClientsTeam(Player selectedPlayer)
         {
