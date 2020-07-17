@@ -133,9 +133,39 @@ namespace SportsAgencyTycoonV2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap double_left_arrows_33 {
+            get {
+                object obj = ResourceManager.GetObject("double left arrows 33", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap double_left_arrows_50 {
+            get {
+                object obj = ResourceManager.GetObject("double left arrows 50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap double_left_arrows_small {
             get {
                 object obj = ResourceManager.GetObject("double left arrows small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap double_right_arrows_50 {
+            get {
+                object obj = ResourceManager.GetObject("double right arrows 50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

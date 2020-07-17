@@ -158,7 +158,41 @@ namespace SportsAgencyTycoonV2
             NHL = new League(Sports.Hockey, "National Hockey League", "NHL", rnd.Next(30, 55), new Date(10, 1), new Date(6, 2), 82, 8, 9500000, 650000);
             MLS = new League(Sports.Soccer, "Major League Soccer", "MLS", rnd.Next(15, 50), new Date(3, 2), new Date(12, 1), 34, 9, 7000000, 56250);
         }
-        
+        public void CreateMaxAndMinSalariesBasedOnLicenseOrder()
+        {
+            for (int i = 0; i < LicenseOrder.Count; i++)
+                for (int j = 0; j < Leagues.Count; j++)
+                {
+                    if (Leagues[j].Sport == LicenseOrder[i])
+                    {
+                        if (i == 0)
+                        {
+                            Leagues[j].MinSalary = 150000;
+                            Leagues[j].MaxSalary = 7000000;
+                        }
+                        else if (i == 1)
+                        {
+                            Leagues[j].MinSalary = 500000;
+                            Leagues[j].MaxSalary = 9500000;
+                        }
+                        else if (i == 2)
+                        {
+                            Leagues[j].MinSalary = 550000;
+                            Leagues[j].MaxSalary = 30000000;
+                        }
+                        else if (i == 3)
+                        {
+                            Leagues[j].MinSalary = 600000;
+                            Leagues[j].MaxSalary = 35000000;
+                        }
+                        else if (i == 4)
+                        {
+                            Leagues[j].MinSalary = 650000;
+                            Leagues[j].MaxSalary = 40000000;
+                        }
+                    }
+                }
+        }
         public void CreateProgressionRegressionEventsForPlayers()
         {
             foreach (League l in Leagues)
@@ -363,6 +397,12 @@ namespace SportsAgencyTycoonV2
             Leagues.Add(MLB);
             Leagues.Add(NHL);
             Leagues.Add(MLS);
+
+            CreateMaxAndMinSalariesBasedOnLicenseOrder();
+            foreach (Sports S in LicenseOrder)
+                Console.WriteLine(S.ToString());
+            foreach (League l in Leagues)
+                Console.WriteLine(l.Abbreviation + " Min: " + l.MinSalary.ToString("C0") + " Max: " + l.MaxSalary.ToString("C0"));
             //add PGA, ATP, WBA and UFC to World.Associations
             /*Associations.Add(PGA);
             Associations.Add(ATP);
@@ -941,6 +981,33 @@ namespace SportsAgencyTycoonV2
             {
                 if (e.EventDate.Week == calendar.Week && e.EventDate.MonthNumber == calendar.Month) EventsThisWeek.Add(e);
             }
+        }
+        public void PayPlayersMonthlySalary()
+        {
+            foreach (League l in Leagues)
+                if (l.InSeason && l.Initialized)
+                    foreach (Team t in l.TeamList)
+                        foreach (Player p in t.Roster)
+                        {
+                            // all players getting paid monthly get their money
+                            if (p.Contract.AgentPaySchedule == PaySchedule.Monthly)
+                            {
+                                p.CareerEarnings += p.Contract.MonthlySalary;
+                                // if player is member of agency, agency gets paid too
+                                if (p.MemberOfAgency)
+                                {
+                                    MyAgency.AddMoney(Convert.ToInt32((double)p.Contract.MonthlySalary * (double)(p.Contract.AgentPercentage / 100)));
+
+
+                                    /*for (int i = 0; i < MainForm.agency.Agents.Count; i++)
+                                    {
+                                        int index = MainForm.agency.Agents[i].ClientList.FindIndex(o => (o.FullName == p.FullName) && (o.Id == p.Id) && (o.Sport == p.Sport));
+                                        if (index >= 0) MainForm.agency.Agents[i].CareerEarnings += Convert.ToInt32((double)p.Contract.MonthlySalary * (double)(p.Contract.AgentPercentage / 100));
+                                    }*/
+                                }
+
+                            }
+                        }
         }
         public void PayPlayersAnnualSalary(League l)
         {

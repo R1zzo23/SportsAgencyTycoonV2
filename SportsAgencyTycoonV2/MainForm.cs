@@ -390,5 +390,10 @@ namespace SportsAgencyTycoonV2
         {
             agencyClientsPanelFunctions.ScrollRight();
         }
+
+        private void btnCallForClient_Click(object sender, EventArgs e)
+        {
+            agencyClientsPanelFunctions.CallTeamOrTeams();
+        }
     }
 }

@@ -22,14 +22,22 @@ namespace SportsAgencyTycoonV2
             {
                 mainForm.lblClientName.Text = world.MyAgency.Clients[i].FullName;
                 if (world.MyAgency.Clients[i].FreeAgent)
+                {
                     mainForm.lblClientPosAndTeam.Text = "Free Agent " + world.MyAgency.Clients[i].Position.ToString();
+                    mainForm.btnCallForClient.Text = "Call Teams";
+                }
                 else
+                {
                     mainForm.lblClientPosAndTeam.Text = world.MyAgency.Clients[i].Position.ToString() + " for " + world.MyAgency.Clients[i].Team.Abbreviation;
-
+                    mainForm.btnCallForClient.Text = "Call Team";
+                }
+                    
                 DisplayClientSportImage(world.MyAgency.Clients[i].Sport);
                 mainForm.lblClientAgencyHappiness.Text = world.MyAgency.Clients[i].AgencyHappinessString;
                 mainForm.lblClientTeamHappiness.Text = world.MyAgency.Clients[i].TeamHappinessString;
                 mainForm.lblClientPopularity.Text = world.MyAgency.Clients[i].PopularityString;
+
+
             }
         }
         public void DisplayClientSportImage(Sports s)
@@ -60,6 +68,22 @@ namespace SportsAgencyTycoonV2
             else index++;
 
             DisplayClient(index);
+        }
+        public void CallTeamOrTeams()
+        {
+            Player selectedPlayer = world.MyAgency.Clients[index];
+            if (selectedPlayer.FreeAgent)
+                CallTeamsToSignClient(selectedPlayer);
+            else
+                CallClientsTeam(selectedPlayer);
+        }
+        public void CallTeamsToSignClient(Player selectedPlayer)
+        {
+            Console.WriteLine("Calling teams to sign client...");
+        }
+        public void CallClientsTeam(Player selectedPlayer)
+        {
+            Console.WriteLine("Calling client's current team...");
         }
     }
 }

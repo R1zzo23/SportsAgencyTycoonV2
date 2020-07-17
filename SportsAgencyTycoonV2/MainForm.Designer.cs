@@ -45,13 +45,7 @@
             this.lblLicenseList = new System.Windows.Forms.Label();
             this.universalAgencyPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.btnViewRosters = new System.Windows.Forms.Button();
-            this.btnStandings = new System.Windows.Forms.Button();
             this.panelButtonHighlight = new System.Windows.Forms.Panel();
-            this.btnClients = new System.Windows.Forms.Button();
-            this.btnJobs = new System.Windows.Forms.Button();
-            this.btnManager = new System.Windows.Forms.Button();
-            this.btnOffice = new System.Windows.Forms.Button();
             this.toolTipMainForm = new System.Windows.Forms.ToolTip(this.components);
             this.lblManagerIQ = new System.Windows.Forms.Label();
             this.lblManagerNegotiate = new System.Windows.Forms.Label();
@@ -84,23 +78,18 @@
             this.lblAgent3Status = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.lblAgent3Name = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.gbAgent2 = new System.Windows.Forms.GroupBox();
             this.btnAgent2Rest = new System.Windows.Forms.Button();
             this.lblAgent2Status = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblAgent2Name = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbAgent1 = new System.Windows.Forms.GroupBox();
             this.btnAgent1Rest = new System.Windows.Forms.Button();
             this.lblAgent1Status = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblAgent1Name = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.agencyImageLarge = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.managerImageLarge = new System.Windows.Forms.PictureBox();
             this.freelancePanel = new System.Windows.Forms.Panel();
             this.jobProgressBar = new System.Windows.Forms.ProgressBar();
             this.gbJob3 = new System.Windows.Forms.GroupBox();
@@ -156,11 +145,6 @@
             this.cbLeagues = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureFootball = new System.Windows.Forms.PictureBox();
-            this.pictureBasketball = new System.Windows.Forms.PictureBox();
-            this.pictureBaseball = new System.Windows.Forms.PictureBox();
-            this.pictureHockey = new System.Windows.Forms.PictureBox();
-            this.pictureSoccer = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.teamRosterPanel = new System.Windows.Forms.Panel();
             this.lblRoster = new System.Windows.Forms.Label();
@@ -194,7 +178,6 @@
             this.btnCloseScoutingPanel = new System.Windows.Forms.Button();
             this.btnSignToAgency = new System.Windows.Forms.Button();
             this.lblWSSAScouting = new System.Windows.Forms.Label();
-            this.wssaStarRating = new System.Windows.Forms.PictureBox();
             this.lblScoutedBy = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblScoutedAgencyHappiness = new System.Windows.Forms.Label();
@@ -215,7 +198,6 @@
             this.lblScoutedPlayerDescription = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbAgentToScout = new System.Windows.Forms.ComboBox();
-            this.starRatingPicture = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbScoutedPlayers = new System.Windows.Forms.ComboBox();
             this.btnSearchForClient = new System.Windows.Forms.Button();
@@ -228,29 +210,43 @@
             this.cbClientSport = new System.Windows.Forms.ComboBox();
             this.managerPanel = new System.Windows.Forms.Panel();
             this.agencyClientsPanel = new System.Windows.Forms.Panel();
-            this.lblClientName = new System.Windows.Forms.Label();
-            this.btnScrollRightThroughClients = new System.Windows.Forms.Button();
-            this.btnScrollLeftThroughClients = new System.Windows.Forms.Button();
-            this.btnAddClient = new System.Windows.Forms.Button();
-            this.clientSportImage = new System.Windows.Forms.PictureBox();
-            this.lblClientPosAndTeam = new System.Windows.Forms.Label();
-            this.lblClientTeamHappiness = new System.Windows.Forms.Label();
-            this.lblClientPopularity = new System.Windows.Forms.Label();
-            this.lblClientAgencyHappiness = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.lblClientAgencyHappiness = new System.Windows.Forms.Label();
+            this.lblClientPopularity = new System.Windows.Forms.Label();
+            this.lblClientTeamHappiness = new System.Windows.Forms.Label();
+            this.lblClientPosAndTeam = new System.Windows.Forms.Label();
+            this.lblClientName = new System.Windows.Forms.Label();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.clientSportImage = new System.Windows.Forms.PictureBox();
+            this.btnScrollRightThroughClients = new System.Windows.Forms.Button();
+            this.btnScrollLeftThroughClients = new System.Windows.Forms.Button();
+            this.wssaStarRating = new System.Windows.Forms.PictureBox();
+            this.starRatingPicture = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.agencyImageLarge = new System.Windows.Forms.PictureBox();
+            this.managerImageLarge = new System.Windows.Forms.PictureBox();
+            this.pictureFootball = new System.Windows.Forms.PictureBox();
+            this.pictureBasketball = new System.Windows.Forms.PictureBox();
+            this.pictureBaseball = new System.Windows.Forms.PictureBox();
+            this.pictureHockey = new System.Windows.Forms.PictureBox();
+            this.pictureSoccer = new System.Windows.Forms.PictureBox();
+            this.btnViewRosters = new System.Windows.Forms.Button();
+            this.btnStandings = new System.Windows.Forms.Button();
+            this.btnClients = new System.Windows.Forms.Button();
+            this.btnJobs = new System.Windows.Forms.Button();
+            this.btnManager = new System.Windows.Forms.Button();
+            this.btnOffice = new System.Windows.Forms.Button();
+            this.btnCallForClient = new System.Windows.Forms.Button();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
             this.gbAgent3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.gbAgent2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbAgent1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).BeginInit();
             this.freelancePanel.SuspendLayout();
             this.gbJob3.SuspendLayout();
             this.gbJob2.SuspendLayout();
@@ -258,24 +254,29 @@
             this.calendarPanel.SuspendLayout();
             this.worldPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).BeginInit();
             this.teamRosterPanel.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.scoutClientPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.agencyClientsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).BeginInit();
             this.SuspendLayout();
             // 
             // btnManagerAction
@@ -298,7 +299,7 @@
             this.cbManagerActions.Location = new System.Drawing.Point(8, 143);
             this.cbManagerActions.Margin = new System.Windows.Forms.Padding(4);
             this.cbManagerActions.Name = "cbManagerActions";
-            this.cbManagerActions.Size = new System.Drawing.Size(263, 25);
+            this.cbManagerActions.Size = new System.Drawing.Size(263, 29);
             this.cbManagerActions.TabIndex = 1;
             // 
             // lblManagerName
@@ -307,7 +308,7 @@
             this.lblManagerName.Location = new System.Drawing.Point(79, 6);
             this.lblManagerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerName.Name = "lblManagerName";
-            this.lblManagerName.Size = new System.Drawing.Size(192, 19);
+            this.lblManagerName.Size = new System.Drawing.Size(234, 21);
             this.lblManagerName.TabIndex = 0;
             this.lblManagerName.Text = "Very Very Long Name Here";
             this.lblManagerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -329,7 +330,7 @@
             this.lblAgencyMoney.Location = new System.Drawing.Point(476, 40);
             this.lblAgencyMoney.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgencyMoney.Name = "lblAgencyMoney";
-            this.lblAgencyMoney.Size = new System.Drawing.Size(81, 19);
+            this.lblAgencyMoney.Size = new System.Drawing.Size(95, 21);
             this.lblAgencyMoney.TabIndex = 2;
             this.lblAgencyMoney.Text = "Money: $0";
             // 
@@ -339,7 +340,7 @@
             this.lblInfluencePoints.Location = new System.Drawing.Point(622, 40);
             this.lblInfluencePoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfluencePoints.Name = "lblInfluencePoints";
-            this.lblInfluencePoints.Size = new System.Drawing.Size(132, 19);
+            this.lblInfluencePoints.Size = new System.Drawing.Size(158, 21);
             this.lblInfluencePoints.TabIndex = 3;
             this.lblInfluencePoints.Text = "Influence Points: 0";
             // 
@@ -349,7 +350,7 @@
             this.lblOfficeLevel.Location = new System.Drawing.Point(670, 4);
             this.lblOfficeLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOfficeLevel.Name = "lblOfficeLevel";
-            this.lblOfficeLevel.Size = new System.Drawing.Size(60, 19);
+            this.lblOfficeLevel.Size = new System.Drawing.Size(73, 21);
             this.lblOfficeLevel.TabIndex = 5;
             this.lblOfficeLevel.Text = "Level: 0";
             // 
@@ -385,7 +386,7 @@
             this.lblEmployeeCapacity.Location = new System.Drawing.Point(670, 64);
             this.lblEmployeeCapacity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeCapacity.Name = "lblEmployeeCapacity";
-            this.lblEmployeeCapacity.Size = new System.Drawing.Size(186, 19);
+            this.lblEmployeeCapacity.Size = new System.Drawing.Size(218, 21);
             this.lblEmployeeCapacity.TabIndex = 2;
             this.lblEmployeeCapacity.Text = "Employee Capacity: 0/10";
             // 
@@ -395,7 +396,7 @@
             this.lblMonthlyCost.Location = new System.Drawing.Point(670, 44);
             this.lblMonthlyCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMonthlyCost.Name = "lblMonthlyCost";
-            this.lblMonthlyCost.Size = new System.Drawing.Size(123, 19);
+            this.lblMonthlyCost.Size = new System.Drawing.Size(148, 21);
             this.lblMonthlyCost.TabIndex = 1;
             this.lblMonthlyCost.Text = "Monthly Cost: $0";
             // 
@@ -405,7 +406,7 @@
             this.lblPurchaseCost.Location = new System.Drawing.Point(670, 24);
             this.lblPurchaseCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPurchaseCost.Name = "lblPurchaseCost";
-            this.lblPurchaseCost.Size = new System.Drawing.Size(130, 19);
+            this.lblPurchaseCost.Size = new System.Drawing.Size(158, 21);
             this.lblPurchaseCost.TabIndex = 0;
             this.lblPurchaseCost.Text = "Purchase Cost: $0";
             // 
@@ -416,7 +417,7 @@
             this.lblLicenseList.Location = new System.Drawing.Point(391, 6);
             this.lblLicenseList.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLicenseList.Name = "lblLicenseList";
-            this.lblLicenseList.Size = new System.Drawing.Size(147, 17);
+            this.lblLicenseList.Size = new System.Drawing.Size(180, 19);
             this.lblLicenseList.TabIndex = 5;
             this.lblLicenseList.Text = "Agency License List: ";
             this.lblLicenseList.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -446,38 +447,6 @@
             this.menuPanel.Size = new System.Drawing.Size(89, 282);
             this.menuPanel.TabIndex = 7;
             // 
-            // btnViewRosters
-            // 
-            this.btnViewRosters.FlatAppearance.BorderSize = 0;
-            this.btnViewRosters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewRosters.ForeColor = System.Drawing.Color.White;
-            this.btnViewRosters.Image = ((System.Drawing.Image)(resources.GetObject("btnViewRosters.Image")));
-            this.btnViewRosters.Location = new System.Drawing.Point(3, 223);
-            this.btnViewRosters.Name = "btnViewRosters";
-            this.btnViewRosters.Size = new System.Drawing.Size(68, 41);
-            this.btnViewRosters.TabIndex = 10;
-            this.btnViewRosters.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnViewRosters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnViewRosters, "Clients");
-            this.btnViewRosters.UseVisualStyleBackColor = true;
-            this.btnViewRosters.Click += new System.EventHandler(this.btnViewRosters_Click);
-            // 
-            // btnStandings
-            // 
-            this.btnStandings.FlatAppearance.BorderSize = 0;
-            this.btnStandings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStandings.ForeColor = System.Drawing.Color.White;
-            this.btnStandings.Image = ((System.Drawing.Image)(resources.GetObject("btnStandings.Image")));
-            this.btnStandings.Location = new System.Drawing.Point(3, 176);
-            this.btnStandings.Name = "btnStandings";
-            this.btnStandings.Size = new System.Drawing.Size(68, 41);
-            this.btnStandings.TabIndex = 9;
-            this.btnStandings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStandings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnStandings, "Standings");
-            this.btnStandings.UseVisualStyleBackColor = true;
-            this.btnStandings.Click += new System.EventHandler(this.btnStandings_Click);
-            // 
             // panelButtonHighlight
             // 
             this.panelButtonHighlight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
@@ -486,70 +455,6 @@
             this.panelButtonHighlight.Size = new System.Drawing.Size(7, 40);
             this.panelButtonHighlight.TabIndex = 8;
             // 
-            // btnClients
-            // 
-            this.btnClients.FlatAppearance.BorderSize = 0;
-            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClients.ForeColor = System.Drawing.Color.White;
-            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
-            this.btnClients.Location = new System.Drawing.Point(3, 132);
-            this.btnClients.Name = "btnClients";
-            this.btnClients.Size = new System.Drawing.Size(68, 41);
-            this.btnClients.TabIndex = 3;
-            this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnClients, "Clients");
-            this.btnClients.UseVisualStyleBackColor = true;
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
-            // 
-            // btnJobs
-            // 
-            this.btnJobs.FlatAppearance.BorderSize = 0;
-            this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJobs.ForeColor = System.Drawing.Color.White;
-            this.btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("btnJobs.Image")));
-            this.btnJobs.Location = new System.Drawing.Point(3, 88);
-            this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(68, 41);
-            this.btnJobs.TabIndex = 2;
-            this.btnJobs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnJobs, "Freelance Jobs");
-            this.btnJobs.UseVisualStyleBackColor = true;
-            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
-            // 
-            // btnManager
-            // 
-            this.btnManager.FlatAppearance.BorderSize = 0;
-            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManager.ForeColor = System.Drawing.Color.White;
-            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
-            this.btnManager.Location = new System.Drawing.Point(3, 44);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(68, 41);
-            this.btnManager.TabIndex = 1;
-            this.btnManager.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnManager.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnManager, "Manager");
-            this.btnManager.UseVisualStyleBackColor = true;
-            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
-            // 
-            // btnOffice
-            // 
-            this.btnOffice.FlatAppearance.BorderSize = 0;
-            this.btnOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOffice.ForeColor = System.Drawing.Color.White;
-            this.btnOffice.Image = ((System.Drawing.Image)(resources.GetObject("btnOffice.Image")));
-            this.btnOffice.Location = new System.Drawing.Point(3, 0);
-            this.btnOffice.Name = "btnOffice";
-            this.btnOffice.Size = new System.Drawing.Size(68, 41);
-            this.btnOffice.TabIndex = 0;
-            this.btnOffice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOffice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnOffice, "Agency");
-            this.btnOffice.UseVisualStyleBackColor = true;
-            this.btnOffice.Click += new System.EventHandler(this.btnOffice_Click);
-            // 
             // lblManagerIQ
             // 
             this.lblManagerIQ.AutoSize = true;
@@ -557,7 +462,7 @@
             this.lblManagerIQ.Location = new System.Drawing.Point(82, 30);
             this.lblManagerIQ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerIQ.Name = "lblManagerIQ";
-            this.lblManagerIQ.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerIQ.Size = new System.Drawing.Size(69, 19);
             this.lblManagerIQ.TabIndex = 13;
             this.lblManagerIQ.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerIQ, "Intelligence");
@@ -569,7 +474,7 @@
             this.lblManagerNegotiate.Location = new System.Drawing.Point(82, 54);
             this.lblManagerNegotiate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerNegotiate.Name = "lblManagerNegotiate";
-            this.lblManagerNegotiate.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerNegotiate.Size = new System.Drawing.Size(69, 19);
             this.lblManagerNegotiate.TabIndex = 11;
             this.lblManagerNegotiate.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerNegotiate, "Negotiating");
@@ -581,7 +486,7 @@
             this.lblManagerGreed.Location = new System.Drawing.Point(170, 30);
             this.lblManagerGreed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerGreed.Name = "lblManagerGreed";
-            this.lblManagerGreed.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerGreed.Size = new System.Drawing.Size(69, 19);
             this.lblManagerGreed.TabIndex = 10;
             this.lblManagerGreed.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerGreed, "Greed");
@@ -593,7 +498,7 @@
             this.lblManagerPower.Location = new System.Drawing.Point(82, 78);
             this.lblManagerPower.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerPower.Name = "lblManagerPower";
-            this.lblManagerPower.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerPower.Size = new System.Drawing.Size(69, 19);
             this.lblManagerPower.TabIndex = 12;
             this.lblManagerPower.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerPower, "Power");
@@ -605,7 +510,7 @@
             this.lblManagerScouting.Location = new System.Drawing.Point(170, 54);
             this.lblManagerScouting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerScouting.Name = "lblManagerScouting";
-            this.lblManagerScouting.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerScouting.Size = new System.Drawing.Size(69, 19);
             this.lblManagerScouting.TabIndex = 14;
             this.lblManagerScouting.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerScouting, "Greed");
@@ -617,7 +522,7 @@
             this.lblManagerEfficiency.Location = new System.Drawing.Point(170, 78);
             this.lblManagerEfficiency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerEfficiency.Name = "lblManagerEfficiency";
-            this.lblManagerEfficiency.Size = new System.Drawing.Size(56, 16);
+            this.lblManagerEfficiency.Size = new System.Drawing.Size(69, 19);
             this.lblManagerEfficiency.TabIndex = 15;
             this.lblManagerEfficiency.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerEfficiency, "Greed");
@@ -629,7 +534,7 @@
             this.lblAgent1EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent1EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1EFF.Name = "lblAgent1EFF";
-            this.lblAgent1EFF.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1EFF.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1EFF.TabIndex = 22;
             this.lblAgent1EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1EFF, "Efficiency");
@@ -641,7 +546,7 @@
             this.lblAgent1SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent1SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1SCT.Name = "lblAgent1SCT";
-            this.lblAgent1SCT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1SCT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1SCT.TabIndex = 21;
             this.lblAgent1SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1SCT, "Scouting");
@@ -653,7 +558,7 @@
             this.lblAgent1INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent1INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1INT.Name = "lblAgent1INT";
-            this.lblAgent1INT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1INT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1INT.TabIndex = 20;
             this.lblAgent1INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1INT, "Intelligence");
@@ -665,7 +570,7 @@
             this.lblAgent1NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent1NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1NEG.Name = "lblAgent1NEG";
-            this.lblAgent1NEG.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1NEG.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1NEG.TabIndex = 18;
             this.lblAgent1NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1NEG, "Negotiating");
@@ -677,7 +582,7 @@
             this.lblAgent1GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent1GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1GRD.Name = "lblAgent1GRD";
-            this.lblAgent1GRD.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1GRD.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1GRD.TabIndex = 17;
             this.lblAgent1GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1GRD, "Greed");
@@ -689,7 +594,7 @@
             this.lblAgent1POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent1POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1POW.Name = "lblAgent1POW";
-            this.lblAgent1POW.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent1POW.Size = new System.Drawing.Size(69, 19);
             this.lblAgent1POW.TabIndex = 19;
             this.lblAgent1POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1POW, "Power");
@@ -701,7 +606,7 @@
             this.lblAgent2EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent2EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2EFF.Name = "lblAgent2EFF";
-            this.lblAgent2EFF.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2EFF.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2EFF.TabIndex = 22;
             this.lblAgent2EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2EFF, "Efficiency");
@@ -713,7 +618,7 @@
             this.lblAgent2SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent2SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2SCT.Name = "lblAgent2SCT";
-            this.lblAgent2SCT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2SCT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2SCT.TabIndex = 21;
             this.lblAgent2SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2SCT, "Scouting");
@@ -725,7 +630,7 @@
             this.lblAgent2INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent2INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2INT.Name = "lblAgent2INT";
-            this.lblAgent2INT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2INT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2INT.TabIndex = 20;
             this.lblAgent2INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2INT, "Intelligence");
@@ -737,7 +642,7 @@
             this.lblAgent2NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent2NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2NEG.Name = "lblAgent2NEG";
-            this.lblAgent2NEG.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2NEG.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2NEG.TabIndex = 18;
             this.lblAgent2NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2NEG, "Negotiating");
@@ -749,7 +654,7 @@
             this.lblAgent2GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent2GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2GRD.Name = "lblAgent2GRD";
-            this.lblAgent2GRD.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2GRD.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2GRD.TabIndex = 17;
             this.lblAgent2GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2GRD, "Greed");
@@ -761,7 +666,7 @@
             this.lblAgent2POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent2POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2POW.Name = "lblAgent2POW";
-            this.lblAgent2POW.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent2POW.Size = new System.Drawing.Size(69, 19);
             this.lblAgent2POW.TabIndex = 19;
             this.lblAgent2POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2POW, "Power");
@@ -773,7 +678,7 @@
             this.lblAgent3EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent3EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3EFF.Name = "lblAgent3EFF";
-            this.lblAgent3EFF.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3EFF.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3EFF.TabIndex = 22;
             this.lblAgent3EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3EFF, "Efficiency");
@@ -785,7 +690,7 @@
             this.lblAgent3SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent3SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3SCT.Name = "lblAgent3SCT";
-            this.lblAgent3SCT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3SCT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3SCT.TabIndex = 21;
             this.lblAgent3SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3SCT, "Scouting");
@@ -797,7 +702,7 @@
             this.lblAgent3INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent3INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3INT.Name = "lblAgent3INT";
-            this.lblAgent3INT.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3INT.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3INT.TabIndex = 20;
             this.lblAgent3INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3INT, "Intelligence");
@@ -809,7 +714,7 @@
             this.lblAgent3NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent3NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3NEG.Name = "lblAgent3NEG";
-            this.lblAgent3NEG.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3NEG.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3NEG.TabIndex = 18;
             this.lblAgent3NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3NEG, "Negotiating");
@@ -821,7 +726,7 @@
             this.lblAgent3GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent3GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3GRD.Name = "lblAgent3GRD";
-            this.lblAgent3GRD.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3GRD.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3GRD.TabIndex = 17;
             this.lblAgent3GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3GRD, "Greed");
@@ -833,7 +738,7 @@
             this.lblAgent3POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent3POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3POW.Name = "lblAgent3POW";
-            this.lblAgent3POW.Size = new System.Drawing.Size(56, 16);
+            this.lblAgent3POW.Size = new System.Drawing.Size(69, 19);
             this.lblAgent3POW.TabIndex = 19;
             this.lblAgent3POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3POW, "Power");
@@ -874,7 +779,7 @@
             this.lblManagerStatus.AutoSize = true;
             this.lblManagerStatus.Location = new System.Drawing.Point(10, 110);
             this.lblManagerStatus.Name = "lblManagerStatus";
-            this.lblManagerStatus.Size = new System.Drawing.Size(54, 19);
+            this.lblManagerStatus.Size = new System.Drawing.Size(66, 21);
             this.lblManagerStatus.TabIndex = 19;
             this.lblManagerStatus.Text = "Status:";
             // 
@@ -914,7 +819,7 @@
             this.lblAgent3Status.AutoSize = true;
             this.lblAgent3Status.Location = new System.Drawing.Point(9, 137);
             this.lblAgent3Status.Name = "lblAgent3Status";
-            this.lblAgent3Status.Size = new System.Drawing.Size(54, 19);
+            this.lblAgent3Status.Size = new System.Drawing.Size(66, 21);
             this.lblAgent3Status.TabIndex = 25;
             this.lblAgent3Status.Text = "Status:";
             // 
@@ -925,7 +830,7 @@
             this.label19.Location = new System.Drawing.Point(1, 24);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(52, 17);
+            this.label19.Size = new System.Drawing.Size(63, 19);
             this.label19.TabIndex = 24;
             this.label19.Text = "Agent:";
             // 
@@ -935,20 +840,10 @@
             this.lblAgent3Name.Location = new System.Drawing.Point(51, 23);
             this.lblAgent3Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3Name.Name = "lblAgent3Name";
-            this.lblAgent3Name.Size = new System.Drawing.Size(192, 19);
+            this.lblAgent3Name.Size = new System.Drawing.Size(234, 21);
             this.lblAgent3Name.TabIndex = 23;
             this.lblAgent3Name.Text = "Very Very Long Name Here";
             this.lblAgent3Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
             // 
             // gbAgent2
             // 
@@ -986,7 +881,7 @@
             this.lblAgent2Status.AutoSize = true;
             this.lblAgent2Status.Location = new System.Drawing.Point(9, 137);
             this.lblAgent2Status.Name = "lblAgent2Status";
-            this.lblAgent2Status.Size = new System.Drawing.Size(54, 19);
+            this.lblAgent2Status.Size = new System.Drawing.Size(66, 21);
             this.lblAgent2Status.TabIndex = 25;
             this.lblAgent2Status.Text = "Status:";
             // 
@@ -997,7 +892,7 @@
             this.label11.Location = new System.Drawing.Point(1, 24);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 17);
+            this.label11.Size = new System.Drawing.Size(63, 19);
             this.label11.TabIndex = 24;
             this.label11.Text = "Agent:";
             // 
@@ -1007,20 +902,10 @@
             this.lblAgent2Name.Location = new System.Drawing.Point(51, 23);
             this.lblAgent2Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2Name.Name = "lblAgent2Name";
-            this.lblAgent2Name.Size = new System.Drawing.Size(192, 19);
+            this.lblAgent2Name.Size = new System.Drawing.Size(234, 21);
             this.lblAgent2Name.TabIndex = 23;
             this.lblAgent2Name.Text = "Very Very Long Name Here";
             this.lblAgent2Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
             // 
             // gbAgent1
             // 
@@ -1058,7 +943,7 @@
             this.lblAgent1Status.AutoSize = true;
             this.lblAgent1Status.Location = new System.Drawing.Point(9, 137);
             this.lblAgent1Status.Name = "lblAgent1Status";
-            this.lblAgent1Status.Size = new System.Drawing.Size(54, 19);
+            this.lblAgent1Status.Size = new System.Drawing.Size(66, 21);
             this.lblAgent1Status.TabIndex = 25;
             this.lblAgent1Status.Text = "Status:";
             // 
@@ -1069,7 +954,7 @@
             this.label9.Location = new System.Drawing.Point(1, 24);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 17);
+            this.label9.Size = new System.Drawing.Size(63, 19);
             this.label9.TabIndex = 24;
             this.label9.Text = "Agent:";
             // 
@@ -1079,20 +964,10 @@
             this.lblAgent1Name.Location = new System.Drawing.Point(51, 23);
             this.lblAgent1Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1Name.Name = "lblAgent1Name";
-            this.lblAgent1Name.Size = new System.Drawing.Size(192, 19);
+            this.lblAgent1Name.Size = new System.Drawing.Size(234, 21);
             this.lblAgent1Name.TabIndex = 23;
             this.lblAgent1Name.Text = "Very Very Long Name Here";
             this.lblAgent1Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -1101,19 +976,9 @@
             this.label2.Location = new System.Drawing.Point(602, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(59, 19);
             this.label2.TabIndex = 9;
             this.label2.Text = "Office";
-            // 
-            // agencyImageLarge
-            // 
-            this.agencyImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("agencyImageLarge.Image")));
-            this.agencyImageLarge.InitialImage = null;
-            this.agencyImageLarge.Location = new System.Drawing.Point(597, 25);
-            this.agencyImageLarge.Name = "agencyImageLarge";
-            this.agencyImageLarge.Size = new System.Drawing.Size(66, 63);
-            this.agencyImageLarge.TabIndex = 8;
-            this.agencyImageLarge.TabStop = false;
             // 
             // label1
             // 
@@ -1122,19 +987,9 @@
             this.label1.Location = new System.Drawing.Point(4, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.Size = new System.Drawing.Size(88, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "Manager:";
-            // 
-            // managerImageLarge
-            // 
-            this.managerImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.Image")));
-            this.managerImageLarge.InitialImage = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.InitialImage")));
-            this.managerImageLarge.Location = new System.Drawing.Point(8, 28);
-            this.managerImageLarge.Name = "managerImageLarge";
-            this.managerImageLarge.Size = new System.Drawing.Size(66, 63);
-            this.managerImageLarge.TabIndex = 6;
-            this.managerImageLarge.TabStop = false;
             // 
             // freelancePanel
             // 
@@ -1177,7 +1032,7 @@
             this.job3DaysToComplete.AutoSize = true;
             this.job3DaysToComplete.Location = new System.Drawing.Point(7, 151);
             this.job3DaysToComplete.Name = "job3DaysToComplete";
-            this.job3DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job3DaysToComplete.Size = new System.Drawing.Size(168, 21);
             this.job3DaysToComplete.TabIndex = 9;
             this.job3DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1198,7 +1053,7 @@
             this.job3PointsUntilCompletion.AutoSize = true;
             this.job3PointsUntilCompletion.Location = new System.Drawing.Point(7, 130);
             this.job3PointsUntilCompletion.Name = "job3PointsUntilCompletion";
-            this.job3PointsUntilCompletion.Size = new System.Drawing.Size(174, 19);
+            this.job3PointsUntilCompletion.Size = new System.Drawing.Size(210, 21);
             this.job3PointsUntilCompletion.TabIndex = 5;
             this.job3PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1207,7 +1062,7 @@
             this.job3MoneyPayout.AutoSize = true;
             this.job3MoneyPayout.Location = new System.Drawing.Point(7, 109);
             this.job3MoneyPayout.Name = "job3MoneyPayout";
-            this.job3MoneyPayout.Size = new System.Drawing.Size(118, 19);
+            this.job3MoneyPayout.Size = new System.Drawing.Size(140, 21);
             this.job3MoneyPayout.TabIndex = 4;
             this.job3MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1216,7 +1071,7 @@
             this.job3IPPayout.AutoSize = true;
             this.job3IPPayout.Location = new System.Drawing.Point(7, 88);
             this.job3IPPayout.Name = "job3IPPayout";
-            this.job3IPPayout.Size = new System.Drawing.Size(81, 19);
+            this.job3IPPayout.Size = new System.Drawing.Size(98, 21);
             this.job3IPPayout.TabIndex = 3;
             this.job3IPPayout.Text = "IP Payout: ";
             // 
@@ -1225,7 +1080,7 @@
             this.job3BaselineScore.AutoSize = true;
             this.job3BaselineScore.Location = new System.Drawing.Point(7, 67);
             this.job3BaselineScore.Name = "job3BaselineScore";
-            this.job3BaselineScore.Size = new System.Drawing.Size(115, 19);
+            this.job3BaselineScore.Size = new System.Drawing.Size(138, 21);
             this.job3BaselineScore.TabIndex = 2;
             this.job3BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1234,7 +1089,7 @@
             this.job3Description.AutoSize = true;
             this.job3Description.Location = new System.Drawing.Point(7, 46);
             this.job3Description.Name = "job3Description";
-            this.job3Description.Size = new System.Drawing.Size(127, 19);
+            this.job3Description.Size = new System.Drawing.Size(153, 21);
             this.job3Description.TabIndex = 1;
             this.job3Description.Text = "Job 1 Description";
             // 
@@ -1244,7 +1099,7 @@
             this.job3Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job3Title.Location = new System.Drawing.Point(6, 16);
             this.job3Title.Name = "job3Title";
-            this.job3Title.Size = new System.Drawing.Size(174, 26);
+            this.job3Title.Size = new System.Drawing.Size(215, 31);
             this.job3Title.TabIndex = 0;
             this.job3Title.Text = "Job 1 Title Text";
             this.job3Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1272,7 +1127,7 @@
             this.job2DaysToComplete.AutoSize = true;
             this.job2DaysToComplete.Location = new System.Drawing.Point(4, 151);
             this.job2DaysToComplete.Name = "job2DaysToComplete";
-            this.job2DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job2DaysToComplete.Size = new System.Drawing.Size(168, 21);
             this.job2DaysToComplete.TabIndex = 8;
             this.job2DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1293,7 +1148,7 @@
             this.job2PointsUntilCompletion.AutoSize = true;
             this.job2PointsUntilCompletion.Location = new System.Drawing.Point(7, 130);
             this.job2PointsUntilCompletion.Name = "job2PointsUntilCompletion";
-            this.job2PointsUntilCompletion.Size = new System.Drawing.Size(174, 19);
+            this.job2PointsUntilCompletion.Size = new System.Drawing.Size(210, 21);
             this.job2PointsUntilCompletion.TabIndex = 5;
             this.job2PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1302,7 +1157,7 @@
             this.job2MoneyPayout.AutoSize = true;
             this.job2MoneyPayout.Location = new System.Drawing.Point(7, 109);
             this.job2MoneyPayout.Name = "job2MoneyPayout";
-            this.job2MoneyPayout.Size = new System.Drawing.Size(118, 19);
+            this.job2MoneyPayout.Size = new System.Drawing.Size(140, 21);
             this.job2MoneyPayout.TabIndex = 4;
             this.job2MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1311,7 +1166,7 @@
             this.job2IPPayout.AutoSize = true;
             this.job2IPPayout.Location = new System.Drawing.Point(7, 88);
             this.job2IPPayout.Name = "job2IPPayout";
-            this.job2IPPayout.Size = new System.Drawing.Size(81, 19);
+            this.job2IPPayout.Size = new System.Drawing.Size(98, 21);
             this.job2IPPayout.TabIndex = 3;
             this.job2IPPayout.Text = "IP Payout: ";
             // 
@@ -1320,7 +1175,7 @@
             this.job2BaselineScore.AutoSize = true;
             this.job2BaselineScore.Location = new System.Drawing.Point(7, 67);
             this.job2BaselineScore.Name = "job2BaselineScore";
-            this.job2BaselineScore.Size = new System.Drawing.Size(115, 19);
+            this.job2BaselineScore.Size = new System.Drawing.Size(138, 21);
             this.job2BaselineScore.TabIndex = 2;
             this.job2BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1329,7 +1184,7 @@
             this.job2Description.AutoSize = true;
             this.job2Description.Location = new System.Drawing.Point(7, 46);
             this.job2Description.Name = "job2Description";
-            this.job2Description.Size = new System.Drawing.Size(127, 19);
+            this.job2Description.Size = new System.Drawing.Size(153, 21);
             this.job2Description.TabIndex = 1;
             this.job2Description.Text = "Job 1 Description";
             // 
@@ -1339,7 +1194,7 @@
             this.job2Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job2Title.Location = new System.Drawing.Point(6, 16);
             this.job2Title.Name = "job2Title";
-            this.job2Title.Size = new System.Drawing.Size(174, 26);
+            this.job2Title.Size = new System.Drawing.Size(215, 31);
             this.job2Title.TabIndex = 0;
             this.job2Title.Text = "Job 1 Title Text";
             this.job2Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1367,7 +1222,7 @@
             this.job1DaysToComplete.AutoSize = true;
             this.job1DaysToComplete.Location = new System.Drawing.Point(7, 156);
             this.job1DaysToComplete.Name = "job1DaysToComplete";
-            this.job1DaysToComplete.Size = new System.Drawing.Size(137, 19);
+            this.job1DaysToComplete.Size = new System.Drawing.Size(168, 21);
             this.job1DaysToComplete.TabIndex = 7;
             this.job1DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1388,7 +1243,7 @@
             this.job1PointsUntilCompletion.AutoSize = true;
             this.job1PointsUntilCompletion.Location = new System.Drawing.Point(7, 134);
             this.job1PointsUntilCompletion.Name = "job1PointsUntilCompletion";
-            this.job1PointsUntilCompletion.Size = new System.Drawing.Size(174, 19);
+            this.job1PointsUntilCompletion.Size = new System.Drawing.Size(210, 21);
             this.job1PointsUntilCompletion.TabIndex = 5;
             this.job1PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1397,7 +1252,7 @@
             this.job1MoneyPayout.AutoSize = true;
             this.job1MoneyPayout.Location = new System.Drawing.Point(7, 112);
             this.job1MoneyPayout.Name = "job1MoneyPayout";
-            this.job1MoneyPayout.Size = new System.Drawing.Size(118, 19);
+            this.job1MoneyPayout.Size = new System.Drawing.Size(140, 21);
             this.job1MoneyPayout.TabIndex = 4;
             this.job1MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1406,7 +1261,7 @@
             this.job1IPPayout.AutoSize = true;
             this.job1IPPayout.Location = new System.Drawing.Point(7, 90);
             this.job1IPPayout.Name = "job1IPPayout";
-            this.job1IPPayout.Size = new System.Drawing.Size(81, 19);
+            this.job1IPPayout.Size = new System.Drawing.Size(98, 21);
             this.job1IPPayout.TabIndex = 3;
             this.job1IPPayout.Text = "IP Payout: ";
             // 
@@ -1415,7 +1270,7 @@
             this.job1BaselineScore.AutoSize = true;
             this.job1BaselineScore.Location = new System.Drawing.Point(7, 68);
             this.job1BaselineScore.Name = "job1BaselineScore";
-            this.job1BaselineScore.Size = new System.Drawing.Size(115, 19);
+            this.job1BaselineScore.Size = new System.Drawing.Size(138, 21);
             this.job1BaselineScore.TabIndex = 2;
             this.job1BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1424,7 +1279,7 @@
             this.job1Description.AutoSize = true;
             this.job1Description.Location = new System.Drawing.Point(7, 46);
             this.job1Description.Name = "job1Description";
-            this.job1Description.Size = new System.Drawing.Size(127, 19);
+            this.job1Description.Size = new System.Drawing.Size(153, 21);
             this.job1Description.TabIndex = 1;
             this.job1Description.Text = "Job 1 Description";
             // 
@@ -1434,7 +1289,7 @@
             this.job1Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job1Title.Location = new System.Drawing.Point(6, 16);
             this.job1Title.Name = "job1Title";
-            this.job1Title.Size = new System.Drawing.Size(174, 26);
+            this.job1Title.Size = new System.Drawing.Size(215, 31);
             this.job1Title.TabIndex = 0;
             this.job1Title.Text = "Job 1 Title Text";
             this.job1Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1524,7 +1379,7 @@
             this.lblWeek.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeek.Location = new System.Drawing.Point(4, 44);
             this.lblWeek.Name = "lblWeek";
-            this.lblWeek.Size = new System.Drawing.Size(26, 14);
+            this.lblWeek.Size = new System.Drawing.Size(30, 16);
             this.lblWeek.TabIndex = 2;
             this.lblWeek.Text = "D: 0";
             // 
@@ -1534,7 +1389,7 @@
             this.lblMonth.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonth.Location = new System.Drawing.Point(4, 24);
             this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(27, 14);
+            this.lblMonth.Size = new System.Drawing.Size(31, 16);
             this.lblMonth.TabIndex = 1;
             this.lblMonth.Text = "M: 0";
             // 
@@ -1544,7 +1399,7 @@
             this.lblYear.Font = new System.Drawing.Font("Arial Unicode MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(4, 4);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(26, 14);
+            this.lblYear.Size = new System.Drawing.Size(29, 16);
             this.lblYear.TabIndex = 0;
             this.lblYear.Text = "Y: 0";
             // 
@@ -1574,7 +1429,7 @@
             this.lblEastDivision4.Location = new System.Drawing.Point(733, 469);
             this.lblEastDivision4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision4.Name = "lblEastDivision4";
-            this.lblEastDivision4.Size = new System.Drawing.Size(55, 19);
+            this.lblEastDivision4.Size = new System.Drawing.Size(61, 23);
             this.lblEastDivision4.TabIndex = 23;
             this.lblEastDivision4.Text = "label10";
             // 
@@ -1585,7 +1440,7 @@
             this.lblEastDivision3.Location = new System.Drawing.Point(733, 338);
             this.lblEastDivision3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision3.Name = "lblEastDivision3";
-            this.lblEastDivision3.Size = new System.Drawing.Size(47, 19);
+            this.lblEastDivision3.Size = new System.Drawing.Size(52, 23);
             this.lblEastDivision3.TabIndex = 22;
             this.lblEastDivision3.Text = "label9";
             // 
@@ -1596,7 +1451,7 @@
             this.lblEastDivision2.Location = new System.Drawing.Point(733, 207);
             this.lblEastDivision2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision2.Name = "lblEastDivision2";
-            this.lblEastDivision2.Size = new System.Drawing.Size(47, 19);
+            this.lblEastDivision2.Size = new System.Drawing.Size(52, 23);
             this.lblEastDivision2.TabIndex = 21;
             this.lblEastDivision2.Text = "label8";
             // 
@@ -1607,7 +1462,7 @@
             this.lblEastDivision1.Location = new System.Drawing.Point(733, 76);
             this.lblEastDivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision1.Name = "lblEastDivision1";
-            this.lblEastDivision1.Size = new System.Drawing.Size(47, 19);
+            this.lblEastDivision1.Size = new System.Drawing.Size(52, 23);
             this.lblEastDivision1.TabIndex = 20;
             this.lblEastDivision1.Text = "label7";
             // 
@@ -1618,7 +1473,7 @@
             this.lblWestDivision4.Location = new System.Drawing.Point(473, 469);
             this.lblWestDivision4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision4.Name = "lblWestDivision4";
-            this.lblWestDivision4.Size = new System.Drawing.Size(47, 19);
+            this.lblWestDivision4.Size = new System.Drawing.Size(52, 23);
             this.lblWestDivision4.TabIndex = 19;
             this.lblWestDivision4.Text = "label6";
             // 
@@ -1629,7 +1484,7 @@
             this.lblWestDivision3.Location = new System.Drawing.Point(473, 338);
             this.lblWestDivision3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision3.Name = "lblWestDivision3";
-            this.lblWestDivision3.Size = new System.Drawing.Size(47, 19);
+            this.lblWestDivision3.Size = new System.Drawing.Size(52, 23);
             this.lblWestDivision3.TabIndex = 18;
             this.lblWestDivision3.Text = "label5";
             // 
@@ -1640,7 +1495,7 @@
             this.lblWestDivision2.Location = new System.Drawing.Point(473, 207);
             this.lblWestDivision2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision2.Name = "lblWestDivision2";
-            this.lblWestDivision2.Size = new System.Drawing.Size(47, 19);
+            this.lblWestDivision2.Size = new System.Drawing.Size(52, 23);
             this.lblWestDivision2.TabIndex = 17;
             this.lblWestDivision2.Text = "label4";
             // 
@@ -1651,7 +1506,7 @@
             this.lblWestDivision1.Location = new System.Drawing.Point(473, 76);
             this.lblWestDivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision1.Name = "lblWestDivision1";
-            this.lblWestDivision1.Size = new System.Drawing.Size(47, 19);
+            this.lblWestDivision1.Size = new System.Drawing.Size(52, 23);
             this.lblWestDivision1.TabIndex = 16;
             this.lblWestDivision1.Text = "label3";
             // 
@@ -1662,7 +1517,7 @@
             this.lblEastConference.Location = new System.Drawing.Point(236, 76);
             this.lblEastConference.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastConference.Name = "lblEastConference";
-            this.lblEastConference.Size = new System.Drawing.Size(47, 19);
+            this.lblEastConference.Size = new System.Drawing.Size(52, 23);
             this.lblEastConference.TabIndex = 15;
             this.lblEastConference.Text = "label2";
             // 
@@ -1673,7 +1528,7 @@
             this.lblWestConference.Location = new System.Drawing.Point(18, 76);
             this.lblWestConference.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestConference.Name = "lblWestConference";
-            this.lblWestConference.Size = new System.Drawing.Size(47, 19);
+            this.lblWestConference.Size = new System.Drawing.Size(52, 23);
             this.lblWestConference.TabIndex = 14;
             this.lblWestConference.Text = "label1";
             // 
@@ -1683,7 +1538,7 @@
             this.cbLeagues.Location = new System.Drawing.Point(15, 42);
             this.cbLeagues.Margin = new System.Windows.Forms.Padding(4);
             this.cbLeagues.Name = "cbLeagues";
-            this.cbLeagues.Size = new System.Drawing.Size(319, 25);
+            this.cbLeagues.Size = new System.Drawing.Size(319, 29);
             this.cbLeagues.TabIndex = 13;
             this.cbLeagues.SelectedIndexChanged += new System.EventHandler(this.cbLeagues_SelectedIndexChanged);
             // 
@@ -1692,7 +1547,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 19);
+            this.label3.Size = new System.Drawing.Size(158, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "League Standings";
             // 
@@ -1710,63 +1565,13 @@
             this.panel1.Size = new System.Drawing.Size(89, 220);
             this.panel1.TabIndex = 12;
             // 
-            // pictureFootball
-            // 
-            this.pictureFootball.Image = global::SportsAgencyTycoonV2.Properties.Resources.football;
-            this.pictureFootball.Location = new System.Drawing.Point(28, 179);
-            this.pictureFootball.Name = "pictureFootball";
-            this.pictureFootball.Size = new System.Drawing.Size(33, 33);
-            this.pictureFootball.TabIndex = 5;
-            this.pictureFootball.TabStop = false;
-            this.pictureFootball.Visible = false;
-            // 
-            // pictureBasketball
-            // 
-            this.pictureBasketball.Image = global::SportsAgencyTycoonV2.Properties.Resources.basketball;
-            this.pictureBasketball.Location = new System.Drawing.Point(28, 140);
-            this.pictureBasketball.Name = "pictureBasketball";
-            this.pictureBasketball.Size = new System.Drawing.Size(33, 33);
-            this.pictureBasketball.TabIndex = 4;
-            this.pictureBasketball.TabStop = false;
-            this.pictureBasketball.Visible = false;
-            // 
-            // pictureBaseball
-            // 
-            this.pictureBaseball.Image = global::SportsAgencyTycoonV2.Properties.Resources.baseball;
-            this.pictureBaseball.Location = new System.Drawing.Point(28, 101);
-            this.pictureBaseball.Name = "pictureBaseball";
-            this.pictureBaseball.Size = new System.Drawing.Size(33, 33);
-            this.pictureBaseball.TabIndex = 3;
-            this.pictureBaseball.TabStop = false;
-            this.pictureBaseball.Visible = false;
-            // 
-            // pictureHockey
-            // 
-            this.pictureHockey.Image = global::SportsAgencyTycoonV2.Properties.Resources.hockey;
-            this.pictureHockey.Location = new System.Drawing.Point(28, 62);
-            this.pictureHockey.Name = "pictureHockey";
-            this.pictureHockey.Size = new System.Drawing.Size(33, 33);
-            this.pictureHockey.TabIndex = 2;
-            this.pictureHockey.TabStop = false;
-            this.pictureHockey.Visible = false;
-            // 
-            // pictureSoccer
-            // 
-            this.pictureSoccer.Image = global::SportsAgencyTycoonV2.Properties.Resources.soccer;
-            this.pictureSoccer.Location = new System.Drawing.Point(28, 23);
-            this.pictureSoccer.Name = "pictureSoccer";
-            this.pictureSoccer.Size = new System.Drawing.Size(33, 33);
-            this.pictureSoccer.TabIndex = 1;
-            this.pictureSoccer.TabStop = false;
-            this.pictureSoccer.Visible = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(8, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.Size = new System.Drawing.Size(89, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "In Season";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1795,7 +1600,7 @@
             this.lblRoster.AutoSize = true;
             this.lblRoster.Location = new System.Drawing.Point(25, 200);
             this.lblRoster.Name = "lblRoster";
-            this.lblRoster.Size = new System.Drawing.Size(52, 19);
+            this.lblRoster.Size = new System.Drawing.Size(60, 21);
             this.lblRoster.TabIndex = 19;
             this.lblRoster.Text = "label1";
             // 
@@ -1804,7 +1609,7 @@
             this.cbLeagueList.FormattingEnabled = true;
             this.cbLeagueList.Location = new System.Drawing.Point(14, 17);
             this.cbLeagueList.Name = "cbLeagueList";
-            this.cbLeagueList.Size = new System.Drawing.Size(308, 25);
+            this.cbLeagueList.Size = new System.Drawing.Size(308, 29);
             this.cbLeagueList.TabIndex = 18;
             this.cbLeagueList.SelectedIndexChanged += new System.EventHandler(this.cbLeagueList_SelectedIndexChanged);
             // 
@@ -1813,7 +1618,7 @@
             this.cbTeamList.FormattingEnabled = true;
             this.cbTeamList.Location = new System.Drawing.Point(329, 16);
             this.cbTeamList.Name = "cbTeamList";
-            this.cbTeamList.Size = new System.Drawing.Size(308, 25);
+            this.cbTeamList.Size = new System.Drawing.Size(308, 29);
             this.cbTeamList.TabIndex = 17;
             this.cbTeamList.SelectedIndexChanged += new System.EventHandler(this.cbTeamList_SelectedIndexChanged);
             // 
@@ -1823,7 +1628,7 @@
             this.lblStarter.Location = new System.Drawing.Point(649, 587);
             this.lblStarter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStarter.Name = "lblStarter";
-            this.lblStarter.Size = new System.Drawing.Size(61, 19);
+            this.lblStarter.Size = new System.Drawing.Size(75, 21);
             this.lblStarter.TabIndex = 16;
             this.lblStarter.Text = "Starter: ";
             // 
@@ -1833,7 +1638,7 @@
             this.lblDepthChart.Location = new System.Drawing.Point(649, 562);
             this.lblDepthChart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepthChart.Name = "lblDepthChart";
-            this.lblDepthChart.Size = new System.Drawing.Size(156, 19);
+            this.lblDepthChart.Size = new System.Drawing.Size(190, 21);
             this.lblDepthChart.TabIndex = 15;
             this.lblDepthChart.Text = "Spot on Depth Chart:";
             // 
@@ -1842,7 +1647,7 @@
             this.lblStats.AutoSize = true;
             this.lblStats.Location = new System.Drawing.Point(889, 80);
             this.lblStats.Name = "lblStats";
-            this.lblStats.Size = new System.Drawing.Size(52, 19);
+            this.lblStats.Size = new System.Drawing.Size(60, 21);
             this.lblStats.TabIndex = 14;
             this.lblStats.Text = "label1";
             // 
@@ -1867,7 +1672,7 @@
             this.lblAgencyHappiness.AutoSize = true;
             this.lblAgencyHappiness.Location = new System.Drawing.Point(6, 173);
             this.lblAgencyHappiness.Name = "lblAgencyHappiness";
-            this.lblAgencyHappiness.Size = new System.Drawing.Size(141, 19);
+            this.lblAgencyHappiness.Size = new System.Drawing.Size(170, 21);
             this.lblAgencyHappiness.TabIndex = 10;
             this.lblAgencyHappiness.Text = "Agency Happiness:";
             // 
@@ -1876,7 +1681,7 @@
             this.lblTeamHappiness.AutoSize = true;
             this.lblTeamHappiness.Location = new System.Drawing.Point(6, 148);
             this.lblTeamHappiness.Name = "lblTeamHappiness";
-            this.lblTeamHappiness.Size = new System.Drawing.Size(125, 19);
+            this.lblTeamHappiness.Size = new System.Drawing.Size(152, 21);
             this.lblTeamHappiness.TabIndex = 9;
             this.lblTeamHappiness.Text = "Team Happiness:";
             // 
@@ -1885,7 +1690,7 @@
             this.lblPlayForTitle.AutoSize = true;
             this.lblPlayForTitle.Location = new System.Drawing.Point(6, 124);
             this.lblPlayForTitle.Name = "lblPlayForTitle";
-            this.lblPlayForTitle.Size = new System.Drawing.Size(92, 19);
+            this.lblPlayForTitle.Size = new System.Drawing.Size(111, 21);
             this.lblPlayForTitle.TabIndex = 8;
             this.lblPlayForTitle.Text = "Play for Title:";
             // 
@@ -1894,7 +1699,7 @@
             this.lblLoyalty.AutoSize = true;
             this.lblLoyalty.Location = new System.Drawing.Point(6, 99);
             this.lblLoyalty.Name = "lblLoyalty";
-            this.lblLoyalty.Size = new System.Drawing.Size(62, 19);
+            this.lblLoyalty.Size = new System.Drawing.Size(72, 21);
             this.lblLoyalty.TabIndex = 7;
             this.lblLoyalty.Text = "Loyalty:";
             // 
@@ -1903,7 +1708,7 @@
             this.lblLifestyle.AutoSize = true;
             this.lblLifestyle.Location = new System.Drawing.Point(6, 71);
             this.lblLifestyle.Name = "lblLifestyle";
-            this.lblLifestyle.Size = new System.Drawing.Size(69, 19);
+            this.lblLifestyle.Size = new System.Drawing.Size(83, 21);
             this.lblLifestyle.TabIndex = 6;
             this.lblLifestyle.Text = "Lifestyle: ";
             // 
@@ -1912,7 +1717,7 @@
             this.lblGreed.AutoSize = true;
             this.lblGreed.Location = new System.Drawing.Point(6, 46);
             this.lblGreed.Name = "lblGreed";
-            this.lblGreed.Size = new System.Drawing.Size(61, 19);
+            this.lblGreed.Size = new System.Drawing.Size(74, 21);
             this.lblGreed.TabIndex = 5;
             this.lblGreed.Text = "Greed: ";
             // 
@@ -1921,7 +1726,7 @@
             this.lblPopularity.AutoSize = true;
             this.lblPopularity.Location = new System.Drawing.Point(6, 22);
             this.lblPopularity.Name = "lblPopularity";
-            this.lblPopularity.Size = new System.Drawing.Size(82, 19);
+            this.lblPopularity.Size = new System.Drawing.Size(96, 21);
             this.lblPopularity.TabIndex = 4;
             this.lblPopularity.Text = "Popularity:";
             // 
@@ -1943,7 +1748,7 @@
             this.lblPosition.AutoSize = true;
             this.lblPosition.Location = new System.Drawing.Point(6, 16);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(64, 19);
+            this.lblPosition.Size = new System.Drawing.Size(77, 21);
             this.lblPosition.TabIndex = 10;
             this.lblPosition.Text = "Position:";
             // 
@@ -1952,7 +1757,7 @@
             this.lblSkillLevel.AutoSize = true;
             this.lblSkillLevel.Location = new System.Drawing.Point(6, 89);
             this.lblSkillLevel.Name = "lblSkillLevel";
-            this.lblSkillLevel.Size = new System.Drawing.Size(79, 19);
+            this.lblSkillLevel.Size = new System.Drawing.Size(95, 21);
             this.lblSkillLevel.TabIndex = 9;
             this.lblSkillLevel.Text = "Skill Level: ";
             // 
@@ -1961,7 +1766,7 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(6, 64);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(40, 19);
+            this.lblAge.Size = new System.Drawing.Size(50, 21);
             this.lblAge.TabIndex = 8;
             this.lblAge.Text = "Age:";
             // 
@@ -1970,7 +1775,7 @@
             this.lblFullName.AutoSize = true;
             this.lblFullName.Location = new System.Drawing.Point(6, 40);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(100, 19);
+            this.lblFullName.Size = new System.Drawing.Size(118, 21);
             this.lblFullName.TabIndex = 7;
             this.lblFullName.Text = "Yearly Salary:";
             // 
@@ -1992,7 +1797,7 @@
             this.lblAgentPercent.AutoSize = true;
             this.lblAgentPercent.Location = new System.Drawing.Point(6, 94);
             this.lblAgentPercent.Name = "lblAgentPercent";
-            this.lblAgentPercent.Size = new System.Drawing.Size(139, 19);
+            this.lblAgentPercent.Size = new System.Drawing.Size(171, 21);
             this.lblAgentPercent.TabIndex = 7;
             this.lblAgentPercent.Text = "Agent Percentage:";
             // 
@@ -2001,7 +1806,7 @@
             this.lblAgentPaid.AutoSize = true;
             this.lblAgentPaid.Location = new System.Drawing.Point(6, 71);
             this.lblAgentPaid.Name = "lblAgentPaid";
-            this.lblAgentPaid.Size = new System.Drawing.Size(93, 19);
+            this.lblAgentPaid.Size = new System.Drawing.Size(114, 21);
             this.lblAgentPaid.TabIndex = 6;
             this.lblAgentPaid.Text = "Agent Paid: ";
             // 
@@ -2010,7 +1815,7 @@
             this.lblYearsLeft.AutoSize = true;
             this.lblYearsLeft.Location = new System.Drawing.Point(6, 46);
             this.lblYearsLeft.Name = "lblYearsLeft";
-            this.lblYearsLeft.Size = new System.Drawing.Size(76, 19);
+            this.lblYearsLeft.Size = new System.Drawing.Size(97, 21);
             this.lblYearsLeft.TabIndex = 5;
             this.lblYearsLeft.Text = "Years Left:";
             // 
@@ -2019,7 +1824,7 @@
             this.lblYearlySalary.AutoSize = true;
             this.lblYearlySalary.Location = new System.Drawing.Point(6, 22);
             this.lblYearlySalary.Name = "lblYearlySalary";
-            this.lblYearlySalary.Size = new System.Drawing.Size(100, 19);
+            this.lblYearlySalary.Size = new System.Drawing.Size(118, 21);
             this.lblYearlySalary.TabIndex = 4;
             this.lblYearlySalary.Text = "Yearly Salary:";
             // 
@@ -2029,7 +1834,7 @@
             this.lblTeamAwards.Location = new System.Drawing.Point(23, 124);
             this.lblTeamAwards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTeamAwards.Name = "lblTeamAwards";
-            this.lblTeamAwards.Size = new System.Drawing.Size(52, 19);
+            this.lblTeamAwards.Size = new System.Drawing.Size(60, 21);
             this.lblTeamAwards.TabIndex = 6;
             this.lblTeamAwards.Text = "label1";
             // 
@@ -2038,7 +1843,7 @@
             this.lblTeamInfo.AutoSize = true;
             this.lblTeamInfo.Location = new System.Drawing.Point(23, 71);
             this.lblTeamInfo.Name = "lblTeamInfo";
-            this.lblTeamInfo.Size = new System.Drawing.Size(52, 19);
+            this.lblTeamInfo.Size = new System.Drawing.Size(60, 21);
             this.lblTeamInfo.TabIndex = 5;
             this.lblTeamInfo.Text = "label1";
             // 
@@ -2049,7 +1854,7 @@
             this.cbTeamRoster.FormattingEnabled = true;
             this.cbTeamRoster.Location = new System.Drawing.Point(643, 15);
             this.cbTeamRoster.Name = "cbTeamRoster";
-            this.cbTeamRoster.Size = new System.Drawing.Size(301, 27);
+            this.cbTeamRoster.Size = new System.Drawing.Size(301, 29);
             this.cbTeamRoster.TabIndex = 1;
             this.cbTeamRoster.SelectedIndexChanged += new System.EventHandler(this.cbTeamRoster_SelectedIndexChanged);
             // 
@@ -2112,26 +1917,16 @@
             this.lblWSSAScouting.AutoSize = true;
             this.lblWSSAScouting.Location = new System.Drawing.Point(525, 144);
             this.lblWSSAScouting.Name = "lblWSSAScouting";
-            this.lblWSSAScouting.Size = new System.Drawing.Size(111, 19);
+            this.lblWSSAScouting.Size = new System.Drawing.Size(132, 21);
             this.lblWSSAScouting.TabIndex = 26;
             this.lblWSSAScouting.Text = "WSSA Scouting";
-            // 
-            // wssaStarRating
-            // 
-            this.wssaStarRating.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
-            this.wssaStarRating.InitialImage = null;
-            this.wssaStarRating.Location = new System.Drawing.Point(345, 136);
-            this.wssaStarRating.Name = "wssaStarRating";
-            this.wssaStarRating.Size = new System.Drawing.Size(163, 37);
-            this.wssaStarRating.TabIndex = 25;
-            this.wssaStarRating.TabStop = false;
             // 
             // lblScoutedBy
             // 
             this.lblScoutedBy.AutoSize = true;
             this.lblScoutedBy.Location = new System.Drawing.Point(525, 190);
             this.lblScoutedBy.Name = "lblScoutedBy";
-            this.lblScoutedBy.Size = new System.Drawing.Size(60, 19);
+            this.lblScoutedBy.Size = new System.Drawing.Size(69, 21);
             this.lblScoutedBy.TabIndex = 24;
             this.lblScoutedBy.Text = "label10";
             // 
@@ -2152,7 +1947,7 @@
             this.lblScoutedAgencyHappiness.AutoSize = true;
             this.lblScoutedAgencyHappiness.Location = new System.Drawing.Point(6, 80);
             this.lblScoutedAgencyHappiness.Name = "lblScoutedAgencyHappiness";
-            this.lblScoutedAgencyHappiness.Size = new System.Drawing.Size(141, 19);
+            this.lblScoutedAgencyHappiness.Size = new System.Drawing.Size(170, 21);
             this.lblScoutedAgencyHappiness.TabIndex = 10;
             this.lblScoutedAgencyHappiness.Text = "Agency Happiness:";
             // 
@@ -2161,7 +1956,7 @@
             this.lblScoutedTeamHappiness.AutoSize = true;
             this.lblScoutedTeamHappiness.Location = new System.Drawing.Point(6, 50);
             this.lblScoutedTeamHappiness.Name = "lblScoutedTeamHappiness";
-            this.lblScoutedTeamHappiness.Size = new System.Drawing.Size(125, 19);
+            this.lblScoutedTeamHappiness.Size = new System.Drawing.Size(152, 21);
             this.lblScoutedTeamHappiness.TabIndex = 9;
             this.lblScoutedTeamHappiness.Text = "Team Happiness:";
             // 
@@ -2170,7 +1965,7 @@
             this.lblScoutedPopularity.AutoSize = true;
             this.lblScoutedPopularity.Location = new System.Drawing.Point(6, 20);
             this.lblScoutedPopularity.Name = "lblScoutedPopularity";
-            this.lblScoutedPopularity.Size = new System.Drawing.Size(82, 19);
+            this.lblScoutedPopularity.Size = new System.Drawing.Size(96, 21);
             this.lblScoutedPopularity.TabIndex = 4;
             this.lblScoutedPopularity.Text = "Popularity:";
             // 
@@ -2180,7 +1975,7 @@
             this.lblScoutedIsStarter.Location = new System.Drawing.Point(593, 367);
             this.lblScoutedIsStarter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScoutedIsStarter.Name = "lblScoutedIsStarter";
-            this.lblScoutedIsStarter.Size = new System.Drawing.Size(61, 19);
+            this.lblScoutedIsStarter.Size = new System.Drawing.Size(75, 21);
             this.lblScoutedIsStarter.TabIndex = 22;
             this.lblScoutedIsStarter.Text = "Starter: ";
             // 
@@ -2190,7 +1985,7 @@
             this.lblScoutedDepthChart.Location = new System.Drawing.Point(593, 340);
             this.lblScoutedDepthChart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScoutedDepthChart.Name = "lblScoutedDepthChart";
-            this.lblScoutedDepthChart.Size = new System.Drawing.Size(156, 19);
+            this.lblScoutedDepthChart.Size = new System.Drawing.Size(190, 21);
             this.lblScoutedDepthChart.TabIndex = 21;
             this.lblScoutedDepthChart.Text = "Spot on Depth Chart:";
             // 
@@ -2199,7 +1994,7 @@
             this.lblScoutedStats.AutoSize = true;
             this.lblScoutedStats.Location = new System.Drawing.Point(593, 394);
             this.lblScoutedStats.Name = "lblScoutedStats";
-            this.lblScoutedStats.Size = new System.Drawing.Size(52, 19);
+            this.lblScoutedStats.Size = new System.Drawing.Size(60, 21);
             this.lblScoutedStats.TabIndex = 20;
             this.lblScoutedStats.Text = "label1";
             // 
@@ -2220,7 +2015,7 @@
             this.lblScoutedPosition.AutoSize = true;
             this.lblScoutedPosition.Location = new System.Drawing.Point(6, 23);
             this.lblScoutedPosition.Name = "lblScoutedPosition";
-            this.lblScoutedPosition.Size = new System.Drawing.Size(64, 19);
+            this.lblScoutedPosition.Size = new System.Drawing.Size(77, 21);
             this.lblScoutedPosition.TabIndex = 10;
             this.lblScoutedPosition.Text = "Position:";
             // 
@@ -2229,7 +2024,7 @@
             this.lblScoutedAge.AutoSize = true;
             this.lblScoutedAge.Location = new System.Drawing.Point(6, 54);
             this.lblScoutedAge.Name = "lblScoutedAge";
-            this.lblScoutedAge.Size = new System.Drawing.Size(40, 19);
+            this.lblScoutedAge.Size = new System.Drawing.Size(50, 21);
             this.lblScoutedAge.TabIndex = 8;
             this.lblScoutedAge.Text = "Age:";
             // 
@@ -2238,7 +2033,7 @@
             this.lblScoutedSalary.AutoSize = true;
             this.lblScoutedSalary.Location = new System.Drawing.Point(6, 40);
             this.lblScoutedSalary.Name = "lblScoutedSalary";
-            this.lblScoutedSalary.Size = new System.Drawing.Size(0, 19);
+            this.lblScoutedSalary.Size = new System.Drawing.Size(0, 21);
             this.lblScoutedSalary.TabIndex = 7;
             // 
             // groupBox7
@@ -2259,7 +2054,7 @@
             this.lblScoutedAgentPercent.AutoSize = true;
             this.lblScoutedAgentPercent.Location = new System.Drawing.Point(6, 94);
             this.lblScoutedAgentPercent.Name = "lblScoutedAgentPercent";
-            this.lblScoutedAgentPercent.Size = new System.Drawing.Size(139, 19);
+            this.lblScoutedAgentPercent.Size = new System.Drawing.Size(171, 21);
             this.lblScoutedAgentPercent.TabIndex = 7;
             this.lblScoutedAgentPercent.Text = "Agent Percentage:";
             // 
@@ -2268,7 +2063,7 @@
             this.lblScoutedAgentPaid.AutoSize = true;
             this.lblScoutedAgentPaid.Location = new System.Drawing.Point(6, 71);
             this.lblScoutedAgentPaid.Name = "lblScoutedAgentPaid";
-            this.lblScoutedAgentPaid.Size = new System.Drawing.Size(93, 19);
+            this.lblScoutedAgentPaid.Size = new System.Drawing.Size(114, 21);
             this.lblScoutedAgentPaid.TabIndex = 6;
             this.lblScoutedAgentPaid.Text = "Agent Paid: ";
             // 
@@ -2277,7 +2072,7 @@
             this.lblScoutedYearsLeft.AutoSize = true;
             this.lblScoutedYearsLeft.Location = new System.Drawing.Point(6, 46);
             this.lblScoutedYearsLeft.Name = "lblScoutedYearsLeft";
-            this.lblScoutedYearsLeft.Size = new System.Drawing.Size(76, 19);
+            this.lblScoutedYearsLeft.Size = new System.Drawing.Size(97, 21);
             this.lblScoutedYearsLeft.TabIndex = 5;
             this.lblScoutedYearsLeft.Text = "Years Left:";
             // 
@@ -2286,7 +2081,7 @@
             this.lblScoutedYearlySalary.AutoSize = true;
             this.lblScoutedYearlySalary.Location = new System.Drawing.Point(6, 22);
             this.lblScoutedYearlySalary.Name = "lblScoutedYearlySalary";
-            this.lblScoutedYearlySalary.Size = new System.Drawing.Size(100, 19);
+            this.lblScoutedYearlySalary.Size = new System.Drawing.Size(118, 21);
             this.lblScoutedYearlySalary.TabIndex = 4;
             this.lblScoutedYearlySalary.Text = "Yearly Salary:";
             // 
@@ -2296,7 +2091,7 @@
             this.lblScoutedPlayerDescription.Location = new System.Drawing.Point(348, 237);
             this.lblScoutedPlayerDescription.MaximumSize = new System.Drawing.Size(376, 0);
             this.lblScoutedPlayerDescription.Name = "lblScoutedPlayerDescription";
-            this.lblScoutedPlayerDescription.Size = new System.Drawing.Size(60, 19);
+            this.lblScoutedPlayerDescription.Size = new System.Drawing.Size(69, 21);
             this.lblScoutedPlayerDescription.TabIndex = 10;
             this.lblScoutedPlayerDescription.Text = "label10";
             // 
@@ -2305,7 +2100,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(11, 144);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 19);
+            this.label8.Size = new System.Drawing.Size(164, 21);
             this.label8.TabIndex = 9;
             this.label8.Text = "Choose An Agent:";
             // 
@@ -2314,26 +2109,16 @@
             this.cbAgentToScout.FormattingEnabled = true;
             this.cbAgentToScout.Location = new System.Drawing.Point(11, 179);
             this.cbAgentToScout.Name = "cbAgentToScout";
-            this.cbAgentToScout.Size = new System.Drawing.Size(307, 25);
+            this.cbAgentToScout.Size = new System.Drawing.Size(307, 29);
             this.cbAgentToScout.TabIndex = 8;
             this.cbAgentToScout.SelectedIndexChanged += new System.EventHandler(this.cbAgentToScout_SelectedIndexChanged);
-            // 
-            // starRatingPicture
-            // 
-            this.starRatingPicture.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
-            this.starRatingPicture.InitialImage = null;
-            this.starRatingPicture.Location = new System.Drawing.Point(345, 182);
-            this.starRatingPicture.Name = "starRatingPicture";
-            this.starRatingPicture.Size = new System.Drawing.Size(163, 37);
-            this.starRatingPicture.TabIndex = 7;
-            this.starRatingPicture.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(348, 67);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 19);
+            this.label7.Size = new System.Drawing.Size(146, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "Players Scouted:";
             // 
@@ -2342,7 +2127,7 @@
             this.cbScoutedPlayers.FormattingEnabled = true;
             this.cbScoutedPlayers.Location = new System.Drawing.Point(345, 100);
             this.cbScoutedPlayers.Name = "cbScoutedPlayers";
-            this.cbScoutedPlayers.Size = new System.Drawing.Size(376, 25);
+            this.cbScoutedPlayers.Size = new System.Drawing.Size(376, 29);
             this.cbScoutedPlayers.TabIndex = 5;
             this.cbScoutedPlayers.SelectedIndexChanged += new System.EventHandler(this.cbScoutedPlayers_SelectedIndexChanged);
             // 
@@ -2374,7 +2159,7 @@
             this.rbEither.AutoSize = true;
             this.rbEither.Location = new System.Drawing.Point(13, 98);
             this.rbEither.Name = "rbEither";
-            this.rbEither.Size = new System.Drawing.Size(65, 23);
+            this.rbEither.Size = new System.Drawing.Size(76, 25);
             this.rbEither.TabIndex = 2;
             this.rbEither.TabStop = true;
             this.rbEither.Text = "Either";
@@ -2385,7 +2170,7 @@
             this.rbOnTeam.AutoSize = true;
             this.rbOnTeam.Location = new System.Drawing.Point(12, 63);
             this.rbOnTeam.Name = "rbOnTeam";
-            this.rbOnTeam.Size = new System.Drawing.Size(102, 23);
+            this.rbOnTeam.Size = new System.Drawing.Size(125, 25);
             this.rbOnTeam.TabIndex = 1;
             this.rbOnTeam.TabStop = true;
             this.rbOnTeam.Text = "On A Team";
@@ -2396,7 +2181,7 @@
             this.rbFreeAgent.AutoSize = true;
             this.rbFreeAgent.Location = new System.Drawing.Point(12, 28);
             this.rbFreeAgent.Name = "rbFreeAgent";
-            this.rbFreeAgent.Size = new System.Drawing.Size(101, 23);
+            this.rbFreeAgent.Size = new System.Drawing.Size(123, 25);
             this.rbFreeAgent.TabIndex = 0;
             this.rbFreeAgent.TabStop = true;
             this.rbFreeAgent.Text = "Free Agent";
@@ -2408,7 +2193,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(270, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(448, 39);
+            this.label6.Size = new System.Drawing.Size(558, 49);
             this.label6.TabIndex = 2;
             this.label6.Text = "Client Scouting and Signing";
             // 
@@ -2417,7 +2202,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 67);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 19);
+            this.label5.Size = new System.Drawing.Size(145, 21);
             this.label5.TabIndex = 1;
             this.label5.Text = "Choose A Sport:";
             // 
@@ -2426,7 +2211,7 @@
             this.cbClientSport.FormattingEnabled = true;
             this.cbClientSport.Location = new System.Drawing.Point(11, 102);
             this.cbClientSport.Name = "cbClientSport";
-            this.cbClientSport.Size = new System.Drawing.Size(307, 25);
+            this.cbClientSport.Size = new System.Drawing.Size(307, 29);
             this.cbClientSport.TabIndex = 0;
             this.cbClientSport.SelectedIndexChanged += new System.EventHandler(this.cbClientSport_SelectedIndexChanged);
             // 
@@ -2439,6 +2224,7 @@
             // 
             // agencyClientsPanel
             // 
+            this.agencyClientsPanel.Controls.Add(this.btnCallForClient);
             this.agencyClientsPanel.Controls.Add(this.label12);
             this.agencyClientsPanel.Controls.Add(this.label13);
             this.agencyClientsPanel.Controls.Add(this.label14);
@@ -2456,6 +2242,70 @@
             this.agencyClientsPanel.Size = new System.Drawing.Size(1061, 683);
             this.agencyClientsPanel.TabIndex = 16;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(142, 172);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(170, 21);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Agency Happiness:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(201, 116);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(96, 21);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Popularity:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(158, 143);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(152, 21);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Team Happiness:";
+            // 
+            // lblClientAgencyHappiness
+            // 
+            this.lblClientAgencyHappiness.AutoSize = true;
+            this.lblClientAgencyHappiness.Location = new System.Drawing.Point(290, 172);
+            this.lblClientAgencyHappiness.Name = "lblClientAgencyHappiness";
+            this.lblClientAgencyHappiness.Size = new System.Drawing.Size(175, 21);
+            this.lblClientAgencyHappiness.TabIndex = 8;
+            this.lblClientAgencyHappiness.Text = "Agency Happiness: ";
+            // 
+            // lblClientPopularity
+            // 
+            this.lblClientPopularity.AutoSize = true;
+            this.lblClientPopularity.Location = new System.Drawing.Point(289, 116);
+            this.lblClientPopularity.Name = "lblClientPopularity";
+            this.lblClientPopularity.Size = new System.Drawing.Size(96, 21);
+            this.lblClientPopularity.TabIndex = 7;
+            this.lblClientPopularity.Text = "Popularity:";
+            // 
+            // lblClientTeamHappiness
+            // 
+            this.lblClientTeamHappiness.AutoSize = true;
+            this.lblClientTeamHappiness.Location = new System.Drawing.Point(289, 143);
+            this.lblClientTeamHappiness.Name = "lblClientTeamHappiness";
+            this.lblClientTeamHappiness.Size = new System.Drawing.Size(152, 21);
+            this.lblClientTeamHappiness.TabIndex = 6;
+            this.lblClientTeamHappiness.Text = "Team Happiness:";
+            // 
+            // lblClientPosAndTeam
+            // 
+            this.lblClientPosAndTeam.AutoSize = true;
+            this.lblClientPosAndTeam.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientPosAndTeam.Location = new System.Drawing.Point(272, 72);
+            this.lblClientPosAndTeam.Name = "lblClientPosAndTeam";
+            this.lblClientPosAndTeam.Size = new System.Drawing.Size(151, 30);
+            this.lblClientPosAndTeam.TabIndex = 5;
+            this.lblClientPosAndTeam.Text = "POS for ABR";
+            // 
             // lblClientName
             // 
             this.lblClientName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -2466,30 +2316,6 @@
             this.lblClientName.TabIndex = 3;
             this.lblClientName.Text = "1234567891 123456789012";
             this.lblClientName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnScrollRightThroughClients
-            // 
-            this.btnScrollRightThroughClients.FlatAppearance.BorderSize = 0;
-            this.btnScrollRightThroughClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScrollRightThroughClients.Image = global::SportsAgencyTycoonV2.Properties.Resources.double_right_arrows_small;
-            this.btnScrollRightThroughClients.Location = new System.Drawing.Point(529, 11);
-            this.btnScrollRightThroughClients.Name = "btnScrollRightThroughClients";
-            this.btnScrollRightThroughClients.Size = new System.Drawing.Size(95, 136);
-            this.btnScrollRightThroughClients.TabIndex = 2;
-            this.btnScrollRightThroughClients.UseVisualStyleBackColor = true;
-            this.btnScrollRightThroughClients.Click += new System.EventHandler(this.btnScrollRightThroughClients_Click);
-            // 
-            // btnScrollLeftThroughClients
-            // 
-            this.btnScrollLeftThroughClients.FlatAppearance.BorderSize = 0;
-            this.btnScrollLeftThroughClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScrollLeftThroughClients.Image = global::SportsAgencyTycoonV2.Properties.Resources.double_left_arrows_small;
-            this.btnScrollLeftThroughClients.Location = new System.Drawing.Point(13, 6);
-            this.btnScrollLeftThroughClients.Name = "btnScrollLeftThroughClients";
-            this.btnScrollLeftThroughClients.Size = new System.Drawing.Size(95, 136);
-            this.btnScrollLeftThroughClients.TabIndex = 1;
-            this.btnScrollLeftThroughClients.UseVisualStyleBackColor = true;
-            this.btnScrollLeftThroughClients.Click += new System.EventHandler(this.btnScrollLeftThroughClients_Click);
             // 
             // btnAddClient
             // 
@@ -2512,73 +2338,261 @@
             this.clientSportImage.TabIndex = 4;
             this.clientSportImage.TabStop = false;
             // 
-            // lblClientPosAndTeam
+            // btnScrollRightThroughClients
             // 
-            this.lblClientPosAndTeam.AutoSize = true;
-            this.lblClientPosAndTeam.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientPosAndTeam.Location = new System.Drawing.Point(272, 72);
-            this.lblClientPosAndTeam.Name = "lblClientPosAndTeam";
-            this.lblClientPosAndTeam.Size = new System.Drawing.Size(119, 22);
-            this.lblClientPosAndTeam.TabIndex = 5;
-            this.lblClientPosAndTeam.Text = "POS for ABR";
+            this.btnScrollRightThroughClients.FlatAppearance.BorderSize = 0;
+            this.btnScrollRightThroughClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScrollRightThroughClients.Image = global::SportsAgencyTycoonV2.Properties.Resources.double_right_arrows_50;
+            this.btnScrollRightThroughClients.Location = new System.Drawing.Point(528, 47);
+            this.btnScrollRightThroughClients.Name = "btnScrollRightThroughClients";
+            this.btnScrollRightThroughClients.Size = new System.Drawing.Size(95, 136);
+            this.btnScrollRightThroughClients.TabIndex = 2;
+            this.btnScrollRightThroughClients.UseVisualStyleBackColor = true;
+            this.btnScrollRightThroughClients.Click += new System.EventHandler(this.btnScrollRightThroughClients_Click);
             // 
-            // lblClientTeamHappiness
+            // btnScrollLeftThroughClients
             // 
-            this.lblClientTeamHappiness.AutoSize = true;
-            this.lblClientTeamHappiness.Location = new System.Drawing.Point(289, 143);
-            this.lblClientTeamHappiness.Name = "lblClientTeamHappiness";
-            this.lblClientTeamHappiness.Size = new System.Drawing.Size(125, 19);
-            this.lblClientTeamHappiness.TabIndex = 6;
-            this.lblClientTeamHappiness.Text = "Team Happiness:";
+            this.btnScrollLeftThroughClients.FlatAppearance.BorderSize = 0;
+            this.btnScrollLeftThroughClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScrollLeftThroughClients.Image = global::SportsAgencyTycoonV2.Properties.Resources.double_left_arrows_50;
+            this.btnScrollLeftThroughClients.Location = new System.Drawing.Point(11, 47);
+            this.btnScrollLeftThroughClients.Name = "btnScrollLeftThroughClients";
+            this.btnScrollLeftThroughClients.Size = new System.Drawing.Size(95, 136);
+            this.btnScrollLeftThroughClients.TabIndex = 1;
+            this.btnScrollLeftThroughClients.UseVisualStyleBackColor = true;
+            this.btnScrollLeftThroughClients.Click += new System.EventHandler(this.btnScrollLeftThroughClients_Click);
             // 
-            // lblClientPopularity
+            // wssaStarRating
             // 
-            this.lblClientPopularity.AutoSize = true;
-            this.lblClientPopularity.Location = new System.Drawing.Point(289, 116);
-            this.lblClientPopularity.Name = "lblClientPopularity";
-            this.lblClientPopularity.Size = new System.Drawing.Size(82, 19);
-            this.lblClientPopularity.TabIndex = 7;
-            this.lblClientPopularity.Text = "Popularity:";
+            this.wssaStarRating.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
+            this.wssaStarRating.InitialImage = null;
+            this.wssaStarRating.Location = new System.Drawing.Point(345, 136);
+            this.wssaStarRating.Name = "wssaStarRating";
+            this.wssaStarRating.Size = new System.Drawing.Size(163, 37);
+            this.wssaStarRating.TabIndex = 25;
+            this.wssaStarRating.TabStop = false;
             // 
-            // lblClientAgencyHappiness
+            // starRatingPicture
             // 
-            this.lblClientAgencyHappiness.AutoSize = true;
-            this.lblClientAgencyHappiness.Location = new System.Drawing.Point(290, 172);
-            this.lblClientAgencyHappiness.Name = "lblClientAgencyHappiness";
-            this.lblClientAgencyHappiness.Size = new System.Drawing.Size(145, 19);
-            this.lblClientAgencyHappiness.TabIndex = 8;
-            this.lblClientAgencyHappiness.Text = "Agency Happiness: ";
+            this.starRatingPicture.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
+            this.starRatingPicture.InitialImage = null;
+            this.starRatingPicture.Location = new System.Drawing.Point(345, 182);
+            this.starRatingPicture.Name = "starRatingPicture";
+            this.starRatingPicture.Size = new System.Drawing.Size(163, 37);
+            this.starRatingPicture.TabIndex = 7;
+            this.starRatingPicture.TabStop = false;
             // 
-            // label12
+            // pictureBox3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(142, 172);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 19);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Agency Happiness:";
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
             // 
-            // label13
+            // pictureBox2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(201, 116);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 19);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "Popularity:";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
-            // label14
+            // pictureBox1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(158, 143);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(125, 19);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Team Happiness:";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // agencyImageLarge
+            // 
+            this.agencyImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("agencyImageLarge.Image")));
+            this.agencyImageLarge.InitialImage = null;
+            this.agencyImageLarge.Location = new System.Drawing.Point(597, 25);
+            this.agencyImageLarge.Name = "agencyImageLarge";
+            this.agencyImageLarge.Size = new System.Drawing.Size(66, 63);
+            this.agencyImageLarge.TabIndex = 8;
+            this.agencyImageLarge.TabStop = false;
+            // 
+            // managerImageLarge
+            // 
+            this.managerImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.Image")));
+            this.managerImageLarge.InitialImage = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.InitialImage")));
+            this.managerImageLarge.Location = new System.Drawing.Point(8, 28);
+            this.managerImageLarge.Name = "managerImageLarge";
+            this.managerImageLarge.Size = new System.Drawing.Size(66, 63);
+            this.managerImageLarge.TabIndex = 6;
+            this.managerImageLarge.TabStop = false;
+            // 
+            // pictureFootball
+            // 
+            this.pictureFootball.Image = global::SportsAgencyTycoonV2.Properties.Resources.football;
+            this.pictureFootball.Location = new System.Drawing.Point(28, 179);
+            this.pictureFootball.Name = "pictureFootball";
+            this.pictureFootball.Size = new System.Drawing.Size(33, 33);
+            this.pictureFootball.TabIndex = 5;
+            this.pictureFootball.TabStop = false;
+            this.pictureFootball.Visible = false;
+            // 
+            // pictureBasketball
+            // 
+            this.pictureBasketball.Image = global::SportsAgencyTycoonV2.Properties.Resources.basketball;
+            this.pictureBasketball.Location = new System.Drawing.Point(28, 140);
+            this.pictureBasketball.Name = "pictureBasketball";
+            this.pictureBasketball.Size = new System.Drawing.Size(33, 33);
+            this.pictureBasketball.TabIndex = 4;
+            this.pictureBasketball.TabStop = false;
+            this.pictureBasketball.Visible = false;
+            // 
+            // pictureBaseball
+            // 
+            this.pictureBaseball.Image = global::SportsAgencyTycoonV2.Properties.Resources.baseball;
+            this.pictureBaseball.Location = new System.Drawing.Point(28, 101);
+            this.pictureBaseball.Name = "pictureBaseball";
+            this.pictureBaseball.Size = new System.Drawing.Size(33, 33);
+            this.pictureBaseball.TabIndex = 3;
+            this.pictureBaseball.TabStop = false;
+            this.pictureBaseball.Visible = false;
+            // 
+            // pictureHockey
+            // 
+            this.pictureHockey.Image = global::SportsAgencyTycoonV2.Properties.Resources.hockey;
+            this.pictureHockey.Location = new System.Drawing.Point(28, 62);
+            this.pictureHockey.Name = "pictureHockey";
+            this.pictureHockey.Size = new System.Drawing.Size(33, 33);
+            this.pictureHockey.TabIndex = 2;
+            this.pictureHockey.TabStop = false;
+            this.pictureHockey.Visible = false;
+            // 
+            // pictureSoccer
+            // 
+            this.pictureSoccer.Image = global::SportsAgencyTycoonV2.Properties.Resources.soccer;
+            this.pictureSoccer.Location = new System.Drawing.Point(28, 23);
+            this.pictureSoccer.Name = "pictureSoccer";
+            this.pictureSoccer.Size = new System.Drawing.Size(33, 33);
+            this.pictureSoccer.TabIndex = 1;
+            this.pictureSoccer.TabStop = false;
+            this.pictureSoccer.Visible = false;
+            // 
+            // btnViewRosters
+            // 
+            this.btnViewRosters.FlatAppearance.BorderSize = 0;
+            this.btnViewRosters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewRosters.ForeColor = System.Drawing.Color.White;
+            this.btnViewRosters.Image = ((System.Drawing.Image)(resources.GetObject("btnViewRosters.Image")));
+            this.btnViewRosters.Location = new System.Drawing.Point(3, 223);
+            this.btnViewRosters.Name = "btnViewRosters";
+            this.btnViewRosters.Size = new System.Drawing.Size(68, 41);
+            this.btnViewRosters.TabIndex = 10;
+            this.btnViewRosters.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnViewRosters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnViewRosters, "Clients");
+            this.btnViewRosters.UseVisualStyleBackColor = true;
+            this.btnViewRosters.Click += new System.EventHandler(this.btnViewRosters_Click);
+            // 
+            // btnStandings
+            // 
+            this.btnStandings.FlatAppearance.BorderSize = 0;
+            this.btnStandings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStandings.ForeColor = System.Drawing.Color.White;
+            this.btnStandings.Image = ((System.Drawing.Image)(resources.GetObject("btnStandings.Image")));
+            this.btnStandings.Location = new System.Drawing.Point(3, 176);
+            this.btnStandings.Name = "btnStandings";
+            this.btnStandings.Size = new System.Drawing.Size(68, 41);
+            this.btnStandings.TabIndex = 9;
+            this.btnStandings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStandings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnStandings, "Standings");
+            this.btnStandings.UseVisualStyleBackColor = true;
+            this.btnStandings.Click += new System.EventHandler(this.btnStandings_Click);
+            // 
+            // btnClients
+            // 
+            this.btnClients.FlatAppearance.BorderSize = 0;
+            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClients.ForeColor = System.Drawing.Color.White;
+            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
+            this.btnClients.Location = new System.Drawing.Point(3, 132);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Size = new System.Drawing.Size(68, 41);
+            this.btnClients.TabIndex = 3;
+            this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnClients, "Clients");
+            this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
+            // 
+            // btnJobs
+            // 
+            this.btnJobs.FlatAppearance.BorderSize = 0;
+            this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJobs.ForeColor = System.Drawing.Color.White;
+            this.btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("btnJobs.Image")));
+            this.btnJobs.Location = new System.Drawing.Point(3, 88);
+            this.btnJobs.Name = "btnJobs";
+            this.btnJobs.Size = new System.Drawing.Size(68, 41);
+            this.btnJobs.TabIndex = 2;
+            this.btnJobs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnJobs, "Freelance Jobs");
+            this.btnJobs.UseVisualStyleBackColor = true;
+            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
+            // 
+            // btnManager
+            // 
+            this.btnManager.FlatAppearance.BorderSize = 0;
+            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManager.ForeColor = System.Drawing.Color.White;
+            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
+            this.btnManager.Location = new System.Drawing.Point(3, 44);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(68, 41);
+            this.btnManager.TabIndex = 1;
+            this.btnManager.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnManager.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnManager, "Manager");
+            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
+            // 
+            // btnOffice
+            // 
+            this.btnOffice.FlatAppearance.BorderSize = 0;
+            this.btnOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOffice.ForeColor = System.Drawing.Color.White;
+            this.btnOffice.Image = ((System.Drawing.Image)(resources.GetObject("btnOffice.Image")));
+            this.btnOffice.Location = new System.Drawing.Point(3, 0);
+            this.btnOffice.Name = "btnOffice";
+            this.btnOffice.Size = new System.Drawing.Size(68, 41);
+            this.btnOffice.TabIndex = 0;
+            this.btnOffice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOffice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnOffice, "Agency");
+            this.btnOffice.UseVisualStyleBackColor = true;
+            this.btnOffice.Click += new System.EventHandler(this.btnOffice_Click);
+            // 
+            // btnCallForClient
+            // 
+            this.btnCallForClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCallForClient.ForeColor = System.Drawing.Color.White;
+            this.btnCallForClient.Location = new System.Drawing.Point(258, 212);
+            this.btnCallForClient.Name = "btnCallForClient";
+            this.btnCallForClient.Size = new System.Drawing.Size(134, 41);
+            this.btnCallForClient.TabIndex = 12;
+            this.btnCallForClient.Text = "Call Teams";
+            this.btnCallForClient.UseVisualStyleBackColor = true;
+            this.btnCallForClient.Click += new System.EventHandler(this.btnCallForClient_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
@@ -2605,15 +2619,10 @@
             this.agencyPanel.PerformLayout();
             this.gbAgent3.ResumeLayout(false);
             this.gbAgent3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.gbAgent2.ResumeLayout(false);
             this.gbAgent2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbAgent1.ResumeLayout(false);
             this.gbAgent1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).EndInit();
             this.freelancePanel.ResumeLayout(false);
             this.gbJob3.ResumeLayout(false);
             this.gbJob3.PerformLayout();
@@ -2627,11 +2636,6 @@
             this.worldPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).EndInit();
             this.teamRosterPanel.ResumeLayout(false);
             this.teamRosterPanel.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -2642,19 +2646,29 @@
             this.groupBox1.PerformLayout();
             this.scoutClientPanel.ResumeLayout(false);
             this.scoutClientPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.agencyClientsPanel.ResumeLayout(false);
             this.agencyClientsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2870,6 +2884,7 @@
         public System.Windows.Forms.Label lblClientAgencyHappiness;
         public System.Windows.Forms.Label lblClientPopularity;
         public System.Windows.Forms.Label lblClientTeamHappiness;
+        public System.Windows.Forms.Button btnCallForClient;
     }
 }
 
