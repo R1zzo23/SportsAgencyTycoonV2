@@ -10,14 +10,17 @@ namespace SportsAgencyTycoonV2
     {
         MainForm mainForm;
         World world;
+        public GetClientSignedFunctions getClientSignedFunctions;
         int index = 0;
         public AgencyClientsPanelFunctions(MainForm mf, World w)
         {
             mainForm = mf;
             world = w;
+            getClientSignedFunctions = new GetClientSignedFunctions(mainForm, world);
         }
         public void DisplayClient(int i)
         {
+            mainForm.clientTeamNegotiationPanel.Visible = false;
             if (world.MyAgency.ClientCount - 1 >= i)
             {
                 mainForm.lblClientName.Text = world.MyAgency.Clients[i].FullName;
@@ -81,7 +84,6 @@ namespace SportsAgencyTycoonV2
         {
             Console.WriteLine("Calling teams to sign client...");
             League league = world.Leagues[world.Leagues.FindIndex(o => o.Sport == selectedPlayer.Sport)];
-            GetClientSignedFunctions getClientSignedFunctions = new GetClientSignedFunctions(mainForm, world);
             getClientSignedFunctions.AttemptToGetPlayerSigned(selectedPlayer, league, world.MyAgency);
         }
         public void CallClientsTeam(Player selectedPlayer)

@@ -395,5 +395,13 @@ namespace SportsAgencyTycoonV2
         {
             agencyClientsPanelFunctions.CallTeamOrTeams();
         }
+
+        private void btnNegotiateForClient_Click(object sender, EventArgs e)
+        {
+            if (rbFocusMoney.Checked == false && rbFocusWinning.Checked == false && rbFocusLifestyle.Checked == false)
+                MessageBox.Show("Select a focus for these negotiations.");
+            else
+                agencyClientsPanelFunctions.getClientSignedFunctions.BeginNegotiations();
+        }
     }
 }

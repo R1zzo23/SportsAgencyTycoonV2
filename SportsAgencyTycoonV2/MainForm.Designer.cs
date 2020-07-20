@@ -45,7 +45,13 @@
             this.lblLicenseList = new System.Windows.Forms.Label();
             this.universalAgencyPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.btnViewRosters = new System.Windows.Forms.Button();
+            this.btnStandings = new System.Windows.Forms.Button();
             this.panelButtonHighlight = new System.Windows.Forms.Panel();
+            this.btnClients = new System.Windows.Forms.Button();
+            this.btnJobs = new System.Windows.Forms.Button();
+            this.btnManager = new System.Windows.Forms.Button();
+            this.btnOffice = new System.Windows.Forms.Button();
             this.toolTipMainForm = new System.Windows.Forms.ToolTip(this.components);
             this.lblManagerIQ = new System.Windows.Forms.Label();
             this.lblManagerNegotiate = new System.Windows.Forms.Label();
@@ -78,18 +84,23 @@
             this.lblAgent3Status = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.lblAgent3Name = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.gbAgent2 = new System.Windows.Forms.GroupBox();
             this.btnAgent2Rest = new System.Windows.Forms.Button();
             this.lblAgent2Status = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblAgent2Name = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbAgent1 = new System.Windows.Forms.GroupBox();
             this.btnAgent1Rest = new System.Windows.Forms.Button();
             this.lblAgent1Status = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblAgent1Name = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.agencyImageLarge = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.managerImageLarge = new System.Windows.Forms.PictureBox();
             this.freelancePanel = new System.Windows.Forms.Panel();
             this.jobProgressBar = new System.Windows.Forms.ProgressBar();
             this.gbJob3 = new System.Windows.Forms.GroupBox();
@@ -145,6 +156,11 @@
             this.cbLeagues = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureFootball = new System.Windows.Forms.PictureBox();
+            this.pictureBasketball = new System.Windows.Forms.PictureBox();
+            this.pictureBaseball = new System.Windows.Forms.PictureBox();
+            this.pictureHockey = new System.Windows.Forms.PictureBox();
+            this.pictureSoccer = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.teamRosterPanel = new System.Windows.Forms.Panel();
             this.lblRoster = new System.Windows.Forms.Label();
@@ -178,6 +194,7 @@
             this.btnCloseScoutingPanel = new System.Windows.Forms.Button();
             this.btnSignToAgency = new System.Windows.Forms.Button();
             this.lblWSSAScouting = new System.Windows.Forms.Label();
+            this.wssaStarRating = new System.Windows.Forms.PictureBox();
             this.lblScoutedBy = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblScoutedAgencyHappiness = new System.Windows.Forms.Label();
@@ -198,6 +215,7 @@
             this.lblScoutedPlayerDescription = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbAgentToScout = new System.Windows.Forms.ComboBox();
+            this.starRatingPicture = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbScoutedPlayers = new System.Windows.Forms.ComboBox();
             this.btnSearchForClient = new System.Windows.Forms.Button();
@@ -210,6 +228,9 @@
             this.cbClientSport = new System.Windows.Forms.ComboBox();
             this.managerPanel = new System.Windows.Forms.Panel();
             this.agencyClientsPanel = new System.Windows.Forms.Panel();
+            this.clientTeamNegotiationPanel = new System.Windows.Forms.Panel();
+            this.lblNumberOfTeamsInterested = new System.Windows.Forms.Label();
+            this.btnCallForClient = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -217,36 +238,27 @@
             this.lblClientPopularity = new System.Windows.Forms.Label();
             this.lblClientTeamHappiness = new System.Windows.Forms.Label();
             this.lblClientPosAndTeam = new System.Windows.Forms.Label();
-            this.lblClientName = new System.Windows.Forms.Label();
-            this.btnAddClient = new System.Windows.Forms.Button();
             this.clientSportImage = new System.Windows.Forms.PictureBox();
+            this.lblClientName = new System.Windows.Forms.Label();
             this.btnScrollRightThroughClients = new System.Windows.Forms.Button();
             this.btnScrollLeftThroughClients = new System.Windows.Forms.Button();
-            this.wssaStarRating = new System.Windows.Forms.PictureBox();
-            this.starRatingPicture = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.agencyImageLarge = new System.Windows.Forms.PictureBox();
-            this.managerImageLarge = new System.Windows.Forms.PictureBox();
-            this.pictureFootball = new System.Windows.Forms.PictureBox();
-            this.pictureBasketball = new System.Windows.Forms.PictureBox();
-            this.pictureBaseball = new System.Windows.Forms.PictureBox();
-            this.pictureHockey = new System.Windows.Forms.PictureBox();
-            this.pictureSoccer = new System.Windows.Forms.PictureBox();
-            this.btnViewRosters = new System.Windows.Forms.Button();
-            this.btnStandings = new System.Windows.Forms.Button();
-            this.btnClients = new System.Windows.Forms.Button();
-            this.btnJobs = new System.Windows.Forms.Button();
-            this.btnManager = new System.Windows.Forms.Button();
-            this.btnOffice = new System.Windows.Forms.Button();
-            this.btnCallForClient = new System.Windows.Forms.Button();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.gbNegotiationFocus = new System.Windows.Forms.GroupBox();
+            this.rbFocusMoney = new System.Windows.Forms.RadioButton();
+            this.rbFocusWinning = new System.Windows.Forms.RadioButton();
+            this.rbFocusLifestyle = new System.Windows.Forms.RadioButton();
+            this.btnNegotiateForClient = new System.Windows.Forms.Button();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
             this.gbAgent3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.gbAgent2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbAgent1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).BeginInit();
             this.freelancePanel.SuspendLayout();
             this.gbJob3.SuspendLayout();
             this.gbJob2.SuspendLayout();
@@ -254,29 +266,26 @@
             this.calendarPanel.SuspendLayout();
             this.worldPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.teamRosterPanel.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.scoutClientPanel.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.agencyClientsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).BeginInit();
+            this.teamRosterPanel.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.scoutClientPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.agencyClientsPanel.SuspendLayout();
+            this.clientTeamNegotiationPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).BeginInit();
+            this.gbNegotiationFocus.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnManagerAction
@@ -447,6 +456,38 @@
             this.menuPanel.Size = new System.Drawing.Size(89, 282);
             this.menuPanel.TabIndex = 7;
             // 
+            // btnViewRosters
+            // 
+            this.btnViewRosters.FlatAppearance.BorderSize = 0;
+            this.btnViewRosters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewRosters.ForeColor = System.Drawing.Color.White;
+            this.btnViewRosters.Image = ((System.Drawing.Image)(resources.GetObject("btnViewRosters.Image")));
+            this.btnViewRosters.Location = new System.Drawing.Point(3, 223);
+            this.btnViewRosters.Name = "btnViewRosters";
+            this.btnViewRosters.Size = new System.Drawing.Size(68, 41);
+            this.btnViewRosters.TabIndex = 10;
+            this.btnViewRosters.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnViewRosters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnViewRosters, "Clients");
+            this.btnViewRosters.UseVisualStyleBackColor = true;
+            this.btnViewRosters.Click += new System.EventHandler(this.btnViewRosters_Click);
+            // 
+            // btnStandings
+            // 
+            this.btnStandings.FlatAppearance.BorderSize = 0;
+            this.btnStandings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStandings.ForeColor = System.Drawing.Color.White;
+            this.btnStandings.Image = ((System.Drawing.Image)(resources.GetObject("btnStandings.Image")));
+            this.btnStandings.Location = new System.Drawing.Point(3, 176);
+            this.btnStandings.Name = "btnStandings";
+            this.btnStandings.Size = new System.Drawing.Size(68, 41);
+            this.btnStandings.TabIndex = 9;
+            this.btnStandings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStandings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnStandings, "Standings");
+            this.btnStandings.UseVisualStyleBackColor = true;
+            this.btnStandings.Click += new System.EventHandler(this.btnStandings_Click);
+            // 
             // panelButtonHighlight
             // 
             this.panelButtonHighlight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(23)))));
@@ -454,6 +495,70 @@
             this.panelButtonHighlight.Name = "panelButtonHighlight";
             this.panelButtonHighlight.Size = new System.Drawing.Size(7, 40);
             this.panelButtonHighlight.TabIndex = 8;
+            // 
+            // btnClients
+            // 
+            this.btnClients.FlatAppearance.BorderSize = 0;
+            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClients.ForeColor = System.Drawing.Color.White;
+            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
+            this.btnClients.Location = new System.Drawing.Point(3, 132);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Size = new System.Drawing.Size(68, 41);
+            this.btnClients.TabIndex = 3;
+            this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnClients, "Clients");
+            this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
+            // 
+            // btnJobs
+            // 
+            this.btnJobs.FlatAppearance.BorderSize = 0;
+            this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJobs.ForeColor = System.Drawing.Color.White;
+            this.btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("btnJobs.Image")));
+            this.btnJobs.Location = new System.Drawing.Point(3, 88);
+            this.btnJobs.Name = "btnJobs";
+            this.btnJobs.Size = new System.Drawing.Size(68, 41);
+            this.btnJobs.TabIndex = 2;
+            this.btnJobs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnJobs, "Freelance Jobs");
+            this.btnJobs.UseVisualStyleBackColor = true;
+            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
+            // 
+            // btnManager
+            // 
+            this.btnManager.FlatAppearance.BorderSize = 0;
+            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManager.ForeColor = System.Drawing.Color.White;
+            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
+            this.btnManager.Location = new System.Drawing.Point(3, 44);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(68, 41);
+            this.btnManager.TabIndex = 1;
+            this.btnManager.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnManager.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnManager, "Manager");
+            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
+            // 
+            // btnOffice
+            // 
+            this.btnOffice.FlatAppearance.BorderSize = 0;
+            this.btnOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOffice.ForeColor = System.Drawing.Color.White;
+            this.btnOffice.Image = ((System.Drawing.Image)(resources.GetObject("btnOffice.Image")));
+            this.btnOffice.Location = new System.Drawing.Point(3, 0);
+            this.btnOffice.Name = "btnOffice";
+            this.btnOffice.Size = new System.Drawing.Size(68, 41);
+            this.btnOffice.TabIndex = 0;
+            this.btnOffice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnOffice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTipMainForm.SetToolTip(this.btnOffice, "Agency");
+            this.btnOffice.UseVisualStyleBackColor = true;
+            this.btnOffice.Click += new System.EventHandler(this.btnOffice_Click);
             // 
             // lblManagerIQ
             // 
@@ -845,6 +950,16 @@
             this.lblAgent3Name.Text = "Very Very Long Name Here";
             this.lblAgent3Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
             // gbAgent2
             // 
             this.gbAgent2.Controls.Add(this.btnAgent2Rest);
@@ -906,6 +1021,16 @@
             this.lblAgent2Name.TabIndex = 23;
             this.lblAgent2Name.Text = "Very Very Long Name Here";
             this.lblAgent2Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
             // gbAgent1
             // 
@@ -969,6 +1094,16 @@
             this.lblAgent1Name.Text = "Very Very Long Name Here";
             this.lblAgent1Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -980,6 +1115,16 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Office";
             // 
+            // agencyImageLarge
+            // 
+            this.agencyImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("agencyImageLarge.Image")));
+            this.agencyImageLarge.InitialImage = null;
+            this.agencyImageLarge.Location = new System.Drawing.Point(597, 25);
+            this.agencyImageLarge.Name = "agencyImageLarge";
+            this.agencyImageLarge.Size = new System.Drawing.Size(66, 63);
+            this.agencyImageLarge.TabIndex = 8;
+            this.agencyImageLarge.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -990,6 +1135,16 @@
             this.label1.Size = new System.Drawing.Size(88, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "Manager:";
+            // 
+            // managerImageLarge
+            // 
+            this.managerImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.Image")));
+            this.managerImageLarge.InitialImage = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.InitialImage")));
+            this.managerImageLarge.Location = new System.Drawing.Point(8, 28);
+            this.managerImageLarge.Name = "managerImageLarge";
+            this.managerImageLarge.Size = new System.Drawing.Size(66, 63);
+            this.managerImageLarge.TabIndex = 6;
+            this.managerImageLarge.TabStop = false;
             // 
             // freelancePanel
             // 
@@ -1565,6 +1720,56 @@
             this.panel1.Size = new System.Drawing.Size(89, 220);
             this.panel1.TabIndex = 12;
             // 
+            // pictureFootball
+            // 
+            this.pictureFootball.Image = global::SportsAgencyTycoonV2.Properties.Resources.football;
+            this.pictureFootball.Location = new System.Drawing.Point(28, 179);
+            this.pictureFootball.Name = "pictureFootball";
+            this.pictureFootball.Size = new System.Drawing.Size(33, 33);
+            this.pictureFootball.TabIndex = 5;
+            this.pictureFootball.TabStop = false;
+            this.pictureFootball.Visible = false;
+            // 
+            // pictureBasketball
+            // 
+            this.pictureBasketball.Image = global::SportsAgencyTycoonV2.Properties.Resources.basketball;
+            this.pictureBasketball.Location = new System.Drawing.Point(28, 140);
+            this.pictureBasketball.Name = "pictureBasketball";
+            this.pictureBasketball.Size = new System.Drawing.Size(33, 33);
+            this.pictureBasketball.TabIndex = 4;
+            this.pictureBasketball.TabStop = false;
+            this.pictureBasketball.Visible = false;
+            // 
+            // pictureBaseball
+            // 
+            this.pictureBaseball.Image = global::SportsAgencyTycoonV2.Properties.Resources.baseball;
+            this.pictureBaseball.Location = new System.Drawing.Point(28, 101);
+            this.pictureBaseball.Name = "pictureBaseball";
+            this.pictureBaseball.Size = new System.Drawing.Size(33, 33);
+            this.pictureBaseball.TabIndex = 3;
+            this.pictureBaseball.TabStop = false;
+            this.pictureBaseball.Visible = false;
+            // 
+            // pictureHockey
+            // 
+            this.pictureHockey.Image = global::SportsAgencyTycoonV2.Properties.Resources.hockey;
+            this.pictureHockey.Location = new System.Drawing.Point(28, 62);
+            this.pictureHockey.Name = "pictureHockey";
+            this.pictureHockey.Size = new System.Drawing.Size(33, 33);
+            this.pictureHockey.TabIndex = 2;
+            this.pictureHockey.TabStop = false;
+            this.pictureHockey.Visible = false;
+            // 
+            // pictureSoccer
+            // 
+            this.pictureSoccer.Image = global::SportsAgencyTycoonV2.Properties.Resources.soccer;
+            this.pictureSoccer.Location = new System.Drawing.Point(28, 23);
+            this.pictureSoccer.Name = "pictureSoccer";
+            this.pictureSoccer.Size = new System.Drawing.Size(33, 33);
+            this.pictureSoccer.TabIndex = 1;
+            this.pictureSoccer.TabStop = false;
+            this.pictureSoccer.Visible = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -1921,6 +2126,16 @@
             this.lblWSSAScouting.TabIndex = 26;
             this.lblWSSAScouting.Text = "WSSA Scouting";
             // 
+            // wssaStarRating
+            // 
+            this.wssaStarRating.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
+            this.wssaStarRating.InitialImage = null;
+            this.wssaStarRating.Location = new System.Drawing.Point(345, 136);
+            this.wssaStarRating.Name = "wssaStarRating";
+            this.wssaStarRating.Size = new System.Drawing.Size(163, 37);
+            this.wssaStarRating.TabIndex = 25;
+            this.wssaStarRating.TabStop = false;
+            // 
             // lblScoutedBy
             // 
             this.lblScoutedBy.AutoSize = true;
@@ -2113,6 +2328,16 @@
             this.cbAgentToScout.TabIndex = 8;
             this.cbAgentToScout.SelectedIndexChanged += new System.EventHandler(this.cbAgentToScout_SelectedIndexChanged);
             // 
+            // starRatingPicture
+            // 
+            this.starRatingPicture.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
+            this.starRatingPicture.InitialImage = null;
+            this.starRatingPicture.Location = new System.Drawing.Point(345, 182);
+            this.starRatingPicture.Name = "starRatingPicture";
+            this.starRatingPicture.Size = new System.Drawing.Size(163, 37);
+            this.starRatingPicture.TabIndex = 7;
+            this.starRatingPicture.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -2224,6 +2449,7 @@
             // 
             // agencyClientsPanel
             // 
+            this.agencyClientsPanel.Controls.Add(this.clientTeamNegotiationPanel);
             this.agencyClientsPanel.Controls.Add(this.btnCallForClient);
             this.agencyClientsPanel.Controls.Add(this.label12);
             this.agencyClientsPanel.Controls.Add(this.label13);
@@ -2241,6 +2467,36 @@
             this.agencyClientsPanel.Name = "agencyClientsPanel";
             this.agencyClientsPanel.Size = new System.Drawing.Size(1061, 683);
             this.agencyClientsPanel.TabIndex = 16;
+            // 
+            // clientTeamNegotiationPanel
+            // 
+            this.clientTeamNegotiationPanel.Controls.Add(this.gbNegotiationFocus);
+            this.clientTeamNegotiationPanel.Controls.Add(this.lblNumberOfTeamsInterested);
+            this.clientTeamNegotiationPanel.Location = new System.Drawing.Point(13, 280);
+            this.clientTeamNegotiationPanel.Name = "clientTeamNegotiationPanel";
+            this.clientTeamNegotiationPanel.Size = new System.Drawing.Size(415, 217);
+            this.clientTeamNegotiationPanel.TabIndex = 13;
+            // 
+            // lblNumberOfTeamsInterested
+            // 
+            this.lblNumberOfTeamsInterested.AutoSize = true;
+            this.lblNumberOfTeamsInterested.Location = new System.Drawing.Point(12, 21);
+            this.lblNumberOfTeamsInterested.Name = "lblNumberOfTeamsInterested";
+            this.lblNumberOfTeamsInterested.Size = new System.Drawing.Size(197, 21);
+            this.lblNumberOfTeamsInterested.TabIndex = 0;
+            this.lblNumberOfTeamsInterested.Text = "# of Teams Interested:";
+            // 
+            // btnCallForClient
+            // 
+            this.btnCallForClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCallForClient.ForeColor = System.Drawing.Color.White;
+            this.btnCallForClient.Location = new System.Drawing.Point(258, 212);
+            this.btnCallForClient.Name = "btnCallForClient";
+            this.btnCallForClient.Size = new System.Drawing.Size(134, 41);
+            this.btnCallForClient.TabIndex = 12;
+            this.btnCallForClient.Text = "Call Teams";
+            this.btnCallForClient.UseVisualStyleBackColor = true;
+            this.btnCallForClient.Click += new System.EventHandler(this.btnCallForClient_Click);
             // 
             // label12
             // 
@@ -2306,6 +2562,15 @@
             this.lblClientPosAndTeam.TabIndex = 5;
             this.lblClientPosAndTeam.Text = "POS for ABR";
             // 
+            // clientSportImage
+            // 
+            this.clientSportImage.Image = global::SportsAgencyTycoonV2.Properties.Resources.basketball;
+            this.clientSportImage.Location = new System.Drawing.Point(232, 67);
+            this.clientSportImage.Name = "clientSportImage";
+            this.clientSportImage.Size = new System.Drawing.Size(33, 33);
+            this.clientSportImage.TabIndex = 4;
+            this.clientSportImage.TabStop = false;
+            // 
             // lblClientName
             // 
             this.lblClientName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -2316,27 +2581,6 @@
             this.lblClientName.TabIndex = 3;
             this.lblClientName.Text = "1234567891 123456789012";
             this.lblClientName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAddClient
-            // 
-            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClient.ForeColor = System.Drawing.Color.White;
-            this.btnAddClient.Location = new System.Drawing.Point(915, 12);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(136, 51);
-            this.btnAddClient.TabIndex = 0;
-            this.btnAddClient.Text = "Add New Client To Agency";
-            this.btnAddClient.UseVisualStyleBackColor = true;
-            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
-            // 
-            // clientSportImage
-            // 
-            this.clientSportImage.Image = global::SportsAgencyTycoonV2.Properties.Resources.basketball;
-            this.clientSportImage.Location = new System.Drawing.Point(232, 67);
-            this.clientSportImage.Name = "clientSportImage";
-            this.clientSportImage.Size = new System.Drawing.Size(33, 33);
-            this.clientSportImage.TabIndex = 4;
-            this.clientSportImage.TabStop = false;
             // 
             // btnScrollRightThroughClients
             // 
@@ -2362,233 +2606,76 @@
             this.btnScrollLeftThroughClients.UseVisualStyleBackColor = true;
             this.btnScrollLeftThroughClients.Click += new System.EventHandler(this.btnScrollLeftThroughClients_Click);
             // 
-            // wssaStarRating
+            // btnAddClient
             // 
-            this.wssaStarRating.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
-            this.wssaStarRating.InitialImage = null;
-            this.wssaStarRating.Location = new System.Drawing.Point(345, 136);
-            this.wssaStarRating.Name = "wssaStarRating";
-            this.wssaStarRating.Size = new System.Drawing.Size(163, 37);
-            this.wssaStarRating.TabIndex = 25;
-            this.wssaStarRating.TabStop = false;
+            this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.ForeColor = System.Drawing.Color.White;
+            this.btnAddClient.Location = new System.Drawing.Point(915, 12);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(136, 51);
+            this.btnAddClient.TabIndex = 0;
+            this.btnAddClient.Text = "Add New Client To Agency";
+            this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
-            // starRatingPicture
+            // gbNegotiationFocus
             // 
-            this.starRatingPicture.Image = global::SportsAgencyTycoonV2.Properties.Resources._5star;
-            this.starRatingPicture.InitialImage = null;
-            this.starRatingPicture.Location = new System.Drawing.Point(345, 182);
-            this.starRatingPicture.Name = "starRatingPicture";
-            this.starRatingPicture.Size = new System.Drawing.Size(163, 37);
-            this.starRatingPicture.TabIndex = 7;
-            this.starRatingPicture.TabStop = false;
+            this.gbNegotiationFocus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.gbNegotiationFocus.Controls.Add(this.btnNegotiateForClient);
+            this.gbNegotiationFocus.Controls.Add(this.rbFocusLifestyle);
+            this.gbNegotiationFocus.Controls.Add(this.rbFocusWinning);
+            this.gbNegotiationFocus.Controls.Add(this.rbFocusMoney);
+            this.gbNegotiationFocus.Location = new System.Drawing.Point(14, 56);
+            this.gbNegotiationFocus.Name = "gbNegotiationFocus";
+            this.gbNegotiationFocus.Size = new System.Drawing.Size(265, 137);
+            this.gbNegotiationFocus.TabIndex = 1;
+            this.gbNegotiationFocus.TabStop = false;
+            this.gbNegotiationFocus.Text = "Negotiation Focus";
             // 
-            // pictureBox3
+            // rbFocusMoney
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
+            this.rbFocusMoney.AutoSize = true;
+            this.rbFocusMoney.Location = new System.Drawing.Point(7, 28);
+            this.rbFocusMoney.Name = "rbFocusMoney";
+            this.rbFocusMoney.Size = new System.Drawing.Size(88, 25);
+            this.rbFocusMoney.TabIndex = 0;
+            this.rbFocusMoney.TabStop = true;
+            this.rbFocusMoney.Text = "Money";
+            this.rbFocusMoney.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // rbFocusWinning
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
+            this.rbFocusWinning.AutoSize = true;
+            this.rbFocusWinning.Location = new System.Drawing.Point(7, 66);
+            this.rbFocusWinning.Name = "rbFocusWinning";
+            this.rbFocusWinning.Size = new System.Drawing.Size(95, 25);
+            this.rbFocusWinning.TabIndex = 1;
+            this.rbFocusWinning.TabStop = true;
+            this.rbFocusWinning.Text = "Winning";
+            this.rbFocusWinning.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // rbFocusLifestyle
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.rbFocusLifestyle.AutoSize = true;
+            this.rbFocusLifestyle.Location = new System.Drawing.Point(7, 104);
+            this.rbFocusLifestyle.Name = "rbFocusLifestyle";
+            this.rbFocusLifestyle.Size = new System.Drawing.Size(94, 25);
+            this.rbFocusLifestyle.TabIndex = 2;
+            this.rbFocusLifestyle.TabStop = true;
+            this.rbFocusLifestyle.Text = "Lifestyle";
+            this.rbFocusLifestyle.UseVisualStyleBackColor = true;
             // 
-            // agencyImageLarge
+            // btnNegotiateForClient
             // 
-            this.agencyImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("agencyImageLarge.Image")));
-            this.agencyImageLarge.InitialImage = null;
-            this.agencyImageLarge.Location = new System.Drawing.Point(597, 25);
-            this.agencyImageLarge.Name = "agencyImageLarge";
-            this.agencyImageLarge.Size = new System.Drawing.Size(66, 63);
-            this.agencyImageLarge.TabIndex = 8;
-            this.agencyImageLarge.TabStop = false;
-            // 
-            // managerImageLarge
-            // 
-            this.managerImageLarge.Image = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.Image")));
-            this.managerImageLarge.InitialImage = ((System.Drawing.Image)(resources.GetObject("managerImageLarge.InitialImage")));
-            this.managerImageLarge.Location = new System.Drawing.Point(8, 28);
-            this.managerImageLarge.Name = "managerImageLarge";
-            this.managerImageLarge.Size = new System.Drawing.Size(66, 63);
-            this.managerImageLarge.TabIndex = 6;
-            this.managerImageLarge.TabStop = false;
-            // 
-            // pictureFootball
-            // 
-            this.pictureFootball.Image = global::SportsAgencyTycoonV2.Properties.Resources.football;
-            this.pictureFootball.Location = new System.Drawing.Point(28, 179);
-            this.pictureFootball.Name = "pictureFootball";
-            this.pictureFootball.Size = new System.Drawing.Size(33, 33);
-            this.pictureFootball.TabIndex = 5;
-            this.pictureFootball.TabStop = false;
-            this.pictureFootball.Visible = false;
-            // 
-            // pictureBasketball
-            // 
-            this.pictureBasketball.Image = global::SportsAgencyTycoonV2.Properties.Resources.basketball;
-            this.pictureBasketball.Location = new System.Drawing.Point(28, 140);
-            this.pictureBasketball.Name = "pictureBasketball";
-            this.pictureBasketball.Size = new System.Drawing.Size(33, 33);
-            this.pictureBasketball.TabIndex = 4;
-            this.pictureBasketball.TabStop = false;
-            this.pictureBasketball.Visible = false;
-            // 
-            // pictureBaseball
-            // 
-            this.pictureBaseball.Image = global::SportsAgencyTycoonV2.Properties.Resources.baseball;
-            this.pictureBaseball.Location = new System.Drawing.Point(28, 101);
-            this.pictureBaseball.Name = "pictureBaseball";
-            this.pictureBaseball.Size = new System.Drawing.Size(33, 33);
-            this.pictureBaseball.TabIndex = 3;
-            this.pictureBaseball.TabStop = false;
-            this.pictureBaseball.Visible = false;
-            // 
-            // pictureHockey
-            // 
-            this.pictureHockey.Image = global::SportsAgencyTycoonV2.Properties.Resources.hockey;
-            this.pictureHockey.Location = new System.Drawing.Point(28, 62);
-            this.pictureHockey.Name = "pictureHockey";
-            this.pictureHockey.Size = new System.Drawing.Size(33, 33);
-            this.pictureHockey.TabIndex = 2;
-            this.pictureHockey.TabStop = false;
-            this.pictureHockey.Visible = false;
-            // 
-            // pictureSoccer
-            // 
-            this.pictureSoccer.Image = global::SportsAgencyTycoonV2.Properties.Resources.soccer;
-            this.pictureSoccer.Location = new System.Drawing.Point(28, 23);
-            this.pictureSoccer.Name = "pictureSoccer";
-            this.pictureSoccer.Size = new System.Drawing.Size(33, 33);
-            this.pictureSoccer.TabIndex = 1;
-            this.pictureSoccer.TabStop = false;
-            this.pictureSoccer.Visible = false;
-            // 
-            // btnViewRosters
-            // 
-            this.btnViewRosters.FlatAppearance.BorderSize = 0;
-            this.btnViewRosters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewRosters.ForeColor = System.Drawing.Color.White;
-            this.btnViewRosters.Image = ((System.Drawing.Image)(resources.GetObject("btnViewRosters.Image")));
-            this.btnViewRosters.Location = new System.Drawing.Point(3, 223);
-            this.btnViewRosters.Name = "btnViewRosters";
-            this.btnViewRosters.Size = new System.Drawing.Size(68, 41);
-            this.btnViewRosters.TabIndex = 10;
-            this.btnViewRosters.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnViewRosters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnViewRosters, "Clients");
-            this.btnViewRosters.UseVisualStyleBackColor = true;
-            this.btnViewRosters.Click += new System.EventHandler(this.btnViewRosters_Click);
-            // 
-            // btnStandings
-            // 
-            this.btnStandings.FlatAppearance.BorderSize = 0;
-            this.btnStandings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStandings.ForeColor = System.Drawing.Color.White;
-            this.btnStandings.Image = ((System.Drawing.Image)(resources.GetObject("btnStandings.Image")));
-            this.btnStandings.Location = new System.Drawing.Point(3, 176);
-            this.btnStandings.Name = "btnStandings";
-            this.btnStandings.Size = new System.Drawing.Size(68, 41);
-            this.btnStandings.TabIndex = 9;
-            this.btnStandings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStandings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnStandings, "Standings");
-            this.btnStandings.UseVisualStyleBackColor = true;
-            this.btnStandings.Click += new System.EventHandler(this.btnStandings_Click);
-            // 
-            // btnClients
-            // 
-            this.btnClients.FlatAppearance.BorderSize = 0;
-            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClients.ForeColor = System.Drawing.Color.White;
-            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
-            this.btnClients.Location = new System.Drawing.Point(3, 132);
-            this.btnClients.Name = "btnClients";
-            this.btnClients.Size = new System.Drawing.Size(68, 41);
-            this.btnClients.TabIndex = 3;
-            this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnClients, "Clients");
-            this.btnClients.UseVisualStyleBackColor = true;
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
-            // 
-            // btnJobs
-            // 
-            this.btnJobs.FlatAppearance.BorderSize = 0;
-            this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJobs.ForeColor = System.Drawing.Color.White;
-            this.btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("btnJobs.Image")));
-            this.btnJobs.Location = new System.Drawing.Point(3, 88);
-            this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(68, 41);
-            this.btnJobs.TabIndex = 2;
-            this.btnJobs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnJobs, "Freelance Jobs");
-            this.btnJobs.UseVisualStyleBackColor = true;
-            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
-            // 
-            // btnManager
-            // 
-            this.btnManager.FlatAppearance.BorderSize = 0;
-            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManager.ForeColor = System.Drawing.Color.White;
-            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
-            this.btnManager.Location = new System.Drawing.Point(3, 44);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(68, 41);
-            this.btnManager.TabIndex = 1;
-            this.btnManager.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnManager.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnManager, "Manager");
-            this.btnManager.UseVisualStyleBackColor = true;
-            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
-            // 
-            // btnOffice
-            // 
-            this.btnOffice.FlatAppearance.BorderSize = 0;
-            this.btnOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOffice.ForeColor = System.Drawing.Color.White;
-            this.btnOffice.Image = ((System.Drawing.Image)(resources.GetObject("btnOffice.Image")));
-            this.btnOffice.Location = new System.Drawing.Point(3, 0);
-            this.btnOffice.Name = "btnOffice";
-            this.btnOffice.Size = new System.Drawing.Size(68, 41);
-            this.btnOffice.TabIndex = 0;
-            this.btnOffice.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOffice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolTipMainForm.SetToolTip(this.btnOffice, "Agency");
-            this.btnOffice.UseVisualStyleBackColor = true;
-            this.btnOffice.Click += new System.EventHandler(this.btnOffice_Click);
-            // 
-            // btnCallForClient
-            // 
-            this.btnCallForClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCallForClient.ForeColor = System.Drawing.Color.White;
-            this.btnCallForClient.Location = new System.Drawing.Point(258, 212);
-            this.btnCallForClient.Name = "btnCallForClient";
-            this.btnCallForClient.Size = new System.Drawing.Size(134, 41);
-            this.btnCallForClient.TabIndex = 12;
-            this.btnCallForClient.Text = "Call Teams";
-            this.btnCallForClient.UseVisualStyleBackColor = true;
-            this.btnCallForClient.Click += new System.EventHandler(this.btnCallForClient_Click);
+            this.btnNegotiateForClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegotiateForClient.ForeColor = System.Drawing.Color.White;
+            this.btnNegotiateForClient.Location = new System.Drawing.Point(131, 60);
+            this.btnNegotiateForClient.Name = "btnNegotiateForClient";
+            this.btnNegotiateForClient.Size = new System.Drawing.Size(107, 37);
+            this.btnNegotiateForClient.TabIndex = 3;
+            this.btnNegotiateForClient.Text = "Negotiate";
+            this.btnNegotiateForClient.UseVisualStyleBackColor = true;
+            this.btnNegotiateForClient.Click += new System.EventHandler(this.btnNegotiateForClient_Click);
             // 
             // MainForm
             // 
@@ -2619,10 +2706,15 @@
             this.agencyPanel.PerformLayout();
             this.gbAgent3.ResumeLayout(false);
             this.gbAgent3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.gbAgent2.ResumeLayout(false);
             this.gbAgent2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbAgent1.ResumeLayout(false);
             this.gbAgent1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).EndInit();
             this.freelancePanel.ResumeLayout(false);
             this.gbJob3.ResumeLayout(false);
             this.gbJob3.PerformLayout();
@@ -2636,6 +2728,11 @@
             this.worldPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).EndInit();
             this.teamRosterPanel.ResumeLayout(false);
             this.teamRosterPanel.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -2646,29 +2743,23 @@
             this.groupBox1.PerformLayout();
             this.scoutClientPanel.ResumeLayout(false);
             this.scoutClientPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.agencyClientsPanel.ResumeLayout(false);
             this.agencyClientsPanel.PerformLayout();
+            this.clientTeamNegotiationPanel.ResumeLayout(false);
+            this.clientTeamNegotiationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wssaStarRating)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.starRatingPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencyImageLarge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managerImageLarge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFootball)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBasketball)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBaseball)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHockey)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSoccer)).EndInit();
+            this.gbNegotiationFocus.ResumeLayout(false);
+            this.gbNegotiationFocus.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2885,6 +2976,13 @@
         public System.Windows.Forms.Label lblClientPopularity;
         public System.Windows.Forms.Label lblClientTeamHappiness;
         public System.Windows.Forms.Button btnCallForClient;
+        public System.Windows.Forms.Label lblNumberOfTeamsInterested;
+        public System.Windows.Forms.Panel clientTeamNegotiationPanel;
+        public System.Windows.Forms.GroupBox gbNegotiationFocus;
+        public System.Windows.Forms.RadioButton rbFocusLifestyle;
+        public System.Windows.Forms.RadioButton rbFocusWinning;
+        public System.Windows.Forms.RadioButton rbFocusMoney;
+        public System.Windows.Forms.Button btnNegotiateForClient;
     }
 }
 
