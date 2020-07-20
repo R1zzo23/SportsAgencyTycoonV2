@@ -953,23 +953,26 @@ namespace SportsAgencyTycoonV2
         public void RetireLeaguePlayers(League league)
         {
             int count = 0;
-            foreach (Team t in league.TeamList)
+            if (league.Initialized)
             {
-                for (int i = t.Roster.Count - 1; i > 0; i--)
+                foreach (Team t in league.TeamList)
                 {
-                    if (t.Roster[i].Retiring)
+                    for (int i = t.Roster.Count - 1; i > 0; i--)
                     {
-                        ProgressionRegression.RetirePlayer(t.Roster[i]);
-                        count++;
+                        if (t.Roster[i].Retiring)
+                        {
+                            ProgressionRegression.RetirePlayer(t.Roster[i]);
+                            count++;
+                        }
                     }
                 }
-            }
-            for (int j = league.FreeAgents.Count - 1; j > 0; j--)
-            {
-                if (league.FreeAgents[j].Retiring)
+                for (int j = league.FreeAgents.Count - 1; j > 0; j--)
                 {
-                    ProgressionRegression.RetirePlayer(league.FreeAgents[j]);
-                    count++;
+                    if (league.FreeAgents[j].Retiring)
+                    {
+                        ProgressionRegression.RetirePlayer(league.FreeAgents[j]);
+                        count++;
+                    }
                 }
             }
             Console.WriteLine(league.Name + " retirements this year: " + count);

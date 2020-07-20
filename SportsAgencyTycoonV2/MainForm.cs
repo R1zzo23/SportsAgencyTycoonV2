@@ -401,7 +401,14 @@ namespace SportsAgencyTycoonV2
             if (rbFocusMoney.Checked == false && rbFocusWinning.Checked == false && rbFocusLifestyle.Checked == false)
                 MessageBox.Show("Select a focus for these negotiations.");
             else
-                agencyClientsPanelFunctions.getClientSignedFunctions.BeginNegotiations();
+            {
+                string focus = "";
+                if (rbFocusMoney.Checked) focus = "money";
+                else if (rbFocusWinning.Checked) focus = "winning";
+                else if (rbFocusLifestyle.Checked) focus = "lifestyle";
+                agencyClientsPanelFunctions.getClientSignedFunctions.BeginNegotiations(focus);
+            }
+                
         }
     }
 }

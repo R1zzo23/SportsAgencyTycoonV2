@@ -94,6 +94,7 @@
     <Compile Include="HockeyDraft.cs" />
     <Compile Include="HockeyPlayer.cs" />
     <Compile Include="Interaction.cs" />
+    <Compile Include="InterestLevel.cs" />
     <Compile Include="JobType.cs" />
     <Compile Include="LastName.cs" />
     <Compile Include="League.cs" />

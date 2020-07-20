@@ -14,6 +14,7 @@ namespace SportsAgencyTycoonV2
         Player client;
         League league;
         List<Team> interestedTeams = new List<Team>();
+        List<Contract> contractOffers = new List<Contract>();
 
         public GetClientSignedFunctions(MainForm mf, World w)
         {
@@ -31,9 +32,15 @@ namespace SportsAgencyTycoonV2
         }
         private void GatherInterestedTeams(Player client, League l)
         {
+            interestedTeams.Clear();
+            contractOffers.Clear();
+
+            Console.WriteLine("Client's Skill: " + client.CurrentSkill + "/" + client.PotentialSkill);
+
             foreach (Team t in l.TeamList)
             {
                 bool interested = false;
+                InterestLevel interestLevel = InterestLevel.None;
 
                 List<Player> playersAtPosition = new List<Player>();
                 foreach (Player p in t.Roster)
@@ -44,13 +51,35 @@ namespace SportsAgencyTycoonV2
 
                 // check if player is better than anyone on the roster at same position
                 if (client.CurrentSkill > playersAtPosition[0].CurrentSkill)
+                {
                     interested = true;
-
+                    if (client.Age <= 30)
+                        interestLevel = InterestLevel.VeryHigh;
+                    else if (playersAtPosition[0].PotentialSkill > client.PotentialSkill && playersAtPosition[0].Age <= client.Age)
+                        interestLevel = InterestLevel.Medium;
+                    else interestLevel = InterestLevel.High;
+                    Console.WriteLine("Starter's Current Skill: " + playersAtPosition[0].CurrentSkill);
+                }                   
                 // check if player has more potential than last guy on roster at same position
-                if (client.PotentialSkill > playersAtPosition[playersAtPosition.Count - 1].PotentialSkill)
+                else if (client.PotentialSkill > playersAtPosition[playersAtPosition.Count - 1].PotentialSkill)
+                {
                     interested = true;
+                    if (client.Age <= 30)
+                        interestLevel = InterestLevel.Low;
+                    else interestLevel = InterestLevel.VeryLow;
+                    Console.WriteLine("Worst Players's Potential Skill: " + playersAtPosition[playersAtPosition.Count - 1].PotentialSkill);
+                }
+                // young player with comparable upside to end of bench player
+                else if (client.Age <= playersAtPosition[playersAtPosition.Count - 1].Age - 3 && client.PotentialSkill >= playersAtPosition[playersAtPosition.Count - 1].PotentialSkill - 10)
+                {
+                    interested = true;
+                    interestLevel = InterestLevel.Medium;
+                    Console.WriteLine("Worst Players's Potential Skill: " + playersAtPosition[playersAtPosition.Count - 1].PotentialSkill);
+                }
 
                 if (interested) interestedTeams.Add(t);
+                if (interestLevel != InterestLevel.None)
+                    GenerateContract(interestLevel);
             }
 
             Console.WriteLine("Teams Interested:");
@@ -61,10 +90,137 @@ namespace SportsAgencyTycoonV2
             if (interestedTeams.Count > 0)
                 mainForm.gbNegotiationFocus.Visible = true;
             else mainForm.gbNegotiationFocus.Visible = false;
-        }
-        public void BeginNegotiations()
-        {
 
+            foreach (Contract c in contractOffers)
+                Console.WriteLine(c.Years + "yr @ " + c.YearlySalary.ToString("C0"));
+        }
+        public void BeginNegotiations(string focus)
+        {
+            List<int> yearlySalary = new List<int>();
+            List<int> totalSalary = new List<int>();
+            List<Team> finalTeams = new List<Team>();
+            List<Contract> finalOffers = new List<Contract>();
+            if (focus == "money")
+            {
+                foreach (Contract c in contractOffers)
+                {
+                    yearlySalary.Add(c.YearlySalary);
+                    totalSalary.Add(c.YearlySalary * c.Years);
+                }
+                for (int i = 0; i < 3; i++)
+                {
+                    if (finalOffers.Count < 3)
+                    {
+                        if (contractOffers.Count > 0)
+                        {
+                            for (int j = contractOffers.Count - 1; j >= 0; j--)
+                            {
+                                int largestSalary = contractOffers.Max(o => o.YearlySalary);
+
+                                if (contractOffers[j].YearlySalary == largestSalary)
+                                {
+                                    finalOffers.Add(contractOffers[j]);
+                                    finalTeams.Add(interestedTeams[j]);
+                                    contractOffers.RemoveAt(j);
+                                    interestedTeams.RemoveAt(j);
+                                }
+                            }
+                        }
+                    } 
+                }
+                for (int i = 0; i < finalTeams.Count; i++)
+                    Console.WriteLine(finalTeams[i].Abbreviation + " offers " + finalOffers[i].YearlySalary.ToString("C0") + " per year for " + finalOffers[i].Years + " years.");
+            }
+        }
+        public void GenerateContract(InterestLevel interestLevel)
+        {
+            int randomNumber = world.rnd.Next(1, 101);
+            int years = 0;
+            int maxYears = 0;
+            int yearlySalary = 0;
+            int maxSalaryWillingToOffer = 0;
+            bool willingToNegotiate = false;
+
+            if (interestLevel == InterestLevel.None)
+            {
+                years = 0;
+                yearlySalary = 0;
+                willingToNegotiate = false;
+            }
+            else if (interestLevel == InterestLevel.VeryLow)
+            {
+                if (randomNumber > 50)
+                {
+                    years = 1;
+                    yearlySalary = client.League.MinSalary;
+                    maxSalaryWillingToOffer = client.League.MinSalary;
+                }
+                else
+                {
+                    years = 1;
+                    yearlySalary = client.League.MinSalary;
+                    maxSalaryWillingToOffer = client.League.MinSalary;
+                }
+                willingToNegotiate = false;
+            }
+            else if (interestLevel == InterestLevel.Low)
+            {
+                years = 1;
+                yearlySalary = client.League.MinSalary;
+                maxSalaryWillingToOffer = world.rnd.Next(client.League.MinSalary, client.League.MinSalary + 750000);
+                maxYears = world.rnd.Next(1, 3);
+                /*if (relationship.Relationship >= 75)
+                    willingToNegotiate = true;
+                else
+                    willingToNegotiate = false;*/
+            }
+            else if (interestLevel == InterestLevel.Medium)
+            {
+                years = world.rnd.Next(1, 3);
+                maxYears = world.rnd.Next(1, 3);
+                if (maxYears < years) maxYears = years;
+                yearlySalary = client.DetermineYearlySalary(world.rnd);
+                double percent = world.rnd.Next(1, 21);
+                double maxPercent = world.rnd.Next(5, 101);
+                yearlySalary = Convert.ToInt32((double)yearlySalary * (1 - (percent / 100)));
+                maxSalaryWillingToOffer = Convert.ToInt32((double)yearlySalary * (1 + ((maxPercent + 25) / 100)));
+
+                if (yearlySalary > maxSalaryWillingToOffer)
+                {
+                    int temp = yearlySalary;
+                    yearlySalary = maxSalaryWillingToOffer;
+                    maxSalaryWillingToOffer = temp;
+                }
+
+                willingToNegotiate = true;
+            }
+            else if (interestLevel == InterestLevel.High)
+            {
+                years = world.rnd.Next(2, 4);
+                maxYears = world.rnd.Next(2, 5);
+                if (maxYears < years) maxYears = years + 1;
+                yearlySalary = client.DetermineYearlySalary(world.rnd);
+                maxSalaryWillingToOffer = Convert.ToInt32((double)yearlySalary * (1 + (world.rnd.Next(20, 101) / 100)));
+                willingToNegotiate = true;
+            }
+            else // interestLevel == "VERY HIGH"
+            {
+                years = world.rnd.Next(3, 5);
+                maxYears = world.rnd.Next(3, 5);
+                if (maxYears < years) maxYears = years;
+                yearlySalary = client.DetermineYearlySalary(world.rnd);
+                double percent = world.rnd.Next(10, 26);
+                yearlySalary = Convert.ToInt32((double)yearlySalary * (1 + (percent / 100)));
+                if (yearlySalary > client.League.MaxSalary) yearlySalary = client.League.MaxSalary;
+                maxSalaryWillingToOffer = Convert.ToInt32((double)yearlySalary * (1 + (world.rnd.Next(50, 151) / 100)));
+                if (yearlySalary > maxSalaryWillingToOffer) maxSalaryWillingToOffer = yearlySalary;
+                willingToNegotiate = true;
+            }
+
+            if (yearlySalary > client.League.MaxSalary) yearlySalary = client.League.MaxSalary;
+            if (maxSalaryWillingToOffer > client.League.MaxSalary) maxSalaryWillingToOffer = client.League.MaxSalary;
+
+            contractOffers.Add(new Contract(years, yearlySalary, Convert.ToInt32((double)yearlySalary / (double)league.MonthsInSeason), league.SeasonStart, league.SeasonEnd, 0, 0, PaySchedule.Monthly));
         }
     }
 }
