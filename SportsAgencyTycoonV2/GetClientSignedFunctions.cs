@@ -15,6 +15,10 @@ namespace SportsAgencyTycoonV2
         League league;
         List<Team> interestedTeams = new List<Team>();
         List<Contract> contractOffers = new List<Contract>();
+        List<int> yearlySalary = new List<int>();
+        List<int> totalSalary = new List<int>();
+        List<Team> finalTeams = new List<Team>();
+        List<Contract> finalOffers = new List<Contract>();
 
         public GetClientSignedFunctions(MainForm mf, World w)
         {
@@ -28,6 +32,12 @@ namespace SportsAgencyTycoonV2
             client = c;
             league = l;
             mainForm.clientTeamNegotiationPanel.Visible = true;
+            interestedTeams.Clear();
+            contractOffers.Clear();
+            yearlySalary.Clear();
+            totalSalary.Clear();
+            finalTeams.Clear();
+            finalOffers.Clear();
             GatherInterestedTeams(client, league);
         }
         private void GatherInterestedTeams(Player client, League l)
@@ -96,42 +106,97 @@ namespace SportsAgencyTycoonV2
         }
         public void BeginNegotiations(string focus)
         {
-            List<int> yearlySalary = new List<int>();
-            List<int> totalSalary = new List<int>();
-            List<Team> finalTeams = new List<Team>();
-            List<Contract> finalOffers = new List<Contract>();
+            GatherFinalOffers();
+
+            List<Contract> trimmedList = new List<Contract>();
+            List<Team> trimmedTeams = new List<Team>();
+
             if (focus == "money")
             {
-                foreach (Contract c in contractOffers)
-                {
-                    yearlySalary.Add(c.YearlySalary);
-                    totalSalary.Add(c.YearlySalary * c.Years);
-                }
+                List<int> contractIndexes = new List<int>();
+                List<int> teamIndexes = new List<int>();
+
                 for (int i = 0; i < 3; i++)
                 {
-                    if (finalOffers.Count < 3)
+                    if (finalOffers.Count > 0)
                     {
-                        if (contractOffers.Count > 0)
+                        int mostMoney = finalOffers.Max(o => o.YearlySalary);
+                        for (int j = 0; j < finalOffers.Count; j++)
                         {
-                            for (int j = contractOffers.Count - 1; j >= 0; j--)
+                            if (finalOffers[j].YearlySalary == mostMoney)
                             {
-                                int largestSalary = contractOffers.Max(o => o.YearlySalary);
-
-                                if (contractOffers[j].YearlySalary == largestSalary)
+                                contractIndexes.Add(j);
+                                //teamIndexes.Add(j);
+                            }
+                        }
+                        if (trimmedList.Count < 3)
+                        {
+                            int spotsLeft = 3 - trimmedList.Count;
+                            if (contractIndexes.Count <= spotsLeft)
+                            {
+                                //foreach (int index in contractIndexes)
+                                for (int x = contractIndexes.Count - 1; x >= 0; x--)
                                 {
-                                    finalOffers.Add(contractOffers[j]);
-                                    finalTeams.Add(interestedTeams[j]);
-                                    contractOffers.RemoveAt(j);
-                                    interestedTeams.RemoveAt(j);
+                                    trimmedList.Add(finalOffers[contractIndexes[x]]);
+                                    trimmedTeams.Add(finalTeams[contractIndexes[x]]);
+                                    finalOffers.RemoveAt(contractIndexes[x]);
+                                    finalTeams.RemoveAt(contractIndexes[x]);
+                                }
+                                contractIndexes.Clear();
+                            }
+                            else
+                            {
+                                while (trimmedList.Count < 3)
+                                {
+                                    int randomContract = world.rnd.Next(0, contractIndexes.Count);
+                                    trimmedList.Add(finalOffers[randomContract]);
+                                    trimmedTeams.Add(finalTeams[randomContract]);
+                                    contractIndexes.RemoveAt(randomContract);
                                 }
                             }
                         }
-                    } 
+                    }
                 }
-                for (int i = 0; i < finalTeams.Count; i++)
-                    Console.WriteLine(finalTeams[i].Abbreviation + " offers " + finalOffers[i].YearlySalary.ToString("C0") + " per year for " + finalOffers[i].Years + " years.");
             }
+
+            Console.WriteLine("Trimemed List: Final 3");
+            for (int i = 0; i < trimmedList.Count; i++)
+                Console.WriteLine(trimmedTeams[i].Abbreviation + " offers " + trimmedList[i].YearlySalary.ToString("C0") + " per year for " + trimmedList[i].Years + " years.");
         }
+
+        public void GatherFinalOffers()
+        {
+            foreach (Contract c in contractOffers)
+            {
+                yearlySalary.Add(c.YearlySalary);
+                totalSalary.Add(c.YearlySalary * c.Years);
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                if (finalOffers.Count < 3)
+                {
+                    if (contractOffers.Count > 0)
+                    {
+                        for (int j = contractOffers.Count - 1; j >= 0; j--)
+                        {
+                            int largestSalary = contractOffers.Max(o => o.YearlySalary);
+
+                            if (contractOffers[j].YearlySalary == largestSalary)
+                            {
+                                finalOffers.Add(contractOffers[j]);
+                                finalTeams.Add(interestedTeams[j]);
+
+                                contractOffers.RemoveAt(j);
+                                interestedTeams.RemoveAt(j);
+                            }
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < finalTeams.Count; i++)
+                Console.WriteLine(finalTeams[i].Abbreviation + " offers " + finalOffers[i].YearlySalary.ToString("C0") + " per year for " + finalOffers[i].Years + " years.");
+        }
+
         public void GenerateContract(InterestLevel interestLevel)
         {
             int randomNumber = world.rnd.Next(1, 101);
