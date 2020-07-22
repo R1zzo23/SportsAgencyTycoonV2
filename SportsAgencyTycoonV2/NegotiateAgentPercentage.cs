@@ -34,13 +34,11 @@ namespace SportsAgencyTycoonV2
         }
         private double DetermineCurrentPercent(Player p, int max, int min)
         {
-            double percent = 0;
-
             if (p.Contract.AgentPercentage == 0)
                 playersCurrentPercent = Convert.ToDouble((max + min) / 2);
             else playersCurrentPercent = p.Contract.AgentPercentage;
 
-            return percent;
+            return playersCurrentPercent / 100;
         }
         private int DetermineLengthOfNegotiation(Player p, Agent a)
         {
