@@ -17,7 +17,10 @@ namespace SportsAgencyTycoonV2
             Random rnd = r;
             int max = DetermineMaxPercentage(p) * 100;
             int min = 200;
-            double playersCurrentPercent = p.Contract.AgentPercentage;
+
+            playersCurrentPercent = DetermineCurrentPercent(p, max, min);
+            p.Contract.AgentPercentage = playersCurrentPercent;
+            
             int daysToNegotiate = DetermineLengthOfNegotiation(p, a);
             a.WorkTime = daysToNegotiate;
             a.Status = AgentStatus.Negotiating;
@@ -28,6 +31,16 @@ namespace SportsAgencyTycoonV2
             if (p.Sport == Sports.Basketball || p.Sport == Sports.Football) return 3;
             else if (p.Sport == Sports.Baseball || p.Sport == Sports.Hockey || p.Sport == Sports.Soccer)  return 5;
             else return 10;
+        }
+        private double DetermineCurrentPercent(Player p, int max, int min)
+        {
+            double percent = 0;
+
+            if (p.Contract.AgentPercentage == 0)
+                playersCurrentPercent = Convert.ToDouble((max + min) / 2);
+            else playersCurrentPercent = p.Contract.AgentPercentage;
+
+            return percent;
         }
         private int DetermineLengthOfNegotiation(Player p, Agent a)
         {

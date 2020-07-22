@@ -19,6 +19,7 @@ namespace SportsAgencyTycoonV2
         List<int> totalSalary = new List<int>();
         List<Team> finalTeams = new List<Team>();
         List<Contract> finalOffers = new List<Contract>();
+        NegotiateAgentPercentage negotiateAgentPercentage = new NegotiateAgentPercentage();
 
         public GetClientSignedFunctions(MainForm mf, World w)
         {
@@ -162,6 +163,35 @@ namespace SportsAgencyTycoonV2
             Console.WriteLine("Trimemed List: Final 3");
             for (int i = 0; i < trimmedList.Count; i++)
                 Console.WriteLine(trimmedTeams[i].Abbreviation + " offers " + trimmedList[i].YearlySalary.ToString("C0") + " per year for " + trimmedList[i].Years + " years.");
+
+            //selecting contract
+            if (focus == "money")
+            {
+                int finalDecision;
+                List<int> indexNumbers = new List<int>();
+                if (client.Age > 30)
+                {
+                    for (int i = 0; i < trimmedList.Count; i++)
+                    {
+                        if (trimmedList[i].Years > 1)
+                        {
+                            indexNumbers.Add(i);
+                        }
+                    }
+                }
+
+                if (indexNumbers.Count > 0)
+                {
+                    finalDecision = world.rnd.Next(0, indexNumbers.Count);
+                }
+                else finalDecision = world.rnd.Next(0, trimmedList.Count);
+
+                Console.WriteLine(client.FullName + " will sign with " + trimmedTeams[finalDecision].Abbreviation + " for " + trimmedList[finalDecision].Years + "-years @ " + trimmedList[finalDecision].YearlySalary.ToString("C0"));
+
+                SignPlayerToContractWithTeam(trimmedTeams[finalDecision], client, trimmedList[finalDecision]);
+            }
+
+           
         }
 
         public void GatherFinalOffers()
@@ -286,6 +316,20 @@ namespace SportsAgencyTycoonV2
             if (maxSalaryWillingToOffer > client.League.MaxSalary) maxSalaryWillingToOffer = client.League.MaxSalary;
 
             contractOffers.Add(new Contract(years, yearlySalary, Convert.ToInt32((double)yearlySalary / (double)league.MonthsInSeason), league.SeasonStart, league.SeasonEnd, 0, 0, PaySchedule.Monthly));
+        }
+
+        public void SignPlayerToContractWithTeam(Team t, Player client, Contract c)
+        {
+            //give client new contract
+            client.Contract = c;
+
+            //negotiate agent percentage of contract
+            negotiateAgentPercentage.NegotiatePercentage(client, world.MyAgency.Manager, world.rnd);
+
+            // add player to team roster
+            t.Roster.Add(client);
+            client.Team = t;
+            client.FreeAgent = false;
         }
     }
 }

@@ -229,6 +229,11 @@
             this.managerPanel = new System.Windows.Forms.Panel();
             this.agencyClientsPanel = new System.Windows.Forms.Panel();
             this.clientTeamNegotiationPanel = new System.Windows.Forms.Panel();
+            this.gbNegotiationFocus = new System.Windows.Forms.GroupBox();
+            this.btnNegotiateForClient = new System.Windows.Forms.Button();
+            this.rbFocusLifestyle = new System.Windows.Forms.RadioButton();
+            this.rbFocusWinning = new System.Windows.Forms.RadioButton();
+            this.rbFocusMoney = new System.Windows.Forms.RadioButton();
             this.lblNumberOfTeamsInterested = new System.Windows.Forms.Label();
             this.btnCallForClient = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -243,11 +248,6 @@
             this.btnScrollRightThroughClients = new System.Windows.Forms.Button();
             this.btnScrollLeftThroughClients = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
-            this.gbNegotiationFocus = new System.Windows.Forms.GroupBox();
-            this.rbFocusMoney = new System.Windows.Forms.RadioButton();
-            this.rbFocusWinning = new System.Windows.Forms.RadioButton();
-            this.rbFocusLifestyle = new System.Windows.Forms.RadioButton();
-            this.btnNegotiateForClient = new System.Windows.Forms.Button();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -284,8 +284,8 @@
             this.groupBox4.SuspendLayout();
             this.agencyClientsPanel.SuspendLayout();
             this.clientTeamNegotiationPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).BeginInit();
             this.gbNegotiationFocus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).BeginInit();
             this.SuspendLayout();
             // 
             // btnManagerAction
@@ -2477,6 +2477,65 @@
             this.clientTeamNegotiationPanel.Size = new System.Drawing.Size(415, 217);
             this.clientTeamNegotiationPanel.TabIndex = 13;
             // 
+            // gbNegotiationFocus
+            // 
+            this.gbNegotiationFocus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.gbNegotiationFocus.Controls.Add(this.btnNegotiateForClient);
+            this.gbNegotiationFocus.Controls.Add(this.rbFocusLifestyle);
+            this.gbNegotiationFocus.Controls.Add(this.rbFocusWinning);
+            this.gbNegotiationFocus.Controls.Add(this.rbFocusMoney);
+            this.gbNegotiationFocus.Location = new System.Drawing.Point(14, 56);
+            this.gbNegotiationFocus.Name = "gbNegotiationFocus";
+            this.gbNegotiationFocus.Size = new System.Drawing.Size(265, 137);
+            this.gbNegotiationFocus.TabIndex = 1;
+            this.gbNegotiationFocus.TabStop = false;
+            this.gbNegotiationFocus.Text = "Negotiation Focus";
+            // 
+            // btnNegotiateForClient
+            // 
+            this.btnNegotiateForClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegotiateForClient.ForeColor = System.Drawing.Color.White;
+            this.btnNegotiateForClient.Location = new System.Drawing.Point(131, 60);
+            this.btnNegotiateForClient.Name = "btnNegotiateForClient";
+            this.btnNegotiateForClient.Size = new System.Drawing.Size(107, 37);
+            this.btnNegotiateForClient.TabIndex = 3;
+            this.btnNegotiateForClient.Text = "Negotiate";
+            this.btnNegotiateForClient.UseVisualStyleBackColor = true;
+            this.btnNegotiateForClient.Click += new System.EventHandler(this.btnNegotiateForClient_Click);
+            // 
+            // rbFocusLifestyle
+            // 
+            this.rbFocusLifestyle.AutoSize = true;
+            this.rbFocusLifestyle.Location = new System.Drawing.Point(7, 104);
+            this.rbFocusLifestyle.Name = "rbFocusLifestyle";
+            this.rbFocusLifestyle.Size = new System.Drawing.Size(94, 25);
+            this.rbFocusLifestyle.TabIndex = 2;
+            this.rbFocusLifestyle.TabStop = true;
+            this.rbFocusLifestyle.Text = "Lifestyle";
+            this.rbFocusLifestyle.UseVisualStyleBackColor = true;
+            // 
+            // rbFocusWinning
+            // 
+            this.rbFocusWinning.AutoSize = true;
+            this.rbFocusWinning.Location = new System.Drawing.Point(7, 66);
+            this.rbFocusWinning.Name = "rbFocusWinning";
+            this.rbFocusWinning.Size = new System.Drawing.Size(95, 25);
+            this.rbFocusWinning.TabIndex = 1;
+            this.rbFocusWinning.TabStop = true;
+            this.rbFocusWinning.Text = "Winning";
+            this.rbFocusWinning.UseVisualStyleBackColor = true;
+            // 
+            // rbFocusMoney
+            // 
+            this.rbFocusMoney.AutoSize = true;
+            this.rbFocusMoney.Location = new System.Drawing.Point(7, 28);
+            this.rbFocusMoney.Name = "rbFocusMoney";
+            this.rbFocusMoney.Size = new System.Drawing.Size(88, 25);
+            this.rbFocusMoney.TabIndex = 0;
+            this.rbFocusMoney.TabStop = true;
+            this.rbFocusMoney.Text = "Money";
+            this.rbFocusMoney.UseVisualStyleBackColor = true;
+            // 
             // lblNumberOfTeamsInterested
             // 
             this.lblNumberOfTeamsInterested.AutoSize = true;
@@ -2618,73 +2677,14 @@
             this.btnAddClient.UseVisualStyleBackColor = true;
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
-            // gbNegotiationFocus
-            // 
-            this.gbNegotiationFocus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.gbNegotiationFocus.Controls.Add(this.btnNegotiateForClient);
-            this.gbNegotiationFocus.Controls.Add(this.rbFocusLifestyle);
-            this.gbNegotiationFocus.Controls.Add(this.rbFocusWinning);
-            this.gbNegotiationFocus.Controls.Add(this.rbFocusMoney);
-            this.gbNegotiationFocus.Location = new System.Drawing.Point(14, 56);
-            this.gbNegotiationFocus.Name = "gbNegotiationFocus";
-            this.gbNegotiationFocus.Size = new System.Drawing.Size(265, 137);
-            this.gbNegotiationFocus.TabIndex = 1;
-            this.gbNegotiationFocus.TabStop = false;
-            this.gbNegotiationFocus.Text = "Negotiation Focus";
-            // 
-            // rbFocusMoney
-            // 
-            this.rbFocusMoney.AutoSize = true;
-            this.rbFocusMoney.Location = new System.Drawing.Point(7, 28);
-            this.rbFocusMoney.Name = "rbFocusMoney";
-            this.rbFocusMoney.Size = new System.Drawing.Size(88, 25);
-            this.rbFocusMoney.TabIndex = 0;
-            this.rbFocusMoney.TabStop = true;
-            this.rbFocusMoney.Text = "Money";
-            this.rbFocusMoney.UseVisualStyleBackColor = true;
-            // 
-            // rbFocusWinning
-            // 
-            this.rbFocusWinning.AutoSize = true;
-            this.rbFocusWinning.Location = new System.Drawing.Point(7, 66);
-            this.rbFocusWinning.Name = "rbFocusWinning";
-            this.rbFocusWinning.Size = new System.Drawing.Size(95, 25);
-            this.rbFocusWinning.TabIndex = 1;
-            this.rbFocusWinning.TabStop = true;
-            this.rbFocusWinning.Text = "Winning";
-            this.rbFocusWinning.UseVisualStyleBackColor = true;
-            // 
-            // rbFocusLifestyle
-            // 
-            this.rbFocusLifestyle.AutoSize = true;
-            this.rbFocusLifestyle.Location = new System.Drawing.Point(7, 104);
-            this.rbFocusLifestyle.Name = "rbFocusLifestyle";
-            this.rbFocusLifestyle.Size = new System.Drawing.Size(94, 25);
-            this.rbFocusLifestyle.TabIndex = 2;
-            this.rbFocusLifestyle.TabStop = true;
-            this.rbFocusLifestyle.Text = "Lifestyle";
-            this.rbFocusLifestyle.UseVisualStyleBackColor = true;
-            // 
-            // btnNegotiateForClient
-            // 
-            this.btnNegotiateForClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNegotiateForClient.ForeColor = System.Drawing.Color.White;
-            this.btnNegotiateForClient.Location = new System.Drawing.Point(131, 60);
-            this.btnNegotiateForClient.Name = "btnNegotiateForClient";
-            this.btnNegotiateForClient.Size = new System.Drawing.Size(107, 37);
-            this.btnNegotiateForClient.TabIndex = 3;
-            this.btnNegotiateForClient.Text = "Negotiate";
-            this.btnNegotiateForClient.UseVisualStyleBackColor = true;
-            this.btnNegotiateForClient.Click += new System.EventHandler(this.btnNegotiateForClient_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
-            this.Controls.Add(this.agencyClientsPanel);
             this.Controls.Add(this.scoutClientPanel);
+            this.Controls.Add(this.agencyClientsPanel);
             this.Controls.Add(this.managerPanel);
             this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.freelancePanel);
@@ -2757,9 +2757,9 @@
             this.agencyClientsPanel.PerformLayout();
             this.clientTeamNegotiationPanel.ResumeLayout(false);
             this.clientTeamNegotiationPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).EndInit();
             this.gbNegotiationFocus.ResumeLayout(false);
             this.gbNegotiationFocus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).EndInit();
             this.ResumeLayout(false);
 
         }
