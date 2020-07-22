@@ -708,6 +708,7 @@ namespace SportsAgencyTycoonV2
                         p.Team = t;
                         p.League = l;
                         p.Contract = p.CreatePlayerContract(rnd);
+                        p.Contract.Team = t;
                         p.FreeAgent = false;
                     }
             }

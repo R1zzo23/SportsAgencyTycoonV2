@@ -13,11 +13,11 @@ namespace SportsAgencyTycoonV2
         Agency agency;
         Player client;
         League league;
-        List<Team> interestedTeams = new List<Team>();
+        //List<Team> interestedTeams = new List<Team>();
         List<Contract> contractOffers = new List<Contract>();
         List<int> yearlySalary = new List<int>();
         List<int> totalSalary = new List<int>();
-        List<Team> finalTeams = new List<Team>();
+        //List<Team> finalTeams = new List<Team>();
         List<Contract> finalOffers = new List<Contract>();
         NegotiateAgentPercentage negotiateAgentPercentage = new NegotiateAgentPercentage();
 
@@ -33,17 +33,17 @@ namespace SportsAgencyTycoonV2
             client = c;
             league = l;
             mainForm.clientTeamNegotiationPanel.Visible = true;
-            interestedTeams.Clear();
+            //interestedTeams.Clear();
             contractOffers.Clear();
             yearlySalary.Clear();
             totalSalary.Clear();
-            finalTeams.Clear();
+            //finalTeams.Clear();
             finalOffers.Clear();
             GatherInterestedTeams(client, league);
         }
         private void GatherInterestedTeams(Player client, League l)
         {
-            interestedTeams.Clear();
+            //interestedTeams.Clear();
             contractOffers.Clear();
 
             Console.WriteLine("Client's Skill: " + client.CurrentSkill + "/" + client.PotentialSkill);
@@ -88,34 +88,35 @@ namespace SportsAgencyTycoonV2
                     Console.WriteLine("Worst Players's Potential Skill: " + playersAtPosition[playersAtPosition.Count - 1].PotentialSkill);
                 }
 
-                if (interested) interestedTeams.Add(t);
+                //if (interested) interestedTeams.Add(t);
                 if (interestLevel != InterestLevel.None)
-                    GenerateContract(interestLevel);
+                    GenerateContract(interestLevel, t);
             }
 
             Console.WriteLine("Teams Interested:");
-            foreach (Team t in interestedTeams)
-                Console.WriteLine("- " + t.City + " " + t.Mascot);
+            //foreach (Team t in interestedTeams)
+            foreach (Contract c in contractOffers)
+                Console.WriteLine("- " + c.Team.City + " " + c.Team.Mascot);
 
-            mainForm.lblNumberOfTeamsInterested.Text = "# of Teams Interested: " + interestedTeams.Count.ToString();
-            if (interestedTeams.Count > 0)
+            mainForm.lblNumberOfTeamsInterested.Text = "# of Teams Interested: " + contractOffers.Count.ToString();
+            if (contractOffers.Count > 0)
                 mainForm.gbNegotiationFocus.Visible = true;
             else mainForm.gbNegotiationFocus.Visible = false;
 
             foreach (Contract c in contractOffers)
-                Console.WriteLine(c.Years + "yr @ " + c.YearlySalary.ToString("C0"));
+                Console.WriteLine(c.Team.Abbreviation + " offers " + c.Years + "-yr @ " + c.YearlySalary.ToString("C0"));
         }
         public void BeginNegotiations(string focus)
         {
             GatherFinalOffers();
 
             List<Contract> trimmedList = new List<Contract>();
-            List<Team> trimmedTeams = new List<Team>();
+            //List<Team> trimmedTeams = new List<Team>();
 
             if (focus == "money")
             {
                 List<int> contractIndexes = new List<int>();
-                List<int> teamIndexes = new List<int>();
+                //List<int> teamIndexes = new List<int>();
 
                 for (int i = 0; i < 3; i++)
                 {
@@ -139,9 +140,9 @@ namespace SportsAgencyTycoonV2
                                 for (int x = contractIndexes.Count - 1; x >= 0; x--)
                                 {
                                     trimmedList.Add(finalOffers[contractIndexes[x]]);
-                                    trimmedTeams.Add(finalTeams[contractIndexes[x]]);
+                                    //trimmedTeams.Add(finalTeams[contractIndexes[x]]);
                                     finalOffers.RemoveAt(contractIndexes[x]);
-                                    finalTeams.RemoveAt(contractIndexes[x]);
+                                    //finalTeams.RemoveAt(contractIndexes[x]);
                                 }
                                 contractIndexes.Clear();
                             }
@@ -151,7 +152,7 @@ namespace SportsAgencyTycoonV2
                                 {
                                     int randomContract = world.rnd.Next(0, contractIndexes.Count);
                                     trimmedList.Add(finalOffers[randomContract]);
-                                    trimmedTeams.Add(finalTeams[randomContract]);
+                                    //trimmedTeams.Add(finalTeams[randomContract]);
                                     contractIndexes.RemoveAt(randomContract);
                                 }
                             }
@@ -162,7 +163,7 @@ namespace SportsAgencyTycoonV2
 
             Console.WriteLine("Trimemed List: Final 3");
             for (int i = 0; i < trimmedList.Count; i++)
-                Console.WriteLine(trimmedTeams[i].Abbreviation + " offers " + trimmedList[i].YearlySalary.ToString("C0") + " per year for " + trimmedList[i].Years + " years.");
+                Console.WriteLine(trimmedList[i].Team.Abbreviation + " offers " + trimmedList[i].YearlySalary.ToString("C0") + " per year for " + trimmedList[i].Years + " years.");
 
             //selecting contract
             if (focus == "money")
@@ -186,9 +187,9 @@ namespace SportsAgencyTycoonV2
                 }
                 else finalDecision = world.rnd.Next(0, trimmedList.Count);
 
-                Console.WriteLine(client.FullName + " will sign with " + trimmedTeams[finalDecision].Abbreviation + " for " + trimmedList[finalDecision].Years + "-years @ " + trimmedList[finalDecision].YearlySalary.ToString("C0"));
+                Console.WriteLine(client.FullName + " will sign with " + trimmedList[finalDecision].Team.Abbreviation + " for " + trimmedList[finalDecision].Years + "-years @ " + trimmedList[finalDecision].YearlySalary.ToString("C0"));
 
-                SignPlayerToContractWithTeam(trimmedTeams[finalDecision], client, trimmedList[finalDecision]);
+                SignPlayerToContractWithTeam(trimmedList[finalDecision].Team, client, trimmedList[finalDecision]);
             }
 
            
@@ -196,11 +197,11 @@ namespace SportsAgencyTycoonV2
 
         public void GatherFinalOffers()
         {
-            foreach (Contract c in contractOffers)
+            /*foreach (Contract c in contractOffers)
             {
                 yearlySalary.Add(c.YearlySalary);
                 totalSalary.Add(c.YearlySalary * c.Years);
-            }
+            }*/
             for (int i = 0; i < 3; i++)
             {
                 if (finalOffers.Count < 3)
@@ -214,20 +215,20 @@ namespace SportsAgencyTycoonV2
                             if (contractOffers[j].YearlySalary == largestSalary)
                             {
                                 finalOffers.Add(contractOffers[j]);
-                                finalTeams.Add(interestedTeams[j]);
+                                //finalTeams.Add(interestedTeams[j]);
 
                                 contractOffers.RemoveAt(j);
-                                interestedTeams.RemoveAt(j);
+                                //interestedTeams.RemoveAt(j);
                             }
                         }
                     }
                 }
             }
-            for (int i = 0; i < finalTeams.Count; i++)
-                Console.WriteLine(finalTeams[i].Abbreviation + " offers " + finalOffers[i].YearlySalary.ToString("C0") + " per year for " + finalOffers[i].Years + " years.");
+            for (int i = 0; i < finalOffers.Count; i++)
+                Console.WriteLine(finalOffers[i].Team.Abbreviation + " offers " + finalOffers[i].YearlySalary.ToString("C0") + " per year for " + finalOffers[i].Years + " years.");
         }
 
-        public void GenerateContract(InterestLevel interestLevel)
+        public void GenerateContract(InterestLevel interestLevel, Team t)
         {
             int randomNumber = world.rnd.Next(1, 101);
             int years = 0;
@@ -315,7 +316,10 @@ namespace SportsAgencyTycoonV2
             if (yearlySalary > client.League.MaxSalary) yearlySalary = client.League.MaxSalary;
             if (maxSalaryWillingToOffer > client.League.MaxSalary) maxSalaryWillingToOffer = client.League.MaxSalary;
 
-            contractOffers.Add(new Contract(years, yearlySalary, Convert.ToInt32((double)yearlySalary / (double)league.MonthsInSeason), league.SeasonStart, league.SeasonEnd, 0, 0, PaySchedule.Monthly));
+            Contract contract = new Contract(years, yearlySalary, Convert.ToInt32((double)yearlySalary / (double)league.MonthsInSeason), league.SeasonStart, league.SeasonEnd, 0, 0, PaySchedule.Monthly);
+            contract.Team = t;
+
+            contractOffers.Add(contract);
         }
 
         public void SignPlayerToContractWithTeam(Team t, Player client, Contract c)

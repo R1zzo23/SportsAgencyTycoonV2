@@ -8,6 +8,7 @@ namespace SportsAgencyTycoonV2
 {
     public class Contract
     {
+        public Team Team;
         public int Years;
         public int YearlySalary;
         public Date StartDate;
