@@ -111,13 +111,10 @@ namespace SportsAgencyTycoonV2
             GatherFinalOffers();
 
             List<Contract> trimmedList = new List<Contract>();
-            //List<Team> trimmedTeams = new List<Team>();
+            List<int> contractIndexes = new List<int>();
 
-            if (focus == "money")
+            if (focus == "money" || focus == "lifestyle")
             {
-                List<int> contractIndexes = new List<int>();
-                //List<int> teamIndexes = new List<int>();
-
                 for (int i = 0; i < 3; i++)
                 {
                     if (finalOffers.Count > 0)
@@ -128,7 +125,6 @@ namespace SportsAgencyTycoonV2
                             if (finalOffers[j].YearlySalary == mostMoney)
                             {
                                 contractIndexes.Add(j);
-                                //teamIndexes.Add(j);
                             }
                         }
                         if (trimmedList.Count < 3)
@@ -136,13 +132,10 @@ namespace SportsAgencyTycoonV2
                             int spotsLeft = 3 - trimmedList.Count;
                             if (contractIndexes.Count <= spotsLeft)
                             {
-                                //foreach (int index in contractIndexes)
                                 for (int x = contractIndexes.Count - 1; x >= 0; x--)
                                 {
                                     trimmedList.Add(finalOffers[contractIndexes[x]]);
-                                    //trimmedTeams.Add(finalTeams[contractIndexes[x]]);
                                     finalOffers.RemoveAt(contractIndexes[x]);
-                                    //finalTeams.RemoveAt(contractIndexes[x]);
                                 }
                                 contractIndexes.Clear();
                             }
@@ -152,7 +145,6 @@ namespace SportsAgencyTycoonV2
                                 {
                                     int randomContract = world.rnd.Next(0, contractIndexes.Count);
                                     trimmedList.Add(finalOffers[randomContract]);
-                                    //trimmedTeams.Add(finalTeams[randomContract]);
                                     contractIndexes.RemoveAt(randomContract);
                                 }
                             }
@@ -160,24 +152,28 @@ namespace SportsAgencyTycoonV2
                     }
                 }
             }
+            else if (focus == "winning")
+            {
+                finalOffers = finalOffers.OrderByDescending(c => c.Team.TitleConteder).ToList();
+                for (int i = 0; i < 3; i++)
+                    trimmedList.Add(finalOffers[i]);
+            }
 
-            Console.WriteLine("Trimemed List: Final 3");
+            Console.WriteLine("Trimmed List: Final 3");
             for (int i = 0; i < trimmedList.Count; i++)
                 Console.WriteLine(trimmedList[i].Team.Abbreviation + " offers " + trimmedList[i].YearlySalary.ToString("C0") + " per year for " + trimmedList[i].Years + " years.");
+
+            int finalDecision = 0;
+            List<int> indexNumbers = new List<int>();
 
             //selecting contract
             if (focus == "money")
             {
-                int finalDecision;
-                List<int> indexNumbers = new List<int>();
-                if (client.Age > 30)
+                for (int i = 0; i < trimmedList.Count; i++)
                 {
-                    for (int i = 0; i < trimmedList.Count; i++)
+                    if (trimmedList[i].Years > 1)
                     {
-                        if (trimmedList[i].Years > 1)
-                        {
-                            indexNumbers.Add(i);
-                        }
+                        indexNumbers.Add(i);
                     }
                 }
 
@@ -187,12 +183,20 @@ namespace SportsAgencyTycoonV2
                 }
                 else finalDecision = world.rnd.Next(0, trimmedList.Count);
 
-                Console.WriteLine(client.FullName + " will sign with " + trimmedList[finalDecision].Team.Abbreviation + " for " + trimmedList[finalDecision].Years + "-years @ " + trimmedList[finalDecision].YearlySalary.ToString("C0"));
-
-                SignPlayerToContractWithTeam(trimmedList[finalDecision].Team, client, trimmedList[finalDecision]);
+            }
+            else if (focus == "lifestyle")
+            {
+                trimmedList = trimmedList.OrderByDescending(c => c.Team.MarketValue).ToList();
+                finalDecision = 0;
+            }
+            else // if (focus == "winning")
+            {
+                finalDecision = world.rnd.Next(0, trimmedList.Count);
             }
 
-           
+            Console.WriteLine(client.FullName + " will sign with " + trimmedList[finalDecision].Team.Abbreviation + " for " + trimmedList[finalDecision].Years + "-years @ " + trimmedList[finalDecision].YearlySalary.ToString("C0"));
+
+            SignPlayerToContractWithTeam(trimmedList[finalDecision].Team, client, trimmedList[finalDecision]);
         }
 
         public void GatherFinalOffers()
@@ -334,6 +338,30 @@ namespace SportsAgencyTycoonV2
             t.Roster.Add(client);
             client.Team = t;
             client.FreeAgent = false;
+
+            mainForm.clientTeamNegotiationPanel.Visible = false;
+
+            DetermineIfStarter();
+        }
+        private void DetermineIfStarter()
+        {
+            bool isStarter = false;
+
+            if (client.Sport == Sports.Baseball)
+                isStarter = world.IsBaseballStarter(client.Team, client);
+            else if (client.Sport == Sports.Basketball)
+                isStarter = world.IsBasketballStarter(client.Team, client);
+            else if (client.Sport == Sports.Football)
+                isStarter = world.IsFootballStarter(client.Team, client);
+            else if (client.Sport == Sports.Hockey)
+                isStarter = world.IsHockeyStarter(client.Team, client);
+            else if (client.Sport == Sports.Soccer)
+                isStarter = world.IsSoccerStarter(client.Team, client);
+
+            client.IsStarter = isStarter;
+            client.DetermineTeamHappiness(world.rnd, client.IsStarter);
+            client.DetermineAgencyHappiness(world.rnd, client.Contract);
+
         }
     }
 }

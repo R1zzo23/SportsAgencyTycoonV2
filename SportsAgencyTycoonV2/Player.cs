@@ -394,6 +394,9 @@ namespace SportsAgencyTycoonV2
             //team titleContender and PlayForTitleContender match?
             if (Team.TitleConteder >= 50 && PlayForTitleContender >= 65) happinessChecks++;
 
+            //lucky to be on a team?
+            if (CurrentSkill <= 35) happinessChecks += 2;
+
             if (happinessChecks == 0)
                 happiness = rnd.Next(0, 50);
             else if (happinessChecks == 1)
@@ -423,15 +426,23 @@ namespace SportsAgencyTycoonV2
                 if (Greed >= 65 && contract.YearlySalary < (League.MaxSalary * (PotentialSkill / 100))) contentWithContract = false;
 
                 if (contentWithContract)
-                    happiness = (rnd.Next(41, 100) + TeamHappiness) / 2;
-                else happiness = (rnd.Next(0, 41) + TeamHappiness) / 2;
+                {
+                    //happiness = (rnd.Next(41, 100) + TeamHappiness) / 2;
+                    if (contract.YearlySalary >= (League.MaxSalary + League.MinSalary) / 2)
+                    {
+                        happiness = rnd.Next(15, 30) + (TeamHappiness / 10);
+                    }
+                    else happiness = rnd.Next(1, 16) + (TeamHappiness / 10);
+                }
+                    
+                else happiness = (-rnd.Next(1, 20) + TeamHappiness) / 2;
             }
             else if (Sport == Sports.Boxing || Sport == Sports.Golf || Sport == Sports.MMA || Sport == Sports.Tennis)
                 happiness = rnd.Next(0, 100);
             else happiness = rnd.Next(0, 100);
 
 
-            AgencyHappiness = happiness;
+            AgencyHappiness += happiness;
 
             AgencyHappinessDescription = DescribeHappiness(AgencyHappiness);
             AgencyHappinessString = EnumToString(AgencyHappinessDescription.ToString());
