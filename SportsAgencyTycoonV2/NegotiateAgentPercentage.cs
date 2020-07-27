@@ -36,7 +36,7 @@ namespace SportsAgencyTycoonV2
         {
             if (p.Contract.AgentPercentage == 0)
                 playersCurrentPercent = Convert.ToDouble((max + min) / 2);
-            else playersCurrentPercent = p.Contract.AgentPercentage;
+            else playersCurrentPercent = p.Contract.AgentPercentage * 100;
 
             return playersCurrentPercent / 100;
         }

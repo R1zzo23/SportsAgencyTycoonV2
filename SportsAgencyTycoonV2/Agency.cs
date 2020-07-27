@@ -104,6 +104,7 @@ namespace SportsAgencyTycoonV2
         public void PayOfficeMonthlyRent()
         {
             AddMoney(-Office.MonthlyCost);
+            mainForm.UpdateAgencyMoneyLabel();
         }
         public void AddDayWorking(Agent a)
         {
