@@ -368,12 +368,12 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(897, 4);
+            this.button2.Location = new System.Drawing.Point(893, 4);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 50);
+            this.button2.Size = new System.Drawing.Size(132, 50);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Upgrade Current Office";
+            this.button2.Text = "Upgrade Current Office With Amenities";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -381,12 +381,12 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(897, 56);
+            this.button1.Location = new System.Drawing.Point(893, 56);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 50);
+            this.button1.Size = new System.Drawing.Size(132, 50);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Find New Office";
+            this.button1.Text = "Move To Larger Office Building";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // lblEmployeeCapacity
@@ -2683,10 +2683,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
+            this.Controls.Add(this.agencyPanel);
+            this.Controls.Add(this.managerPanel);
             this.Controls.Add(this.agencyClientsPanel);
             this.Controls.Add(this.scoutClientPanel);
-            this.Controls.Add(this.managerPanel);
-            this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.freelancePanel);
             this.Controls.Add(this.teamRosterPanel);
             this.Controls.Add(this.worldPanel);

@@ -143,7 +143,8 @@ namespace SportsAgencyTycoonV2
                 cbManagerActions.Items.Add("Obtain " + world.LicenseOrder[world.MyAgency.Licenses.Count].ToString() + " License (" + world.NextLicenseCost.ToString() + " IP)");
             cbManagerActions.Items.Add("Freelance");
             cbManagerActions.Items.Add("Search For Player");
-            cbManagerActions.Items.Add("Call Teams");
+            cbManagerActions.Items.Add("Hire Agent");
+            //cbManagerActions.Items.Add("Call Teams");
         }
         public void UpdateOfficeInfo()
         {
@@ -192,6 +193,20 @@ namespace SportsAgencyTycoonV2
                 else if (cbManagerActions.SelectedIndex == 2)
                 {
                     OpenClientPanel();
+                }
+                // hire new agent
+                else if (cbManagerActions.SelectedIndex == 3)
+                {
+                    Console.WriteLine(world.MyAgency.AgentCount + " - - - - - " + world.MyAgency.Office.EmployeeCapacity);
+                    if (world.MyAgency.AgentCount + 1 < world.MyAgency.Office.EmployeeCapacity)
+                    {
+                        // begin agent hiring process
+                        
+                    }
+                    else // show that there's no room in current office
+                    {
+                        MessageBox.Show("Office has reached its employee capacity. Upgrade your office or fire an agent to make room for a new one.");
+                    }
                 }
             }
         }

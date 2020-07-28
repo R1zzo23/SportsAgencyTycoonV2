@@ -106,5 +106,9 @@ namespace SportsAgencyTycoonV2
         {
             _CurrentEfficiency = i;
         }
+        public void AddPower(int i)
+        {
+            _Power += i;
+        }
     }
 }

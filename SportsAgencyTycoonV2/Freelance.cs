@@ -258,6 +258,8 @@ namespace SportsAgencyTycoonV2
             {
                 results = results + "JOB FAILED!";
                 // knock agency reputation?
+                world.MyAgency.Manager.AddPower(-1);
+                world.MyAgency.Manager.UpdateManagerUI(world.mainForm);
 
             }
             MessageBox.Show(results);

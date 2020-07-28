@@ -2,14 +2,11 @@
 - scoring all FreelanceJobs
   + cannot score SCOUTING jobs until I create scouting function for agency
 - scouting job yields actual player
-- increasing efficiency over time/when taking a break
 - agents earning XP via jobs
 
 New Things To Add:
 - negotiations for your own client to be automated?
   + pick a focus: money, title contender, playing time, exposure for marketing or balanced
-  + deal gets finalized IF there is a team willing to take player on
-  + calculate players happiness with team and agency after deal is finalized
 - different size agencies across the world
 - agencies hold market share for each sport?
 - after finishing scouting job, you have choice to 
