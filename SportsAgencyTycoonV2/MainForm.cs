@@ -227,7 +227,7 @@ namespace SportsAgencyTycoonV2
             panelButtonHighlight.Top = btnManager.Top;
             HideAllPanels();
             managerPanel.Visible = true;
-
+            managerPanelFunctions.DisplayInfo();
         }
 
         private void btnJobs_Click(object sender, EventArgs e)
@@ -424,6 +424,58 @@ namespace SportsAgencyTycoonV2
                 agencyClientsPanelFunctions.getClientSignedFunctions.BeginNegotiations(focus);
             }
                 
+        }
+        #region Agent Focus Radio Button CheckedChanged
+        private void rbBalancedAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeFocus("balanced");
+        }
+
+        private void rbNegotiatingAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeFocus("negotiating");
+        }
+
+        private void rbGreedAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeFocus("greed");
+        }
+
+        private void rbPowerAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeFocus("power");
+        }
+
+        private void rbScoutingAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeFocus("scouting");
+        }
+        #endregion
+        #region Search Investment Radio Button CheckedChanged
+        private void rb25kAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeInvestmentAmount(25000);
+        }
+        private void rb50kAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeInvestmentAmount(50000);
+        }
+        private void rb100kAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeInvestmentAmount(100000);
+        }
+        private void rb250kAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeInvestmentAmount(250000);
+        }
+        private void rb500kAgent_CheckedChanged(object sender, EventArgs e)
+        {
+            managerPanelFunctions.ChangeInvestmentAmount(500000);
+        }
+#endregion
+        private void btnSearchForAgent_Click(object sender, EventArgs e)
+        {
+            managerPanelFunctions.SearchForAgent();
         }
     }
 }
