@@ -16,10 +16,66 @@ namespace SportsAgencyTycoonV2
         List<Agent> agentsFound = new List<Agent>();
         List<int> numbers = new List<int>();
 
+        public List<Control> agentNames = new List<Control>();
+        public List<Control> agentGreeds = new List<Control>();
+        public List<Control> agentNegotiations = new List<Control>();
+        public List<Control> agentScoutings = new List<Control>();
+        public List<Control> agentPowers = new List<Control>();
+        public List<Control> agentEfficiencies = new List<Control>();
+        public List<Control> agentIntelligences = new List<Control>();
+        public List<Control> agentGroupBoxes = new List<Control>();
+        public List<Control> agentSalaries = new List<Control>();
+        public List<Control> agentHireButtons = new List<Control>();
+
         public ManagerPanelFunctions(MainForm mf, World w)
         {
             mainForm = mf;
             world = w;
+            AddAgentLabelsToList();
+            HideAgentGroupBoxes();
+        }
+        private void AddAgentLabelsToList()
+        {
+            agentGroupBoxes.Add(mainForm.gbScoutedAgent1);
+            agentGroupBoxes.Add(mainForm.gbScoutedAgent2);
+            agentGroupBoxes.Add(mainForm.gbScoutedAgent3);
+            agentGroupBoxes.Add(mainForm.gbScoutedAgent4);
+            agentNames.Add(mainForm.lblScoutedAgent1Name);
+            agentNames.Add(mainForm.lblScoutedAgent2Name);
+            agentNames.Add(mainForm.lblScoutedAgent3Name);
+            agentNames.Add(mainForm.lblScoutedAgent4Name);
+            agentNegotiations.Add(mainForm.lblScoutedAgent1NEG);
+            agentNegotiations.Add(mainForm.lblScoutedAgent2NEG);
+            agentNegotiations.Add(mainForm.lblScoutedAgent3NEG);
+            agentNegotiations.Add(mainForm.lblScoutedAgent4NEG);
+            agentGreeds.Add(mainForm.lblScoutedAgent1GRD);
+            agentGreeds.Add(mainForm.lblScoutedAgent2GRD);
+            agentGreeds.Add(mainForm.lblScoutedAgent3GRD);
+            agentGreeds.Add(mainForm.lblScoutedAgent4GRD);
+            agentScoutings.Add(mainForm.lblScoutedAgent1SCT);
+            agentScoutings.Add(mainForm.lblScoutedAgent2SCT);
+            agentScoutings.Add(mainForm.lblScoutedAgent3SCT);
+            agentScoutings.Add(mainForm.lblScoutedAgent4SCT);
+            agentPowers.Add(mainForm.lblScoutedAgent1POW);
+            agentPowers.Add(mainForm.lblScoutedAgent2POW);
+            agentPowers.Add(mainForm.lblScoutedAgent3POW);
+            agentPowers.Add(mainForm.lblScoutedAgent4POW);
+            agentEfficiencies.Add(mainForm.lblScoutedAgent1EFF);
+            agentEfficiencies.Add(mainForm.lblScoutedAgent2EFF);
+            agentEfficiencies.Add(mainForm.lblScoutedAgent3EFF);
+            agentEfficiencies.Add(mainForm.lblScoutedAgent4EFF);
+            agentIntelligences.Add(mainForm.lblScoutedAgent1INT);
+            agentIntelligences.Add(mainForm.lblScoutedAgent2INT);
+            agentIntelligences.Add(mainForm.lblScoutedAgent3INT);
+            agentIntelligences.Add(mainForm.lblScoutedAgent4INT);
+            agentSalaries.Add(mainForm.lblScoutedAgent1Salary);
+            agentSalaries.Add(mainForm.lblScoutedAgent2Salary);
+            agentSalaries.Add(mainForm.lblScoutedAgent3Salary);
+            agentSalaries.Add(mainForm.lblScoutedAgent4Salary);
+            agentHireButtons.Add(mainForm.btnHireAgent1);
+            agentHireButtons.Add(mainForm.btnHireAgent2);
+            agentHireButtons.Add(mainForm.btnHireAgent3);
+            agentHireButtons.Add(mainForm.btnHireAgent4);
         }
         public void DisplayInfo()
         {
@@ -64,6 +120,7 @@ namespace SportsAgencyTycoonV2
         private void FindAgents()
         {
             agentsFound.Clear();
+            HideAgentGroupBoxes();
             int agentsToFind = 2;
             Agent manager = world.MyAgency.Manager;
             double managerPoints = manager.Power + manager.Intelligence + manager.Negotiating + manager.Greed + manager.Scouting;
@@ -83,7 +140,7 @@ namespace SportsAgencyTycoonV2
             else //if (searchInvestment == 500000)
             {
                 percent = 1.3;
-                agentsToFind = 3;
+                agentsToFind = 4;
             }                
 
             agentPoints = managerPoints * percent;
@@ -94,6 +151,37 @@ namespace SportsAgencyTycoonV2
             }
             foreach (Agent a in agentsFound)
                 Console.WriteLine(a.FullName + " " + a.Greed + " " + a.Negotiating + " " + a.Power + " " + a.Intelligence + " " + a.Scouting + " " + a.MaxEfficiency);
+
+            // remove money spent on search
+            world.MyAgency.AddMoney(-searchInvestment);
+
+            DisplayScoutedAgents();
+        }
+        private void HideAgentGroupBoxes()
+        {
+            foreach (Control gb in agentGroupBoxes) gb.Visible = false;
+        }
+        private void DisplayScoutedAgents()
+        {
+            HideAgentGroupBoxes();
+            for (int i = 0; i < agentsFound.Count; i++)
+            {
+                agentGroupBoxes[i].Visible = true;
+                agentNames[i].Text = agentsFound[i].FullName;
+                agentSalaries[i].Text = "Salary: " + agentsFound[i].Salary.ToString("C0");
+                agentIntelligences[i].Text = "INT: " + agentsFound[i].Intelligence;
+                agentNegotiations[i].Text = "NEG: " + agentsFound[i].Negotiating;
+                agentPowers[i].Text = "POW: " + agentsFound[i].Power;
+                agentGreeds[i].Text = "GRD: " + agentsFound[i].Greed;
+                agentScoutings[i].Text = "SCT: " + agentsFound[i].Scouting;
+                agentEfficiencies[i].Text = "EFF: " + agentsFound[i].MaxEfficiency;
+            }
+        }
+        public void HireSelectedAgent(int i)
+        {
+            world.MyAgency.AddAgent(agentsFound[i]);
+            agentsFound.RemoveAt(i);
+            DisplayScoutedAgents();
         }
         private void CreateNewAgent(int points)
         {
@@ -148,5 +236,7 @@ namespace SportsAgencyTycoonV2
             numbers.RemoveAt(index);
             return output;
         }
+
+
     }
 }

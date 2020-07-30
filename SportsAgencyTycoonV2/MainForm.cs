@@ -477,5 +477,20 @@ namespace SportsAgencyTycoonV2
         {
             managerPanelFunctions.SearchForAgent();
         }
+
+        private void btnHireAgent1_Click(object sender, EventArgs e)
+        {
+            managerPanelFunctions.HireSelectedAgent(0);
+        }
+
+        private void btnHireAgent2_Click(object sender, EventArgs e)
+        {
+            managerPanelFunctions.HireSelectedAgent(1);
+        }
+
+        private void btnHireAgent3_Click(object sender, EventArgs e)
+        {
+            managerPanelFunctions.HireSelectedAgent(2);
+        }
     }
 }
