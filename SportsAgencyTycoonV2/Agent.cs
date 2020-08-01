@@ -50,9 +50,7 @@ namespace SportsAgencyTycoonV2
             _FullName = firstName + " " + lastName;
 
             _Role = role;
-            if (role == Role.Manager)
-                _Salary = 0;
-            else _Salary = DetermineSalary();
+            
 
             if (role == Role.Manager)
             {
@@ -74,6 +72,11 @@ namespace SportsAgencyTycoonV2
                 _CurrentEfficiency = efficiency;
                 _MaxEfficiency = efficiency;
             }
+
+            if (role == Role.Manager)
+                _Salary = 0;
+            else _Salary = DetermineSalary();
+
             WorkingOnJob = false;
             DaysWorkingOnJob = 0;
         }
@@ -83,8 +86,12 @@ namespace SportsAgencyTycoonV2
         }
         int DetermineSalary()
         {
-            int salary = 0;
+            int salary = 8000;
 
+            int sum = Greed + Negotiating + Scouting + Power + Intelligence;
+
+            int ratingsDifference = sum - 400;
+            salary += ratingsDifference * 50;
 
             return salary;
         }

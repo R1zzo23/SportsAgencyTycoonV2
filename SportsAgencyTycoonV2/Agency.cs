@@ -106,6 +106,12 @@ namespace SportsAgencyTycoonV2
             AddMoney(-Office.MonthlyCost);
             mainForm.UpdateAgencyMoneyLabel();
         }
+        public void PayAgentSalaries()
+        {
+            foreach (Agent a in AgentList)
+                AddMoney(-a.Salary);
+            mainForm.UpdateAgencyMoneyLabel();
+        }
         public void AddDayWorking(Agent a)
         {
             a.DaysWorkingOnJob++;
@@ -159,6 +165,7 @@ namespace SportsAgencyTycoonV2
                     mainForm.agentPowers[i].Text = "POW: " + AgentList[i].Power.ToString();
                     mainForm.agentEfficiencies[i].Text = "EFF: " + AgentList[i].CurrentEfficiency.ToString() + "/" + AgentList[i].MaxEfficiency.ToString();
                     mainForm.agentStatusLabels[i].Text = "Status: " + AgentList[i].Status.ToString();
+                    mainForm.agentSalaries[i].Text = "Salary: " + AgentList[i].Salary.ToString("C0") + "/month";
                     if (AgentList[i].Status == AgentStatus.Available && AgentList[i].CurrentEfficiency < AgentList[i].MaxEfficiency)
                         mainForm.agentRestButtons[i].Enabled = true;
                     else mainForm.agentRestButtons[i].Enabled = false;

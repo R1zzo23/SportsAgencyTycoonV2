@@ -27,6 +27,7 @@ namespace SportsAgencyTycoonV2
         public List<Control> agentGroupBoxes = new List<Control>();
         public List<Control> agentStatusLabels = new List<Control>();
         public List<Control> agentRestButtons = new List<Control>();
+        public List<Control> agentSalaries = new List<Control>();
 
         public WorldPanelFunctions worldPanelFunctions;
         public TeamRosterPanelFunctions teamRosterPanelFunctions;
@@ -90,6 +91,9 @@ namespace SportsAgencyTycoonV2
             agentRestButtons.Add(btnAgent1Rest);
             agentRestButtons.Add(btnAgent2Rest);
             agentRestButtons.Add(btnAgent3Rest);
+            agentSalaries.Add(lblAgent1Salary);
+            agentSalaries.Add(lblAgent2Salary);
+            agentSalaries.Add(lblAgent3Salary);
         }
         private void AddDayMarkersToList()
         {

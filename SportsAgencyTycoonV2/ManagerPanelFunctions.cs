@@ -191,7 +191,7 @@ namespace SportsAgencyTycoonV2
             int negotiating;
             int scouting;
             int intelligence;
-            int pointsRemaining = points;
+            int pointsRemaining = points + world.rnd.Next(-10, 11);
 
             int averageRating = points / 5;
 

@@ -405,6 +405,7 @@ namespace SportsAgencyTycoonV2
             //MonthName = (Months)MonthNumber;
             Week = 1;
             world.MyAgency.PayOfficeMonthlyRent();
+            world.MyAgency.PayAgentSalaries();
             world.PayPlayersMonthlySalary();
         }
         private void SetNewYear()

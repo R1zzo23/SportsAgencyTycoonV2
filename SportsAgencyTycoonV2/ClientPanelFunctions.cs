@@ -72,9 +72,16 @@ namespace SportsAgencyTycoonV2
                             onTeam = true;
                         }
                         else if (mainForm.rbFreeAgent.Checked)
+                        {
                             freeAgent = true;
+                            onTeam = false;
+                        }
                         else if (mainForm.rbOnTeam.Checked)
+                        {
                             onTeam = true;
+                            freeAgent = false;
+                        }
+                            
 
                         FillAvailableClientList();
                         DetermineWhichPlayersGetScouted();
