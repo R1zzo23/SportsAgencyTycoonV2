@@ -104,18 +104,21 @@
             this.agencyPanel = new System.Windows.Forms.Panel();
             this.lblManagerStatus = new System.Windows.Forms.Label();
             this.gbAgent3 = new System.Windows.Forms.GroupBox();
+            this.lblAgent3Salary = new System.Windows.Forms.Label();
             this.btnAgent3Rest = new System.Windows.Forms.Button();
             this.lblAgent3Status = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.lblAgent3Name = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.gbAgent2 = new System.Windows.Forms.GroupBox();
+            this.lblAgent2Salary = new System.Windows.Forms.Label();
             this.btnAgent2Rest = new System.Windows.Forms.Button();
             this.lblAgent2Status = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblAgent2Name = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbAgent1 = new System.Windows.Forms.GroupBox();
+            this.lblAgent1Salary = new System.Windows.Forms.Label();
             this.btnAgent1Rest = new System.Windows.Forms.Button();
             this.lblAgent1Status = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -312,9 +315,14 @@
             this.btnScrollRightThroughClients = new System.Windows.Forms.Button();
             this.btnScrollLeftThroughClients = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
-            this.lblAgent1Salary = new System.Windows.Forms.Label();
-            this.lblAgent2Salary = new System.Windows.Forms.Label();
-            this.lblAgent3Salary = new System.Windows.Forms.Label();
+            this.cbManagerPanelActions = new System.Windows.Forms.ComboBox();
+            this.btnManagerPanelAction = new System.Windows.Forms.Button();
+            this.agencyFinancesPanel = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lblIncomeList = new System.Windows.Forms.Label();
+            this.lblExpenses = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.universalAgencyPanel.SuspendLayout();
             this.menuPanel.SuspendLayout();
             this.agencyPanel.SuspendLayout();
@@ -365,6 +373,7 @@
             this.clientTeamNegotiationPanel.SuspendLayout();
             this.gbNegotiationFocus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).BeginInit();
+            this.agencyFinancesPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnManagerAction
@@ -1275,6 +1284,15 @@
             this.gbAgent3.TabIndex = 18;
             this.gbAgent3.TabStop = false;
             // 
+            // lblAgent3Salary
+            // 
+            this.lblAgent3Salary.AutoSize = true;
+            this.lblAgent3Salary.Location = new System.Drawing.Point(9, 168);
+            this.lblAgent3Salary.Name = "lblAgent3Salary";
+            this.lblAgent3Salary.Size = new System.Drawing.Size(63, 21);
+            this.lblAgent3Salary.TabIndex = 28;
+            this.lblAgent3Salary.Text = "Salary:";
+            // 
             // btnAgent3Rest
             // 
             this.btnAgent3Rest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1348,6 +1366,15 @@
             this.gbAgent2.TabIndex = 17;
             this.gbAgent2.TabStop = false;
             // 
+            // lblAgent2Salary
+            // 
+            this.lblAgent2Salary.AutoSize = true;
+            this.lblAgent2Salary.Location = new System.Drawing.Point(9, 165);
+            this.lblAgent2Salary.Name = "lblAgent2Salary";
+            this.lblAgent2Salary.Size = new System.Drawing.Size(63, 21);
+            this.lblAgent2Salary.TabIndex = 28;
+            this.lblAgent2Salary.Text = "Salary:";
+            // 
             // btnAgent2Rest
             // 
             this.btnAgent2Rest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1420,6 +1447,15 @@
             this.gbAgent1.Size = new System.Drawing.Size(314, 198);
             this.gbAgent1.TabIndex = 16;
             this.gbAgent1.TabStop = false;
+            // 
+            // lblAgent1Salary
+            // 
+            this.lblAgent1Salary.AutoSize = true;
+            this.lblAgent1Salary.Location = new System.Drawing.Point(9, 168);
+            this.lblAgent1Salary.Name = "lblAgent1Salary";
+            this.lblAgent1Salary.Size = new System.Drawing.Size(63, 21);
+            this.lblAgent1Salary.TabIndex = 27;
+            this.lblAgent1Salary.Text = "Salary:";
             // 
             // btnAgent1Rest
             // 
@@ -2812,6 +2848,9 @@
             // 
             // managerPanel
             // 
+            this.managerPanel.Controls.Add(this.agencyFinancesPanel);
+            this.managerPanel.Controls.Add(this.btnManagerPanelAction);
+            this.managerPanel.Controls.Add(this.cbManagerPanelActions);
             this.managerPanel.Controls.Add(this.agentHiringPanel);
             this.managerPanel.Controls.Add(this.lblManagerActionsAndName);
             this.managerPanel.Location = new System.Drawing.Point(95, 74);
@@ -2829,7 +2868,7 @@
             this.agentHiringPanel.Controls.Add(this.groupBox8);
             this.agentHiringPanel.Controls.Add(this.gbAgentFocus);
             this.agentHiringPanel.Controls.Add(this.label10);
-            this.agentHiringPanel.Location = new System.Drawing.Point(34, 88);
+            this.agentHiringPanel.Location = new System.Drawing.Point(31, 150);
             this.agentHiringPanel.Name = "agentHiringPanel";
             this.agentHiringPanel.Size = new System.Drawing.Size(991, 511);
             this.agentHiringPanel.TabIndex = 1;
@@ -3531,32 +3570,89 @@
             this.btnAddClient.UseVisualStyleBackColor = true;
             this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
-            // lblAgent1Salary
+            // cbManagerPanelActions
             // 
-            this.lblAgent1Salary.AutoSize = true;
-            this.lblAgent1Salary.Location = new System.Drawing.Point(9, 168);
-            this.lblAgent1Salary.Name = "lblAgent1Salary";
-            this.lblAgent1Salary.Size = new System.Drawing.Size(63, 21);
-            this.lblAgent1Salary.TabIndex = 27;
-            this.lblAgent1Salary.Text = "Salary:";
+            this.cbManagerPanelActions.FormattingEnabled = true;
+            this.cbManagerPanelActions.Location = new System.Drawing.Point(34, 74);
+            this.cbManagerPanelActions.Name = "cbManagerPanelActions";
+            this.cbManagerPanelActions.Size = new System.Drawing.Size(285, 29);
+            this.cbManagerPanelActions.TabIndex = 2;
             // 
-            // lblAgent2Salary
+            // btnManagerPanelAction
             // 
-            this.lblAgent2Salary.AutoSize = true;
-            this.lblAgent2Salary.Location = new System.Drawing.Point(9, 165);
-            this.lblAgent2Salary.Name = "lblAgent2Salary";
-            this.lblAgent2Salary.Size = new System.Drawing.Size(63, 21);
-            this.lblAgent2Salary.TabIndex = 28;
-            this.lblAgent2Salary.Text = "Salary:";
+            this.btnManagerPanelAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManagerPanelAction.ForeColor = System.Drawing.Color.White;
+            this.btnManagerPanelAction.Location = new System.Drawing.Point(342, 74);
+            this.btnManagerPanelAction.Name = "btnManagerPanelAction";
+            this.btnManagerPanelAction.Size = new System.Drawing.Size(86, 33);
+            this.btnManagerPanelAction.TabIndex = 3;
+            this.btnManagerPanelAction.Text = "Open";
+            this.btnManagerPanelAction.UseVisualStyleBackColor = true;
+            this.btnManagerPanelAction.Click += new System.EventHandler(this.btnManagerPanelAction_Click);
             // 
-            // lblAgent3Salary
+            // agencyFinancesPanel
             // 
-            this.lblAgent3Salary.AutoSize = true;
-            this.lblAgent3Salary.Location = new System.Drawing.Point(9, 168);
-            this.lblAgent3Salary.Name = "lblAgent3Salary";
-            this.lblAgent3Salary.Size = new System.Drawing.Size(63, 21);
-            this.lblAgent3Salary.TabIndex = 28;
-            this.lblAgent3Salary.Text = "Salary:";
+            this.agencyFinancesPanel.Controls.Add(this.lblExpenses);
+            this.agencyFinancesPanel.Controls.Add(this.label21);
+            this.agencyFinancesPanel.Controls.Add(this.lblIncomeList);
+            this.agencyFinancesPanel.Controls.Add(this.label18);
+            this.agencyFinancesPanel.Controls.Add(this.label15);
+            this.agencyFinancesPanel.Location = new System.Drawing.Point(31, 150);
+            this.agencyFinancesPanel.Name = "agencyFinancesPanel";
+            this.agencyFinancesPanel.Size = new System.Drawing.Size(991, 511);
+            this.agencyFinancesPanel.TabIndex = 4;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 8);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(985, 53);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Agency Finances";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label18.Location = new System.Drawing.Point(14, 80);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(116, 33);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Income";
+            // 
+            // lblIncomeList
+            // 
+            this.lblIncomeList.AutoSize = true;
+            this.lblIncomeList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblIncomeList.Location = new System.Drawing.Point(22, 129);
+            this.lblIncomeList.Name = "lblIncomeList";
+            this.lblIncomeList.Size = new System.Drawing.Size(69, 21);
+            this.lblIncomeList.TabIndex = 2;
+            this.lblIncomeList.Text = "label20";
+            // 
+            // lblExpenses
+            // 
+            this.lblExpenses.AutoSize = true;
+            this.lblExpenses.ForeColor = System.Drawing.Color.Red;
+            this.lblExpenses.Location = new System.Drawing.Point(440, 137);
+            this.lblExpenses.Name = "lblExpenses";
+            this.lblExpenses.Size = new System.Drawing.Size(69, 21);
+            this.lblExpenses.TabIndex = 4;
+            this.lblExpenses.Text = "label20";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(432, 88);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(132, 33);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "Expenses";
             // 
             // MainForm
             // 
@@ -3660,6 +3756,8 @@
             this.gbNegotiationFocus.ResumeLayout(false);
             this.gbNegotiationFocus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientSportImage)).EndInit();
+            this.agencyFinancesPanel.ResumeLayout(false);
+            this.agencyFinancesPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3950,6 +4048,14 @@
         public System.Windows.Forms.Label lblAgent3Salary;
         public System.Windows.Forms.Label lblAgent2Salary;
         public System.Windows.Forms.Label lblAgent1Salary;
+        public System.Windows.Forms.ComboBox cbManagerPanelActions;
+        private System.Windows.Forms.Button btnManagerPanelAction;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Panel agencyFinancesPanel;
+        public System.Windows.Forms.Label lblIncomeList;
+        public System.Windows.Forms.Label lblExpenses;
+        private System.Windows.Forms.Label label21;
     }
 }
 

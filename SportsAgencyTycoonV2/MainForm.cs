@@ -201,20 +201,28 @@ namespace SportsAgencyTycoonV2
                 // hire new agent
                 else if (cbManagerActions.SelectedIndex == 3)
                 {
-                    Console.WriteLine(world.MyAgency.AgentCount + " - - - - - " + world.MyAgency.Office.EmployeeCapacity);
-                    if (world.MyAgency.AgentCount + 1 < world.MyAgency.Office.EmployeeCapacity)
-                    {
-                        // begin agent hiring process
-                        
-                    }
-                    else // show that there's no room in current office
-                    {
-                        MessageBox.Show("Office has reached its employee capacity. Upgrade your office or fire an agent to make room for a new one.");
-                    }
+                    CheckToHireNewAgent();
                 }
             }
         }
+        private void CheckToHireNewAgent()
+        {
+            Console.WriteLine(world.MyAgency.AgentCount + " - - - - - " + world.MyAgency.Office.EmployeeCapacity);
+            if (world.MyAgency.AgentCount + 1 < world.MyAgency.Office.EmployeeCapacity)
+            {
+                // begin agent hiring process
+                panelButtonHighlight.Height = btnManager.Height;
+                panelButtonHighlight.Top = btnManager.Top;
+                HideAllPanels();
+                managerPanel.Visible = true;
+                managerPanelFunctions.ShowAgentHiringPanel();
 
+            }
+            else // show that there's no room in current office
+            {
+                MessageBox.Show("Office has reached its employee capacity. Upgrade your office or fire an agent to make room for a new one.");
+            }
+        }
         private void btnOffice_Click(object sender, EventArgs e)
         {
             panelButtonHighlight.Height = btnOffice.Height;
@@ -232,6 +240,7 @@ namespace SportsAgencyTycoonV2
             HideAllPanels();
             managerPanel.Visible = true;
             managerPanelFunctions.DisplayInfo();
+            managerPanelFunctions.HideManagerPanelFunctionPanels();
         }
 
         private void btnJobs_Click(object sender, EventArgs e)
@@ -495,6 +504,18 @@ namespace SportsAgencyTycoonV2
         private void btnHireAgent3_Click(object sender, EventArgs e)
         {
             managerPanelFunctions.HireSelectedAgent(2);
+        }
+
+        private void btnManagerPanelAction_Click(object sender, EventArgs e)
+        {
+            if (cbManagerPanelActions.Text == "View Agency Finances")
+            {
+                managerPanelFunctions.ShowAgencyFinancesPanel();
+            }
+            else if (cbManagerPanelActions.Text == "Hire New Agent")
+            {
+                CheckToHireNewAgent();
+            }
         }
     }
 }

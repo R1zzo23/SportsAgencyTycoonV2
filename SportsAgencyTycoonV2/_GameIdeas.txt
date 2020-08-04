@@ -3,10 +3,9 @@
   + cannot score SCOUTING jobs until I create scouting function for agency
 - scouting job yields actual player
 - agents earning XP via jobs
+- new forms of income/expenses
 
 New Things To Add:
-- negotiations for your own client to be automated?
-  + pick a focus: money, title contender, playing time, exposure for marketing or balanced
 - different size agencies across the world
 - agencies hold market share for each sport?
 - after finishing scouting job, you have choice to 

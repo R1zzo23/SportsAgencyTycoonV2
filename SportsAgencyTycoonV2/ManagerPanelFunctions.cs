@@ -27,13 +27,49 @@ namespace SportsAgencyTycoonV2
         public List<Control> agentSalaries = new List<Control>();
         public List<Control> agentHireButtons = new List<Control>();
 
+        int totalIncome = 0;
+        int totalExpenses = 0;
+
         public ManagerPanelFunctions(MainForm mf, World w)
         {
             mainForm = mf;
             world = w;
             AddAgentLabelsToList();
             HideAgentGroupBoxes();
+            FillManagerActionsCB();
+            HideManagerPanelFunctionPanels();
         }
+        #region Panel Visibility
+        public void ShowManagerPanel()
+        {
+            mainForm.managerPanel.Visible = true;
+            HideManagerPanelFunctionPanels();
+        }
+        public void HideManagerPanelFunctionPanels()
+        {
+            mainForm.agentHiringPanel.Visible = false;
+            mainForm.agencyFinancesPanel.Visible = false;
+        }
+        public void ShowAgencyFinancesPanel()
+        {
+            HideManagerPanelFunctionPanels();
+            mainForm.agencyFinancesPanel.Visible = true;
+            DisplayIncomeSources();
+            DisplayExpenses();
+        }
+        public void ShowAgentHiringPanel()
+        {
+            HideManagerPanelFunctionPanels();
+            mainForm.agentHiringPanel.Visible = true;
+        }
+        #endregion
+        public void FillManagerActionsCB()
+        {
+            mainForm.cbManagerPanelActions.Items.Clear();
+            mainForm.cbManagerPanelActions.Items.Add("View Agency Finances");
+            mainForm.cbManagerPanelActions.Items.Add("Hire New Agent");
+        }
+        #region Hire Agent Region
         private void AddAgentLabelsToList()
         {
             agentGroupBoxes.Add(mainForm.gbScoutedAgent1);
@@ -236,7 +272,40 @@ namespace SportsAgencyTycoonV2
             numbers.RemoveAt(index);
             return output;
         }
+        #endregion
+        #region Agency Finances Region
+        private void DisplayIncomeSources()
+        {
+            int moneyFromClients = 0;
+            int moneyFromEndorsements = 0;
 
+
+            foreach (Player client in world.MyAgency.Clients)
+                moneyFromClients += Convert.ToInt32((double)client.Contract.MonthlySalary * (double)(client.Contract.AgentPercentage / 100));
+
+            // calculate money for endorsements
+
+            totalIncome = moneyFromClients + moneyFromEndorsements;
+
+            mainForm.lblIncomeList.Text = "Money From Clients' Salary: " + moneyFromClients.ToString("C0") + Environment.NewLine + 
+                "Money From Client Endorsements: " + moneyFromEndorsements.ToString("C0") + Environment.NewLine + 
+                "TOTAL: " + totalIncome.ToString("C0"); ;
+        }
+        private void DisplayExpenses()
+        {
+            int officeRent = world.MyAgency.Office.MonthlyCost;
+            int agentSalaries = 0;
+
+            foreach (Agent a in world.MyAgency.AgentList)
+                agentSalaries += a.Salary;
+
+            totalExpenses = officeRent + agentSalaries;
+
+            mainForm.lblExpenses.Text = "Office Rent: " + officeRent.ToString("C0") + Environment.NewLine + 
+                "Agent Salaries: " + agentSalaries.ToString("C0") + Environment.NewLine + 
+                "TOTAL: " + totalExpenses.ToString("C0");
+        }
+        #endregion
 
     }
 }
