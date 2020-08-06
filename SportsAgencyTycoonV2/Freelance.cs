@@ -227,6 +227,41 @@ namespace SportsAgencyTycoonV2
             }
             else if (job.JobType == JobType.negotiating)
             {
+                GetClientSignedFunctions getClientSignedFunctions = new GetClientSignedFunctions(world.mainForm, world);
+                League league;
+                List<Agency> agencyList = new List<Agency>();
+                foreach (Agency a in world.Agencies)
+                    if (a != world.MyAgency) agencyList.Add(a);
+
+                if (job.Sport == Sports.Soccer)
+                {
+                    agencyList = agencyList.OrderByDescending(o => o.SoccerControl).ToList();
+                    league = world.MLS;
+                }
+                else if (job.Sport == Sports.Hockey)
+                {
+                    agencyList = agencyList.OrderByDescending(o => o.HockeyControl).ToList();
+                    league = world.NHL;
+                }
+                else if (job.Sport == Sports.Baseball)
+                {
+                    agencyList = agencyList.OrderByDescending(o => o.BaseballControl).ToList();
+                    league = world.MLB;
+                }
+                else if (job.Sport == Sports.Basketball)
+                {
+                    agencyList = agencyList.OrderByDescending(o => o.BasketballControl).ToList();
+                    league = world.NBA;
+                }
+                else //if (job.Sport == Sports.Football)
+                {
+                    agencyList = agencyList.OrderByDescending(o => o.FootballControl).ToList();
+                    league = world.NFL;
+                }
+
+                getClientSignedFunctions.AttemptToGetPlayerSigned(new Player(world.rnd, league.IdCount, job.Sport, world.rnd.Next(21, 26)) ,league, agencyList[0]);
+
+
                 if (jobDoneInTime) jobScore = rnd.Next(6, 11);
                 else jobScore = rnd.Next(1, 6);
             }

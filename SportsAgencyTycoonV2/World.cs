@@ -16,6 +16,7 @@ namespace SportsAgencyTycoonV2
 
         public List<Player> AvailableClients;
         public List<Agent> AvailableAgents;
+        public List<Agency> Agencies = new List<Agency>();
 
         public List<League> Leagues;
         public League NBA;
@@ -126,6 +127,92 @@ namespace SportsAgencyTycoonV2
             //CreateGlobalAchievements();
             //CreateTeamRelationships(MyAgency.Manager);
         }
+
+        public void CreateOtherAgencies()
+        {
+            for (int i = 0; i < 9; i++)
+                Agencies.Add(new Agency(mainForm, "Agency #" + i, 1));
+            
+            for (int j = 0; j < 7; j++)
+            {
+                int index = rnd.Next(0, Agencies.Count);
+                while (Agencies[index].SoccerControl > 0)
+                {
+                    index = rnd.Next(0, Agencies.Count);
+                }
+                if (j == 0) Agencies[index].SoccerControl = 50;
+                else if (j == 1) Agencies[index].SoccerControl = 25;
+                else if (j == 2) Agencies[index].SoccerControl = 13;
+                else if (j == 3) Agencies[index].SoccerControl = 6;
+                else if (j == 4) Agencies[index].SoccerControl = 3;
+                else if (j == 5) Agencies[index].SoccerControl = 2;
+                else if (j == 6) Agencies[index].SoccerControl = 1;
+            }
+            for (int j = 0; j < 7; j++)
+            {
+                int index = rnd.Next(0, Agencies.Count);
+                while (Agencies[index].HockeyControl > 0)
+                {
+                    index = rnd.Next(0, Agencies.Count);
+                }
+                if (j == 0) Agencies[index].HockeyControl = 50;
+                else if (j == 1) Agencies[index].HockeyControl = 25;
+                else if (j == 2) Agencies[index].HockeyControl = 13;
+                else if (j == 3) Agencies[index].HockeyControl = 6;
+                else if (j == 4) Agencies[index].HockeyControl = 3;
+                else if (j == 5) Agencies[index].HockeyControl = 2;
+                else if (j == 6) Agencies[index].HockeyControl = 1;
+            }
+            for (int j = 0; j < 7; j++)
+            {
+                int index = rnd.Next(0, Agencies.Count);
+                while (Agencies[index].BaseballControl > 0)
+                {
+                    index = rnd.Next(0, Agencies.Count);
+                }
+                if (j == 0) Agencies[index].BaseballControl = 50;
+                else if (j == 1) Agencies[index].BaseballControl = 25;
+                else if (j == 2) Agencies[index].BaseballControl = 13;
+                else if (j == 3) Agencies[index].BaseballControl = 6;
+                else if (j == 4) Agencies[index].BaseballControl = 3;
+                else if (j == 5) Agencies[index].BaseballControl = 2;
+                else if (j == 6) Agencies[index].BaseballControl = 1;
+            }
+            for (int j = 0; j < 7; j++)
+            {
+                int index = rnd.Next(0, Agencies.Count);
+                while (Agencies[index].BasketballControl > 0)
+                {
+                    index = rnd.Next(0, Agencies.Count);
+                }
+                if (j == 0) Agencies[index].BasketballControl = 50;
+                else if (j == 1) Agencies[index].BasketballControl = 25;
+                else if (j == 2) Agencies[index].BasketballControl = 13;
+                else if (j == 3) Agencies[index].BasketballControl = 6;
+                else if (j == 4) Agencies[index].BasketballControl = 3;
+                else if (j == 5) Agencies[index].BasketballControl = 2;
+                else if (j == 6) Agencies[index].BasketballControl = 1;
+            }
+            for (int j = 0; j < 7; j++)
+            {
+                int index = rnd.Next(0, Agencies.Count);
+                while (Agencies[index].FootballControl > 0)
+                {
+                    index = rnd.Next(0, Agencies.Count);
+                }
+                if (j == 0) Agencies[index].FootballControl = 50;
+                else if (j == 1) Agencies[index].FootballControl = 25;
+                else if (j == 2) Agencies[index].FootballControl = 13;
+                else if (j == 3) Agencies[index].FootballControl = 6;
+                else if (j == 4) Agencies[index].FootballControl = 3;
+                else if (j == 5) Agencies[index].FootballControl = 2;
+                else if (j == 6) Agencies[index].FootballControl = 1;
+            }
+
+            foreach (Agency a in Agencies)
+                Console.WriteLine(a.Name + ": Soccer [" + a.SoccerControl + "], Hockey [" + a.HockeyControl + "], Baseball [" + a.BaseballControl + "], Basketball [" + a.BasketballControl + "], Football [" + a.FootballControl + "]");
+        }
+
 
         #region Create Leagues & Associations
         public void CreateLeaguesAssociationEventsPlayersAndTeams()

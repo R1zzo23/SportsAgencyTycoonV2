@@ -40,6 +40,13 @@ namespace SportsAgencyTycoonV2
         public bool AttemptingJob;
         public int DaysAttemptingJob = 0;
         public MainForm mainForm;
+
+        public int SoccerControl;
+        public int HockeyControl;
+        public int BaseballControl;
+        public int BasketballControl;
+        public int FootballControl;
+
         #endregion
 
         public Agency(MainForm mf, string name, int level)

@@ -53,6 +53,8 @@ namespace SportsAgencyTycoonV2
             AddAgentLabelsToList();
             UpdateOfficeInfo();
             world.InitializeWorld();
+            world.CreateOtherAgencies();
+            world.Agencies.Add(world.MyAgency);
             worldPanelFunctions = new WorldPanelFunctions(this, world);
             teamRosterPanelFunctions = new TeamRosterPanelFunctions(this, world);
             clientPanelFunctions = new ClientPanelFunctions(this, world);
