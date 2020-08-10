@@ -35,3 +35,16 @@ C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\Sports
 C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.exe
 C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.pdb
 C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.csprojAssemblyReference.cache
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\bin\Debug\SportsAgencyTycoonV2.exe.config
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\bin\Debug\SportsAgencyTycoonV2.exe
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\bin\Debug\SportsAgencyTycoonV2.pdb
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.csprojAssemblyReference.cache
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.CreateManagerAndAgency.resources
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.FreelanceForm.resources
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.MainForm.resources
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.PlayerSearchForm.resources
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.Properties.Resources.resources
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.csproj.GenerateResource.cache
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.csproj.CoreCompileInputs.cache
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.exe
+C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.pdb

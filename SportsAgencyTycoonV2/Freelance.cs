@@ -215,6 +215,12 @@ namespace SportsAgencyTycoonV2
             bool jobDoneInTime;
             string results;
 
+            BasketballPlayer basketballPlayer = null;
+            BaseballPlayer baseballPlayer = null;
+            HockeyPlayer hockeyPlayer = null;
+            FootballPlayer footballPlayer = null;
+            SoccerPlayer soccerPlayer = null;
+
             Console.WriteLine("Agency Days To Complete Job: " + world.MyAgency.DaysAttemptingJob.ToString());
 
             if (world.MyAgency.DaysAttemptingJob <= job.DaysToComplete)
@@ -230,6 +236,8 @@ namespace SportsAgencyTycoonV2
                 GetClientSignedFunctions getClientSignedFunctions = new GetClientSignedFunctions(world.mainForm, world);
                 League league;
                 List<Agency> agencyList = new List<Agency>();
+                Sports sport = world.MyAgency.Licenses[world.rnd.Next(0, world.MyAgency.Licenses.Count)];
+                job.Sport = sport;
                 foreach (Agency a in world.Agencies)
                     if (a != world.MyAgency) agencyList.Add(a);
 
@@ -237,33 +245,65 @@ namespace SportsAgencyTycoonV2
                 {
                     agencyList = agencyList.OrderByDescending(o => o.SoccerControl).ToList();
                     league = world.MLS;
+                    soccerPlayer = new SoccerPlayer(world.rnd, league.IdCount, job.Sport, world.rnd.Next(21, 26), AssignRandomPosition(job.Sport));
+                    soccerPlayer.League = league;
+                    getClientSignedFunctions.AttemptToGetPlayerSigned(soccerPlayer, league, agencyList[0]);
+                    getClientSignedFunctions.BeginNegotiations("money");
+                    jobScore = soccerPlayer.TeamHappiness;
                 }
                 else if (job.Sport == Sports.Hockey)
                 {
                     agencyList = agencyList.OrderByDescending(o => o.HockeyControl).ToList();
                     league = world.NHL;
+                    hockeyPlayer = new HockeyPlayer(world.rnd, league.IdCount, job.Sport, world.rnd.Next(21, 26), AssignRandomPosition(job.Sport));
+                    hockeyPlayer.League = league;
+                    getClientSignedFunctions.AttemptToGetPlayerSigned(hockeyPlayer, league, agencyList[0]);
+                    getClientSignedFunctions.BeginNegotiations("money");
+                    jobScore = hockeyPlayer.TeamHappiness;
                 }
                 else if (job.Sport == Sports.Baseball)
                 {
                     agencyList = agencyList.OrderByDescending(o => o.BaseballControl).ToList();
                     league = world.MLB;
+                    baseballPlayer = new BaseballPlayer(world.rnd, league.IdCount, job.Sport, world.rnd.Next(21, 26), AssignRandomPosition(job.Sport));
+                    baseballPlayer.League = league;
+                    getClientSignedFunctions.AttemptToGetPlayerSigned(baseballPlayer, league, agencyList[0]);
+                    getClientSignedFunctions.BeginNegotiations("money");
+                    jobScore = baseballPlayer.TeamHappiness;
                 }
                 else if (job.Sport == Sports.Basketball)
                 {
                     agencyList = agencyList.OrderByDescending(o => o.BasketballControl).ToList();
                     league = world.NBA;
+                    basketballPlayer = new BasketballPlayer(world.rnd, league.IdCount, job.Sport, world.rnd.Next(21, 26), AssignRandomPosition(job.Sport));
+                    basketballPlayer.League = league;
+                    getClientSignedFunctions.AttemptToGetPlayerSigned(basketballPlayer, league, agencyList[0]);
+                    getClientSignedFunctions.BeginNegotiations("money");
+                    jobScore = basketballPlayer.TeamHappiness;
                 }
                 else //if (job.Sport == Sports.Football)
                 {
                     agencyList = agencyList.OrderByDescending(o => o.FootballControl).ToList();
                     league = world.NFL;
+                    footballPlayer = new FootballPlayer(world.rnd, league.IdCount, job.Sport, world.rnd.Next(21, 26), AssignRandomPosition(job.Sport));
+                    footballPlayer.League = league;
+                    getClientSignedFunctions.AttemptToGetPlayerSigned(footballPlayer, league, agencyList[0]);
+                    getClientSignedFunctions.BeginNegotiations("money");
+                    jobScore = footballPlayer.TeamHappiness;
                 }
 
-                getClientSignedFunctions.AttemptToGetPlayerSigned(new Player(world.rnd, league.IdCount, job.Sport, world.rnd.Next(21, 26)) ,league, agencyList[0]);
+                jobScore = jobScore / 10;
 
+                /*Player createdPlayer = new Player(world.rnd, league.IdCount, job.Sport, world.rnd.Next(21, 26));
+                createdPlayer.Position = AssignRandomPosition(job.Sport);
+                createdPlayer.League = league;
+                getClientSignedFunctions.AttemptToGetPlayerSigned(createdPlayer, league, agencyList[0]);
+                getClientSignedFunctions.BeginNegotiations("money");
+                jobScore = createdPlayer.TeamHappiness;*/
+                
 
-                if (jobDoneInTime) jobScore = rnd.Next(6, 11);
-                else jobScore = rnd.Next(1, 6);
+                //if (jobDoneInTime) jobScore = rnd.Next(6, 11);
+                //else jobScore = rnd.Next(1, 6);
             }
             else if (job.JobType == JobType.scouting)
             {
@@ -302,6 +342,69 @@ namespace SportsAgencyTycoonV2
             AllEmployeesNotWorking();
             DisplayAvailableJobs();
                 
+        }
+
+        private Position AssignRandomPosition(Sports s)
+        {
+            int max = 0;
+            if (s == Sports.Football) max = 16;
+            else if (s == Sports.Basketball) max = 5;
+            else if (s == Sports.Baseball) max = 5;
+            else if (s == Sports.Hockey) max = 4;
+            else if (s == Sports.Soccer) max = 4;
+
+            int rnd = world.rnd.Next(0, max);
+
+            if (s == Sports.Football)
+            {
+                if (rnd == 0) return Position.QB;
+                else if (rnd == 1) return Position.RB;
+                else if (rnd == 2) return Position.FB;
+                else if (rnd == 3) return Position.P;
+                else if (rnd == 4) return Position.WR;
+                else if (rnd == 5) return Position.TE;
+                else if (rnd == 6) return Position.C;
+                else if (rnd == 7) return Position.OG;
+                else if (rnd == 8) return Position.OT;
+                else if (rnd == 9) return Position.DE;
+                else if (rnd == 10) return Position.DT;
+                else if (rnd == 11) return Position.LB;
+                else if (rnd == 12) return Position.CB;
+                else if (rnd == 13) return Position.SS;
+                else if (rnd == 14) return Position.FS;
+                else if (rnd == 15) return Position.K;
+            }
+            else if (s == Sports.Basketball)
+            {
+                if (rnd == 0) return Position.PG;
+                else if (rnd == 1) return Position.SG;
+                else if (rnd == 2) return Position.SF;
+                else if (rnd == 3) return Position.PF;
+                else if (rnd == 4) return Position.CE;
+            }
+            else if (s == Sports.Baseball)
+            {
+                if (rnd == 0) return Position.C;
+                else if (rnd == 1) return Position.INF;
+                else if (rnd == 2) return Position.OF;
+                else if (rnd == 3) return Position.SP;
+                else if (rnd == 4) return Position.RP;
+            }
+            else if (s == Sports.Hockey)
+            {
+                if (rnd == 0) return Position.G;
+                else if (rnd == 1) return Position.C;
+                else if (rnd == 2) return Position.W;
+                else if (rnd == 3) return Position.D;
+            }
+            else if (s == Sports.Soccer)
+            {
+                if (rnd == 0) return Position.GK;
+                else if (rnd == 1) return Position.D;
+                else if (rnd == 2) return Position.MID;
+                else if (rnd == 3) return Position.F;
+            }
+            return Position.FB;
         }
         public void AllEmployeesNotWorking()
         {
