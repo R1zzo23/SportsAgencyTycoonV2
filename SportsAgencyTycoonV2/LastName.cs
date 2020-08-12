@@ -124,7 +124,7 @@ namespace SportsAgencyTycoonV2
         Ellis,
         Harrison,
         Gibson,
-        Mcdonald,
+        McDonald,
         Cruz,
         Marshall,
         Ortiz,

@@ -32,6 +32,9 @@ namespace SportsAgencyTycoonV2
             agency = a;
             client = c;
             league = l;
+
+            Console.WriteLine(c.FullName + "(" + c.CurrentSkill + "/" + c.PotentialSkill + ") - Greed: " + c.Greed + " - Winning: " + c.PlayForTitleContender + " - Lifestyle: " + c.Lifestyle);
+
             mainForm.clientTeamNegotiationPanel.Visible = true;
             //interestedTeams.Clear();
             contractOffers.Clear();
