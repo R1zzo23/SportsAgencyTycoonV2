@@ -204,6 +204,7 @@ namespace SportsAgencyTycoonV2
                 // Get agency score for job
                 ScoreJob(AttemptedJob);
                 world.MyAgency.AttemptingJob = false;
+                world.MyAgency.DaysAttemptingJob = 0;
                 AllEmployeesNotWorking();
                 EnableButtons();
             }
@@ -214,6 +215,7 @@ namespace SportsAgencyTycoonV2
             double jobScore = 10;
             bool jobDoneInTime;
             string results;
+            double penaltyPercentage = 0;
 
             BasketballPlayer basketballPlayer = null;
             BaseballPlayer baseballPlayer = null;
@@ -226,6 +228,12 @@ namespace SportsAgencyTycoonV2
             if (world.MyAgency.DaysAttemptingJob <= job.DaysToComplete)
                 jobDoneInTime = true;
             else jobDoneInTime = false;
+
+            if (!jobDoneInTime)
+            {
+                penaltyPercentage = (Convert.ToDouble(world.MyAgency.DaysAttemptingJob) - Convert.ToDouble(job.DaysToComplete)) / Convert.ToDouble(job.DaysToComplete);
+                Console.WriteLine("Original Job Score: " + jobScore.ToString());
+            }
 
             if (job.JobType == JobType.education)
             {
@@ -310,16 +318,11 @@ namespace SportsAgencyTycoonV2
                 
             }
 
-            if (!jobDoneInTime)
-            {
-                double penaltyPercentage = (Convert.ToDouble(world.MyAgency.DaysAttemptingJob) - Convert.ToDouble(job.DaysToComplete)) / Convert.ToDouble(job.DaysToComplete);
+            
 
-                Console.WriteLine("Original Job Score: " + jobScore.ToString());
-                
-                jobScore = jobScore * (1 - penaltyPercentage);
+            jobScore = jobScore * (1 - penaltyPercentage);
 
-                Console.WriteLine("penaltyPercentage = " + penaltyPercentage);
-            }
+            Console.WriteLine("penaltyPercentage = " + penaltyPercentage);
 
             results = "Baseline Score Needed: " + baselineScore.ToString() + Environment.NewLine
                 + "Agency's Job Score: " + jobScore.ToString() + Environment.NewLine;

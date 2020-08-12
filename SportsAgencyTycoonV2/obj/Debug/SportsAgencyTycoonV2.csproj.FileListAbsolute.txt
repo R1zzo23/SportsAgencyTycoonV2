@@ -48,3 +48,4 @@ C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\Sports
 C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.csproj.CoreCompileInputs.cache
 C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.exe
 C:\Users\jjr60\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.pdb
+C:\Users\adamj\Github\SportsAgencyTycoonV2\SportsAgencyTycoonV2\obj\Debug\SportsAgencyTycoonV2.csproj.CoreCompileInputs.cache

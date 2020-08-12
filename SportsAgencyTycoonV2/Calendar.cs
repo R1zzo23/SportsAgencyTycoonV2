@@ -57,6 +57,7 @@ namespace SportsAgencyTycoonV2
             }
             else
             {
+                world.MyAgency.DaysAttemptingJob = 0;
                 if (world.MyAgency.Manager.Status == AgentStatus.Scouting || world.MyAgency.Manager.Status == AgentStatus.Negotiating || world.MyAgency.Manager.Status == AgentStatus.Training)
                     world.MyAgency.AddDayWorking(world.MyAgency.Manager);
                 if (world.MyAgency.AgentCount > 0)
