@@ -215,12 +215,12 @@ namespace SportsAgencyTycoonV2
             int winner = SimulatePlayoffGame(AFCPlayoffs[0], NFCPlayoffs[0]);
             if (winner == 1)
             {
-                AFCPlayoffs[0].Awards.Add(new Award(World.calendar.Year, "Super Bowl Champions"));
+                AFCPlayoffs[0].Awards.Add(new Award(World.calendar.Year - 1, "Super Bowl Champions"));
                 //mainForm.newsLabel.Text = "The " + AFCPlayoffs[0].Mascot + " defeat the " + NFCPlayoffs[0].Mascot + " and are crowned Super Bowl champs!" + Environment.NewLine + mainForm.newsLabel.Text;
             }
             else
             {
-                NFCPlayoffs[0].Awards.Add(new Award(World.calendar.Year, "Super Bowl Champions"));
+                NFCPlayoffs[0].Awards.Add(new Award(World.calendar.Year - 1, "Super Bowl Champions"));
                 //mainForm.newsLabel.Text = "The " + NFCPlayoffs[0].Mascot + " defeat the " + AFCPlayoffs[0].Mascot + " and are crowned Super Bowl champs!" + Environment.NewLine + mainForm.newsLabel.Text;
             }
         }
