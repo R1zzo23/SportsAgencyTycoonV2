@@ -27,5 +27,9 @@ namespace SportsAgencyTycoonV2
             _MonthlyCost = monthlyCost;
             _EmployeeCapacity = employeeCapacity;
         }
+        public void IncreaseLevel()
+        {
+            _Level++;
+        }
     }
 }

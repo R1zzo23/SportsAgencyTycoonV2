@@ -233,6 +233,7 @@ namespace SportsAgencyTycoonV2
             agencyPanel.Visible = true;
             world.MyAgency.DisplayAllAgents();
             world.MyAgency.Manager.UpdateManagerUI(this);
+            world.MyAgency.UpdateOfficeUI(this);
         }
 
         private void btnManager_Click(object sender, EventArgs e)
@@ -518,6 +519,16 @@ namespace SportsAgencyTycoonV2
             {
                 CheckToHireNewAgent();
             }
+        }
+
+        private void btnUpgradeOfficeAmenities_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMoveToNewOffice_Click(object sender, EventArgs e)
+        {
+            world.MyAgency.NewOffice(); 
         }
     }
 }

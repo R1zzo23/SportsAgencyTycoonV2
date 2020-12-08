@@ -27,6 +27,8 @@ namespace SportsAgencyTycoonV2
         public string Name { get { return _Name; } }
         public int Level { get { return _Level; } }
         public Office Office { get { return _Office; } }
+        public int OfficeIndex = 0;
+        public List<Office> OfficeList = new List<Office>();
         public Agent Manager { get { return _Manager; } }
         public int Money { get { return _Money; } }
         public int InfluencePoints { get { return _InfluencePoints; } }
@@ -61,6 +63,15 @@ namespace SportsAgencyTycoonV2
             _AgentCount = _AgentList.Count;
             //_AgentList[0].SetCurrentEfficiency(25);
             //_AgentList[1].SetCurrentEfficiency(50);
+            CreateOffices();
+        }
+        public void CreateOffices()
+        {
+            OfficeList.Add(new Office(1, 0, 2500, 1));
+            OfficeList.Add(new Office(2, 50000, 4000, 3));
+            OfficeList.Add(new Office(3, 100000, 6000, 6));
+            OfficeList.Add(new Office(4, 250000, 10000, 10));
+            OfficeList.Add(new Office(5, 500000, 25000, 15));
         }
         public void AddAgent(Agent a)
         {
@@ -93,7 +104,24 @@ namespace SportsAgencyTycoonV2
         }
         public void SetOffice()
         {
-            _Office = new Office(1, 0, 2500, 1);
+            _Office = OfficeList[OfficeIndex];
+        }
+        public void NewOffice()
+        {
+            if (OfficeIndex < 4)
+            {
+                OfficeIndex++;
+                _Office = OfficeList[OfficeIndex];
+                AddMoney(-_Office.PurchaseCost);
+                UpdateOfficeUI(mainForm);
+            }
+        }
+        public void UpdateOfficeUI(MainForm mf)
+        {
+            mf.lblOfficeLevel.Text = "Level: " + _Office.Level.ToString();
+            mf.lblPurchaseCost.Text = "Purchase Cost: " + _Office.PurchaseCost.ToString("C0");
+            mf.lblMonthlyCost.Text = "Monthly Cost: " + _Office.MonthlyCost.ToString("C0");
+            mf.lblEmployeeCapacity.Text = "Employee Capacity: " + (AgentCount + 1).ToString() + "/" + _Office.EmployeeCapacity.ToString();
         }
         public void AddLicense(Sports sport)
         {
