@@ -13,6 +13,7 @@ New Things To Add:
     with company that offered you the job
 - player demands (top tier players demanding private jets, etc.)
 - player training
+- after signing a 3rd agent, need to create teams (scouting, negotiating)
 
 Things To Add From v1 Of Game:
 - Agency calling GM for player
