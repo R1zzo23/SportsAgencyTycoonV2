@@ -530,5 +530,6 @@ namespace SportsAgencyTycoonV2
         {
             world.MyAgency.NewOffice(); 
         }
+
     }
 }

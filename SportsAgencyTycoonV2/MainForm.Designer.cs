@@ -396,7 +396,7 @@
             this.cbManagerActions.Location = new System.Drawing.Point(8, 143);
             this.cbManagerActions.Margin = new System.Windows.Forms.Padding(4);
             this.cbManagerActions.Name = "cbManagerActions";
-            this.cbManagerActions.Size = new System.Drawing.Size(263, 39);
+            this.cbManagerActions.Size = new System.Drawing.Size(263, 24);
             this.cbManagerActions.TabIndex = 1;
             // 
             // lblManagerName
@@ -405,7 +405,7 @@
             this.lblManagerName.Location = new System.Drawing.Point(79, 6);
             this.lblManagerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerName.Name = "lblManagerName";
-            this.lblManagerName.Size = new System.Drawing.Size(345, 31);
+            this.lblManagerName.Size = new System.Drawing.Size(182, 17);
             this.lblManagerName.TabIndex = 0;
             this.lblManagerName.Text = "Very Very Long Name Here";
             this.lblManagerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -427,7 +427,7 @@
             this.lblAgencyMoney.Location = new System.Drawing.Point(476, 40);
             this.lblAgencyMoney.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgencyMoney.Name = "lblAgencyMoney";
-            this.lblAgencyMoney.Size = new System.Drawing.Size(140, 31);
+            this.lblAgencyMoney.Size = new System.Drawing.Size(74, 17);
             this.lblAgencyMoney.TabIndex = 2;
             this.lblAgencyMoney.Text = "Money: $0";
             // 
@@ -437,7 +437,7 @@
             this.lblInfluencePoints.Location = new System.Drawing.Point(622, 40);
             this.lblInfluencePoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfluencePoints.Name = "lblInfluencePoints";
-            this.lblInfluencePoints.Size = new System.Drawing.Size(238, 31);
+            this.lblInfluencePoints.Size = new System.Drawing.Size(124, 17);
             this.lblInfluencePoints.TabIndex = 3;
             this.lblInfluencePoints.Text = "Influence Points: 0";
             // 
@@ -447,7 +447,7 @@
             this.lblOfficeLevel.Location = new System.Drawing.Point(670, 4);
             this.lblOfficeLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOfficeLevel.Name = "lblOfficeLevel";
-            this.lblOfficeLevel.Size = new System.Drawing.Size(109, 31);
+            this.lblOfficeLevel.Size = new System.Drawing.Size(58, 17);
             this.lblOfficeLevel.TabIndex = 5;
             this.lblOfficeLevel.Text = "Level: 0";
             // 
@@ -485,7 +485,7 @@
             this.lblEmployeeCapacity.Location = new System.Drawing.Point(670, 64);
             this.lblEmployeeCapacity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeCapacity.Name = "lblEmployeeCapacity";
-            this.lblEmployeeCapacity.Size = new System.Drawing.Size(316, 31);
+            this.lblEmployeeCapacity.Size = new System.Drawing.Size(164, 17);
             this.lblEmployeeCapacity.TabIndex = 2;
             this.lblEmployeeCapacity.Text = "Employee Capacity: 0/10";
             // 
@@ -495,7 +495,7 @@
             this.lblMonthlyCost.Location = new System.Drawing.Point(670, 44);
             this.lblMonthlyCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMonthlyCost.Name = "lblMonthlyCost";
-            this.lblMonthlyCost.Size = new System.Drawing.Size(218, 31);
+            this.lblMonthlyCost.Size = new System.Drawing.Size(113, 17);
             this.lblMonthlyCost.TabIndex = 1;
             this.lblMonthlyCost.Text = "Monthly Cost: $0";
             // 
@@ -505,7 +505,7 @@
             this.lblPurchaseCost.Location = new System.Drawing.Point(670, 24);
             this.lblPurchaseCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPurchaseCost.Name = "lblPurchaseCost";
-            this.lblPurchaseCost.Size = new System.Drawing.Size(238, 31);
+            this.lblPurchaseCost.Size = new System.Drawing.Size(124, 17);
             this.lblPurchaseCost.TabIndex = 0;
             this.lblPurchaseCost.Text = "Purchase Cost: $0";
             // 
@@ -516,7 +516,7 @@
             this.lblLicenseList.Location = new System.Drawing.Point(391, 6);
             this.lblLicenseList.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLicenseList.Name = "lblLicenseList";
-            this.lblLicenseList.Size = new System.Drawing.Size(292, 31);
+            this.lblLicenseList.Size = new System.Drawing.Size(163, 17);
             this.lblLicenseList.TabIndex = 5;
             this.lblLicenseList.Text = "Agency License List: ";
             this.lblLicenseList.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -657,7 +657,7 @@
             this.lblManagerIQ.Location = new System.Drawing.Point(82, 30);
             this.lblManagerIQ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerIQ.Name = "lblManagerIQ";
-            this.lblManagerIQ.Size = new System.Drawing.Size(89, 31);
+            this.lblManagerIQ.Size = new System.Drawing.Size(46, 17);
             this.lblManagerIQ.TabIndex = 13;
             this.lblManagerIQ.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerIQ, "Intelligence");
@@ -669,7 +669,7 @@
             this.lblManagerNegotiate.Location = new System.Drawing.Point(82, 54);
             this.lblManagerNegotiate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerNegotiate.Name = "lblManagerNegotiate";
-            this.lblManagerNegotiate.Size = new System.Drawing.Size(103, 31);
+            this.lblManagerNegotiate.Size = new System.Drawing.Size(54, 17);
             this.lblManagerNegotiate.TabIndex = 11;
             this.lblManagerNegotiate.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerNegotiate, "Negotiating");
@@ -681,7 +681,7 @@
             this.lblManagerGreed.Location = new System.Drawing.Point(170, 30);
             this.lblManagerGreed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerGreed.Name = "lblManagerGreed";
-            this.lblManagerGreed.Size = new System.Drawing.Size(105, 31);
+            this.lblManagerGreed.Size = new System.Drawing.Size(55, 17);
             this.lblManagerGreed.TabIndex = 10;
             this.lblManagerGreed.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerGreed, "Greed");
@@ -693,7 +693,7 @@
             this.lblManagerPower.Location = new System.Drawing.Point(82, 78);
             this.lblManagerPower.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerPower.Name = "lblManagerPower";
-            this.lblManagerPower.Size = new System.Drawing.Size(108, 31);
+            this.lblManagerPower.Size = new System.Drawing.Size(57, 17);
             this.lblManagerPower.TabIndex = 12;
             this.lblManagerPower.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerPower, "Power");
@@ -705,7 +705,7 @@
             this.lblManagerScouting.Location = new System.Drawing.Point(170, 54);
             this.lblManagerScouting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerScouting.Name = "lblManagerScouting";
-            this.lblManagerScouting.Size = new System.Drawing.Size(99, 31);
+            this.lblManagerScouting.Size = new System.Drawing.Size(51, 17);
             this.lblManagerScouting.TabIndex = 14;
             this.lblManagerScouting.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerScouting, "Greed");
@@ -717,7 +717,7 @@
             this.lblManagerEfficiency.Location = new System.Drawing.Point(170, 78);
             this.lblManagerEfficiency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblManagerEfficiency.Name = "lblManagerEfficiency";
-            this.lblManagerEfficiency.Size = new System.Drawing.Size(96, 31);
+            this.lblManagerEfficiency.Size = new System.Drawing.Size(49, 17);
             this.lblManagerEfficiency.TabIndex = 15;
             this.lblManagerEfficiency.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblManagerEfficiency, "Greed");
@@ -729,7 +729,7 @@
             this.lblAgent1EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent1EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1EFF.Name = "lblAgent1EFF";
-            this.lblAgent1EFF.Size = new System.Drawing.Size(96, 31);
+            this.lblAgent1EFF.Size = new System.Drawing.Size(49, 17);
             this.lblAgent1EFF.TabIndex = 22;
             this.lblAgent1EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1EFF, "Efficiency");
@@ -741,7 +741,7 @@
             this.lblAgent1SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent1SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1SCT.Name = "lblAgent1SCT";
-            this.lblAgent1SCT.Size = new System.Drawing.Size(99, 31);
+            this.lblAgent1SCT.Size = new System.Drawing.Size(51, 17);
             this.lblAgent1SCT.TabIndex = 21;
             this.lblAgent1SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1SCT, "Scouting");
@@ -753,7 +753,7 @@
             this.lblAgent1INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent1INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1INT.Name = "lblAgent1INT";
-            this.lblAgent1INT.Size = new System.Drawing.Size(89, 31);
+            this.lblAgent1INT.Size = new System.Drawing.Size(46, 17);
             this.lblAgent1INT.TabIndex = 20;
             this.lblAgent1INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1INT, "Intelligence");
@@ -765,7 +765,7 @@
             this.lblAgent1NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent1NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1NEG.Name = "lblAgent1NEG";
-            this.lblAgent1NEG.Size = new System.Drawing.Size(103, 31);
+            this.lblAgent1NEG.Size = new System.Drawing.Size(54, 17);
             this.lblAgent1NEG.TabIndex = 18;
             this.lblAgent1NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1NEG, "Negotiating");
@@ -777,7 +777,7 @@
             this.lblAgent1GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent1GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1GRD.Name = "lblAgent1GRD";
-            this.lblAgent1GRD.Size = new System.Drawing.Size(105, 31);
+            this.lblAgent1GRD.Size = new System.Drawing.Size(55, 17);
             this.lblAgent1GRD.TabIndex = 17;
             this.lblAgent1GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1GRD, "Greed");
@@ -789,7 +789,7 @@
             this.lblAgent1POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent1POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1POW.Name = "lblAgent1POW";
-            this.lblAgent1POW.Size = new System.Drawing.Size(108, 31);
+            this.lblAgent1POW.Size = new System.Drawing.Size(57, 17);
             this.lblAgent1POW.TabIndex = 19;
             this.lblAgent1POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent1POW, "Power");
@@ -801,7 +801,7 @@
             this.lblAgent2EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent2EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2EFF.Name = "lblAgent2EFF";
-            this.lblAgent2EFF.Size = new System.Drawing.Size(96, 31);
+            this.lblAgent2EFF.Size = new System.Drawing.Size(49, 17);
             this.lblAgent2EFF.TabIndex = 22;
             this.lblAgent2EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2EFF, "Efficiency");
@@ -813,7 +813,7 @@
             this.lblAgent2SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent2SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2SCT.Name = "lblAgent2SCT";
-            this.lblAgent2SCT.Size = new System.Drawing.Size(99, 31);
+            this.lblAgent2SCT.Size = new System.Drawing.Size(51, 17);
             this.lblAgent2SCT.TabIndex = 21;
             this.lblAgent2SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2SCT, "Scouting");
@@ -825,7 +825,7 @@
             this.lblAgent2INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent2INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2INT.Name = "lblAgent2INT";
-            this.lblAgent2INT.Size = new System.Drawing.Size(89, 31);
+            this.lblAgent2INT.Size = new System.Drawing.Size(46, 17);
             this.lblAgent2INT.TabIndex = 20;
             this.lblAgent2INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2INT, "Intelligence");
@@ -837,7 +837,7 @@
             this.lblAgent2NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent2NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2NEG.Name = "lblAgent2NEG";
-            this.lblAgent2NEG.Size = new System.Drawing.Size(103, 31);
+            this.lblAgent2NEG.Size = new System.Drawing.Size(54, 17);
             this.lblAgent2NEG.TabIndex = 18;
             this.lblAgent2NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2NEG, "Negotiating");
@@ -849,7 +849,7 @@
             this.lblAgent2GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent2GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2GRD.Name = "lblAgent2GRD";
-            this.lblAgent2GRD.Size = new System.Drawing.Size(105, 31);
+            this.lblAgent2GRD.Size = new System.Drawing.Size(55, 17);
             this.lblAgent2GRD.TabIndex = 17;
             this.lblAgent2GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2GRD, "Greed");
@@ -861,7 +861,7 @@
             this.lblAgent2POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent2POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2POW.Name = "lblAgent2POW";
-            this.lblAgent2POW.Size = new System.Drawing.Size(108, 31);
+            this.lblAgent2POW.Size = new System.Drawing.Size(57, 17);
             this.lblAgent2POW.TabIndex = 19;
             this.lblAgent2POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent2POW, "Power");
@@ -873,7 +873,7 @@
             this.lblAgent3EFF.Location = new System.Drawing.Point(175, 105);
             this.lblAgent3EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3EFF.Name = "lblAgent3EFF";
-            this.lblAgent3EFF.Size = new System.Drawing.Size(96, 31);
+            this.lblAgent3EFF.Size = new System.Drawing.Size(49, 17);
             this.lblAgent3EFF.TabIndex = 22;
             this.lblAgent3EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3EFF, "Efficiency");
@@ -885,7 +885,7 @@
             this.lblAgent3SCT.Location = new System.Drawing.Point(175, 81);
             this.lblAgent3SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3SCT.Name = "lblAgent3SCT";
-            this.lblAgent3SCT.Size = new System.Drawing.Size(99, 31);
+            this.lblAgent3SCT.Size = new System.Drawing.Size(51, 17);
             this.lblAgent3SCT.TabIndex = 21;
             this.lblAgent3SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3SCT, "Scouting");
@@ -897,7 +897,7 @@
             this.lblAgent3INT.Location = new System.Drawing.Point(87, 57);
             this.lblAgent3INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3INT.Name = "lblAgent3INT";
-            this.lblAgent3INT.Size = new System.Drawing.Size(89, 31);
+            this.lblAgent3INT.Size = new System.Drawing.Size(46, 17);
             this.lblAgent3INT.TabIndex = 20;
             this.lblAgent3INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3INT, "Intelligence");
@@ -909,7 +909,7 @@
             this.lblAgent3NEG.Location = new System.Drawing.Point(87, 81);
             this.lblAgent3NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3NEG.Name = "lblAgent3NEG";
-            this.lblAgent3NEG.Size = new System.Drawing.Size(103, 31);
+            this.lblAgent3NEG.Size = new System.Drawing.Size(54, 17);
             this.lblAgent3NEG.TabIndex = 18;
             this.lblAgent3NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3NEG, "Negotiating");
@@ -921,7 +921,7 @@
             this.lblAgent3GRD.Location = new System.Drawing.Point(175, 57);
             this.lblAgent3GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3GRD.Name = "lblAgent3GRD";
-            this.lblAgent3GRD.Size = new System.Drawing.Size(105, 31);
+            this.lblAgent3GRD.Size = new System.Drawing.Size(55, 17);
             this.lblAgent3GRD.TabIndex = 17;
             this.lblAgent3GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3GRD, "Greed");
@@ -933,7 +933,7 @@
             this.lblAgent3POW.Location = new System.Drawing.Point(87, 105);
             this.lblAgent3POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3POW.Name = "lblAgent3POW";
-            this.lblAgent3POW.Size = new System.Drawing.Size(108, 31);
+            this.lblAgent3POW.Size = new System.Drawing.Size(57, 17);
             this.lblAgent3POW.TabIndex = 19;
             this.lblAgent3POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblAgent3POW, "Power");
@@ -945,7 +945,7 @@
             this.lblScoutedAgent3EFF.Location = new System.Drawing.Point(175, 105);
             this.lblScoutedAgent3EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent3EFF.Name = "lblScoutedAgent3EFF";
-            this.lblScoutedAgent3EFF.Size = new System.Drawing.Size(96, 31);
+            this.lblScoutedAgent3EFF.Size = new System.Drawing.Size(49, 17);
             this.lblScoutedAgent3EFF.TabIndex = 22;
             this.lblScoutedAgent3EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent3EFF, "Efficiency");
@@ -957,7 +957,7 @@
             this.lblScoutedAgent3SCT.Location = new System.Drawing.Point(175, 81);
             this.lblScoutedAgent3SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent3SCT.Name = "lblScoutedAgent3SCT";
-            this.lblScoutedAgent3SCT.Size = new System.Drawing.Size(99, 31);
+            this.lblScoutedAgent3SCT.Size = new System.Drawing.Size(51, 17);
             this.lblScoutedAgent3SCT.TabIndex = 21;
             this.lblScoutedAgent3SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent3SCT, "Scouting");
@@ -969,7 +969,7 @@
             this.lblScoutedAgent3INT.Location = new System.Drawing.Point(87, 57);
             this.lblScoutedAgent3INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent3INT.Name = "lblScoutedAgent3INT";
-            this.lblScoutedAgent3INT.Size = new System.Drawing.Size(89, 31);
+            this.lblScoutedAgent3INT.Size = new System.Drawing.Size(46, 17);
             this.lblScoutedAgent3INT.TabIndex = 20;
             this.lblScoutedAgent3INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent3INT, "Intelligence");
@@ -981,7 +981,7 @@
             this.lblScoutedAgent3NEG.Location = new System.Drawing.Point(87, 81);
             this.lblScoutedAgent3NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent3NEG.Name = "lblScoutedAgent3NEG";
-            this.lblScoutedAgent3NEG.Size = new System.Drawing.Size(103, 31);
+            this.lblScoutedAgent3NEG.Size = new System.Drawing.Size(54, 17);
             this.lblScoutedAgent3NEG.TabIndex = 18;
             this.lblScoutedAgent3NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent3NEG, "Negotiating");
@@ -993,7 +993,7 @@
             this.lblScoutedAgent3GRD.Location = new System.Drawing.Point(175, 57);
             this.lblScoutedAgent3GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent3GRD.Name = "lblScoutedAgent3GRD";
-            this.lblScoutedAgent3GRD.Size = new System.Drawing.Size(105, 31);
+            this.lblScoutedAgent3GRD.Size = new System.Drawing.Size(55, 17);
             this.lblScoutedAgent3GRD.TabIndex = 17;
             this.lblScoutedAgent3GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent3GRD, "Greed");
@@ -1005,7 +1005,7 @@
             this.lblScoutedAgent3POW.Location = new System.Drawing.Point(87, 105);
             this.lblScoutedAgent3POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent3POW.Name = "lblScoutedAgent3POW";
-            this.lblScoutedAgent3POW.Size = new System.Drawing.Size(108, 31);
+            this.lblScoutedAgent3POW.Size = new System.Drawing.Size(57, 17);
             this.lblScoutedAgent3POW.TabIndex = 19;
             this.lblScoutedAgent3POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent3POW, "Power");
@@ -1017,7 +1017,7 @@
             this.lblScoutedAgent2EFF.Location = new System.Drawing.Point(175, 105);
             this.lblScoutedAgent2EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent2EFF.Name = "lblScoutedAgent2EFF";
-            this.lblScoutedAgent2EFF.Size = new System.Drawing.Size(96, 31);
+            this.lblScoutedAgent2EFF.Size = new System.Drawing.Size(49, 17);
             this.lblScoutedAgent2EFF.TabIndex = 22;
             this.lblScoutedAgent2EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent2EFF, "Efficiency");
@@ -1029,7 +1029,7 @@
             this.lblScoutedAgent2SCT.Location = new System.Drawing.Point(175, 81);
             this.lblScoutedAgent2SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent2SCT.Name = "lblScoutedAgent2SCT";
-            this.lblScoutedAgent2SCT.Size = new System.Drawing.Size(99, 31);
+            this.lblScoutedAgent2SCT.Size = new System.Drawing.Size(51, 17);
             this.lblScoutedAgent2SCT.TabIndex = 21;
             this.lblScoutedAgent2SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent2SCT, "Scouting");
@@ -1041,7 +1041,7 @@
             this.lblScoutedAgent2INT.Location = new System.Drawing.Point(87, 57);
             this.lblScoutedAgent2INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent2INT.Name = "lblScoutedAgent2INT";
-            this.lblScoutedAgent2INT.Size = new System.Drawing.Size(89, 31);
+            this.lblScoutedAgent2INT.Size = new System.Drawing.Size(46, 17);
             this.lblScoutedAgent2INT.TabIndex = 20;
             this.lblScoutedAgent2INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent2INT, "Intelligence");
@@ -1053,7 +1053,7 @@
             this.lblScoutedAgent2NEG.Location = new System.Drawing.Point(87, 81);
             this.lblScoutedAgent2NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent2NEG.Name = "lblScoutedAgent2NEG";
-            this.lblScoutedAgent2NEG.Size = new System.Drawing.Size(103, 31);
+            this.lblScoutedAgent2NEG.Size = new System.Drawing.Size(54, 17);
             this.lblScoutedAgent2NEG.TabIndex = 18;
             this.lblScoutedAgent2NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent2NEG, "Negotiating");
@@ -1065,7 +1065,7 @@
             this.lblScoutedAgent2GRD.Location = new System.Drawing.Point(175, 57);
             this.lblScoutedAgent2GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent2GRD.Name = "lblScoutedAgent2GRD";
-            this.lblScoutedAgent2GRD.Size = new System.Drawing.Size(105, 31);
+            this.lblScoutedAgent2GRD.Size = new System.Drawing.Size(55, 17);
             this.lblScoutedAgent2GRD.TabIndex = 17;
             this.lblScoutedAgent2GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent2GRD, "Greed");
@@ -1077,7 +1077,7 @@
             this.lblScoutedAgent2POW.Location = new System.Drawing.Point(87, 105);
             this.lblScoutedAgent2POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent2POW.Name = "lblScoutedAgent2POW";
-            this.lblScoutedAgent2POW.Size = new System.Drawing.Size(108, 31);
+            this.lblScoutedAgent2POW.Size = new System.Drawing.Size(57, 17);
             this.lblScoutedAgent2POW.TabIndex = 19;
             this.lblScoutedAgent2POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent2POW, "Power");
@@ -1089,7 +1089,7 @@
             this.lblScoutedAgent1EFF.Location = new System.Drawing.Point(175, 105);
             this.lblScoutedAgent1EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent1EFF.Name = "lblScoutedAgent1EFF";
-            this.lblScoutedAgent1EFF.Size = new System.Drawing.Size(96, 31);
+            this.lblScoutedAgent1EFF.Size = new System.Drawing.Size(49, 17);
             this.lblScoutedAgent1EFF.TabIndex = 22;
             this.lblScoutedAgent1EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent1EFF, "Efficiency");
@@ -1101,7 +1101,7 @@
             this.lblScoutedAgent1SCT.Location = new System.Drawing.Point(175, 81);
             this.lblScoutedAgent1SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent1SCT.Name = "lblScoutedAgent1SCT";
-            this.lblScoutedAgent1SCT.Size = new System.Drawing.Size(99, 31);
+            this.lblScoutedAgent1SCT.Size = new System.Drawing.Size(51, 17);
             this.lblScoutedAgent1SCT.TabIndex = 21;
             this.lblScoutedAgent1SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent1SCT, "Scouting");
@@ -1113,7 +1113,7 @@
             this.lblScoutedAgent1INT.Location = new System.Drawing.Point(87, 57);
             this.lblScoutedAgent1INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent1INT.Name = "lblScoutedAgent1INT";
-            this.lblScoutedAgent1INT.Size = new System.Drawing.Size(89, 31);
+            this.lblScoutedAgent1INT.Size = new System.Drawing.Size(46, 17);
             this.lblScoutedAgent1INT.TabIndex = 20;
             this.lblScoutedAgent1INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent1INT, "Intelligence");
@@ -1125,7 +1125,7 @@
             this.lblScoutedAgent1NEG.Location = new System.Drawing.Point(87, 81);
             this.lblScoutedAgent1NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent1NEG.Name = "lblScoutedAgent1NEG";
-            this.lblScoutedAgent1NEG.Size = new System.Drawing.Size(103, 31);
+            this.lblScoutedAgent1NEG.Size = new System.Drawing.Size(54, 17);
             this.lblScoutedAgent1NEG.TabIndex = 18;
             this.lblScoutedAgent1NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent1NEG, "Negotiating");
@@ -1137,7 +1137,7 @@
             this.lblScoutedAgent1GRD.Location = new System.Drawing.Point(175, 57);
             this.lblScoutedAgent1GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent1GRD.Name = "lblScoutedAgent1GRD";
-            this.lblScoutedAgent1GRD.Size = new System.Drawing.Size(105, 31);
+            this.lblScoutedAgent1GRD.Size = new System.Drawing.Size(55, 17);
             this.lblScoutedAgent1GRD.TabIndex = 17;
             this.lblScoutedAgent1GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent1GRD, "Greed");
@@ -1149,7 +1149,7 @@
             this.lblScoutedAgent1POW.Location = new System.Drawing.Point(87, 105);
             this.lblScoutedAgent1POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent1POW.Name = "lblScoutedAgent1POW";
-            this.lblScoutedAgent1POW.Size = new System.Drawing.Size(108, 31);
+            this.lblScoutedAgent1POW.Size = new System.Drawing.Size(57, 17);
             this.lblScoutedAgent1POW.TabIndex = 19;
             this.lblScoutedAgent1POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent1POW, "Power");
@@ -1161,7 +1161,7 @@
             this.lblScoutedAgent4EFF.Location = new System.Drawing.Point(175, 105);
             this.lblScoutedAgent4EFF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent4EFF.Name = "lblScoutedAgent4EFF";
-            this.lblScoutedAgent4EFF.Size = new System.Drawing.Size(96, 31);
+            this.lblScoutedAgent4EFF.Size = new System.Drawing.Size(49, 17);
             this.lblScoutedAgent4EFF.TabIndex = 22;
             this.lblScoutedAgent4EFF.Text = "EFF: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent4EFF, "Efficiency");
@@ -1173,7 +1173,7 @@
             this.lblScoutedAgent4SCT.Location = new System.Drawing.Point(175, 81);
             this.lblScoutedAgent4SCT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent4SCT.Name = "lblScoutedAgent4SCT";
-            this.lblScoutedAgent4SCT.Size = new System.Drawing.Size(99, 31);
+            this.lblScoutedAgent4SCT.Size = new System.Drawing.Size(51, 17);
             this.lblScoutedAgent4SCT.TabIndex = 21;
             this.lblScoutedAgent4SCT.Text = "SCT: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent4SCT, "Scouting");
@@ -1185,7 +1185,7 @@
             this.lblScoutedAgent4INT.Location = new System.Drawing.Point(87, 57);
             this.lblScoutedAgent4INT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent4INT.Name = "lblScoutedAgent4INT";
-            this.lblScoutedAgent4INT.Size = new System.Drawing.Size(89, 31);
+            this.lblScoutedAgent4INT.Size = new System.Drawing.Size(46, 17);
             this.lblScoutedAgent4INT.TabIndex = 20;
             this.lblScoutedAgent4INT.Text = "INT: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent4INT, "Intelligence");
@@ -1197,7 +1197,7 @@
             this.lblScoutedAgent4NEG.Location = new System.Drawing.Point(87, 81);
             this.lblScoutedAgent4NEG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent4NEG.Name = "lblScoutedAgent4NEG";
-            this.lblScoutedAgent4NEG.Size = new System.Drawing.Size(103, 31);
+            this.lblScoutedAgent4NEG.Size = new System.Drawing.Size(54, 17);
             this.lblScoutedAgent4NEG.TabIndex = 18;
             this.lblScoutedAgent4NEG.Text = "NEG: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent4NEG, "Negotiating");
@@ -1209,7 +1209,7 @@
             this.lblScoutedAgent4GRD.Location = new System.Drawing.Point(175, 57);
             this.lblScoutedAgent4GRD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent4GRD.Name = "lblScoutedAgent4GRD";
-            this.lblScoutedAgent4GRD.Size = new System.Drawing.Size(105, 31);
+            this.lblScoutedAgent4GRD.Size = new System.Drawing.Size(55, 17);
             this.lblScoutedAgent4GRD.TabIndex = 17;
             this.lblScoutedAgent4GRD.Text = "GRD: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent4GRD, "Greed");
@@ -1221,7 +1221,7 @@
             this.lblScoutedAgent4POW.Location = new System.Drawing.Point(87, 105);
             this.lblScoutedAgent4POW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent4POW.Name = "lblScoutedAgent4POW";
-            this.lblScoutedAgent4POW.Size = new System.Drawing.Size(108, 31);
+            this.lblScoutedAgent4POW.Size = new System.Drawing.Size(57, 17);
             this.lblScoutedAgent4POW.TabIndex = 19;
             this.lblScoutedAgent4POW.Text = "POW: 0";
             this.toolTipMainForm.SetToolTip(this.lblScoutedAgent4POW, "Power");
@@ -1262,7 +1262,7 @@
             this.lblManagerStatus.AutoSize = true;
             this.lblManagerStatus.Location = new System.Drawing.Point(10, 110);
             this.lblManagerStatus.Name = "lblManagerStatus";
-            this.lblManagerStatus.Size = new System.Drawing.Size(100, 31);
+            this.lblManagerStatus.Size = new System.Drawing.Size(52, 17);
             this.lblManagerStatus.TabIndex = 19;
             this.lblManagerStatus.Text = "Status:";
             // 
@@ -1291,7 +1291,7 @@
             this.lblAgent3Salary.AutoSize = true;
             this.lblAgent3Salary.Location = new System.Drawing.Point(9, 168);
             this.lblAgent3Salary.Name = "lblAgent3Salary";
-            this.lblAgent3Salary.Size = new System.Drawing.Size(99, 31);
+            this.lblAgent3Salary.Size = new System.Drawing.Size(52, 17);
             this.lblAgent3Salary.TabIndex = 28;
             this.lblAgent3Salary.Text = "Salary:";
             // 
@@ -1312,7 +1312,7 @@
             this.lblAgent3Status.AutoSize = true;
             this.lblAgent3Status.Location = new System.Drawing.Point(9, 137);
             this.lblAgent3Status.Name = "lblAgent3Status";
-            this.lblAgent3Status.Size = new System.Drawing.Size(100, 31);
+            this.lblAgent3Status.Size = new System.Drawing.Size(52, 17);
             this.lblAgent3Status.TabIndex = 25;
             this.lblAgent3Status.Text = "Status:";
             // 
@@ -1323,17 +1323,17 @@
             this.label19.Location = new System.Drawing.Point(1, 24);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(99, 31);
+            this.label19.Size = new System.Drawing.Size(55, 17);
             this.label19.TabIndex = 24;
             this.label19.Text = "Agent:";
             // 
             // lblAgent3Name
             // 
             this.lblAgent3Name.AutoSize = true;
-            this.lblAgent3Name.Location = new System.Drawing.Point(51, 23);
+            this.lblAgent3Name.Location = new System.Drawing.Point(53, 24);
             this.lblAgent3Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent3Name.Name = "lblAgent3Name";
-            this.lblAgent3Name.Size = new System.Drawing.Size(345, 31);
+            this.lblAgent3Name.Size = new System.Drawing.Size(182, 17);
             this.lblAgent3Name.TabIndex = 23;
             this.lblAgent3Name.Text = "Very Very Long Name Here";
             this.lblAgent3Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1373,7 +1373,7 @@
             this.lblAgent2Salary.AutoSize = true;
             this.lblAgent2Salary.Location = new System.Drawing.Point(9, 165);
             this.lblAgent2Salary.Name = "lblAgent2Salary";
-            this.lblAgent2Salary.Size = new System.Drawing.Size(99, 31);
+            this.lblAgent2Salary.Size = new System.Drawing.Size(52, 17);
             this.lblAgent2Salary.TabIndex = 28;
             this.lblAgent2Salary.Text = "Salary:";
             // 
@@ -1394,7 +1394,7 @@
             this.lblAgent2Status.AutoSize = true;
             this.lblAgent2Status.Location = new System.Drawing.Point(9, 137);
             this.lblAgent2Status.Name = "lblAgent2Status";
-            this.lblAgent2Status.Size = new System.Drawing.Size(100, 31);
+            this.lblAgent2Status.Size = new System.Drawing.Size(52, 17);
             this.lblAgent2Status.TabIndex = 25;
             this.lblAgent2Status.Text = "Status:";
             // 
@@ -1405,17 +1405,17 @@
             this.label11.Location = new System.Drawing.Point(1, 24);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 31);
+            this.label11.Size = new System.Drawing.Size(55, 17);
             this.label11.TabIndex = 24;
             this.label11.Text = "Agent:";
             // 
             // lblAgent2Name
             // 
             this.lblAgent2Name.AutoSize = true;
-            this.lblAgent2Name.Location = new System.Drawing.Point(51, 23);
+            this.lblAgent2Name.Location = new System.Drawing.Point(53, 24);
             this.lblAgent2Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent2Name.Name = "lblAgent2Name";
-            this.lblAgent2Name.Size = new System.Drawing.Size(345, 31);
+            this.lblAgent2Name.Size = new System.Drawing.Size(182, 17);
             this.lblAgent2Name.TabIndex = 23;
             this.lblAgent2Name.Text = "Very Very Long Name Here";
             this.lblAgent2Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1455,7 +1455,7 @@
             this.lblAgent1Salary.AutoSize = true;
             this.lblAgent1Salary.Location = new System.Drawing.Point(9, 168);
             this.lblAgent1Salary.Name = "lblAgent1Salary";
-            this.lblAgent1Salary.Size = new System.Drawing.Size(99, 31);
+            this.lblAgent1Salary.Size = new System.Drawing.Size(52, 17);
             this.lblAgent1Salary.TabIndex = 27;
             this.lblAgent1Salary.Text = "Salary:";
             // 
@@ -1476,7 +1476,7 @@
             this.lblAgent1Status.AutoSize = true;
             this.lblAgent1Status.Location = new System.Drawing.Point(9, 137);
             this.lblAgent1Status.Name = "lblAgent1Status";
-            this.lblAgent1Status.Size = new System.Drawing.Size(100, 31);
+            this.lblAgent1Status.Size = new System.Drawing.Size(52, 17);
             this.lblAgent1Status.TabIndex = 25;
             this.lblAgent1Status.Text = "Status:";
             // 
@@ -1487,17 +1487,17 @@
             this.label9.Location = new System.Drawing.Point(1, 24);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 31);
+            this.label9.Size = new System.Drawing.Size(55, 17);
             this.label9.TabIndex = 24;
             this.label9.Text = "Agent:";
             // 
             // lblAgent1Name
             // 
             this.lblAgent1Name.AutoSize = true;
-            this.lblAgent1Name.Location = new System.Drawing.Point(51, 23);
+            this.lblAgent1Name.Location = new System.Drawing.Point(53, 24);
             this.lblAgent1Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgent1Name.Name = "lblAgent1Name";
-            this.lblAgent1Name.Size = new System.Drawing.Size(345, 31);
+            this.lblAgent1Name.Size = new System.Drawing.Size(182, 17);
             this.lblAgent1Name.TabIndex = 23;
             this.lblAgent1Name.Text = "Very Very Long Name Here";
             this.lblAgent1Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1519,7 +1519,7 @@
             this.label2.Location = new System.Drawing.Point(602, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 31);
+            this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Office";
             // 
@@ -1540,7 +1540,7 @@
             this.label1.Location = new System.Drawing.Point(4, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 31);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Manager:";
             // 
@@ -1595,7 +1595,7 @@
             this.job3DaysToComplete.AutoSize = true;
             this.job3DaysToComplete.Location = new System.Drawing.Point(7, 151);
             this.job3DaysToComplete.Name = "job3DaysToComplete";
-            this.job3DaysToComplete.Size = new System.Drawing.Size(247, 31);
+            this.job3DaysToComplete.Size = new System.Drawing.Size(128, 17);
             this.job3DaysToComplete.TabIndex = 9;
             this.job3DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1616,7 +1616,7 @@
             this.job3PointsUntilCompletion.AutoSize = true;
             this.job3PointsUntilCompletion.Location = new System.Drawing.Point(7, 130);
             this.job3PointsUntilCompletion.Name = "job3PointsUntilCompletion";
-            this.job3PointsUntilCompletion.Size = new System.Drawing.Size(311, 31);
+            this.job3PointsUntilCompletion.Size = new System.Drawing.Size(161, 17);
             this.job3PointsUntilCompletion.TabIndex = 5;
             this.job3PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1625,7 +1625,7 @@
             this.job3MoneyPayout.AutoSize = true;
             this.job3MoneyPayout.Location = new System.Drawing.Point(7, 109);
             this.job3MoneyPayout.Name = "job3MoneyPayout";
-            this.job3MoneyPayout.Size = new System.Drawing.Size(202, 31);
+            this.job3MoneyPayout.Size = new System.Drawing.Size(106, 17);
             this.job3MoneyPayout.TabIndex = 4;
             this.job3MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1634,7 +1634,7 @@
             this.job3IPPayout.AutoSize = true;
             this.job3IPPayout.Location = new System.Drawing.Point(7, 88);
             this.job3IPPayout.Name = "job3IPPayout";
-            this.job3IPPayout.Size = new System.Drawing.Size(147, 31);
+            this.job3IPPayout.Size = new System.Drawing.Size(76, 17);
             this.job3IPPayout.TabIndex = 3;
             this.job3IPPayout.Text = "IP Payout: ";
             // 
@@ -1643,7 +1643,7 @@
             this.job3BaselineScore.AutoSize = true;
             this.job3BaselineScore.Location = new System.Drawing.Point(7, 67);
             this.job3BaselineScore.Name = "job3BaselineScore";
-            this.job3BaselineScore.Size = new System.Drawing.Size(211, 31);
+            this.job3BaselineScore.Size = new System.Drawing.Size(111, 17);
             this.job3BaselineScore.TabIndex = 2;
             this.job3BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1652,7 +1652,7 @@
             this.job3Description.AutoSize = true;
             this.job3Description.Location = new System.Drawing.Point(7, 46);
             this.job3Description.Name = "job3Description";
-            this.job3Description.Size = new System.Drawing.Size(224, 31);
+            this.job3Description.Size = new System.Drawing.Size(118, 17);
             this.job3Description.TabIndex = 1;
             this.job3Description.Text = "Job 1 Description";
             // 
@@ -1662,7 +1662,7 @@
             this.job3Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job3Title.Location = new System.Drawing.Point(6, 16);
             this.job3Title.Name = "job3Title";
-            this.job3Title.Size = new System.Drawing.Size(331, 51);
+            this.job3Title.Size = new System.Drawing.Size(174, 26);
             this.job3Title.TabIndex = 0;
             this.job3Title.Text = "Job 1 Title Text";
             this.job3Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1690,7 +1690,7 @@
             this.job2DaysToComplete.AutoSize = true;
             this.job2DaysToComplete.Location = new System.Drawing.Point(4, 151);
             this.job2DaysToComplete.Name = "job2DaysToComplete";
-            this.job2DaysToComplete.Size = new System.Drawing.Size(247, 31);
+            this.job2DaysToComplete.Size = new System.Drawing.Size(128, 17);
             this.job2DaysToComplete.TabIndex = 8;
             this.job2DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1711,7 +1711,7 @@
             this.job2PointsUntilCompletion.AutoSize = true;
             this.job2PointsUntilCompletion.Location = new System.Drawing.Point(7, 130);
             this.job2PointsUntilCompletion.Name = "job2PointsUntilCompletion";
-            this.job2PointsUntilCompletion.Size = new System.Drawing.Size(311, 31);
+            this.job2PointsUntilCompletion.Size = new System.Drawing.Size(161, 17);
             this.job2PointsUntilCompletion.TabIndex = 5;
             this.job2PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1720,7 +1720,7 @@
             this.job2MoneyPayout.AutoSize = true;
             this.job2MoneyPayout.Location = new System.Drawing.Point(7, 109);
             this.job2MoneyPayout.Name = "job2MoneyPayout";
-            this.job2MoneyPayout.Size = new System.Drawing.Size(202, 31);
+            this.job2MoneyPayout.Size = new System.Drawing.Size(106, 17);
             this.job2MoneyPayout.TabIndex = 4;
             this.job2MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1729,7 +1729,7 @@
             this.job2IPPayout.AutoSize = true;
             this.job2IPPayout.Location = new System.Drawing.Point(7, 88);
             this.job2IPPayout.Name = "job2IPPayout";
-            this.job2IPPayout.Size = new System.Drawing.Size(147, 31);
+            this.job2IPPayout.Size = new System.Drawing.Size(76, 17);
             this.job2IPPayout.TabIndex = 3;
             this.job2IPPayout.Text = "IP Payout: ";
             // 
@@ -1738,7 +1738,7 @@
             this.job2BaselineScore.AutoSize = true;
             this.job2BaselineScore.Location = new System.Drawing.Point(7, 67);
             this.job2BaselineScore.Name = "job2BaselineScore";
-            this.job2BaselineScore.Size = new System.Drawing.Size(211, 31);
+            this.job2BaselineScore.Size = new System.Drawing.Size(111, 17);
             this.job2BaselineScore.TabIndex = 2;
             this.job2BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1747,7 +1747,7 @@
             this.job2Description.AutoSize = true;
             this.job2Description.Location = new System.Drawing.Point(7, 46);
             this.job2Description.Name = "job2Description";
-            this.job2Description.Size = new System.Drawing.Size(224, 31);
+            this.job2Description.Size = new System.Drawing.Size(118, 17);
             this.job2Description.TabIndex = 1;
             this.job2Description.Text = "Job 1 Description";
             // 
@@ -1757,7 +1757,7 @@
             this.job2Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job2Title.Location = new System.Drawing.Point(6, 16);
             this.job2Title.Name = "job2Title";
-            this.job2Title.Size = new System.Drawing.Size(331, 51);
+            this.job2Title.Size = new System.Drawing.Size(174, 26);
             this.job2Title.TabIndex = 0;
             this.job2Title.Text = "Job 1 Title Text";
             this.job2Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1785,7 +1785,7 @@
             this.job1DaysToComplete.AutoSize = true;
             this.job1DaysToComplete.Location = new System.Drawing.Point(7, 156);
             this.job1DaysToComplete.Name = "job1DaysToComplete";
-            this.job1DaysToComplete.Size = new System.Drawing.Size(247, 31);
+            this.job1DaysToComplete.Size = new System.Drawing.Size(128, 17);
             this.job1DaysToComplete.TabIndex = 7;
             this.job1DaysToComplete.Text = "Days To Complete:";
             // 
@@ -1806,7 +1806,7 @@
             this.job1PointsUntilCompletion.AutoSize = true;
             this.job1PointsUntilCompletion.Location = new System.Drawing.Point(7, 134);
             this.job1PointsUntilCompletion.Name = "job1PointsUntilCompletion";
-            this.job1PointsUntilCompletion.Size = new System.Drawing.Size(311, 31);
+            this.job1PointsUntilCompletion.Size = new System.Drawing.Size(161, 17);
             this.job1PointsUntilCompletion.TabIndex = 5;
             this.job1PointsUntilCompletion.Text = "Points Until Completion: ";
             // 
@@ -1815,7 +1815,7 @@
             this.job1MoneyPayout.AutoSize = true;
             this.job1MoneyPayout.Location = new System.Drawing.Point(7, 112);
             this.job1MoneyPayout.Name = "job1MoneyPayout";
-            this.job1MoneyPayout.Size = new System.Drawing.Size(202, 31);
+            this.job1MoneyPayout.Size = new System.Drawing.Size(106, 17);
             this.job1MoneyPayout.TabIndex = 4;
             this.job1MoneyPayout.Text = "Money Payout: ";
             // 
@@ -1824,7 +1824,7 @@
             this.job1IPPayout.AutoSize = true;
             this.job1IPPayout.Location = new System.Drawing.Point(7, 90);
             this.job1IPPayout.Name = "job1IPPayout";
-            this.job1IPPayout.Size = new System.Drawing.Size(147, 31);
+            this.job1IPPayout.Size = new System.Drawing.Size(76, 17);
             this.job1IPPayout.TabIndex = 3;
             this.job1IPPayout.Text = "IP Payout: ";
             // 
@@ -1833,7 +1833,7 @@
             this.job1BaselineScore.AutoSize = true;
             this.job1BaselineScore.Location = new System.Drawing.Point(7, 68);
             this.job1BaselineScore.Name = "job1BaselineScore";
-            this.job1BaselineScore.Size = new System.Drawing.Size(211, 31);
+            this.job1BaselineScore.Size = new System.Drawing.Size(111, 17);
             this.job1BaselineScore.TabIndex = 2;
             this.job1BaselineScore.Text = "Baseline Score: ";
             // 
@@ -1842,7 +1842,7 @@
             this.job1Description.AutoSize = true;
             this.job1Description.Location = new System.Drawing.Point(7, 46);
             this.job1Description.Name = "job1Description";
-            this.job1Description.Size = new System.Drawing.Size(224, 31);
+            this.job1Description.Size = new System.Drawing.Size(118, 17);
             this.job1Description.TabIndex = 1;
             this.job1Description.Text = "Job 1 Description";
             // 
@@ -1852,7 +1852,7 @@
             this.job1Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.job1Title.Location = new System.Drawing.Point(6, 16);
             this.job1Title.Name = "job1Title";
-            this.job1Title.Size = new System.Drawing.Size(331, 51);
+            this.job1Title.Size = new System.Drawing.Size(174, 26);
             this.job1Title.TabIndex = 0;
             this.job1Title.Text = "Job 1 Title Text";
             this.job1Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1942,7 +1942,7 @@
             this.lblWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeek.Location = new System.Drawing.Point(4, 44);
             this.lblWeek.Name = "lblWeek";
-            this.lblWeek.Size = new System.Drawing.Size(43, 24);
+            this.lblWeek.Size = new System.Drawing.Size(27, 13);
             this.lblWeek.TabIndex = 2;
             this.lblWeek.Text = "D: 0";
             // 
@@ -1952,7 +1952,7 @@
             this.lblMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonth.Location = new System.Drawing.Point(4, 24);
             this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(46, 24);
+            this.lblMonth.Size = new System.Drawing.Size(28, 13);
             this.lblMonth.TabIndex = 1;
             this.lblMonth.Text = "M: 0";
             // 
@@ -1962,7 +1962,7 @@
             this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(4, 4);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(42, 24);
+            this.lblYear.Size = new System.Drawing.Size(26, 13);
             this.lblYear.TabIndex = 0;
             this.lblYear.Text = "Y: 0";
             // 
@@ -1992,7 +1992,7 @@
             this.lblEastDivision4.Location = new System.Drawing.Point(733, 469);
             this.lblEastDivision4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision4.Name = "lblEastDivision4";
-            this.lblEastDivision4.Size = new System.Drawing.Size(101, 31);
+            this.lblEastDivision4.Size = new System.Drawing.Size(54, 17);
             this.lblEastDivision4.TabIndex = 23;
             this.lblEastDivision4.Text = "label10";
             // 
@@ -2003,7 +2003,7 @@
             this.lblEastDivision3.Location = new System.Drawing.Point(733, 338);
             this.lblEastDivision3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision3.Name = "lblEastDivision3";
-            this.lblEastDivision3.Size = new System.Drawing.Size(86, 31);
+            this.lblEastDivision3.Size = new System.Drawing.Size(46, 17);
             this.lblEastDivision3.TabIndex = 22;
             this.lblEastDivision3.Text = "label9";
             // 
@@ -2014,7 +2014,7 @@
             this.lblEastDivision2.Location = new System.Drawing.Point(733, 207);
             this.lblEastDivision2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision2.Name = "lblEastDivision2";
-            this.lblEastDivision2.Size = new System.Drawing.Size(86, 31);
+            this.lblEastDivision2.Size = new System.Drawing.Size(46, 17);
             this.lblEastDivision2.TabIndex = 21;
             this.lblEastDivision2.Text = "label8";
             // 
@@ -2025,7 +2025,7 @@
             this.lblEastDivision1.Location = new System.Drawing.Point(733, 76);
             this.lblEastDivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastDivision1.Name = "lblEastDivision1";
-            this.lblEastDivision1.Size = new System.Drawing.Size(86, 31);
+            this.lblEastDivision1.Size = new System.Drawing.Size(46, 17);
             this.lblEastDivision1.TabIndex = 20;
             this.lblEastDivision1.Text = "label7";
             // 
@@ -2036,7 +2036,7 @@
             this.lblWestDivision4.Location = new System.Drawing.Point(473, 469);
             this.lblWestDivision4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision4.Name = "lblWestDivision4";
-            this.lblWestDivision4.Size = new System.Drawing.Size(86, 31);
+            this.lblWestDivision4.Size = new System.Drawing.Size(46, 17);
             this.lblWestDivision4.TabIndex = 19;
             this.lblWestDivision4.Text = "label6";
             // 
@@ -2047,7 +2047,7 @@
             this.lblWestDivision3.Location = new System.Drawing.Point(473, 338);
             this.lblWestDivision3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision3.Name = "lblWestDivision3";
-            this.lblWestDivision3.Size = new System.Drawing.Size(86, 31);
+            this.lblWestDivision3.Size = new System.Drawing.Size(46, 17);
             this.lblWestDivision3.TabIndex = 18;
             this.lblWestDivision3.Text = "label5";
             // 
@@ -2058,7 +2058,7 @@
             this.lblWestDivision2.Location = new System.Drawing.Point(473, 207);
             this.lblWestDivision2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision2.Name = "lblWestDivision2";
-            this.lblWestDivision2.Size = new System.Drawing.Size(86, 31);
+            this.lblWestDivision2.Size = new System.Drawing.Size(46, 17);
             this.lblWestDivision2.TabIndex = 17;
             this.lblWestDivision2.Text = "label4";
             // 
@@ -2069,7 +2069,7 @@
             this.lblWestDivision1.Location = new System.Drawing.Point(473, 76);
             this.lblWestDivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestDivision1.Name = "lblWestDivision1";
-            this.lblWestDivision1.Size = new System.Drawing.Size(86, 31);
+            this.lblWestDivision1.Size = new System.Drawing.Size(46, 17);
             this.lblWestDivision1.TabIndex = 16;
             this.lblWestDivision1.Text = "label3";
             // 
@@ -2080,7 +2080,7 @@
             this.lblEastConference.Location = new System.Drawing.Point(236, 76);
             this.lblEastConference.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEastConference.Name = "lblEastConference";
-            this.lblEastConference.Size = new System.Drawing.Size(86, 31);
+            this.lblEastConference.Size = new System.Drawing.Size(46, 17);
             this.lblEastConference.TabIndex = 15;
             this.lblEastConference.Text = "label2";
             // 
@@ -2091,7 +2091,7 @@
             this.lblWestConference.Location = new System.Drawing.Point(18, 76);
             this.lblWestConference.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWestConference.Name = "lblWestConference";
-            this.lblWestConference.Size = new System.Drawing.Size(86, 31);
+            this.lblWestConference.Size = new System.Drawing.Size(46, 17);
             this.lblWestConference.TabIndex = 14;
             this.lblWestConference.Text = "label1";
             // 
@@ -2101,7 +2101,7 @@
             this.cbLeagues.Location = new System.Drawing.Point(15, 42);
             this.cbLeagues.Margin = new System.Windows.Forms.Padding(4);
             this.cbLeagues.Name = "cbLeagues";
-            this.cbLeagues.Size = new System.Drawing.Size(319, 39);
+            this.cbLeagues.Size = new System.Drawing.Size(319, 24);
             this.cbLeagues.TabIndex = 13;
             this.cbLeagues.SelectedIndexChanged += new System.EventHandler(this.cbLeagues_SelectedIndexChanged);
             // 
@@ -2110,7 +2110,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 31);
+            this.label3.Size = new System.Drawing.Size(123, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "League Standings";
             // 
@@ -2184,7 +2184,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(8, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 31);
+            this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "In Season";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2213,7 +2213,7 @@
             this.lblRoster.AutoSize = true;
             this.lblRoster.Location = new System.Drawing.Point(25, 200);
             this.lblRoster.Name = "lblRoster";
-            this.lblRoster.Size = new System.Drawing.Size(86, 31);
+            this.lblRoster.Size = new System.Drawing.Size(46, 17);
             this.lblRoster.TabIndex = 19;
             this.lblRoster.Text = "label1";
             // 
@@ -2222,7 +2222,7 @@
             this.cbLeagueList.FormattingEnabled = true;
             this.cbLeagueList.Location = new System.Drawing.Point(14, 17);
             this.cbLeagueList.Name = "cbLeagueList";
-            this.cbLeagueList.Size = new System.Drawing.Size(308, 39);
+            this.cbLeagueList.Size = new System.Drawing.Size(308, 24);
             this.cbLeagueList.TabIndex = 18;
             this.cbLeagueList.SelectedIndexChanged += new System.EventHandler(this.cbLeagueList_SelectedIndexChanged);
             // 
@@ -2231,7 +2231,7 @@
             this.cbTeamList.FormattingEnabled = true;
             this.cbTeamList.Location = new System.Drawing.Point(329, 16);
             this.cbTeamList.Name = "cbTeamList";
-            this.cbTeamList.Size = new System.Drawing.Size(308, 39);
+            this.cbTeamList.Size = new System.Drawing.Size(308, 24);
             this.cbTeamList.TabIndex = 17;
             this.cbTeamList.SelectedIndexChanged += new System.EventHandler(this.cbTeamList_SelectedIndexChanged);
             // 
@@ -2241,7 +2241,7 @@
             this.lblStarter.Location = new System.Drawing.Point(649, 587);
             this.lblStarter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStarter.Name = "lblStarter";
-            this.lblStarter.Size = new System.Drawing.Size(111, 31);
+            this.lblStarter.Size = new System.Drawing.Size(59, 17);
             this.lblStarter.TabIndex = 16;
             this.lblStarter.Text = "Starter: ";
             // 
@@ -2251,7 +2251,7 @@
             this.lblDepthChart.Location = new System.Drawing.Point(649, 562);
             this.lblDepthChart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepthChart.Name = "lblDepthChart";
-            this.lblDepthChart.Size = new System.Drawing.Size(269, 31);
+            this.lblDepthChart.Size = new System.Drawing.Size(141, 17);
             this.lblDepthChart.TabIndex = 15;
             this.lblDepthChart.Text = "Spot on Depth Chart:";
             // 
@@ -2260,7 +2260,7 @@
             this.lblStats.AutoSize = true;
             this.lblStats.Location = new System.Drawing.Point(889, 80);
             this.lblStats.Name = "lblStats";
-            this.lblStats.Size = new System.Drawing.Size(86, 31);
+            this.lblStats.Size = new System.Drawing.Size(46, 17);
             this.lblStats.TabIndex = 14;
             this.lblStats.Text = "label1";
             // 
@@ -2285,7 +2285,7 @@
             this.lblAgencyHappiness.AutoSize = true;
             this.lblAgencyHappiness.Location = new System.Drawing.Point(6, 173);
             this.lblAgencyHappiness.Name = "lblAgencyHappiness";
-            this.lblAgencyHappiness.Size = new System.Drawing.Size(249, 31);
+            this.lblAgencyHappiness.Size = new System.Drawing.Size(130, 17);
             this.lblAgencyHappiness.TabIndex = 10;
             this.lblAgencyHappiness.Text = "Agency Happiness:";
             // 
@@ -2294,7 +2294,7 @@
             this.lblTeamHappiness.AutoSize = true;
             this.lblTeamHappiness.Location = new System.Drawing.Point(6, 148);
             this.lblTeamHappiness.Name = "lblTeamHappiness";
-            this.lblTeamHappiness.Size = new System.Drawing.Size(227, 31);
+            this.lblTeamHappiness.Size = new System.Drawing.Size(119, 17);
             this.lblTeamHappiness.TabIndex = 9;
             this.lblTeamHappiness.Text = "Team Happiness:";
             // 
@@ -2303,7 +2303,7 @@
             this.lblPlayForTitle.AutoSize = true;
             this.lblPlayForTitle.Location = new System.Drawing.Point(6, 124);
             this.lblPlayForTitle.Name = "lblPlayForTitle";
-            this.lblPlayForTitle.Size = new System.Drawing.Size(173, 31);
+            this.lblPlayForTitle.Size = new System.Drawing.Size(91, 17);
             this.lblPlayForTitle.TabIndex = 8;
             this.lblPlayForTitle.Text = "Play for Title:";
             // 
@@ -2312,7 +2312,7 @@
             this.lblLoyalty.AutoSize = true;
             this.lblLoyalty.Location = new System.Drawing.Point(6, 99);
             this.lblLoyalty.Name = "lblLoyalty";
-            this.lblLoyalty.Size = new System.Drawing.Size(109, 31);
+            this.lblLoyalty.Size = new System.Drawing.Size(57, 17);
             this.lblLoyalty.TabIndex = 7;
             this.lblLoyalty.Text = "Loyalty:";
             // 
@@ -2321,7 +2321,7 @@
             this.lblLifestyle.AutoSize = true;
             this.lblLifestyle.Location = new System.Drawing.Point(6, 71);
             this.lblLifestyle.Name = "lblLifestyle";
-            this.lblLifestyle.Size = new System.Drawing.Size(130, 31);
+            this.lblLifestyle.Size = new System.Drawing.Size(68, 17);
             this.lblLifestyle.TabIndex = 6;
             this.lblLifestyle.Text = "Lifestyle: ";
             // 
@@ -2330,7 +2330,7 @@
             this.lblGreed.AutoSize = true;
             this.lblGreed.Location = new System.Drawing.Point(6, 46);
             this.lblGreed.Name = "lblGreed";
-            this.lblGreed.Size = new System.Drawing.Size(104, 31);
+            this.lblGreed.Size = new System.Drawing.Size(56, 17);
             this.lblGreed.TabIndex = 5;
             this.lblGreed.Text = "Greed: ";
             // 
@@ -2339,7 +2339,7 @@
             this.lblPopularity.AutoSize = true;
             this.lblPopularity.Location = new System.Drawing.Point(6, 22);
             this.lblPopularity.Name = "lblPopularity";
-            this.lblPopularity.Size = new System.Drawing.Size(143, 31);
+            this.lblPopularity.Size = new System.Drawing.Size(75, 17);
             this.lblPopularity.TabIndex = 4;
             this.lblPopularity.Text = "Popularity:";
             // 
@@ -2361,7 +2361,7 @@
             this.lblPosition.AutoSize = true;
             this.lblPosition.Location = new System.Drawing.Point(6, 16);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(119, 31);
+            this.lblPosition.Size = new System.Drawing.Size(62, 17);
             this.lblPosition.TabIndex = 10;
             this.lblPosition.Text = "Position:";
             // 
@@ -2370,7 +2370,7 @@
             this.lblSkillLevel.AutoSize = true;
             this.lblSkillLevel.Location = new System.Drawing.Point(6, 89);
             this.lblSkillLevel.Name = "lblSkillLevel";
-            this.lblSkillLevel.Size = new System.Drawing.Size(151, 31);
+            this.lblSkillLevel.Size = new System.Drawing.Size(79, 17);
             this.lblSkillLevel.TabIndex = 9;
             this.lblSkillLevel.Text = "Skill Level: ";
             // 
@@ -2379,7 +2379,7 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(6, 64);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(70, 31);
+            this.lblAge.Size = new System.Drawing.Size(37, 17);
             this.lblAge.TabIndex = 8;
             this.lblAge.Text = "Age:";
             // 
@@ -2388,7 +2388,7 @@
             this.lblFullName.AutoSize = true;
             this.lblFullName.Location = new System.Drawing.Point(6, 40);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(183, 31);
+            this.lblFullName.Size = new System.Drawing.Size(96, 17);
             this.lblFullName.TabIndex = 7;
             this.lblFullName.Text = "Yearly Salary:";
             // 
@@ -2410,7 +2410,7 @@
             this.lblAgentPercent.AutoSize = true;
             this.lblAgentPercent.Location = new System.Drawing.Point(6, 94);
             this.lblAgentPercent.Name = "lblAgentPercent";
-            this.lblAgentPercent.Size = new System.Drawing.Size(239, 31);
+            this.lblAgentPercent.Size = new System.Drawing.Size(126, 17);
             this.lblAgentPercent.TabIndex = 7;
             this.lblAgentPercent.Text = "Agent Percentage:";
             // 
@@ -2419,7 +2419,7 @@
             this.lblAgentPaid.AutoSize = true;
             this.lblAgentPaid.Location = new System.Drawing.Point(6, 71);
             this.lblAgentPaid.Name = "lblAgentPaid";
-            this.lblAgentPaid.Size = new System.Drawing.Size(161, 31);
+            this.lblAgentPaid.Size = new System.Drawing.Size(85, 17);
             this.lblAgentPaid.TabIndex = 6;
             this.lblAgentPaid.Text = "Agent Paid: ";
             // 
@@ -2428,7 +2428,7 @@
             this.lblYearsLeft.AutoSize = true;
             this.lblYearsLeft.Location = new System.Drawing.Point(6, 46);
             this.lblYearsLeft.Name = "lblYearsLeft";
-            this.lblYearsLeft.Size = new System.Drawing.Size(146, 31);
+            this.lblYearsLeft.Size = new System.Drawing.Size(77, 17);
             this.lblYearsLeft.TabIndex = 5;
             this.lblYearsLeft.Text = "Years Left:";
             // 
@@ -2437,7 +2437,7 @@
             this.lblYearlySalary.AutoSize = true;
             this.lblYearlySalary.Location = new System.Drawing.Point(6, 22);
             this.lblYearlySalary.Name = "lblYearlySalary";
-            this.lblYearlySalary.Size = new System.Drawing.Size(183, 31);
+            this.lblYearlySalary.Size = new System.Drawing.Size(96, 17);
             this.lblYearlySalary.TabIndex = 4;
             this.lblYearlySalary.Text = "Yearly Salary:";
             // 
@@ -2447,7 +2447,7 @@
             this.lblTeamAwards.Location = new System.Drawing.Point(23, 124);
             this.lblTeamAwards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTeamAwards.Name = "lblTeamAwards";
-            this.lblTeamAwards.Size = new System.Drawing.Size(86, 31);
+            this.lblTeamAwards.Size = new System.Drawing.Size(46, 17);
             this.lblTeamAwards.TabIndex = 6;
             this.lblTeamAwards.Text = "label1";
             // 
@@ -2456,7 +2456,7 @@
             this.lblTeamInfo.AutoSize = true;
             this.lblTeamInfo.Location = new System.Drawing.Point(23, 71);
             this.lblTeamInfo.Name = "lblTeamInfo";
-            this.lblTeamInfo.Size = new System.Drawing.Size(86, 31);
+            this.lblTeamInfo.Size = new System.Drawing.Size(46, 17);
             this.lblTeamInfo.TabIndex = 5;
             this.lblTeamInfo.Text = "label1";
             // 
@@ -2467,7 +2467,7 @@
             this.cbTeamRoster.FormattingEnabled = true;
             this.cbTeamRoster.Location = new System.Drawing.Point(643, 15);
             this.cbTeamRoster.Name = "cbTeamRoster";
-            this.cbTeamRoster.Size = new System.Drawing.Size(301, 39);
+            this.cbTeamRoster.Size = new System.Drawing.Size(301, 25);
             this.cbTeamRoster.TabIndex = 1;
             this.cbTeamRoster.SelectedIndexChanged += new System.EventHandler(this.cbTeamRoster_SelectedIndexChanged);
             // 
@@ -2530,7 +2530,7 @@
             this.lblWSSAScouting.AutoSize = true;
             this.lblWSSAScouting.Location = new System.Drawing.Point(525, 144);
             this.lblWSSAScouting.Name = "lblWSSAScouting";
-            this.lblWSSAScouting.Size = new System.Drawing.Size(206, 31);
+            this.lblWSSAScouting.Size = new System.Drawing.Size(107, 17);
             this.lblWSSAScouting.TabIndex = 26;
             this.lblWSSAScouting.Text = "WSSA Scouting";
             // 
@@ -2549,7 +2549,7 @@
             this.lblScoutedBy.AutoSize = true;
             this.lblScoutedBy.Location = new System.Drawing.Point(525, 190);
             this.lblScoutedBy.Name = "lblScoutedBy";
-            this.lblScoutedBy.Size = new System.Drawing.Size(101, 31);
+            this.lblScoutedBy.Size = new System.Drawing.Size(54, 17);
             this.lblScoutedBy.TabIndex = 24;
             this.lblScoutedBy.Text = "label10";
             // 
@@ -2570,7 +2570,7 @@
             this.lblScoutedAgencyHappiness.AutoSize = true;
             this.lblScoutedAgencyHappiness.Location = new System.Drawing.Point(6, 80);
             this.lblScoutedAgencyHappiness.Name = "lblScoutedAgencyHappiness";
-            this.lblScoutedAgencyHappiness.Size = new System.Drawing.Size(249, 31);
+            this.lblScoutedAgencyHappiness.Size = new System.Drawing.Size(130, 17);
             this.lblScoutedAgencyHappiness.TabIndex = 10;
             this.lblScoutedAgencyHappiness.Text = "Agency Happiness:";
             // 
@@ -2579,7 +2579,7 @@
             this.lblScoutedTeamHappiness.AutoSize = true;
             this.lblScoutedTeamHappiness.Location = new System.Drawing.Point(6, 50);
             this.lblScoutedTeamHappiness.Name = "lblScoutedTeamHappiness";
-            this.lblScoutedTeamHappiness.Size = new System.Drawing.Size(227, 31);
+            this.lblScoutedTeamHappiness.Size = new System.Drawing.Size(119, 17);
             this.lblScoutedTeamHappiness.TabIndex = 9;
             this.lblScoutedTeamHappiness.Text = "Team Happiness:";
             // 
@@ -2588,7 +2588,7 @@
             this.lblScoutedPopularity.AutoSize = true;
             this.lblScoutedPopularity.Location = new System.Drawing.Point(6, 20);
             this.lblScoutedPopularity.Name = "lblScoutedPopularity";
-            this.lblScoutedPopularity.Size = new System.Drawing.Size(143, 31);
+            this.lblScoutedPopularity.Size = new System.Drawing.Size(75, 17);
             this.lblScoutedPopularity.TabIndex = 4;
             this.lblScoutedPopularity.Text = "Popularity:";
             // 
@@ -2598,7 +2598,7 @@
             this.lblScoutedIsStarter.Location = new System.Drawing.Point(593, 367);
             this.lblScoutedIsStarter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScoutedIsStarter.Name = "lblScoutedIsStarter";
-            this.lblScoutedIsStarter.Size = new System.Drawing.Size(111, 31);
+            this.lblScoutedIsStarter.Size = new System.Drawing.Size(59, 17);
             this.lblScoutedIsStarter.TabIndex = 22;
             this.lblScoutedIsStarter.Text = "Starter: ";
             // 
@@ -2608,7 +2608,7 @@
             this.lblScoutedDepthChart.Location = new System.Drawing.Point(593, 340);
             this.lblScoutedDepthChart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScoutedDepthChart.Name = "lblScoutedDepthChart";
-            this.lblScoutedDepthChart.Size = new System.Drawing.Size(269, 31);
+            this.lblScoutedDepthChart.Size = new System.Drawing.Size(141, 17);
             this.lblScoutedDepthChart.TabIndex = 21;
             this.lblScoutedDepthChart.Text = "Spot on Depth Chart:";
             // 
@@ -2617,7 +2617,7 @@
             this.lblScoutedStats.AutoSize = true;
             this.lblScoutedStats.Location = new System.Drawing.Point(593, 394);
             this.lblScoutedStats.Name = "lblScoutedStats";
-            this.lblScoutedStats.Size = new System.Drawing.Size(86, 31);
+            this.lblScoutedStats.Size = new System.Drawing.Size(46, 17);
             this.lblScoutedStats.TabIndex = 20;
             this.lblScoutedStats.Text = "label1";
             // 
@@ -2638,7 +2638,7 @@
             this.lblScoutedPosition.AutoSize = true;
             this.lblScoutedPosition.Location = new System.Drawing.Point(6, 23);
             this.lblScoutedPosition.Name = "lblScoutedPosition";
-            this.lblScoutedPosition.Size = new System.Drawing.Size(119, 31);
+            this.lblScoutedPosition.Size = new System.Drawing.Size(62, 17);
             this.lblScoutedPosition.TabIndex = 10;
             this.lblScoutedPosition.Text = "Position:";
             // 
@@ -2647,7 +2647,7 @@
             this.lblScoutedAge.AutoSize = true;
             this.lblScoutedAge.Location = new System.Drawing.Point(6, 54);
             this.lblScoutedAge.Name = "lblScoutedAge";
-            this.lblScoutedAge.Size = new System.Drawing.Size(70, 31);
+            this.lblScoutedAge.Size = new System.Drawing.Size(37, 17);
             this.lblScoutedAge.TabIndex = 8;
             this.lblScoutedAge.Text = "Age:";
             // 
@@ -2656,7 +2656,7 @@
             this.lblScoutedSalary.AutoSize = true;
             this.lblScoutedSalary.Location = new System.Drawing.Point(6, 40);
             this.lblScoutedSalary.Name = "lblScoutedSalary";
-            this.lblScoutedSalary.Size = new System.Drawing.Size(0, 31);
+            this.lblScoutedSalary.Size = new System.Drawing.Size(0, 17);
             this.lblScoutedSalary.TabIndex = 7;
             // 
             // groupBox7
@@ -2677,7 +2677,7 @@
             this.lblScoutedAgentPercent.AutoSize = true;
             this.lblScoutedAgentPercent.Location = new System.Drawing.Point(6, 94);
             this.lblScoutedAgentPercent.Name = "lblScoutedAgentPercent";
-            this.lblScoutedAgentPercent.Size = new System.Drawing.Size(239, 31);
+            this.lblScoutedAgentPercent.Size = new System.Drawing.Size(126, 17);
             this.lblScoutedAgentPercent.TabIndex = 7;
             this.lblScoutedAgentPercent.Text = "Agent Percentage:";
             // 
@@ -2686,7 +2686,7 @@
             this.lblScoutedAgentPaid.AutoSize = true;
             this.lblScoutedAgentPaid.Location = new System.Drawing.Point(6, 71);
             this.lblScoutedAgentPaid.Name = "lblScoutedAgentPaid";
-            this.lblScoutedAgentPaid.Size = new System.Drawing.Size(161, 31);
+            this.lblScoutedAgentPaid.Size = new System.Drawing.Size(85, 17);
             this.lblScoutedAgentPaid.TabIndex = 6;
             this.lblScoutedAgentPaid.Text = "Agent Paid: ";
             // 
@@ -2695,7 +2695,7 @@
             this.lblScoutedYearsLeft.AutoSize = true;
             this.lblScoutedYearsLeft.Location = new System.Drawing.Point(6, 46);
             this.lblScoutedYearsLeft.Name = "lblScoutedYearsLeft";
-            this.lblScoutedYearsLeft.Size = new System.Drawing.Size(146, 31);
+            this.lblScoutedYearsLeft.Size = new System.Drawing.Size(77, 17);
             this.lblScoutedYearsLeft.TabIndex = 5;
             this.lblScoutedYearsLeft.Text = "Years Left:";
             // 
@@ -2704,7 +2704,7 @@
             this.lblScoutedYearlySalary.AutoSize = true;
             this.lblScoutedYearlySalary.Location = new System.Drawing.Point(6, 22);
             this.lblScoutedYearlySalary.Name = "lblScoutedYearlySalary";
-            this.lblScoutedYearlySalary.Size = new System.Drawing.Size(183, 31);
+            this.lblScoutedYearlySalary.Size = new System.Drawing.Size(96, 17);
             this.lblScoutedYearlySalary.TabIndex = 4;
             this.lblScoutedYearlySalary.Text = "Yearly Salary:";
             // 
@@ -2714,7 +2714,7 @@
             this.lblScoutedPlayerDescription.Location = new System.Drawing.Point(348, 237);
             this.lblScoutedPlayerDescription.MaximumSize = new System.Drawing.Size(376, 0);
             this.lblScoutedPlayerDescription.Name = "lblScoutedPlayerDescription";
-            this.lblScoutedPlayerDescription.Size = new System.Drawing.Size(101, 31);
+            this.lblScoutedPlayerDescription.Size = new System.Drawing.Size(54, 17);
             this.lblScoutedPlayerDescription.TabIndex = 10;
             this.lblScoutedPlayerDescription.Text = "label10";
             // 
@@ -2723,7 +2723,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(11, 144);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(234, 31);
+            this.label8.Size = new System.Drawing.Size(122, 17);
             this.label8.TabIndex = 9;
             this.label8.Text = "Choose An Agent:";
             // 
@@ -2732,7 +2732,7 @@
             this.cbAgentToScout.FormattingEnabled = true;
             this.cbAgentToScout.Location = new System.Drawing.Point(11, 179);
             this.cbAgentToScout.Name = "cbAgentToScout";
-            this.cbAgentToScout.Size = new System.Drawing.Size(307, 39);
+            this.cbAgentToScout.Size = new System.Drawing.Size(307, 24);
             this.cbAgentToScout.TabIndex = 8;
             this.cbAgentToScout.SelectedIndexChanged += new System.EventHandler(this.cbAgentToScout_SelectedIndexChanged);
             // 
@@ -2751,7 +2751,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(348, 67);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(220, 31);
+            this.label7.Size = new System.Drawing.Size(115, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Players Scouted:";
             // 
@@ -2760,7 +2760,7 @@
             this.cbScoutedPlayers.FormattingEnabled = true;
             this.cbScoutedPlayers.Location = new System.Drawing.Point(345, 100);
             this.cbScoutedPlayers.Name = "cbScoutedPlayers";
-            this.cbScoutedPlayers.Size = new System.Drawing.Size(376, 39);
+            this.cbScoutedPlayers.Size = new System.Drawing.Size(376, 24);
             this.cbScoutedPlayers.TabIndex = 5;
             this.cbScoutedPlayers.SelectedIndexChanged += new System.EventHandler(this.cbScoutedPlayers_SelectedIndexChanged);
             // 
@@ -2792,7 +2792,7 @@
             this.rbEither.AutoSize = true;
             this.rbEither.Location = new System.Drawing.Point(13, 98);
             this.rbEither.Name = "rbEither";
-            this.rbEither.Size = new System.Drawing.Size(116, 35);
+            this.rbEither.Size = new System.Drawing.Size(63, 21);
             this.rbEither.TabIndex = 2;
             this.rbEither.TabStop = true;
             this.rbEither.Text = "Either";
@@ -2803,7 +2803,7 @@
             this.rbOnTeam.AutoSize = true;
             this.rbOnTeam.Location = new System.Drawing.Point(12, 63);
             this.rbOnTeam.Name = "rbOnTeam";
-            this.rbOnTeam.Size = new System.Drawing.Size(182, 35);
+            this.rbOnTeam.Size = new System.Drawing.Size(98, 21);
             this.rbOnTeam.TabIndex = 1;
             this.rbOnTeam.TabStop = true;
             this.rbOnTeam.Text = "On A Team";
@@ -2814,7 +2814,7 @@
             this.rbFreeAgent.AutoSize = true;
             this.rbFreeAgent.Location = new System.Drawing.Point(12, 28);
             this.rbFreeAgent.Name = "rbFreeAgent";
-            this.rbFreeAgent.Size = new System.Drawing.Size(179, 35);
+            this.rbFreeAgent.Size = new System.Drawing.Size(96, 21);
             this.rbFreeAgent.TabIndex = 0;
             this.rbFreeAgent.TabStop = true;
             this.rbFreeAgent.Text = "Free Agent";
@@ -2826,7 +2826,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(270, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(821, 73);
+            this.label6.Size = new System.Drawing.Size(411, 37);
             this.label6.TabIndex = 2;
             this.label6.Text = "Client Scouting and Signing";
             // 
@@ -2835,7 +2835,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 67);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(213, 31);
+            this.label5.Size = new System.Drawing.Size(111, 17);
             this.label5.TabIndex = 1;
             this.label5.Text = "Choose A Sport:";
             // 
@@ -2844,7 +2844,7 @@
             this.cbClientSport.FormattingEnabled = true;
             this.cbClientSport.Location = new System.Drawing.Point(11, 102);
             this.cbClientSport.Name = "cbClientSport";
-            this.cbClientSport.Size = new System.Drawing.Size(307, 39);
+            this.cbClientSport.Size = new System.Drawing.Size(307, 24);
             this.cbClientSport.TabIndex = 0;
             this.cbClientSport.SelectedIndexChanged += new System.EventHandler(this.cbClientSport_SelectedIndexChanged);
             // 
@@ -2878,7 +2878,7 @@
             this.lblExpenses.ForeColor = System.Drawing.Color.Red;
             this.lblExpenses.Location = new System.Drawing.Point(440, 137);
             this.lblExpenses.Name = "lblExpenses";
-            this.lblExpenses.Size = new System.Drawing.Size(101, 31);
+            this.lblExpenses.Size = new System.Drawing.Size(54, 17);
             this.lblExpenses.TabIndex = 4;
             this.lblExpenses.Text = "label20";
             // 
@@ -2889,7 +2889,7 @@
             this.label21.ForeColor = System.Drawing.Color.Red;
             this.label21.Location = new System.Drawing.Point(432, 88);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(213, 51);
+            this.label21.Size = new System.Drawing.Size(108, 26);
             this.label21.TabIndex = 3;
             this.label21.Text = "Expenses";
             // 
@@ -2899,7 +2899,7 @@
             this.lblIncomeList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblIncomeList.Location = new System.Drawing.Point(22, 129);
             this.lblIncomeList.Name = "lblIncomeList";
-            this.lblIncomeList.Size = new System.Drawing.Size(101, 31);
+            this.lblIncomeList.Size = new System.Drawing.Size(54, 17);
             this.lblIncomeList.TabIndex = 2;
             this.lblIncomeList.Text = "label20";
             // 
@@ -2910,7 +2910,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label18.Location = new System.Drawing.Point(14, 80);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(164, 51);
+            this.label18.Size = new System.Drawing.Size(84, 26);
             this.label18.TabIndex = 1;
             this.label18.Text = "Income";
             // 
@@ -2941,7 +2941,7 @@
             this.cbManagerPanelActions.FormattingEnabled = true;
             this.cbManagerPanelActions.Location = new System.Drawing.Point(34, 74);
             this.cbManagerPanelActions.Name = "cbManagerPanelActions";
-            this.cbManagerPanelActions.Size = new System.Drawing.Size(285, 39);
+            this.cbManagerPanelActions.Size = new System.Drawing.Size(285, 24);
             this.cbManagerPanelActions.TabIndex = 2;
             // 
             // agentHiringPanel
@@ -2994,7 +2994,7 @@
             this.lblScoutedAgent4Salary.AutoSize = true;
             this.lblScoutedAgent4Salary.Location = new System.Drawing.Point(9, 137);
             this.lblScoutedAgent4Salary.Name = "lblScoutedAgent4Salary";
-            this.lblScoutedAgent4Salary.Size = new System.Drawing.Size(99, 31);
+            this.lblScoutedAgent4Salary.Size = new System.Drawing.Size(52, 17);
             this.lblScoutedAgent4Salary.TabIndex = 25;
             this.lblScoutedAgent4Salary.Text = "Salary:";
             // 
@@ -3005,7 +3005,7 @@
             this.label17.Location = new System.Drawing.Point(1, 24);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(99, 31);
+            this.label17.Size = new System.Drawing.Size(55, 17);
             this.label17.TabIndex = 24;
             this.label17.Text = "Agent:";
             // 
@@ -3015,7 +3015,7 @@
             this.lblScoutedAgent4Name.Location = new System.Drawing.Point(51, 23);
             this.lblScoutedAgent4Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent4Name.Name = "lblScoutedAgent4Name";
-            this.lblScoutedAgent4Name.Size = new System.Drawing.Size(345, 31);
+            this.lblScoutedAgent4Name.Size = new System.Drawing.Size(182, 17);
             this.lblScoutedAgent4Name.TabIndex = 23;
             this.lblScoutedAgent4Name.Text = "Very Very Long Name Here";
             this.lblScoutedAgent4Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3066,7 +3066,7 @@
             this.lblScoutedAgent3Salary.AutoSize = true;
             this.lblScoutedAgent3Salary.Location = new System.Drawing.Point(9, 137);
             this.lblScoutedAgent3Salary.Name = "lblScoutedAgent3Salary";
-            this.lblScoutedAgent3Salary.Size = new System.Drawing.Size(99, 31);
+            this.lblScoutedAgent3Salary.Size = new System.Drawing.Size(52, 17);
             this.lblScoutedAgent3Salary.TabIndex = 25;
             this.lblScoutedAgent3Salary.Text = "Salary:";
             // 
@@ -3077,7 +3077,7 @@
             this.label16.Location = new System.Drawing.Point(1, 24);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(99, 31);
+            this.label16.Size = new System.Drawing.Size(55, 17);
             this.label16.TabIndex = 24;
             this.label16.Text = "Agent:";
             // 
@@ -3087,7 +3087,7 @@
             this.lblScoutedAgent3Name.Location = new System.Drawing.Point(51, 23);
             this.lblScoutedAgent3Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent3Name.Name = "lblScoutedAgent3Name";
-            this.lblScoutedAgent3Name.Size = new System.Drawing.Size(345, 31);
+            this.lblScoutedAgent3Name.Size = new System.Drawing.Size(182, 17);
             this.lblScoutedAgent3Name.TabIndex = 23;
             this.lblScoutedAgent3Name.Text = "Very Very Long Name Here";
             this.lblScoutedAgent3Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3138,7 +3138,7 @@
             this.lblScoutedAgent2Salary.AutoSize = true;
             this.lblScoutedAgent2Salary.Location = new System.Drawing.Point(9, 137);
             this.lblScoutedAgent2Salary.Name = "lblScoutedAgent2Salary";
-            this.lblScoutedAgent2Salary.Size = new System.Drawing.Size(99, 31);
+            this.lblScoutedAgent2Salary.Size = new System.Drawing.Size(52, 17);
             this.lblScoutedAgent2Salary.TabIndex = 25;
             this.lblScoutedAgent2Salary.Text = "Salary:";
             // 
@@ -3149,7 +3149,7 @@
             this.label26.Location = new System.Drawing.Point(1, 24);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(99, 31);
+            this.label26.Size = new System.Drawing.Size(55, 17);
             this.label26.TabIndex = 24;
             this.label26.Text = "Agent:";
             // 
@@ -3159,7 +3159,7 @@
             this.lblScoutedAgent2Name.Location = new System.Drawing.Point(51, 23);
             this.lblScoutedAgent2Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent2Name.Name = "lblScoutedAgent2Name";
-            this.lblScoutedAgent2Name.Size = new System.Drawing.Size(345, 31);
+            this.lblScoutedAgent2Name.Size = new System.Drawing.Size(182, 17);
             this.lblScoutedAgent2Name.TabIndex = 23;
             this.lblScoutedAgent2Name.Text = "Very Very Long Name Here";
             this.lblScoutedAgent2Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3210,7 +3210,7 @@
             this.lblScoutedAgent1Salary.AutoSize = true;
             this.lblScoutedAgent1Salary.Location = new System.Drawing.Point(9, 137);
             this.lblScoutedAgent1Salary.Name = "lblScoutedAgent1Salary";
-            this.lblScoutedAgent1Salary.Size = new System.Drawing.Size(99, 31);
+            this.lblScoutedAgent1Salary.Size = new System.Drawing.Size(52, 17);
             this.lblScoutedAgent1Salary.TabIndex = 25;
             this.lblScoutedAgent1Salary.Text = "Salary:";
             // 
@@ -3221,7 +3221,7 @@
             this.label35.Location = new System.Drawing.Point(1, 24);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(99, 31);
+            this.label35.Size = new System.Drawing.Size(55, 17);
             this.label35.TabIndex = 24;
             this.label35.Text = "Agent:";
             // 
@@ -3231,7 +3231,7 @@
             this.lblScoutedAgent1Name.Location = new System.Drawing.Point(51, 23);
             this.lblScoutedAgent1Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScoutedAgent1Name.Name = "lblScoutedAgent1Name";
-            this.lblScoutedAgent1Name.Size = new System.Drawing.Size(345, 31);
+            this.lblScoutedAgent1Name.Size = new System.Drawing.Size(182, 17);
             this.lblScoutedAgent1Name.TabIndex = 23;
             this.lblScoutedAgent1Name.Text = "Very Very Long Name Here";
             this.lblScoutedAgent1Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -3277,7 +3277,7 @@
             this.rb500kAgent.AutoSize = true;
             this.rb500kAgent.Location = new System.Drawing.Point(11, 226);
             this.rb500kAgent.Name = "rb500kAgent";
-            this.rb500kAgent.Size = new System.Drawing.Size(158, 35);
+            this.rb500kAgent.Size = new System.Drawing.Size(86, 21);
             this.rb500kAgent.TabIndex = 4;
             this.rb500kAgent.TabStop = true;
             this.rb500kAgent.Text = "$500,000";
@@ -3289,7 +3289,7 @@
             this.rb250kAgent.AutoSize = true;
             this.rb250kAgent.Location = new System.Drawing.Point(11, 178);
             this.rb250kAgent.Name = "rb250kAgent";
-            this.rb250kAgent.Size = new System.Drawing.Size(158, 35);
+            this.rb250kAgent.Size = new System.Drawing.Size(86, 21);
             this.rb250kAgent.TabIndex = 3;
             this.rb250kAgent.TabStop = true;
             this.rb250kAgent.Text = "$250,000";
@@ -3301,7 +3301,7 @@
             this.rb100kAgent.AutoSize = true;
             this.rb100kAgent.Location = new System.Drawing.Point(11, 130);
             this.rb100kAgent.Name = "rb100kAgent";
-            this.rb100kAgent.Size = new System.Drawing.Size(158, 35);
+            this.rb100kAgent.Size = new System.Drawing.Size(86, 21);
             this.rb100kAgent.TabIndex = 2;
             this.rb100kAgent.TabStop = true;
             this.rb100kAgent.Text = "$100,000";
@@ -3313,7 +3313,7 @@
             this.rb50kAgent.AutoSize = true;
             this.rb50kAgent.Location = new System.Drawing.Point(11, 82);
             this.rb50kAgent.Name = "rb50kAgent";
-            this.rb50kAgent.Size = new System.Drawing.Size(143, 35);
+            this.rb50kAgent.Size = new System.Drawing.Size(78, 21);
             this.rb50kAgent.TabIndex = 1;
             this.rb50kAgent.TabStop = true;
             this.rb50kAgent.Text = "$50,000";
@@ -3325,7 +3325,7 @@
             this.rb25kAgent.AutoSize = true;
             this.rb25kAgent.Location = new System.Drawing.Point(11, 34);
             this.rb25kAgent.Name = "rb25kAgent";
-            this.rb25kAgent.Size = new System.Drawing.Size(143, 35);
+            this.rb25kAgent.Size = new System.Drawing.Size(78, 21);
             this.rb25kAgent.TabIndex = 0;
             this.rb25kAgent.TabStop = true;
             this.rb25kAgent.Text = "$25,000";
@@ -3351,7 +3351,7 @@
             this.rbScoutingAgent.AutoSize = true;
             this.rbScoutingAgent.Location = new System.Drawing.Point(11, 226);
             this.rbScoutingAgent.Name = "rbScoutingAgent";
-            this.rbScoutingAgent.Size = new System.Drawing.Size(151, 35);
+            this.rbScoutingAgent.Size = new System.Drawing.Size(81, 21);
             this.rbScoutingAgent.TabIndex = 4;
             this.rbScoutingAgent.TabStop = true;
             this.rbScoutingAgent.Text = "Scouting";
@@ -3363,7 +3363,7 @@
             this.rbPowerAgent.AutoSize = true;
             this.rbPowerAgent.Location = new System.Drawing.Point(11, 178);
             this.rbPowerAgent.Name = "rbPowerAgent";
-            this.rbPowerAgent.Size = new System.Drawing.Size(122, 35);
+            this.rbPowerAgent.Size = new System.Drawing.Size(65, 21);
             this.rbPowerAgent.TabIndex = 3;
             this.rbPowerAgent.TabStop = true;
             this.rbPowerAgent.Text = "Power";
@@ -3375,7 +3375,7 @@
             this.rbGreedAgent.AutoSize = true;
             this.rbGreedAgent.Location = new System.Drawing.Point(11, 130);
             this.rbGreedAgent.Name = "rbGreedAgent";
-            this.rbGreedAgent.Size = new System.Drawing.Size(120, 35);
+            this.rbGreedAgent.Size = new System.Drawing.Size(66, 21);
             this.rbGreedAgent.TabIndex = 2;
             this.rbGreedAgent.TabStop = true;
             this.rbGreedAgent.Text = "Greed";
@@ -3387,7 +3387,7 @@
             this.rbNegotiatingAgent.AutoSize = true;
             this.rbNegotiatingAgent.Location = new System.Drawing.Point(11, 82);
             this.rbNegotiatingAgent.Name = "rbNegotiatingAgent";
-            this.rbNegotiatingAgent.Size = new System.Drawing.Size(183, 35);
+            this.rbNegotiatingAgent.Size = new System.Drawing.Size(98, 21);
             this.rbNegotiatingAgent.TabIndex = 1;
             this.rbNegotiatingAgent.TabStop = true;
             this.rbNegotiatingAgent.Text = "Negotiating";
@@ -3399,7 +3399,7 @@
             this.rbBalancedAgent.AutoSize = true;
             this.rbBalancedAgent.Location = new System.Drawing.Point(11, 34);
             this.rbBalancedAgent.Name = "rbBalancedAgent";
-            this.rbBalancedAgent.Size = new System.Drawing.Size(158, 35);
+            this.rbBalancedAgent.Size = new System.Drawing.Size(85, 21);
             this.rbBalancedAgent.TabIndex = 0;
             this.rbBalancedAgent.TabStop = true;
             this.rbBalancedAgent.Text = "Balanced";
@@ -3422,7 +3422,7 @@
             this.lblManagerActionsAndName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManagerActionsAndName.Location = new System.Drawing.Point(27, 17);
             this.lblManagerActionsAndName.Name = "lblManagerActionsAndName";
-            this.lblManagerActionsAndName.Size = new System.Drawing.Size(648, 55);
+            this.lblManagerActionsAndName.Size = new System.Drawing.Size(325, 29);
             this.lblManagerActionsAndName.TabIndex = 0;
             this.lblManagerActionsAndName.Text = "FirstName LastName\'s Office";
             // 
@@ -3487,7 +3487,7 @@
             this.rbFocusLifestyle.AutoSize = true;
             this.rbFocusLifestyle.Location = new System.Drawing.Point(7, 104);
             this.rbFocusLifestyle.Name = "rbFocusLifestyle";
-            this.rbFocusLifestyle.Size = new System.Drawing.Size(146, 35);
+            this.rbFocusLifestyle.Size = new System.Drawing.Size(78, 21);
             this.rbFocusLifestyle.TabIndex = 2;
             this.rbFocusLifestyle.TabStop = true;
             this.rbFocusLifestyle.Text = "Lifestyle";
@@ -3498,7 +3498,7 @@
             this.rbFocusWinning.AutoSize = true;
             this.rbFocusWinning.Location = new System.Drawing.Point(7, 66);
             this.rbFocusWinning.Name = "rbFocusWinning";
-            this.rbFocusWinning.Size = new System.Drawing.Size(142, 35);
+            this.rbFocusWinning.Size = new System.Drawing.Size(77, 21);
             this.rbFocusWinning.TabIndex = 1;
             this.rbFocusWinning.TabStop = true;
             this.rbFocusWinning.Text = "Winning";
@@ -3509,7 +3509,7 @@
             this.rbFocusMoney.AutoSize = true;
             this.rbFocusMoney.Location = new System.Drawing.Point(7, 28);
             this.rbFocusMoney.Name = "rbFocusMoney";
-            this.rbFocusMoney.Size = new System.Drawing.Size(126, 35);
+            this.rbFocusMoney.Size = new System.Drawing.Size(68, 21);
             this.rbFocusMoney.TabIndex = 0;
             this.rbFocusMoney.TabStop = true;
             this.rbFocusMoney.Text = "Money";
@@ -3520,7 +3520,7 @@
             this.lblNumberOfTeamsInterested.AutoSize = true;
             this.lblNumberOfTeamsInterested.Location = new System.Drawing.Point(12, 21);
             this.lblNumberOfTeamsInterested.Name = "lblNumberOfTeamsInterested";
-            this.lblNumberOfTeamsInterested.Size = new System.Drawing.Size(286, 31);
+            this.lblNumberOfTeamsInterested.Size = new System.Drawing.Size(150, 17);
             this.lblNumberOfTeamsInterested.TabIndex = 0;
             this.lblNumberOfTeamsInterested.Text = "# of Teams Interested:";
             // 
@@ -3541,7 +3541,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(142, 172);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(249, 31);
+            this.label12.Size = new System.Drawing.Size(130, 17);
             this.label12.TabIndex = 11;
             this.label12.Text = "Agency Happiness:";
             // 
@@ -3550,7 +3550,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(201, 116);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 31);
+            this.label13.Size = new System.Drawing.Size(75, 17);
             this.label13.TabIndex = 10;
             this.label13.Text = "Popularity:";
             // 
@@ -3559,7 +3559,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(158, 143);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(227, 31);
+            this.label14.Size = new System.Drawing.Size(119, 17);
             this.label14.TabIndex = 9;
             this.label14.Text = "Team Happiness:";
             // 
@@ -3568,7 +3568,7 @@
             this.lblClientAgencyHappiness.AutoSize = true;
             this.lblClientAgencyHappiness.Location = new System.Drawing.Point(290, 172);
             this.lblClientAgencyHappiness.Name = "lblClientAgencyHappiness";
-            this.lblClientAgencyHappiness.Size = new System.Drawing.Size(256, 31);
+            this.lblClientAgencyHappiness.Size = new System.Drawing.Size(134, 17);
             this.lblClientAgencyHappiness.TabIndex = 8;
             this.lblClientAgencyHappiness.Text = "Agency Happiness: ";
             // 
@@ -3577,7 +3577,7 @@
             this.lblClientPopularity.AutoSize = true;
             this.lblClientPopularity.Location = new System.Drawing.Point(289, 116);
             this.lblClientPopularity.Name = "lblClientPopularity";
-            this.lblClientPopularity.Size = new System.Drawing.Size(143, 31);
+            this.lblClientPopularity.Size = new System.Drawing.Size(75, 17);
             this.lblClientPopularity.TabIndex = 7;
             this.lblClientPopularity.Text = "Popularity:";
             // 
@@ -3586,7 +3586,7 @@
             this.lblClientTeamHappiness.AutoSize = true;
             this.lblClientTeamHappiness.Location = new System.Drawing.Point(289, 143);
             this.lblClientTeamHappiness.Name = "lblClientTeamHappiness";
-            this.lblClientTeamHappiness.Size = new System.Drawing.Size(227, 31);
+            this.lblClientTeamHappiness.Size = new System.Drawing.Size(119, 17);
             this.lblClientTeamHappiness.TabIndex = 6;
             this.lblClientTeamHappiness.Text = "Team Happiness:";
             // 
@@ -3596,7 +3596,7 @@
             this.lblClientPosAndTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientPosAndTeam.Location = new System.Drawing.Point(272, 72);
             this.lblClientPosAndTeam.Name = "lblClientPosAndTeam";
-            this.lblClientPosAndTeam.Size = new System.Drawing.Size(242, 44);
+            this.lblClientPosAndTeam.Size = new System.Drawing.Size(118, 24);
             this.lblClientPosAndTeam.TabIndex = 5;
             this.lblClientPosAndTeam.Text = "POS for ABR";
             // 
@@ -3658,14 +3658,14 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1200, 781);
+            this.Controls.Add(this.agencyClientsPanel);
             this.Controls.Add(this.agencyPanel);
             this.Controls.Add(this.freelancePanel);
             this.Controls.Add(this.managerPanel);
-            this.Controls.Add(this.agencyClientsPanel);
             this.Controls.Add(this.scoutClientPanel);
             this.Controls.Add(this.teamRosterPanel);
             this.Controls.Add(this.worldPanel);
